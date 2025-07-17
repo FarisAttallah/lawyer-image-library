@@ -1,0 +1,23 @@
+/* Google Fonts - Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* Custom Font Definition */
+@font-face {
+  font-family: 'BeINBlack';
+  src: url('/fonts/beIN Black Black.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* Improves loading performance */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'BeINBlack', Arial, sans-serif; /* BeINBlack as primary, Arial as fallback */
+  background-color: #f9fafb;
+  color: #333;
+}
