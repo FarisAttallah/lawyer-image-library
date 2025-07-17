@@ -23,13 +23,20 @@ export default function ContactInfo() {
     ar: {
       title: 'معلومات التواصل',
       firmName: 'مكتب حسين أحمد آل محمد للمحاماة والاستشارات القانونية',
-      address: 'طريق الملك فهد، حي العليا، الرياض 12211، المملكة العربية السعودية',
-      experience: 'خبرة قانونية تتجاوز 13 عامًا من التميز والثقة',
+      address: [
+        'طريق الملك فهد',
+        'حي العليا',
+        'الرياض ١٢٢١١',
+        'المملكة العربية السعودية'
+      ],
+      experience: 'خبرة قانونية تتجاوز ١٣ عامًا من التميز والثقة',
       phone: 'الهاتف',
+      phoneNumber: '+٩٦٦ ٥٠ ١٢٣ ٤٥٦٧',
       email: 'البريد الإلكتروني',
+      emailAddress: 'info@husseinallaw.com',
       workingHours: 'ساعات العمل',
-      workingHoursDetails: 'الأحد - الخميس: 8:00 ص - 6:00 م',
-      officeHours: 'السبت: 9:00 ص - 2:00 م',
+      workingHoursDetails: 'الأحد - الخميس: ٨:٠٠ ص - ٦:٠٠ م',
+      officeHours: 'السبت: ٩:٠٠ ص - ٢:٠٠ م',
       emergencyContact: 'للحالات الطارئة',
       emergencyNote: 'متاح على مدار الساعة للاستشارات العاجلة',
       specializations: 'تخصصاتنا',
@@ -47,10 +54,17 @@ export default function ContactInfo() {
     en: {
       title: 'Contact Information',
       firmName: 'Hussein Ahmed Al Mohammed Law Firm & Legal Consultations',
-      address: 'King Fahd Road, Al Olaya District, Riyadh 12211, Saudi Arabia',
+      address: [
+        'King Fahd Road',
+        'Al Olaya District',
+        'Riyadh 12211',
+        'Saudi Arabia'
+      ],
       experience: 'Legal expertise spanning over 13 years of excellence and trust',
       phone: 'Phone',
+      phoneNumber: '+966 50 123 4567',
       email: 'Email',
+      emailAddress: 'info@husseinallaw.com',
       workingHours: 'Working Hours',
       workingHoursDetails: 'Sunday - Thursday: 8:00 AM - 6:00 PM',
       officeHours: 'Saturday: 9:00 AM - 2:00 PM',
@@ -107,17 +121,23 @@ export default function ContactInfo() {
           fontSize: isMobile ? '0.9rem' : '1.1rem',
           fontWeight: '500',
           marginBottom: '0.5rem',
-          textAlign: isMobile ? 'center' : 'left'
+          textAlign: isMobile ? 'center' : 'left',
+          fontFamily: language === 'ar' ? 'Tahoma, Arial, sans-serif' : 'inherit'
         }}>
           {content.experience}
         </p>
-        <p style={{
+        <div style={{
           color: '#666',
           fontSize: isMobile ? '0.85rem' : '1rem',
-          textAlign: isMobile ? 'center' : 'left'
+          textAlign: isMobile ? 'center' : 'left',
+          fontFamily: language === 'ar' ? 'Tahoma, Arial, sans-serif' : 'inherit'
         }}>
-          {content.address}
-        </p>
+          {content.address.map((line, index) => (
+            <div key={index} style={{ marginBottom: '0.25rem' }}>
+              {line}
+            </div>
+          ))}
+        </div>
       </div>
       
       {/* Contact Details */}
@@ -131,8 +151,14 @@ export default function ContactInfo() {
           }}>
             📞 {content.phone}
           </h4>
-          <p style={{ color: '#666', fontSize: '1rem', marginLeft: language === 'ar' ? '0' : '1.5rem', marginRight: language === 'ar' ? '1.5rem' : '0' }}>
-            +966 50 123 4567
+          <p style={{ 
+            color: '#666', 
+            fontSize: '1rem', 
+            marginLeft: language === 'ar' ? '0' : '1.5rem', 
+            marginRight: language === 'ar' ? '1.5rem' : '0',
+            fontFamily: language === 'ar' ? 'Tahoma, Arial, sans-serif' : 'inherit'
+          }}>
+            {content.phoneNumber}
           </p>
         </div>
         
@@ -146,7 +172,7 @@ export default function ContactInfo() {
             ✉️ {content.email}
           </h4>
           <p style={{ color: '#666', fontSize: '1rem', marginLeft: language === 'ar' ? '0' : '1.5rem', marginRight: language === 'ar' ? '1.5rem' : '0' }}>
-            info@husseinallaw.com
+            {content.emailAddress}
           </p>
         </div>
       </div>
@@ -162,10 +188,20 @@ export default function ContactInfo() {
           🕒 {content.workingHours}
         </h4>
         <div style={{ marginLeft: language === 'ar' ? '0' : '1.5rem', marginRight: language === 'ar' ? '1.5rem' : '0' }}>
-          <p style={{ color: '#666', fontSize: '1rem', marginBottom: '0.5rem' }}>
+          <p style={{ 
+            color: '#666', 
+            fontSize: '1rem', 
+            marginBottom: '0.5rem',
+            fontFamily: language === 'ar' ? 'Tahoma, Arial, sans-serif' : 'inherit'
+          }}>
             {content.workingHoursDetails}
           </p>
-          <p style={{ color: '#666', fontSize: '1rem', marginBottom: '1rem' }}>
+          <p style={{ 
+            color: '#666', 
+            fontSize: '1rem', 
+            marginBottom: '1rem',
+            fontFamily: language === 'ar' ? 'Tahoma, Arial, sans-serif' : 'inherit'
+          }}>
             {content.officeHours}
           </p>
           <div style={{

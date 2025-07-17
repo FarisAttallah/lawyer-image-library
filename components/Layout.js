@@ -11,7 +11,8 @@ export default function Layout({ children }) {
       lineHeight: '1.6',
       position: 'relative',
       minHeight: '100vh',
-      fontSize: '0.9rem' // Slightly smaller for English
+      fontSize: '0.9rem', // Slightly smaller for English
+      scrollBehavior: 'smooth'
     }}>
       {/* Fixed Transparent Header */}
       <div style={{

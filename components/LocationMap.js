@@ -7,40 +7,32 @@ export default function LocationMap() {
     ar: {
       title: 'موقعنا',
       subtitle: 'تفضل بزيارتنا في مكتبنا بالرياض',
-      address: 'طريق الملك فهد، حي العليا، الرياض 12211، المملكة العربية السعودية',
+      address: [
+        'طريق الملك فهد',
+        'حي العليا',
+        'الرياض ١٢٢١١',
+        'المملكة العربية السعودية'
+      ],
       directions: 'احصل على الاتجاهات',
-      mapPlaceholder: 'خريطة موقع المكتب',
       officeLocation: 'موقع المكتب',
-      nearbyLandmarks: 'المعالم القريبة',
-      parkingInfo: 'مواقف مجانية متاحة',
-      publicTransport: 'يمكن الوصول بوسائل النقل العام',
       exactAddress: 'طريق الملك فهد، حي العليا',
       district: 'حي العليا',
-      landmarks: [
-        'مركز الملك عبد العزيز التاريخي',
-        'برج المملكة',
-        'مركز التجارة العالمي',
-        'مجمع الفيصلية'
-      ]
+      phoneNumber: '+٩٦٦ ٥٠ ١٢٣ ٤٥٦٧'
     },
     en: {
       title: 'Our Location',
       subtitle: 'Visit us at our office in Riyadh',
-      address: 'King Fahd Road, Al Olaya District, Riyadh 12211, Saudi Arabia',
+      address: [
+        'King Fahd Road',
+        'Al Olaya District',
+        'Riyadh 12211',
+        'Saudi Arabia'
+      ],
       directions: 'Get Directions',
-      mapPlaceholder: 'Office Location Map',
       officeLocation: 'Office Location',
-      nearbyLandmarks: 'Nearby Landmarks',
-      parkingInfo: 'Free parking available',
-      publicTransport: 'Accessible by public transport',
       exactAddress: 'King Fahd Road, Al Olaya District',
       district: 'Al Olaya District',
-      landmarks: [
-        'King Abdulaziz Historical Center',
-        'Kingdom Tower',
-        'World Trade Center',
-        'Al Faisaliah Complex'
-      ]
+      phoneNumber: '+966 50 123 4567'
     }
   }
   
@@ -180,8 +172,7 @@ export default function LocationMap() {
           <div style={{
             backgroundColor: '#f8f9fa',
             padding: '1.5rem',
-            borderRadius: '8px',
-            marginBottom: '1.5rem'
+            borderRadius: '8px'
           }}>
             <h3 style={{
               color: '#0c4b3b',
@@ -191,14 +182,19 @@ export default function LocationMap() {
             }}>
               📍 {t.officeLocation}
             </h3>
-            <p style={{
+            <div style={{
               color: '#666',
               fontSize: '1.1rem',
               lineHeight: '1.6',
-              marginBottom: '1rem'
+              marginBottom: '1rem',
+              fontFamily: language === 'ar' ? 'Tahoma, Arial, sans-serif' : 'inherit'
             }}>
-              {t.address}
-            </p>
+              {t.address.map((line, index) => (
+                <div key={index} style={{ marginBottom: '0.25rem' }}>
+                  {line}
+                </div>
+              ))}
+            </div>
             
             {/* Contact Quick Info */}
             <div style={{
@@ -208,79 +204,14 @@ export default function LocationMap() {
             }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                 <span>📞</span>
-                <span style={{ color: '#666' }}>+966 50 123 4567</span>
+                <span style={{ 
+                  color: '#666',
+                  fontFamily: language === 'ar' ? 'Tahoma, Arial, sans-serif' : 'inherit'
+                }}>{t.phoneNumber}</span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                 <span>✉️</span>
                 <span style={{ color: '#666' }}>info@husseinallaw.com</span>
-              </div>
-            </div>
-          </div>
-          
-          {/* Additional Information */}
-          <div style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '1rem'
-          }}>
-            <div style={{
-              padding: '1rem',
-              backgroundColor: '#e8f5e8',
-              borderRadius: '8px',
-              border: '1px solid #c3e6cb'
-            }}>
-              <h4 style={{
-                color: '#0c4b3b',
-                fontSize: '1rem',
-                marginBottom: '0.5rem',
-                fontWeight: 'bold'
-              }}>
-                🚗 {language === 'ar' ? 'مواقف السيارات' : 'Parking'}
-              </h4>
-              <p style={{ color: '#666', fontSize: '0.9rem' }}>
-                {t.parkingInfo}
-              </p>
-            </div>
-            
-            <div style={{
-              padding: '1rem',
-              backgroundColor: '#e7f3ff',
-              borderRadius: '8px',
-              border: '1px solid #b8daff'
-            }}>
-              <h4 style={{
-                color: '#0c4b3b',
-                fontSize: '1rem',
-                marginBottom: '0.5rem',
-                fontWeight: 'bold'
-              }}>
-                🚌 {language === 'ar' ? 'النقل العام' : 'Public Transport'}
-              </h4>
-              <p style={{ color: '#666', fontSize: '0.9rem' }}>
-                {t.publicTransport}
-              </p>
-            </div>
-            
-            <div style={{
-              padding: '1rem',
-              backgroundColor: '#fff3cd',
-              borderRadius: '8px',
-              border: '1px solid #ffeaa7'
-            }}>
-              <h4 style={{
-                color: '#0c4b3b',
-                fontSize: '1rem',
-                marginBottom: '0.5rem',
-                fontWeight: 'bold'
-              }}>
-                🏢 {t.nearbyLandmarks}
-              </h4>
-              <div style={{ color: '#666', fontSize: '0.9rem' }}>
-                {t.landmarks.map((landmark, index) => (
-                  <div key={index} style={{ marginBottom: '0.3rem' }}>
-                    • {landmark}
-                  </div>
-                ))}
               </div>
             </div>
           </div>

@@ -5,12 +5,14 @@ import LanguageToggle from './LanguageToggle'
 import ImageLogo from './ImageLogo'
 import Logo from './Logo'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 export default function Header({ transparent = false }) {
   const { language } = useLanguage()
   const t = translations[language]
   const [isMobile, setIsMobile] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const router = useRouter()
   
   // Check if screen is mobile size
   useEffect(() => {
@@ -26,6 +28,46 @@ export default function Header({ transparent = false }) {
     
     return () => window.removeEventListener('resize', checkIsMobile)
   }, [])
+
+  // Handle smooth scrolling to sections when navigating with hash
+  useEffect(() => {
+    const handleRouteChange = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        setTimeout(() => {
+          const element = document.querySelector(hash);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      }
+    };
+
+    router.events.on('routeChangeComplete', handleRouteChange);
+    
+    // Also handle on initial load
+    handleRouteChange();
+
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router.events])
+
+  // Handle smooth scrolling for same-page navigation
+  const handleSmoothScroll = (e, targetId) => {
+    e.preventDefault();
+    
+    // If we're on the same page, just scroll
+    if (router.pathname === '/') {
+      const element = document.querySelector(targetId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // If we're on a different page, navigate with hash
+      router.push(`/${targetId}`);
+    }
+  }
   
   return (
     <header style={{ 
@@ -75,24 +117,30 @@ export default function Header({ transparent = false }) {
                   </Link>
                 </li>
                 <li>
-                  <a href="#about" style={{ 
-                    color: 'white', 
-                    textDecoration: 'none',
-                    transition: 'color 0.3s ease'
-                  }}
-                  onMouseOver={(e) => e.target.style.color = '#c49a6c'}
-                  onMouseOut={(e) => e.target.style.color = 'white'}>
+                  <a href="#about" 
+                    onClick={(e) => handleSmoothScroll(e, '#about')}
+                    style={{ 
+                      color: 'white', 
+                      textDecoration: 'none',
+                      transition: 'color 0.3s ease',
+                      cursor: 'pointer'
+                    }}
+                    onMouseOver={(e) => e.target.style.color = '#c49a6c'}
+                    onMouseOut={(e) => e.target.style.color = 'white'}>
                     {t.about}
                   </a>
                 </li>
                 <li>
-                  <a href="#services" style={{ 
-                    color: 'white', 
-                    textDecoration: 'none',
-                    transition: 'color 0.3s ease'
-                  }}
-                  onMouseOver={(e) => e.target.style.color = '#c49a6c'}
-                  onMouseOut={(e) => e.target.style.color = 'white'}>
+                  <a href="#services" 
+                    onClick={(e) => handleSmoothScroll(e, '#services')}
+                    style={{ 
+                      color: 'white', 
+                      textDecoration: 'none',
+                      transition: 'color 0.3s ease',
+                      cursor: 'pointer'
+                    }}
+                    onMouseOver={(e) => e.target.style.color = '#c49a6c'}
+                    onMouseOut={(e) => e.target.style.color = 'white'}>
                     {t.services}
                   </a>
                 </li>
@@ -206,7 +254,10 @@ export default function Header({ transparent = false }) {
               <li>
                 <a 
                   href="#about" 
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={(e) => {
+                    handleSmoothScroll(e, '#about');
+                    setIsMenuOpen(false);
+                  }}
                   style={{ 
                     color: 'white', 
                     textDecoration: 'none',
@@ -214,7 +265,8 @@ export default function Header({ transparent = false }) {
                     padding: '0.7rem 2rem',
                     borderBottom: '1px solid rgba(255,255,255,0.1)',
                     transition: 'background-color 0.3s ease',
-                    fontSize: '0.9rem'
+                    fontSize: '0.9rem',
+                    cursor: 'pointer'
                   }}
                   onMouseOver={(e) => e.target.style.backgroundColor = 'rgba(196, 154, 108, 0.2)'}
                   onMouseOut={(e) => e.target.style.backgroundColor = 'transparent'}
@@ -225,7 +277,10 @@ export default function Header({ transparent = false }) {
               <li>
                 <a 
                   href="#services" 
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={(e) => {
+                    handleSmoothScroll(e, '#services');
+                    setIsMenuOpen(false);
+                  }}
                   style={{ 
                     color: 'white', 
                     textDecoration: 'none',
@@ -233,7 +288,8 @@ export default function Header({ transparent = false }) {
                     padding: '0.7rem 2rem',
                     borderBottom: '1px solid rgba(255,255,255,0.1)',
                     transition: 'background-color 0.3s ease',
-                    fontSize: '0.9rem'
+                    fontSize: '0.9rem',
+                    cursor: 'pointer'
                   }}
                   onMouseOver={(e) => e.target.style.backgroundColor = 'rgba(196, 154, 108, 0.2)'}
                   onMouseOut={(e) => e.target.style.backgroundColor = 'transparent'}

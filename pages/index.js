@@ -24,7 +24,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section style={{ 
+      <section id="services" style={{ 
         minHeight: '100vh',
         display: 'flex',
         alignItems: 'center',
@@ -44,7 +44,7 @@ export default function Home() {
       </section>
       
       {/* About Section */}
-      <section style={{ 
+      <section id="about" style={{ 
         minHeight: '100vh',
         display: 'flex',
         alignItems: 'center',
