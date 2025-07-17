@@ -147,13 +147,14 @@ export default function ContactForm() {
   }
   
   return (
-    <div style={{
+    <div id="contactForm" style={{
       backgroundColor: 'white',
       padding: isMobile ? '1.5rem' : '2rem',
       borderRadius: '12px',
       boxShadow: '0 4px 16px rgba(0,0,0,0.1)',
       height: 'fit-content',
-      margin: isMobile ? '0 0.5rem' : '0'
+      margin: isMobile ? '0 0.5rem' : '0',
+      scrollMarginTop: '100px' // Adds space when scrolling to this element
     }}>
       <h2 style={{
         color: '#0c4b3b',

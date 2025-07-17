@@ -60,7 +60,7 @@ export const translations = {
     // Footer
     contactInfo: 'معلومات الاتصال',
     phone: 'الهاتف: +966 XX XXX XXXX',
-    email: 'البريد الإلكتروني: info@husseinallaw.com',
+    email: 'البريد الإلكتروني: info@almohmmed.com',
     address: 'العنوان',
     location: 'الرياض، المملكة العربية السعودية',
     workingHours: 'ساعات العمل',
@@ -135,7 +135,7 @@ export const translations = {
     // Footer
     contactInfo: 'Contact Information',
     phone: 'Phone: +966 XX XXX XXXX',
-    email: 'Email: info@husseinallaw.com',
+    email: 'Email: info@almohmmed.com',
     address: 'Address',
     location: 'Riyadh, Saudi Arabia',
     workingHours: 'Working Hours',

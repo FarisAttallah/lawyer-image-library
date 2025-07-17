@@ -24,16 +24,14 @@ export default function ContactInfo() {
       title: 'معلومات التواصل',
       firmName: 'مكتب حسين أحمد آل محمد للمحاماة والاستشارات القانونية',
       address: [
-        'طريق الملك فهد',
-        'حي العليا',
-        'الرياض ١٢٢١١',
-        'المملكة العربية السعودية'
+        'الرياض - المملكة العربية السعودية',
+        'الرمز البريدي ١٢٣٣١ الرقم الاضافي ٦٥٨٣'
       ],
       experience: 'خبرة قانونية تتجاوز ١٣ عامًا من التميز والثقة',
       phone: 'الهاتف',
       phoneNumber: '+٩٦٦ ٥٠ ١٢٣ ٤٥٦٧',
       email: 'البريد الإلكتروني',
-      emailAddress: 'info@husseinallaw.com',
+      emailAddress: 'info@almohmmed.com',
       workingHours: 'ساعات العمل',
       workingHoursDetails: 'الأحد - الخميس: ٨:٠٠ ص - ٦:٠٠ م',
       officeHours: 'السبت: ٩:٠٠ ص - ٢:٠٠ م',
@@ -55,16 +53,14 @@ export default function ContactInfo() {
       title: 'Contact Information',
       firmName: 'Hussein Ahmed Al Mohammed Law Firm & Legal Consultations',
       address: [
-        'King Fahd Road',
-        'Al Olaya District',
-        'Riyadh 12211',
-        'Saudi Arabia'
+        'Riyadh - Saudi Arabia',
+        'Postal Code 12331 Additional Number 6583'
       ],
       experience: 'Legal expertise spanning over 13 years of excellence and trust',
       phone: 'Phone',
       phoneNumber: '+966 50 123 4567',
       email: 'Email',
-      emailAddress: 'info@husseinallaw.com',
+      emailAddress: 'info@almohmmed.com',
       workingHours: 'Working Hours',
       workingHoursDetails: 'Sunday - Thursday: 8:00 AM - 6:00 PM',
       officeHours: 'Saturday: 9:00 AM - 2:00 PM',
@@ -88,168 +84,119 @@ export default function ContactInfo() {
   
   return (
     <div style={{
-      backgroundColor: 'white',
-      padding: isMobile ? '1.5rem' : '2rem',
-      borderRadius: '12px',
-      boxShadow: '0 4px 16px rgba(0,0,0,0.1)',
-      height: 'fit-content',
-      margin: isMobile ? '0 0.5rem' : '0'
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'flex-start',
+      minHeight: '600px',
+      padding: isMobile ? '1rem' : '2rem 1rem'
     }}>
+      {/* Main Contact Image */}
+      <div style={{
+        position: 'relative',
+        width: isMobile ? '100%' : '100%',
+        maxWidth: isMobile ? '400px' : '500px',
+        height: isMobile ? '250px' : '400px',
+        borderRadius: '16px',
+        overflow: 'hidden',
+        boxShadow: '0 12px 32px rgba(0,0,0,0.15)',
+        background: 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)',
+        marginBottom: '2rem',
+        margin: '0 auto 2rem auto'
+      }}>
+        {/* Legal themed border decoration */}
+        <div style={{
+          position: 'absolute',
+          top: '0',
+          left: '0',
+          right: '0',
+          height: '8px',
+          zIndex: 2
+        }}></div>
+        
+        <img 
+          src="images/ContactUs.png" 
+          alt="Contact Us - Hussein Al Mohammed Law Firm"
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: 'center',
+            filter: 'contrast(1.1) brightness(1.05)',
+            transition: 'transform 0.3s ease'
+          }}
+          onMouseOver={(e) => {
+            e.target.style.transform = 'scale(1.05)'
+          }}
+          onMouseOut={(e) => {
+            e.target.style.transform = 'scale(1)'
+          }}
+        />
+        
+        {/* Enhanced overlay with contact message */}
+        <div style={{
+          position: 'absolute',
+          bottom: 0,
+          left: 0,
+          right: 0,
+          background: 'linear-gradient(transparent, rgba(12, 75, 59, 0.95))',
+          padding: isMobile ? '1.5rem 1rem 1rem' : '2rem 1.5rem 1.5rem',
+          color: 'white'
+        }}>
+          
+        </div>
+      </div>
+      
+      {/* Main Heading */}
       <h2 style={{
         color: '#0c4b3b',
-        fontSize: isMobile ? '1.5rem' : '2rem',
-        marginBottom: '1.5rem',
+        fontSize: isMobile ? '1.6rem' : '2rem',
         fontWeight: 'bold',
-        textAlign: isMobile ? 'center' : 'left'
+        textAlign: 'center',
+        marginBottom: '1rem',
+        animation: 'gentleFade 4s ease-in-out infinite'
       }}>
-        {content.title}
+        {language === 'ar' ? 'استشارتك القانونية تبدأ من هنا' : 'Your Legal Consultation Starts Here'}
       </h2>
       
-      {/* Firm Name & Experience */}
-      <div style={{ marginBottom: '2rem' }}>
-        <h3 style={{
-          color: '#226249',
-          fontSize: isMobile ? '1.1rem' : '1.4rem',
-          marginBottom: '0.5rem',
-          fontWeight: 'bold',
-          textAlign: isMobile ? 'center' : 'left'
-        }}>
-          {content.firmName}
-        </h3>
-        <p style={{
-          color: '#c49a6c',
-          fontSize: isMobile ? '0.9rem' : '1.1rem',
-          fontWeight: '500',
-          marginBottom: '0.5rem',
-          textAlign: isMobile ? 'center' : 'left',
-          fontFamily: language === 'ar' ? 'Tahoma, Arial, sans-serif' : 'inherit'
-        }}>
-          {content.experience}
-        </p>
-        <div style={{
-          color: '#666',
-          fontSize: isMobile ? '0.85rem' : '1rem',
-          textAlign: isMobile ? 'center' : 'left',
-          fontFamily: language === 'ar' ? 'Tahoma, Arial, sans-serif' : 'inherit'
-        }}>
-          {content.address.map((line, index) => (
-            <div key={index} style={{ marginBottom: '0.25rem' }}>
-              {line}
-            </div>
-          ))}
-        </div>
-      </div>
+      {/* Supporting Text */}
+      <p style={{
+        color: '#666',
+        fontSize: isMobile ? '0.9rem' : '1.1rem',
+        fontWeight: '400',
+        textAlign: 'center',
+        marginBottom: '1.5rem',
+        maxWidth: '100%',
+        lineHeight: '1.6',
+        animation: 'gentleFade 4s ease-in-out infinite 0.5s'
+      }}>
+        {language === 'ar' 
+          ? 'خبرة قانونية تتجاوز ١٣ عامًا في خدمتك'
+          : 'Over 13 years of legal expertise at your service'
+        }
+      </p>
       
-      {/* Contact Details */}
-      <div style={{ marginBottom: '2rem' }}>
-        <div style={{ marginBottom: '1rem' }}>
-          <h4 style={{
-            color: '#0c4b3b',
-            fontSize: '1.1rem',
-            marginBottom: '0.5rem',
-            fontWeight: 'bold'
-          }}>
-            📞 {content.phone}
-          </h4>
-          <p style={{ 
-            color: '#666', 
-            fontSize: '1rem', 
-            marginLeft: language === 'ar' ? '0' : '1.5rem', 
-            marginRight: language === 'ar' ? '1.5rem' : '0',
-            fontFamily: language === 'ar' ? 'Tahoma, Arial, sans-serif' : 'inherit'
-          }}>
-            {content.phoneNumber}
-          </p>
-        </div>
+      <style jsx>{`
+        @keyframes gentleFloat {
+          0%, 100% {
+            transform: translateY(0px) scale(1);
+            opacity: 0.8;
+          }
+          50% {
+            transform: translateY(-10px) scale(1.05);
+            opacity: 1;
+          }
+        }
         
-        <div style={{ marginBottom: '1rem' }}>
-          <h4 style={{
-            color: '#0c4b3b',
-            fontSize: '1.1rem',
-            marginBottom: '0.5rem',
-            fontWeight: 'bold'
-          }}>
-            ✉️ {content.email}
-          </h4>
-          <p style={{ color: '#666', fontSize: '1rem', marginLeft: language === 'ar' ? '0' : '1.5rem', marginRight: language === 'ar' ? '1.5rem' : '0' }}>
-            {content.emailAddress}
-          </p>
-        </div>
-      </div>
-      
-      {/* Working Hours */}
-      <div style={{ marginBottom: '2rem' }}>
-        <h4 style={{
-          color: '#0c4b3b',
-          fontSize: '1.1rem',
-          marginBottom: '1rem',
-          fontWeight: 'bold'
-        }}>
-          🕒 {content.workingHours}
-        </h4>
-        <div style={{ marginLeft: language === 'ar' ? '0' : '1.5rem', marginRight: language === 'ar' ? '1.5rem' : '0' }}>
-          <p style={{ 
-            color: '#666', 
-            fontSize: '1rem', 
-            marginBottom: '0.5rem',
-            fontFamily: language === 'ar' ? 'Tahoma, Arial, sans-serif' : 'inherit'
-          }}>
-            {content.workingHoursDetails}
-          </p>
-          <p style={{ 
-            color: '#666', 
-            fontSize: '1rem', 
-            marginBottom: '1rem',
-            fontFamily: language === 'ar' ? 'Tahoma, Arial, sans-serif' : 'inherit'
-          }}>
-            {content.officeHours}
-          </p>
-          <div style={{
-            backgroundColor: '#f8f9fa',
-            padding: '1rem',
-            borderRadius: '8px',
-            borderLeft: language === 'ar' ? 'none' : '4px solid #c49a6c',
-            borderRight: language === 'ar' ? '4px solid #c49a6c' : 'none'
-          }}>
-            <p style={{ color: '#0c4b3b', fontWeight: 'bold', marginBottom: '0.5rem' }}>
-              🚨 {content.emergencyContact}
-            </p>
-            <p style={{ color: '#666', fontSize: '0.9rem' }}>
-              {content.emergencyNote}
-            </p>
-          </div>
-        </div>
-      </div>
-      
-      {/* Specializations */}
-      <div>
-        <h4 style={{
-          color: '#0c4b3b',
-          fontSize: '1.1rem',
-          marginBottom: '1rem',
-          fontWeight: 'bold'
-        }}>
-          ⚖️ {content.specializations}
-        </h4>
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr',
-          gap: '0.5rem',
-          marginLeft: language === 'ar' ? '0' : '1.5rem',
-          marginRight: language === 'ar' ? '1.5rem' : '0'
-        }}>
-          {content.specializationsList.map((item, index) => (
-            <div key={index} style={{
-              padding: '0.5rem',
-              backgroundColor: '#f8f9fa',
-              borderRadius: '6px',
-              border: '1px solid #e9ecef'
-            }}>
-              <span style={{ color: '#666', fontSize: '0.95rem' }}>• {item}</span>
-            </div>
-          ))}
-        </div>
-      </div>
+        @keyframes gentleFade {
+          0%, 100% {
+            opacity: 0.6;
+          }
+          50% {
+            opacity: 0.9;
+          }
+        }
+      `}</style>
     </div>
   )
 }

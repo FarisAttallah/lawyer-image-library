@@ -8,30 +8,26 @@ export default function LocationMap() {
       title: 'موقعنا',
       subtitle: 'تفضل بزيارتنا في مكتبنا بالرياض',
       address: [
-        'طريق الملك فهد',
-        'حي العليا',
-        'الرياض ١٢٢١١',
-        'المملكة العربية السعودية'
+        'الرياض - المملكة العربية السعودية',
+        'الرمز البريدي ١٢٣٣١ الرقم الاضافي ٦٥٨٣'
       ],
       directions: 'احصل على الاتجاهات',
       officeLocation: 'موقع المكتب',
-      exactAddress: 'طريق الملك فهد، حي العليا',
-      district: 'حي العليا',
+      exactAddress: 'الرياض - المملكة العربية السعودية',
+      district: 'الرمز البريدي ١٢٣٣١ الرقم الاضافي ٦٥٨٣',
       phoneNumber: '+٩٦٦ ٥٠ ١٢٣ ٤٥٦٧'
     },
     en: {
       title: 'Our Location',
       subtitle: 'Visit us at our office in Riyadh',
       address: [
-        'King Fahd Road',
-        'Al Olaya District',
-        'Riyadh 12211',
-        'Saudi Arabia'
+        'Riyadh - Saudi Arabia',
+        'Postal Code 12331 Additional Number 6583'
       ],
       directions: 'Get Directions',
       officeLocation: 'Office Location',
-      exactAddress: 'King Fahd Road, Al Olaya District',
-      district: 'Al Olaya District',
+      exactAddress: 'Riyadh - Saudi Arabia',
+      district: 'Postal Code 12331 Additional Number 6583',
       phoneNumber: '+966 50 123 4567'
     }
   }
@@ -211,7 +207,7 @@ export default function LocationMap() {
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                 <span>✉️</span>
-                <span style={{ color: '#666' }}>info@husseinallaw.com</span>
+                <span style={{ color: '#666' }}>info@almohmmed.com</span>
               </div>
             </div>
           </div>

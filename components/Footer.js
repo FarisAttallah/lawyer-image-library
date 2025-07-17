@@ -1,5 +1,6 @@
 import { useLanguage } from '../contexts/LanguageContext'
 import { translations } from '../utils/translations'
+import ImageLogo from './ImageLogo'
 
 export default function Footer() {
   const { language } = useLanguage()
@@ -20,16 +21,24 @@ export default function Footer() {
           gap: '3rem',
           marginBottom: '2rem'
         }}>
-          {/* Firm Info */}
+          {/* Firm Info with Logo */}
           <div>
-            <h3 style={{ 
-              color: '#c49a6c', 
-              marginBottom: '1rem',
-              fontSize: '1.4rem',
-              fontWeight: 'bold'
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '1rem',
+              marginBottom: '1rem'
             }}>
-              {t.lawFirm}
-            </h3>
+              <ImageLogo size="medium" />
+              <h3 style={{ 
+                color: '#c49a6c', 
+                fontSize: '1.4rem',
+                fontWeight: 'bold',
+                margin: 0
+              }}>
+                {t.lawFirm}
+              </h3>
+            </div>
             <p style={{
               lineHeight: '1.7',
               marginBottom: '1rem',

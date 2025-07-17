@@ -202,36 +202,6 @@ export default function About({ isMobile, fonts }) {
             </div>
           </div>
         </div>
-
-        {/* Lawyer Quote Section */}
-        <div style={{
-          backgroundColor: 'linear-gradient(135deg, #0c4b3b 0%, #226249 100%)',
-          background: 'linear-gradient(135deg, #0c4b3b 0%, #226249 100%)',
-          padding: isMobile ? '2rem 1.5rem' : '3rem 2rem',
-          borderRadius: '12px',
-          color: 'white',
-          textAlign: 'center',
-          boxShadow: '0 8px 24px rgba(0,0,0,0.15)'
-        }}>
-          <h3 style={{
-            fontSize: fonts.subsectionTitle,
-            marginBottom: '1.5rem',
-            color: '#c49a6c',
-            fontWeight: 'bold'
-          }}>
-            {t.lawyerQuoteTitle}
-          </h3>
-          <blockquote style={{
-            fontSize: fonts.bodyLarge,
-            lineHeight: '1.8',
-            fontStyle: 'italic',
-            maxWidth: '800px',
-            margin: '0 auto',
-            position: 'relative'
-          }}>
-            "{t.lawyerQuote}"
-          </blockquote>
-        </div>
       </div>
     </div>
   )

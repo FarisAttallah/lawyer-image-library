@@ -1,17 +1,17 @@
-export default function ImageLogo({ size = 'medium' }) {
-  // Size configurations for the image logo (square aspect ratio for 1739x1739 logo)
+export default function BrandingIcon({ size = 'medium' }) {
+  // Size configurations for the branding icon (square aspect ratio for 1739x1739 icon)
   const sizes = {
     small: {
-      width: '80px',
-      height: '80px'
+      width: '40px',
+      height: '40px'
     },
     medium: {
-      width: '100px',
-      height: '100px'
+      width: '50px',
+      height: '50px'
     },
     large: {
-      width: '120px',
-      height: '120px'
+      width: '60px',
+      height: '60px'
     }
   }
   
@@ -26,8 +26,8 @@ export default function ImageLogo({ size = 'medium' }) {
       justifyContent: 'center'
     }}>
       <img 
-        src="/images/Logo.png" 
-        alt="Hussein Al Mohammed Law Firm Logo"
+        src="/images/branding-icon.png" 
+        alt="Geometric Branding Icon"
         style={{
           width: '100%',
           height: '100%',

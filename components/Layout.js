@@ -14,16 +14,8 @@ export default function Layout({ children }) {
       fontSize: '0.9rem', // Slightly smaller for English
       scrollBehavior: 'smooth'
     }}>
-      {/* Fixed Transparent Header */}
-      <div style={{
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        right: 0,
-        zIndex: 1000
-      }}>
-        <Header transparent={true} />
-      </div>
+      {/* Header is now fixed positioned in the Header component itself */}
+      <Header transparent={true} />
 
       <main style={{ position: 'relative', zIndex: 1 }}>
         {children}

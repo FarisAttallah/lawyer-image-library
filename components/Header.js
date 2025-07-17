@@ -3,6 +3,7 @@ import { useLanguage } from '../contexts/LanguageContext'
 import { translations } from '../utils/translations'
 import LanguageToggle from './LanguageToggle'
 import ImageLogo from './ImageLogo'
+import BrandingIcon from './BrandingIcon'
 import Logo from './Logo'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
@@ -75,10 +76,17 @@ export default function Header({ transparent = false }) {
       backdropFilter: transparent ? 'blur(10px)' : 'none',
       WebkitBackdropFilter: transparent ? 'blur(10px)' : 'none',
       color: 'white', 
-      padding: isMobile ? '0.56rem 1rem' : '0.7rem 2rem', // Reduced by 30%
+      paddingTop: '0', // No top padding - touches the screen
+      paddingBottom: isMobile ? '0.5rem' : '0.5rem',
+      paddingLeft: isMobile ? '1rem' : '2rem',
+      paddingRight: isMobile ? '1rem' : '2rem',
       boxShadow: transparent ? '0 2px 20px rgba(0,0,0,0.3)' : '0 2px 4px rgba(0,0,0,0.1)',
       direction: language === 'ar' ? 'rtl' : 'ltr',
-      position: 'relative',
+      position: transparent ? 'absolute' : 'fixed', // Absolute for transparent, fixed for other pages
+      top: '0',
+      left: '0',
+      right: '0',
+      zIndex: 1000,
       border: transparent ? '1px solid rgba(255,255,255,0.1)' : 'none',
       transition: 'all 0.3s ease'
     }}>
@@ -87,11 +95,41 @@ export default function Header({ transparent = false }) {
         margin: '0 auto', 
         display: 'flex', 
         justifyContent: 'space-between', 
-        alignItems: 'center' 
+        alignItems: 'center',
+        position: 'relative'
       }}>
-        {/* Logo with link to home */}
-        <Link href="/" style={{ textDecoration: 'none' }}>
-          <Logo size={isMobile ? 'small' : 'medium'} />
+        {/* Branding icon - positioned at the edge */}
+        <div style={{
+          position: 'absolute',
+          left: language === 'ar' ? 'auto' : '0',
+          right: language === 'ar' ? '0' : 'auto',
+          top: '50%',
+          transform: 'translateY(-50%)',
+          zIndex: 1
+        }}>
+          <BrandingIcon size={isMobile ? 'small' : 'medium'} />
+        </div>
+        
+        {/* Separator line */}
+        <div style={{
+          position: 'absolute',
+          left: language === 'ar' ? 'auto' : (isMobile ? '50px' : '60px'),
+          right: language === 'ar' ? (isMobile ? '50px' : '60px') : 'auto',
+          top: '50%',
+          transform: 'translateY(-50%)',
+          width: '2px',
+          height: '30px',
+          backgroundColor: 'rgba(196, 154, 108, 0.3)',
+          zIndex: 1
+        }} />
+        
+        {/* Logo - centered with margin for branding icon */}
+        <Link href="/" style={{ 
+          textDecoration: 'none',
+          marginLeft: language === 'ar' ? '0' : (isMobile ? '60px' : '70px'),
+          marginRight: language === 'ar' ? (isMobile ? '60px' : '70px') : '0'
+        }}>
+          <ImageLogo size={isMobile ? 'small' : 'medium'} />
         </Link>
         
         {/* Desktop Navigation */}
@@ -117,32 +155,26 @@ export default function Header({ transparent = false }) {
                   </Link>
                 </li>
                 <li>
-                  <a href="#about" 
-                    onClick={(e) => handleSmoothScroll(e, '#about')}
-                    style={{ 
-                      color: 'white', 
-                      textDecoration: 'none',
-                      transition: 'color 0.3s ease',
-                      cursor: 'pointer'
-                    }}
-                    onMouseOver={(e) => e.target.style.color = '#c49a6c'}
-                    onMouseOut={(e) => e.target.style.color = 'white'}>
+                  <Link href="/about" style={{ 
+                    color: 'white', 
+                    textDecoration: 'none',
+                    transition: 'color 0.3s ease'
+                  }}
+                  onMouseOver={(e) => e.target.style.color = '#c49a6c'}
+                  onMouseOut={(e) => e.target.style.color = 'white'}>
                     {t.about}
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#services" 
-                    onClick={(e) => handleSmoothScroll(e, '#services')}
-                    style={{ 
-                      color: 'white', 
-                      textDecoration: 'none',
-                      transition: 'color 0.3s ease',
-                      cursor: 'pointer'
-                    }}
-                    onMouseOver={(e) => e.target.style.color = '#c49a6c'}
-                    onMouseOut={(e) => e.target.style.color = 'white'}>
+                  <Link href="/services" style={{ 
+                    color: 'white', 
+                    textDecoration: 'none',
+                    transition: 'color 0.3s ease'
+                  }}
+                  onMouseOver={(e) => e.target.style.color = '#c49a6c'}
+                  onMouseOut={(e) => e.target.style.color = 'white'}>
                     {t.services}
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <Link href="/contact" style={{ 
@@ -252,12 +284,9 @@ export default function Header({ transparent = false }) {
                 </Link>
               </li>
               <li>
-                <a 
-                  href="#about" 
-                  onClick={(e) => {
-                    handleSmoothScroll(e, '#about');
-                    setIsMenuOpen(false);
-                  }}
+                <Link 
+                  href="/about" 
+                  onClick={() => setIsMenuOpen(false)}
                   style={{ 
                     color: 'white', 
                     textDecoration: 'none',
@@ -265,22 +294,18 @@ export default function Header({ transparent = false }) {
                     padding: '0.7rem 2rem',
                     borderBottom: '1px solid rgba(255,255,255,0.1)',
                     transition: 'background-color 0.3s ease',
-                    fontSize: '0.9rem',
-                    cursor: 'pointer'
+                    fontSize: '0.9rem'
                   }}
                   onMouseOver={(e) => e.target.style.backgroundColor = 'rgba(196, 154, 108, 0.2)'}
                   onMouseOut={(e) => e.target.style.backgroundColor = 'transparent'}
                 >
                   {t.about}
-                </a>
+                </Link>
               </li>
               <li>
-                <a 
-                  href="#services" 
-                  onClick={(e) => {
-                    handleSmoothScroll(e, '#services');
-                    setIsMenuOpen(false);
-                  }}
+                <Link 
+                  href="/services" 
+                  onClick={() => setIsMenuOpen(false)}
                   style={{ 
                     color: 'white', 
                     textDecoration: 'none',
@@ -288,14 +313,13 @@ export default function Header({ transparent = false }) {
                     padding: '0.7rem 2rem',
                     borderBottom: '1px solid rgba(255,255,255,0.1)',
                     transition: 'background-color 0.3s ease',
-                    fontSize: '0.9rem',
-                    cursor: 'pointer'
+                    fontSize: '0.9rem'
                   }}
                   onMouseOver={(e) => e.target.style.backgroundColor = 'rgba(196, 154, 108, 0.2)'}
                   onMouseOut={(e) => e.target.style.backgroundColor = 'transparent'}
                 >
                   {t.services}
-                </a>
+                </Link>
               </li>
               <li>
                 <Link 

@@ -1,10 +1,92 @@
 import { useLanguage } from '../contexts/LanguageContext'
 import { translations } from '../utils/translations'
 import Link from 'next/link'
+import { useState, useEffect } from 'react'
 
 export default function Hero({ isMobile, fonts }) {
   const { language } = useLanguage()
   const t = translations[language]
+  
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [isAnimating, setIsAnimating] = useState(false)
+  const [slideOffset, setSlideOffset] = useState(0)
+  
+  const slides = [
+    {
+      image: '/images/Riyadh_Tower_Ameen.png',
+      title: t.welcome,
+      subtitle: t.subtitle
+    },
+    {
+      image: '/images/Hero_office.png',
+      title: t.welcome,
+      subtitle: t.subtitle
+    },
+    {
+      image: '/images/Hero_office_nopeople.png',
+      title: t.welcome,
+      subtitle: t.subtitle
+    }
+  ]
+  
+  // Auto-slide functionality
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (!isAnimating) {
+        nextSlide()
+      }
+    }, 5000) // Change slide every 5 seconds
+    
+    return () => clearInterval(interval)
+  }, [currentSlide, isAnimating])
+  
+  const nextSlide = () => {
+    if (isAnimating) return
+    setIsAnimating(true)
+    setSlideOffset(prev => prev - 100) // Always move left
+    setTimeout(() => {
+      const nextIndex = (currentSlide + 1) % slides.length
+      setCurrentSlide(nextIndex)
+      setSlideOffset(0) // Reset offset after transition
+      setIsAnimating(false)
+    }, 800)
+  }
+  
+  const prevSlide = () => {
+    if (isAnimating) return
+    setIsAnimating(true)
+    setSlideOffset(prev => prev + 100) // Move right temporarily for prev
+    setTimeout(() => {
+      const prevIndex = (currentSlide - 1 + slides.length) % slides.length
+      setCurrentSlide(prevIndex)
+      setSlideOffset(0) // Reset offset after transition
+      setIsAnimating(false)
+    }, 800)
+  }
+  
+  const goToSlide = (index) => {
+    if (isAnimating || index === currentSlide) return
+    setIsAnimating(true)
+    // Always animate left regardless of target slide
+    setSlideOffset(-100)
+    setTimeout(() => {
+      setCurrentSlide(index)
+      setSlideOffset(0)
+      setIsAnimating(false)
+    }, 800)
+  }
+  
+  // Create extended slides array for seamless infinite loop
+  const getExtendedSlides = () => {
+    return [
+      slides[slides.length - 1], // Last slide at the beginning
+      ...slides,
+      slides[0] // First slide at the end
+    ]
+  }
+  
+  const extendedSlides = getExtendedSlides()
+  const extendedCurrentSlide = currentSlide + 1 // Offset by 1 because we added one slide at the beginning
   
   return (
     <section style={{ 
@@ -13,24 +95,41 @@ export default function Hero({ isMobile, fonts }) {
       left: 0,
       width: '100%',
       height: '100vh',
-      backgroundImage: 'url(/images/Riyadh_Tower_Ameen.png)',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center center',
-      backgroundRepeat: 'no-repeat',
-      backgroundAttachment: 'fixed',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
       textAlign: 'center',
       overflow: 'hidden',
       direction: language === 'ar' ? 'rtl' : 'ltr',
-      imageRendering: '-webkit-optimize-contrast',
-      WebkitFilter: 'contrast(1.2) brightness(0.85) saturate(1.1)',
-      filter: 'contrast(1.2) brightness(0.85) saturate(1.1)',
-      WebkitBackfaceVisibility: 'hidden',
-      backfaceVisibility: 'hidden',
       zIndex: 1
     }}>
+      {/* Background Images with sliding animation */}
+      {extendedSlides.map((slide, index) => (
+        <div
+          key={index}
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            backgroundImage: `url(${slide.image})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center center',
+            backgroundRepeat: 'no-repeat',
+            backgroundAttachment: 'fixed',
+            imageRendering: '-webkit-optimize-contrast',
+            WebkitFilter: 'contrast(1.2) brightness(0.85) saturate(1.1)',
+            filter: 'contrast(1.2) brightness(0.85) saturate(1.1)',
+            WebkitBackfaceVisibility: 'hidden',
+            backfaceVisibility: 'hidden',
+            transform: `translateX(${((index - extendedCurrentSlide) * 100) + slideOffset}%)`,
+            transition: isAnimating ? 'transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)' : 'none',
+            zIndex: index === extendedCurrentSlide ? 2 : 1
+          }}
+        />
+      ))}
+      
       {/* Enhanced multi-layer gradient overlay */}
       <div style={{
         position: 'absolute',
@@ -45,7 +144,7 @@ export default function Hero({ isMobile, fonts }) {
           rgba(0, 0, 0, 0.3) 70%,
           rgba(12, 75, 59, 0.7) 100%
         )`,
-        zIndex: 1
+        zIndex: 5
       }} />
       
       {/* Cinematic vignette effect */}
@@ -56,8 +155,122 @@ export default function Hero({ isMobile, fonts }) {
         right: 0,
         bottom: 0,
         background: 'radial-gradient(ellipse at center, transparent 0%, rgba(34, 98, 73, 0.25) 100%)',
-        zIndex: 2
+        zIndex: 6
       }} />
+      
+      {/* Navigation Buttons */}
+      <button
+        onClick={prevSlide}
+        disabled={isAnimating}
+        style={{
+          position: 'absolute',
+          left: isMobile ? '10px' : '30px',
+          top: '50%',
+          transform: 'translateY(-50%)',
+          background: 'rgba(196, 154, 108, 0.9)',
+          border: 'none',
+          borderRadius: '50%',
+          width: isMobile ? '40px' : '50px',
+          height: isMobile ? '40px' : '50px',
+          color: 'white',
+          fontSize: isMobile ? '18px' : '24px',
+          cursor: isAnimating ? 'not-allowed' : 'pointer',
+          zIndex: 15,
+          transition: 'all 0.3s ease',
+          opacity: isAnimating ? 0.5 : 1,
+          backdropFilter: 'blur(10px)',
+          WebkitBackdropFilter: 'blur(10px)',
+          boxShadow: '0 4px 15px rgba(0,0,0,0.3)'
+        }}
+        onMouseOver={(e) => {
+          if (!isAnimating) {
+            e.target.style.background = 'rgba(196, 154, 108, 1)'
+            e.target.style.transform = 'translateY(-50%) scale(1.1)'
+          }
+        }}
+        onMouseOut={(e) => {
+          e.target.style.background = 'rgba(196, 154, 108, 0.9)'
+          e.target.style.transform = 'translateY(-50%) scale(1)'
+        }}
+      >
+        ‹
+      </button>
+      
+      <button
+        onClick={nextSlide}
+        disabled={isAnimating}
+        style={{
+          position: 'absolute',
+          right: isMobile ? '10px' : '30px',
+          top: '50%',
+          transform: 'translateY(-50%)',
+          background: 'rgba(196, 154, 108, 0.9)',
+          border: 'none',
+          borderRadius: '50%',
+          width: isMobile ? '40px' : '50px',
+          height: isMobile ? '40px' : '50px',
+          color: 'white',
+          fontSize: isMobile ? '18px' : '24px',
+          cursor: isAnimating ? 'not-allowed' : 'pointer',
+          zIndex: 15,
+          transition: 'all 0.3s ease',
+          opacity: isAnimating ? 0.5 : 1,
+          backdropFilter: 'blur(10px)',
+          WebkitBackdropFilter: 'blur(10px)',
+          boxShadow: '0 4px 15px rgba(0,0,0,0.3)'
+        }}
+        onMouseOver={(e) => {
+          if (!isAnimating) {
+            e.target.style.background = 'rgba(196, 154, 108, 1)'
+            e.target.style.transform = 'translateY(-50%) scale(1.1)'
+          }
+        }}
+        onMouseOut={(e) => {
+          e.target.style.background = 'rgba(196, 154, 108, 0.9)'
+          e.target.style.transform = 'translateY(-50%) scale(1)'
+        }}
+      >
+        ›
+      </button>
+      
+      {/* Slide Indicators */}
+      <div style={{
+        position: 'absolute',
+        bottom: isMobile ? '20px' : '30px',
+        left: '50%',
+        transform: 'translateX(-50%)',
+        display: 'flex',
+        gap: '10px',
+        zIndex: 15
+      }}>
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => goToSlide(index)}
+            disabled={isAnimating}
+            style={{
+              width: isMobile ? '8px' : '10px',
+              height: isMobile ? '8px' : '10px',
+              borderRadius: '50%',
+              border: 'none',
+              background: index === currentSlide ? '#c49a6c' : 'rgba(255, 255, 255, 0.5)',
+              cursor: isAnimating ? 'not-allowed' : 'pointer',
+              transition: 'all 0.3s ease',
+              opacity: isAnimating ? 0.5 : 1
+            }}
+            onMouseOver={(e) => {
+              if (!isAnimating && index !== currentSlide) {
+                e.target.style.background = 'rgba(255, 255, 255, 0.8)'
+              }
+            }}
+            onMouseOut={(e) => {
+              if (index !== currentSlide) {
+                e.target.style.background = 'rgba(255, 255, 255, 0.5)'
+              }
+            }}
+          />
+        ))}
+      </div>
       
       {/* Animated floating elements */}
       <div style={{
@@ -69,7 +282,7 @@ export default function Hero({ isMobile, fonts }) {
         background: 'linear-gradient(to bottom, transparent, #c49a6c, transparent)',
         opacity: 0.6,
         animation: 'float 3s ease-in-out infinite',
-        zIndex: 1
+        zIndex: 5
       }} />
       <div style={{
         position: 'absolute',
@@ -80,7 +293,7 @@ export default function Hero({ isMobile, fonts }) {
         background: 'linear-gradient(to bottom, transparent, #c49a6c, transparent)',
         opacity: 0.4,
         animation: 'float 4s ease-in-out infinite reverse',
-        zIndex: 1
+        zIndex: 5
       }} />
       
       {/* Content */}
@@ -104,7 +317,7 @@ export default function Hero({ isMobile, fonts }) {
           letterSpacing: '-0.02em',
           position: 'relative'
         }}>
-          {t.welcome}
+          {slides[currentSlide].title}
         </h2>
         <p style={{ 
           color: '#f8f9fa', 
@@ -117,13 +330,13 @@ export default function Hero({ isMobile, fonts }) {
           fontWeight: '300',
           opacity: '0.95'
         }}>
-          {t.subtitle}
+          {slides[currentSlide].subtitle}
         </p>
         
         {/* Enhanced call to action button with pulse effect */}
         <Link href="/contact" style={{ textDecoration: 'none' }}>
           <button style={{
-            backgroundColor: '#c49a6c',
+            backgroundColor: '#3b3b3b',
             color: 'white',
             border: '2px solid transparent',
             padding: isMobile ? '1rem 2rem' : '1.2rem 2.5rem',
@@ -132,7 +345,7 @@ export default function Hero({ isMobile, fonts }) {
             cursor: 'pointer',
             fontWeight: language === 'ar' ? '400' : 'bold',
             transition: 'all 0.3s ease',
-            boxShadow: '0 6px 20px rgba(196, 154, 108, 0.4), 0 0 0 0 rgba(196, 154, 108, 0.7)',
+            boxShadow: '0 6px 20px rgba(59, 59, 59, 0.4), 0 0 0 0 rgba(59, 59, 59, 0.7)',
             textTransform: 'uppercase',
             letterSpacing: '0.5px',
             position: 'relative',
@@ -140,18 +353,18 @@ export default function Hero({ isMobile, fonts }) {
             animation: 'pulse 2s infinite'
           }}
           onMouseOver={(e) => {
-            e.target.style.backgroundColor = 'transparent'
-            e.target.style.borderColor = '#c49a6c'
-            e.target.style.color = '#c49a6c'
+            e.target.style.backgroundColor = '#5a5a5a' // Lighter shade of gray instead of transparent
+            e.target.style.borderColor = '#3b3b3b'
+            e.target.style.color = 'white' // Keeping text white for better readability
             e.target.style.transform = 'translateY(-3px)'
-            e.target.style.boxShadow = '0 8px 25px rgba(196, 154, 108, 0.6)'
+            e.target.style.boxShadow = '0 8px 25px rgba(59, 59, 59, 0.6)'
           }}
           onMouseOut={(e) => {
-            e.target.style.backgroundColor = '#c49a6c'
+            e.target.style.backgroundColor = '#3b3b3b'
             e.target.style.borderColor = 'transparent'
             e.target.style.color = 'white'
             e.target.style.transform = 'translateY(0)'
-            e.target.style.boxShadow = '0 6px 20px rgba(196, 154, 108, 0.4)'
+            e.target.style.boxShadow = '0 6px 20px rgba(59, 59, 59, 0.4)'
           }}>
             {language === 'ar' ? 'اتصل بنا' : 'Contact Us'}
           </button>
@@ -182,13 +395,13 @@ export default function Hero({ isMobile, fonts }) {
         
         @keyframes pulse {
           0% {
-            box-shadow: 0 6px 20px rgba(196, 154, 108, 0.4), 0 0 0 0 rgba(196, 154, 108, 0.7);
+            box-shadow: 0 6px 20px rgba(59, 59, 59, 0.4), 0 0 0 0 rgba(59, 59, 59, 0.7);
           }
           70% {
-            box-shadow: 0 6px 20px rgba(196, 154, 108, 0.4), 0 0 0 10px rgba(196, 154, 108, 0);
+            box-shadow: 0 6px 20px rgba(59, 59, 59, 0.4), 0 0 0 10px rgba(59, 59, 59, 0);
           }
           100% {
-            box-shadow: 0 6px 20px rgba(196, 154, 108, 0.4), 0 0 0 0 rgba(196, 154, 108, 0);
+            box-shadow: 0 6px 20px rgba(59, 59, 59, 0.4), 0 0 0 0 rgba(59, 59, 59, 0);
           }
         }
         

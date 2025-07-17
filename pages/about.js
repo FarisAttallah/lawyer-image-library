@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import ContactInfo from '../components/ContactInfo'
-import ContactForm from '../components/ContactForm'
-import LocationMap from '../components/LocationMap'
+import About from '../components/About'
+import StatsSection from '../components/StatsSection'
+import JusticeSection from '../components/JusticeSection'
 import { useLanguage } from '../contexts/LanguageContext'
 import { translations } from '../utils/translations'
 import { useResponsiveFonts } from '../hooks/useResponsiveFonts'
 
-export default function Contact() {
+export default function AboutPage() {
   const { language } = useLanguage()
   const t = translations[language]
   const [isMobile, setIsMobile] = useState(false)
@@ -57,7 +57,7 @@ export default function Contact() {
           color: 'white',
           padding: isMobile ? '3rem 1rem' : '5rem 2rem',
           textAlign: 'center',
-          backgroundImage: 'url(/images/Contact_Us.jpg)',
+          backgroundImage: 'url(/images/about-hero.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center center',
           backgroundRepeat: 'no-repeat',
@@ -91,10 +91,10 @@ export default function Contact() {
             <h1 style={{
               fontSize: isMobile ? '2rem' : '3.5rem',
               marginBottom: '1.5rem',
-              fontWeight: 'bold',
+              fontWeight: language === 'ar' ? '400' : 'bold',
               textShadow: '3px 3px 6px rgba(0,0,0,0.8)'
             }}>
-              {t.contactUsTitle || (language === 'ar' ? 'اتصل بنا' : 'Contact Us')}
+              {language === 'ar' ? 'عن مكتبنا' : 'About Our Firm'}
             </h1>
             <p style={{
               fontSize: isMobile ? '1rem' : '1.4rem',
@@ -105,57 +105,10 @@ export default function Contact() {
               lineHeight: '1.6'
             }}>
               {language === 'ar' 
-                ? 'نحن هنا لمساعدتك في جميع احتياجاتك القانونية. استشارة مهنية، حلول قانونية موثوقة'
-                : 'We are here to help you with all your legal needs. Professional consultation, trusted legal solutions'
+                ? 'ملتزمون بالعدالة والتميز ونجاح العملاء في تحقيق حقوقهم القانونية'
+                : 'Dedicated to Justice, Excellence, and Client Success in achieving their legal rights'
               }
             </p>
-            
-            {/* Legal Consultation button that scrolls to the form */}
-            <div style={{
-              marginTop: '2rem',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center'
-            }}>
-              <button
-                onClick={() => {
-                  document.getElementById('contactForm').scrollIntoView({ 
-                    behavior: 'smooth',
-                    block: 'start'
-                  })
-                }}
-                style={{
-                  backgroundColor: '#3b3b3b',
-                  padding: isMobile ? '1rem 1.5rem' : '1.2rem 2rem',
-                  borderRadius: '8px',
-                  border: '2px solid transparent',
-                  minWidth: isMobile ? '200px' : 'auto',
-                  textDecoration: 'none',
-                  cursor: 'pointer',
-                  transition: 'all 0.3s ease',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  gap: '0.5rem',
-                  boxShadow: '0 6px 20px rgba(59, 59, 59, 0.4)',
-                  color: 'white',
-                  fontSize: isMobile ? '1rem' : '1.2rem',
-                  fontWeight: 'bold'
-                }}
-                onMouseOver={(e) => {
-                  e.target.style.backgroundColor = '#5a5a5a'
-                  e.target.style.transform = 'translateY(-3px)'
-                  e.target.style.boxShadow = '0 8px 25px rgba(59, 59, 59, 0.6)'
-                }}
-                onMouseOut={(e) => {
-                  e.target.style.backgroundColor = '#3b3b3b'
-                  e.target.style.transform = 'translateY(0)'
-                  e.target.style.boxShadow = '0 6px 20px rgba(59, 59, 59, 0.4)'
-                }}
-              >
-                ⚖️ {language === 'ar' ? 'استشارة قانونية' : 'Legal Consultation'}
-              </button>
-            </div>
           </div>
         </section>
 
@@ -165,21 +118,26 @@ export default function Contact() {
           margin: '0 auto', 
           padding: isMobile ? '2rem 1rem' : '4rem 2rem 3rem 2rem'
         }}>
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: isMobile ? '1fr' : (language === 'ar' ? '1fr 1fr' : '1fr 1fr'),
-            gap: isMobile ? '2rem' : '3rem',
+          {/* About Section */}
+          <section id="about" style={{ 
+            marginBottom: isMobile ? '3rem' : '4rem'
+          }}>
+            <About isMobile={isMobile} fonts={{}} />
+          </section>
+
+          {/* Stats Section */}
+          <section style={{ 
+            marginBottom: isMobile ? '3rem' : '4rem'
+          }}>
+            <StatsSection isMobile={isMobile} fonts={{}} />
+          </section>
+          
+          {/* Justice Section */}
+          <section style={{ 
             marginBottom: isMobile ? '2rem' : '3rem'
           }}>
-            {/* Contact Information */}
-            <ContactInfo />
-            
-            {/* Contact Form */}
-            <ContactForm />
-          </div>
-          
-          {/* Location Map */}
-          <LocationMap />
+            <JusticeSection isMobile={isMobile} fonts={{}} />
+          </section>
         </div>
         </div>
       </main>

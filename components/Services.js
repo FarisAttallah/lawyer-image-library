@@ -14,17 +14,17 @@ export default function Services({ isMobile, fonts }) {
     {
       title: t.litigation,
       description: t.litigationDesc,
-      color: '#226249'
+      color: '#c49a6c'
     },
     {
       title: t.commercialLaw,
       description: t.commercialLawDesc,
-      color: '#a65c32'
+      color: '#c49a6c'
     },
     {
       title: t.laborLaw,
       description: t.laborLawDesc,
-      color: '#0c4b3b'
+      color: '#c49a6c'
     },
     {
       title: t.contracts,
@@ -34,17 +34,17 @@ export default function Services({ isMobile, fonts }) {
     {
       title: t.realEstate,
       description: t.realEstateDesc,
-      color: '#226249'
+      color: '#c49a6c'
     },
     {
       title: t.arbitration,
       description: t.arbitrationDesc,
-      color: '#a65c32'
+      color: '#c49a6c'
     },
     {
       title: t.compliance,
       description: t.complianceDesc,
-      color: '#0c4b3b'
+      color: '#c49a6c'
     }
   ]
   
@@ -52,7 +52,7 @@ export default function Services({ isMobile, fonts }) {
     <div style={{ 
       width: '100%',
       height: '100%',
-      padding: isMobile ? '2rem 1rem' : '3rem 2rem',
+      padding: isMobile ? '2rem 2rem' : '3rem 4rem',
       background: 'linear-gradient(135deg, #0c4b3b 0%, #226249 100%)',
       direction: language === 'ar' ? 'rtl' : 'ltr',
       position: 'relative',
@@ -176,24 +176,26 @@ export default function Services({ isMobile, fonts }) {
               
               {/* Service icon based on index */}
               <div style={{
-                fontSize: '2.5rem',
-                marginBottom: '1rem',
-                textAlign: 'center'
+                fontSize: isMobile ? '2rem' : '2.5rem',
+                marginBottom: isMobile ? '0.5rem' : '1rem',
+                textAlign: 'center',
+                color: '#3b3b3b',
+                fontWeight: 'bold'
               }}>
-                {index === 0 && '💼'} {/* Legal Consultation */}
-                {index === 1 && '⚖️'} {/* Litigation */}
-                {index === 2 && '🏢'} {/* Commercial Law */}
-                {index === 3 && '👥'} {/* Labor Law */}
-                {index === 4 && '📄'} {/* Contracts */}
-                {index === 5 && '🏘️'} {/* Real Estate */}
-                {index === 6 && '🤝'} {/* Arbitration */}
-                {index === 7 && '✅'} {/* Compliance */}
+                {index === 0 && '◉'} {/* Legal Consultation */}
+                {index === 1 && '⚖'} {/* Litigation */}
+                {index === 2 && '▣'} {/* Commercial Law */}
+                {index === 3 && '◈'} {/* Labor Law */}
+                {index === 4 && '⬒'} {/* Contracts */}
+                {index === 5 && '⬢'} {/* Real Estate */}
+                {index === 6 && '◊'} {/* Arbitration */}
+                {index === 7 && '✓'} {/* Compliance */}
               </div>
               
               <h3 style={{ 
                 color: service.color, 
-                marginBottom: '1rem',
-                fontSize: fonts.serviceTitle,
+                marginBottom: isMobile ? '0.5rem' : '1rem',
+                fontSize: isMobile ? '1rem' : '1.2rem',
                 fontWeight: language === 'ar' ? '400' : 'bold',
                 textAlign: 'center',
                 position: 'relative',
@@ -204,20 +206,24 @@ export default function Services({ isMobile, fonts }) {
               
               {/* Decorative line under title */}
               <div style={{
-                width: '40px',
-                height: '3px',
+                width: '30px',
+                height: '2px',
                 background: `linear-gradient(90deg, ${service.color}, transparent)`,
-                margin: '0 auto 1.5rem',
+                margin: isMobile ? '0 auto 0.5rem' : '0 auto 1rem',
                 borderRadius: '2px'
               }}></div>
               
               <p style={{ 
                 color: '#555',
-                lineHeight: '1.7',
-                fontSize: fonts.serviceDescription,
+                lineHeight: '1.5',
+                fontSize: isMobile ? '0.8rem' : '0.9rem',
                 textAlign: 'center',
                 position: 'relative',
-                zIndex: 2
+                zIndex: 2,
+                overflow: 'hidden',
+                display: '-webkit-box',
+                WebkitLineClamp: isMobile ? 3 : 4,
+                WebkitBoxOrient: 'vertical'
               }}>
                 {service.description}
               </p>

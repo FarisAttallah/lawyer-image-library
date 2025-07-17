@@ -192,40 +192,6 @@ export default function JusticeSection({ isMobile, fonts }) {
                 </p>
               </div>
             </div>
-            
-            {/* Call to Action */}
-            <div style={{ position: 'relative' }}>
-              <button style={{
-                backgroundColor: '#c49a6c',
-                color: 'white',
-                border: 'none',
-                padding: isMobile ? '1rem 1.5rem' : '1.2rem 2.5rem',
-                fontSize: fonts.button,
-                borderRadius: '8px',
-                cursor: 'pointer',
-                fontWeight: 'bold',
-                transition: 'all 0.3s ease',
-                boxShadow: '0 4px 12px rgba(196, 154, 108, 0.3)',
-                position: 'relative',
-                overflow: 'hidden'
-              }}
-              onMouseOver={(e) => {
-                e.target.style.backgroundColor = '#a65c32'
-                e.target.style.transform = 'translateY(-2px)'
-                e.target.style.boxShadow = '0 6px 20px rgba(196, 154, 108, 0.4)'
-              }}
-              onMouseOut={(e) => {
-                e.target.style.backgroundColor = '#c49a6c'
-                e.target.style.transform = 'translateY(0)'
-                e.target.style.boxShadow = '0 4px 12px rgba(196, 154, 108, 0.3)'
-              }}>
-                {/* Button icon */}
-                <span style={{ marginRight: language === 'ar' ? '0' : '0.5rem', marginLeft: language === 'ar' ? '0.5rem' : '0' }}>
-                  📞
-                </span>
-                {language === 'ar' ? 'احجز استشارتك القانونية' : 'Book Your Legal Consultation'}
-              </button>
-            </div>
           </div>
           
           {/* Image Content */}
