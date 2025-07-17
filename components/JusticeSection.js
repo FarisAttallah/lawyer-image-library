@@ -257,7 +257,7 @@ export default function JusticeSection({ isMobile, fonts }) {
               }}></div>
               
               <img 
-                src="/images/judge_hammer.jpg" 
+                src="/images/Judge_hammer.jpg" 
                 alt={language === 'ar' ? 'صورة مطرقة القاضي - رمز العدالة' : 'Judge Hammer - Symbol of Justice'}
                 style={{
                   width: '100%',
