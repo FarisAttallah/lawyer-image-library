@@ -112,6 +112,7 @@ export default function Admin() {
     return (
       <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #0c4b3b 0%, #226249 100%)' }}>
         <Header transparent={false} />
+        <div style={{ marginTop: '4rem' }} />
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '80vh' }}>
           <form onSubmit={handleSetup} style={{
             background: 'white',
