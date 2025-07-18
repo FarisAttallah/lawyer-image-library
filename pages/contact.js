@@ -86,13 +86,15 @@ export default function Contact() {
             zIndex: 2,
             maxWidth: '1200px', 
             margin: '0 auto',
-            padding: isMobile ? '0 1rem' : '0'
+            padding: isMobile ? '0 1rem' : '0',
+            animation: 'fadeInUp 1.2s ease-out'
           }}>
             <h1 style={{
               fontSize: isMobile ? '2rem' : '3.5rem',
               marginBottom: '1.5rem',
               fontWeight: 'bold',
-              textShadow: '3px 3px 6px rgba(0,0,0,0.8)'
+              textShadow: '3px 3px 6px rgba(0,0,0,0.8)',
+              animation: 'fadeInUp 1.2s ease-out'
             }}>
               {t.contactUsTitle || (language === 'ar' ? 'اتصل بنا' : 'Contact Us')}
             </h1>
@@ -102,8 +104,22 @@ export default function Contact() {
               maxWidth: '700px',
               margin: '0 auto',
               textShadow: '2px 2px 4px rgba(0,0,0,0.8)',
-              lineHeight: '1.6'
+              lineHeight: '1.6',
+              animation: 'fadeInUp 1.2s ease-out'
             }}>
+        {/* FadeInUp Animation CSS */}
+        <style>{`
+          @keyframes fadeInUp {
+            from {
+              opacity: 0;
+              transform: translateY(30px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+        `}</style>
               {language === 'ar' 
                 ? 'نحن هنا لمساعدتك في جميع احتياجاتك القانونية. استشارة مهنية، حلول قانونية موثوقة'
                 : 'We are here to help you with all your legal needs. Professional consultation, trusted legal solutions'

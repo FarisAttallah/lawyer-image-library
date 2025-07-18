@@ -86,13 +86,15 @@ export default function AboutPage() {
             zIndex: 2,
             maxWidth: '1200px', 
             margin: '0 auto',
-            padding: isMobile ? '0 1rem' : '0'
+            padding: isMobile ? '0 1rem' : '0',
+            animation: 'fadeInUp 1.2s ease-out'
           }}>
             <h1 style={{
               fontSize: isMobile ? '2rem' : '3.5rem',
               marginBottom: '1.5rem',
               fontWeight: language === 'ar' ? '400' : 'bold',
-              textShadow: '3px 3px 6px rgba(0,0,0,0.8)'
+              textShadow: '3px 3px 6px rgba(0,0,0,0.8)',
+              animation: 'fadeInUp 1.2s ease-out'
             }}>
               {language === 'ar' ? 'عن مكتبنا' : 'About Our Firm'}
             </h1>
@@ -102,8 +104,22 @@ export default function AboutPage() {
               maxWidth: '700px',
               margin: '0 auto',
               textShadow: '2px 2px 4px rgba(0,0,0,0.8)',
-              lineHeight: '1.6'
+              lineHeight: '1.6',
+              animation: 'fadeInUp 1.2s ease-out'
             }}>
+        {/* FadeInUp Animation CSS */}
+        <style>{`
+          @keyframes fadeInUp {
+            from {
+              opacity: 0;
+              transform: translateY(30px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+        `}</style>
               {language === 'ar' 
                 ? 'ملتزمون بالعدالة والتميز ونجاح العملاء في تحقيق حقوقهم القانونية'
                 : 'Dedicated to Justice, Excellence, and Client Success in achieving their legal rights'
@@ -114,7 +130,7 @@ export default function AboutPage() {
 
         {/* Main Content */}
         <div style={{ 
-          maxWidth: '1200px', 
+          maxWidth: '100%', 
           margin: '0 auto', 
           padding: isMobile ? '2rem 1rem' : '4rem 2rem 3rem 2rem'
         }}>

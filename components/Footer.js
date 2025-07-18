@@ -1,10 +1,20 @@
 import { useLanguage } from '../contexts/LanguageContext'
 import { translations } from '../utils/translations'
+import BrandingIcon from './BrandingIcon'
 import ImageLogo from './ImageLogo'
+import { useState, useEffect } from 'react'
 
 export default function Footer() {
   const { language } = useLanguage()
   const t = translations[language]
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkIsMobile = () => setIsMobile(window.innerWidth <= 768)
+    checkIsMobile()
+    window.addEventListener('resize', checkIsMobile)
+    return () => window.removeEventListener('resize', checkIsMobile)
+  }, [])
   
   return (
     <footer style={{ 
@@ -29,7 +39,20 @@ export default function Footer() {
               gap: '1rem',
               marginBottom: '1rem'
             }}>
-              <ImageLogo size="medium" />
+              <BrandingIcon size="large" />
+              {/* Separator line */}
+            <div style={{
+              position: 'absolute',
+              left: language === 'ar' ? 'auto' : (isMobile ? '50px' : '60px'),
+              right: language === 'ar' ? (isMobile ? '50px' : '60px') : 'auto',
+              top: '50%',
+              transform: 'translateY(-50%)',
+              width: '2px',
+              height: '30px',
+              backgroundColor: 'rgba(196, 154, 108, 0.3)',
+              zIndex: 1
+            }} />
+              <ImageLogo size="large" />
               <h3 style={{ 
                 color: '#c49a6c', 
                 fontSize: '1.4rem',

@@ -36,15 +36,7 @@ export default function Home() {
         <LawyerProfile isMobile={isMobile} fonts={fonts} />
       </section>
 
-      {/* Services Section */}
-      <section id="services" style={{ 
-        minHeight: '100vh',
-        display: 'flex',
-        alignItems: 'center',
-        padding: '4rem 0'
-      }}>
-        <Services isMobile={isMobile} fonts={fonts} />
-      </section>
+      
 
       {/* Call to Action Section */}
       <section style={{
