@@ -177,6 +177,17 @@ export default function Header({ transparent = false }) {
                   </Link>
                 </li>
                 <li>
+                  <Link href="/careers" style={{ 
+                    color: 'white', 
+                    textDecoration: 'none',
+                    transition: 'color 0.3s ease'
+                  }}
+                  onMouseOver={(e) => e.target.style.color = '#c49a6c'}
+                  onMouseOut={(e) => e.target.style.color = 'white'}>
+                    {language === 'ar' ? 'الوظائف' : 'Careers'}
+                  </Link>
+                </li>
+                <li>
                   <Link href="/contact" style={{ 
                     color: 'white', 
                     textDecoration: 'none',
