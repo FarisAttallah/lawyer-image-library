@@ -336,16 +336,17 @@ export default function Hero({ isMobile, fonts }) {
         {/* Enhanced call to action button with pulse effect */}
         <Link href="/contact" style={{ textDecoration: 'none' }}>
           <button style={{
-            backgroundColor: '#3b3b3b',
+            backgroundColor: '#c49a6c',
             color: 'white',
             border: '2px solid transparent',
             padding: isMobile ? '1rem 2rem' : '1.2rem 2.5rem',
             fontSize: fonts.heroButton,
             borderRadius: '8px',
             cursor: 'pointer',
-            fontWeight: language === 'ar' ? '400' : 'bold',
+            fontWeight: 'bold',
+            fontFamily: 'BeINBlack, Roboto, Arial, sans-serif',
             transition: 'all 0.3s ease',
-            boxShadow: '0 6px 20px rgba(59, 59, 59, 0.4), 0 0 0 0 rgba(59, 59, 59, 0.7)',
+            boxShadow: '0 6px 20px rgba(196, 154, 108, 0.4), 0 0 0 0 rgba(196, 154, 108, 0.7)',
             textTransform: 'uppercase',
             letterSpacing: '0.5px',
             position: 'relative',
@@ -353,18 +354,18 @@ export default function Hero({ isMobile, fonts }) {
             animation: 'pulse 2s infinite'
           }}
           onMouseOver={(e) => {
-            e.target.style.backgroundColor = '#5a5a5a' // Lighter shade of gray instead of transparent
-            e.target.style.borderColor = '#3b3b3b'
-            e.target.style.color = 'white' // Keeping text white for better readability
+            e.target.style.backgroundColor = '#a65c32'
+            e.target.style.borderColor = '#c49a6c'
+            e.target.style.color = 'white'
             e.target.style.transform = 'translateY(-3px)'
-            e.target.style.boxShadow = '0 8px 25px rgba(59, 59, 59, 0.6)'
+            e.target.style.boxShadow = '0 8px 25px rgba(196, 154, 108, 0.6)'
           }}
           onMouseOut={(e) => {
-            e.target.style.backgroundColor = '#3b3b3b'
+            e.target.style.backgroundColor = '#c49a6c'
             e.target.style.borderColor = 'transparent'
             e.target.style.color = 'white'
             e.target.style.transform = 'translateY(0)'
-            e.target.style.boxShadow = '0 6px 20px rgba(59, 59, 59, 0.4)'
+            e.target.style.boxShadow = '0 6px 20px rgba(196, 154, 108, 0.4)'
           }}>
             {language === 'ar' ? 'اتصل بنا' : 'Contact Us'}
           </button>
@@ -395,13 +396,13 @@ export default function Hero({ isMobile, fonts }) {
         
         @keyframes pulse {
           0% {
-            box-shadow: 0 6px 20px rgba(59, 59, 59, 0.4), 0 0 0 0 rgba(59, 59, 59, 0.7);
+            box-shadow: 0 6px 20px rgba(196, 154, 108, 0.4), 0 0 0 0 rgba(196, 154, 108, 0.7);
           }
           70% {
-            box-shadow: 0 6px 20px rgba(59, 59, 59, 0.4), 0 0 0 10px rgba(59, 59, 59, 0);
+            box-shadow: 0 6px 20px rgba(196, 154, 108, 0.4), 0 0 0 10px rgba(196, 154, 108, 0);
           }
           100% {
-            box-shadow: 0 6px 20px rgba(59, 59, 59, 0.4), 0 0 0 0 rgba(59, 59, 59, 0);
+            box-shadow: 0 6px 20px rgba(196, 154, 108, 0.4), 0 0 0 0 rgba(196, 154, 108, 0);
           }
         }
         

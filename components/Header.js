@@ -98,36 +98,9 @@ export default function Header({ transparent = false }) {
         alignItems: 'center',
         position: 'relative'
       }}>
-        {/* Branding icon - positioned at the edge */}
-        <div style={{
-          position: 'absolute',
-          left: language === 'ar' ? 'auto' : '0',
-          right: language === 'ar' ? '0' : 'auto',
-          top: '50%',
-          transform: 'translateY(-50%)',
-          zIndex: 1
-        }}>
-          <BrandingIcon size={isMobile ? 'small' : 'medium'} />
-        </div>
-        
-        {/* Separator line */}
-        <div style={{
-          position: 'absolute',
-          left: language === 'ar' ? 'auto' : (isMobile ? '50px' : '60px'),
-          right: language === 'ar' ? (isMobile ? '50px' : '60px') : 'auto',
-          top: '50%',
-          transform: 'translateY(-50%)',
-          width: '2px',
-          height: '30px',
-          backgroundColor: 'rgba(196, 154, 108, 0.3)',
-          zIndex: 1
-        }} />
-        
-        {/* Logo - centered with margin for branding icon */}
+        {/* Logo - centered */}
         <Link href="/" style={{ 
-          textDecoration: 'none',
-          marginLeft: language === 'ar' ? '0' : (isMobile ? '60px' : '70px'),
-          marginRight: language === 'ar' ? (isMobile ? '60px' : '70px') : '0'
+          textDecoration: 'none'
         }}>
           <ImageLogo size={isMobile ? 'small' : 'medium'} />
         </Link>
@@ -201,14 +174,39 @@ export default function Header({ transparent = false }) {
               </ul>
             </nav>
             
-            <LanguageToggle />
+            {/* For Arabic, icon is to the right of the button; for English, icon is to the left */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12rem', flexDirection: 'row', direction: 'ltr' }}>
+              {language === 'ar' ? (
+                <>
+                  <BrandingIcon size="large" />
+                  <LanguageToggle />
+                </>
+              ) : (
+                <>
+                  <LanguageToggle />
+                  <BrandingIcon size="large" />
+                </>
+              )}
+            </div>
           </div>
         )}
         
         {/* Mobile Menu Button and Language Toggle */}
         {isMobile && (
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-            <LanguageToggle />
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12rem' }}>
+              {language === 'ar' ? (
+                <>
+                  <BrandingIcon size="large" />
+                  <LanguageToggle />
+                </>
+              ) : (
+                <>
+                  <LanguageToggle />
+                  <BrandingIcon size="large" />
+                </>
+              )}
+            </div>
             
             {/* Hamburger Menu Button */}
             <button 
