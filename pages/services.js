@@ -135,22 +135,17 @@ export default function ServicesPage() {
           margin: '0 auto', 
           padding: isMobile ? '2rem 0' : '4rem 0 3rem 0'
         }}>
-          {/* Services Section */}
-          <section id="services" style={{ 
-            marginBottom: isMobile ? '3rem' : '4rem'
-          }}>
-            <Services isMobile={isMobile} fonts={{}} />
-          </section>
 
           {/* Additional Services Information */}
-          <section style={{
+            <section style={{
             padding: '4rem 0',
             background: '#f8f9fa',
-            direction: language === 'ar' ? 'rtl' : 'ltr'
+            direction: language === 'ar' ? 'rtl' : 'ltr',
+            marginBottom: isMobile ? '1rem' : '8rem'
           }}>
             <div style={{
               maxWidth: '1200px',
-              margin: '0 auto',
+              margin: '5rem auto',
               padding: '0 2rem'
             }}>
               <div style={{
@@ -234,6 +229,14 @@ export default function ServicesPage() {
               </div>
             </div>
           </section>
+          {/* Services Section */}
+          <section id="services" style={{ 
+            marginBottom: isMobile ? '3rem' : '15rem'
+          }}>
+            <Services isMobile={isMobile} fonts={{}} />
+          </section>
+
+          
         </div>
         </div>
       </main>
