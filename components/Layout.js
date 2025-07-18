@@ -15,8 +15,7 @@ export default function Layout({ children }) {
       fontSize: '0.9rem',
       scrollBehavior: 'smooth'
     }}>
-      {/* Always show loader for testing */}
-      <BrandingLoader />
+      
       {/* Header is now fixed positioned in the Header component itself */}
       <Header transparent={true} />
       <main style={{ position: 'relative', zIndex: 1 }}>

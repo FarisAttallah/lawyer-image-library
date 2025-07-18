@@ -1,22 +1,29 @@
+import { useEffect, useState, useRef } from 'react';
+import BrandingLoader from '../components/BrandingLoader';
 
-
-import { useEffect, useState } from 'react';
-
-
-
-
-export default function BrandingLoader() {
+const YourComponent = () => {
   const [mounted, setMounted] = useState(false);
   const [showLoader, setShowLoader] = useState(false);
   const [phase, setPhase] = useState(0);
+  const [imagesLoaded, setImagesLoaded] = useState({
+    bottom: false,
+    middle: false,
+    top: false
+  });
+  const [animationDone, setAnimationDone] = useState(false);
+  const hideTimeout = useRef(null);
 
   useEffect(() => {
     setMounted(true);
     if (typeof window !== 'undefined') {
+      document.body.classList.remove('__loader-visible');
       const cache = localStorage.getItem('brandingLoaderTimestamp');
       const now = Date.now();
       if (!cache || now - Number(cache) > 3600000) { // 1 hour = 3600000 ms
         setShowLoader(true);
+      } else {
+        // If loader is not needed, show body immediately
+        document.body.classList.add('__loader-visible');
       }
     }
   }, []);
@@ -29,14 +36,25 @@ export default function BrandingLoader() {
     loopTimeouts.push(setTimeout(() => setPhase(3), 2200)); // Top icon animates in
     loopTimeouts.push(setTimeout(() => setPhase(4), 3400)); // All fade out
     loopTimeouts.push(setTimeout(() => setPhase(0), 4000)); // Reset
-    loopTimeouts.push(setTimeout(() => {
+    hideTimeout.current = setTimeout(() => {
+      setAnimationDone(true);
+    }, 4800); // Animation done after one cycle
+    return () => {
+      loopTimeouts.forEach(clearTimeout);
+      if (hideTimeout.current) clearTimeout(hideTimeout.current);
+    };
+  }, [showLoader]);
+
+  // Hide loader only after animation is done AND all images loaded
+  useEffect(() => {
+    if (animationDone && Object.values(imagesLoaded).every(Boolean)) {
       setShowLoader(false);
       if (typeof window !== 'undefined') {
         localStorage.setItem('brandingLoaderTimestamp', String(Date.now()));
+        document.body.classList.add('__loader-visible');
       }
-    }, 4800)); // Hide loader after one cycle
-    return () => loopTimeouts.forEach(clearTimeout);
-  }, [showLoader]);
+    }
+  }, [animationDone, imagesLoaded]);
 
   if (!mounted || !showLoader) return null;
 
@@ -69,6 +87,7 @@ export default function BrandingLoader() {
         <img
           src="/images/branding_bottom.png"
           alt="Branding Bottom"
+          onLoad={() => setImagesLoaded(prev => ({ ...prev, bottom: true }))}
           style={{
             position: 'absolute',
             left:
@@ -94,6 +113,7 @@ export default function BrandingLoader() {
         <img
           src="/images/branding_middle.png"
           alt="Branding Middle"
+          onLoad={() => setImagesLoaded(prev => ({ ...prev, middle: true }))}
           style={{
             position: 'absolute',
             left:
@@ -119,6 +139,7 @@ export default function BrandingLoader() {
         <img
           src="/images/branding_top.png"
           alt="Branding Top"
+          onLoad={() => setImagesLoaded(prev => ({ ...prev, top: true }))}
           style={{
             position: 'absolute',
             left: 80, // fixed spot
@@ -144,3 +165,5 @@ export default function BrandingLoader() {
     </div>
   );
 }
+
+export default YourComponent;

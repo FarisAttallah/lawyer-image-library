@@ -7,7 +7,6 @@ import JusticeSection from '../components/JusticeSection'
 import { useLanguage } from '../contexts/LanguageContext'
 import { translations } from '../utils/translations'
 import { useResponsiveFonts } from '../hooks/useResponsiveFonts'
-import BrandingLoader from '../components/BrandingLoader'
 
 export default function AboutPage() {
   const { language } = useLanguage()
@@ -34,7 +33,7 @@ export default function AboutPage() {
       position: 'relative',
       minHeight: '100vh'
     }}>
-         <BrandingLoader />
+    
       {/* Normal Header with Background */}
       <div style={{
         position: 'fixed',

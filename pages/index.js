@@ -80,58 +80,94 @@ export default function Home() {
             flexWrap: 'wrap'
           }}>
             <Link href="/about" style={{ textDecoration: 'none' }}>
-              <button style={{
-                backgroundColor: '#c49a6c',
-                color: 'white',
-                border: 'none',
-                padding: isMobile ? '0.8rem 1.5rem' : '1rem 2rem',
-                fontSize: isMobile ? '0.9rem' : '1rem',
-                borderRadius: '6px',
-                cursor: 'pointer',
-                fontWeight: language === 'ar' ? '400' : 'bold',
-                transition: 'all 0.3s ease',
-                boxShadow: '0 4px 15px rgba(196, 154, 108, 0.3)'
-              }}
-              onMouseOver={(e) => {
-                e.target.style.backgroundColor = '#d4a874'
-                e.target.style.transform = 'translateY(-2px)'
-                e.target.style.boxShadow = '0 6px 20px rgba(196, 154, 108, 0.4)'
-              }}
-              onMouseOut={(e) => {
-                e.target.style.backgroundColor = '#c49a6c'
-                e.target.style.transform = 'translateY(0)'
-                e.target.style.boxShadow = '0 4px 15px rgba(196, 154, 108, 0.3)'
-              }}>
+              <button
+                style={{
+                  backgroundColor: '#3b3b3b',
+                  color: 'white',
+                  border: '2px solid transparent',
+                  padding: isMobile ? '1rem 2rem' : '1.2rem 2.5rem',
+                  fontSize: isMobile ? '1.1rem' : '1.25rem',
+                  borderRadius: '8px',
+                  cursor: 'pointer',
+                  fontWeight: 'bold',
+                  transition: 'all 0.3s ease',
+                  boxShadow: '0 6px 20px rgba(59, 59, 59, 0.4), 0 0 0 0 rgba(59, 59, 59, 0.7)',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.5px',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  animation: 'pulse 2s infinite'
+                }}
+                onMouseOver={e => {
+                  e.target.style.backgroundColor = '#5a5a5a';
+                  e.target.style.borderColor = '#3b3b3b';
+                  e.target.style.color = 'white';
+                  e.target.style.transform = 'translateY(-3px)';
+                  e.target.style.boxShadow = '0 8px 25px rgba(59, 59, 59, 0.6)';
+                }}
+                onMouseOut={e => {
+                  e.target.style.backgroundColor = '#3b3b3b';
+                  e.target.style.borderColor = 'transparent';
+                  e.target.style.color = 'white';
+                  e.target.style.transform = 'translateY(0)';
+                  e.target.style.boxShadow = '0 6px 20px rgba(59, 59, 59, 0.4)';
+                }}
+              >
                 {language === 'ar' ? 'عن المكتب' : 'About Our Firm'}
               </button>
             </Link>
             
             <Link href="/services" style={{ textDecoration: 'none' }}>
-              <button style={{
-                backgroundColor: 'transparent',
-                color: 'white',
-                border: '2px solid white',
-                padding: isMobile ? '0.8rem 1.5rem' : '1rem 2rem',
-                fontSize: isMobile ? '0.9rem' : '1rem',
-                borderRadius: '6px',
-                cursor: 'pointer',
-                fontWeight: language === 'ar' ? '400' : 'bold',
-                transition: 'all 0.3s ease'
-              }}
-              onMouseOver={(e) => {
-                e.target.style.backgroundColor = 'white'
-                e.target.style.color = '#0c4b3b'
-                e.target.style.transform = 'translateY(-2px)'
-              }}
-              onMouseOut={(e) => {
-                e.target.style.backgroundColor = 'transparent'
-                e.target.style.color = 'white'
-                e.target.style.transform = 'translateY(0)'
-              }}>
+              <button
+                style={{
+                  backgroundColor: '#3b3b3b',
+                  color: 'white',
+                  border: '2px solid transparent',
+                  padding: isMobile ? '1rem 2rem' : '1.2rem 2.5rem',
+                  fontSize: isMobile ? '1.1rem' : '1.25rem',
+                  borderRadius: '8px',
+                  cursor: 'pointer',
+                  fontWeight: 'bold',
+                  transition: 'all 0.3s ease',
+                  boxShadow: '0 6px 20px rgba(59, 59, 59, 0.4), 0 0 0 0 rgba(59, 59, 59, 0.7)',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.5px',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  animation: 'pulse 2s infinite'
+                }}
+                onMouseOver={e => {
+                  e.target.style.backgroundColor = '#5a5a5a';
+                  e.target.style.borderColor = '#3b3b3b';
+                  e.target.style.color = 'white';
+                  e.target.style.transform = 'translateY(-3px)';
+                  e.target.style.boxShadow = '0 8px 25px rgba(59, 59, 59, 0.6)';
+                }}
+                onMouseOut={e => {
+                  e.target.style.backgroundColor = '#3b3b3b';
+                  e.target.style.borderColor = 'transparent';
+                  e.target.style.color = 'white';
+                  e.target.style.transform = 'translateY(0)';
+                  e.target.style.boxShadow = '0 6px 20px rgba(59, 59, 59, 0.4)';
+                }}
+              >
                 {language === 'ar' ? 'جميع الخدمات' : 'All Services'}
               </button>
             </Link>
           </div>
+          <style jsx>{`
+            @keyframes pulse {
+              0% {
+                box-shadow: 0 6px 20px rgba(59, 59, 59, 0.4), 0 0 0 0 rgba(59, 59, 59, 0.7);
+              }
+              70% {
+                box-shadow: 0 6px 20px rgba(59, 59, 59, 0.4), 0 0 0 10px rgba(59, 59, 59, 0);
+              }
+              100% {
+                box-shadow: 0 6px 20px rgba(59, 59, 59, 0.4), 0 0 0 0 rgba(59, 59, 59, 0);
+              }
+            }
+          `}</style>
         </div>
       </section>
     </Layout>

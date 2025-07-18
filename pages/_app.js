@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import '../styles/globals.css'
 import { LanguageProvider } from '../contexts/LanguageContext'
+import BrandingLoader from '../components/BrandingLoader'
 
 export default function App({ Component, pageProps }) {
   return (
@@ -10,6 +11,8 @@ export default function App({ Component, pageProps }) {
         <meta charSet="utf-8" />
         <title>Hussein Ahmed Al Mohammed Law Firm</title>
       </Head>
+      <BrandingLoader />
+      <link rel="icon" href="/favicon.ico" />
       <Component {...pageProps} />
     </LanguageProvider>
   )

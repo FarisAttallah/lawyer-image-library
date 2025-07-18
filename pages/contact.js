@@ -7,7 +7,6 @@ import LocationMap from '../components/LocationMap'
 import { useLanguage } from '../contexts/LanguageContext'
 import { translations } from '../utils/translations'
 import { useResponsiveFonts } from '../hooks/useResponsiveFonts'
-import BrandingLoader from '../components/BrandingLoader'
 
 export default function Contact() {
   const { language } = useLanguage()
@@ -34,7 +33,6 @@ export default function Contact() {
       position: 'relative',
       minHeight: '100vh'
     }}>
-       <BrandingLoader />
       {/* Normal Header with Background */}
       <div style={{
         position: 'fixed',
