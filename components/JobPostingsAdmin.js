@@ -75,8 +75,8 @@ export default function JobPostingsAdmin() {
     setJobError('');
     setAddSuccess(false);
     try {
-      const newJob = {
-        id: Date.now(),
+    const newJob = {
+      id: Date.now(),
         title_en: jobTitleEn,
         title_ar: jobTitleAr,
         description_en: jobDescEn,
@@ -155,8 +155,8 @@ export default function JobPostingsAdmin() {
         borderRadius: isMobile ? '16px' : '24px',
         boxShadow: isMobile ? '0 4px 16px rgba(12,75,59,0.10)' : '0 8px 32px rgba(12,75,59,0.12)',
         padding: isMobile ? '1.5rem 1rem' : '3rem 2rem',
-        display: 'flex',
-        flexDirection: 'column',
+          display: 'flex',
+          flexDirection: 'column',
         alignItems: 'stretch',
         justifyContent: 'flex-start',
         minHeight: 0,
@@ -333,20 +333,20 @@ export default function JobPostingsAdmin() {
             zIndex: 2,
             position: 'relative',
           }}>{isArabic ? 'الوظائف الحالية' : 'Current Jobs'}</h2>
-          {jobPostings.length === 0 ? (
-            <div style={{ color: '#888', fontStyle: 'italic', marginBottom: '1rem', textAlign: 'center' }}>{isArabic ? 'لا توجد وظائف حالياً.' : 'No job postings yet.'}</div>
-          ) : (
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-              {jobPostings.map(job => (
-                <div key={job.id} style={{
+        {jobPostings.length === 0 ? (
+          <div style={{ color: '#888', fontStyle: 'italic', marginBottom: '1rem', textAlign: 'center' }}>{isArabic ? 'لا توجد وظائف حالياً.' : 'No job postings yet.'}</div>
+        ) : (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+            {jobPostings.map(job => (
+              <div key={job.id} style={{
                   background: '#f9fafb',
                   border: '2px solid #e0e0e0',
-                  borderRadius: '14px',
+                borderRadius: '14px',
                   boxShadow: '0 2px 8px rgba(12,75,59,0.07)',
-                  padding: isArabic ? '1.5rem 1.2rem 1.2rem 1.5rem' : '1.5rem 1.5rem 1.2rem 1.2rem',
-                  position: 'relative',
-                  transition: 'box-shadow 0.2s',
-                  direction: isArabic ? 'rtl' : 'ltr',
+                padding: isArabic ? '1.5rem 1.2rem 1.2rem 1.5rem' : '1.5rem 1.5rem 1.2rem 1.2rem',
+                position: 'relative',
+                transition: 'box-shadow 0.2s',
+                direction: isArabic ? 'rtl' : 'ltr',
                   marginBottom: 0,
                   display: 'flex',
                   flexDirection: 'column',
@@ -371,33 +371,33 @@ export default function JobPostingsAdmin() {
                       {isArabic ? 'عرض المزيد' : 'View More'}
                     </button>
                   )}
-                  <button
-                    onClick={() => handleDeleteJob(job.id)}
-                    style={{
-                      position: 'absolute',
-                      top: '1.1rem',
-                      [isArabic ? 'left' : 'right']: '1.1rem',
-                      background: '#c49a6c',
-                      color: 'white',
-                      border: 'none',
-                      borderRadius: '6px',
-                      padding: '0.45rem 1.1rem',
-                      fontWeight: 'bold',
-                      cursor: 'pointer',
-                      fontSize: '0.98rem',
-                      boxShadow: '0 1px 4px rgba(12,75,59,0.08)',
-                      transition: 'background 0.2s',
-                    }}
-                    onMouseOver={e => e.currentTarget.style.background = '#a65c32'}
-                    onMouseOut={e => e.currentTarget.style.background = '#c49a6c'}
-                  >
-                    {isArabic ? 'حذف' : 'Delete'}
-                  </button>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
+                <button
+                  onClick={() => handleDeleteJob(job.id)}
+                  style={{
+                    position: 'absolute',
+                    top: '1.1rem',
+                    [isArabic ? 'left' : 'right']: '1.1rem',
+                    background: '#c49a6c',
+                    color: 'white',
+                    border: 'none',
+                    borderRadius: '6px',
+                    padding: '0.45rem 1.1rem',
+                    fontWeight: 'bold',
+                    cursor: 'pointer',
+                    fontSize: '0.98rem',
+                    boxShadow: '0 1px 4px rgba(12,75,59,0.08)',
+                    transition: 'background 0.2s',
+                  }}
+                  onMouseOver={e => e.currentTarget.style.background = '#a65c32'}
+                  onMouseOut={e => e.currentTarget.style.background = '#c49a6c'}
+                >
+                  {isArabic ? 'حذف' : 'Delete'}
+                </button>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
       </div>
       {/* Modal for View More */}
       {viewMoreJob && (
