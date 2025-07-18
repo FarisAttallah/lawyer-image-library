@@ -5,6 +5,7 @@ import Services from '../components/Services'
 import { useLanguage } from '../contexts/LanguageContext'
 import { translations } from '../utils/translations'
 import { useResponsiveFonts } from '../hooks/useResponsiveFonts'
+import BrandingLoader from '../components/BrandingLoader'
 
 export default function ServicesPage() {
   const { language } = useLanguage()
@@ -25,12 +26,14 @@ export default function ServicesPage() {
   }, [])
   
   return (
+    
     <div style={{ 
       fontFamily,
       lineHeight: '1.6',
       position: 'relative',
       minHeight: '100vh'
     }}>
+        <BrandingLoader />
       {/* Normal Header with Background */}
       <div style={{
         position: 'fixed',

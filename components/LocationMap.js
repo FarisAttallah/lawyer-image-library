@@ -137,27 +137,53 @@ export default function LocationMap() {
               position: 'absolute',
               bottom: '1rem',
               right: '1rem',
-              backgroundColor: '#c49a6c',
+              backgroundColor: '#3b3b3b',
               color: 'white',
-              padding: '0.7rem 1.2rem',
+              border: '2px solid transparent',
+              padding: '0.7rem 1.2rem', // keep original size
+              fontSize: '0.9rem', // keep original size
               borderRadius: '8px',
-              fontSize: '0.9rem',
+              cursor: 'pointer',
               fontWeight: 'bold',
-              textDecoration: 'none',
               transition: 'all 0.3s ease',
-              boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
-              border: '2px solid white'
+              boxShadow: '0 6px 20px rgba(59, 59, 59, 0.4), 0 0 0 0 rgba(59, 59, 59, 0.7)',
+              textTransform: 'uppercase',
+              letterSpacing: '0.5px',
+              position: 'absolute',
+              overflow: 'hidden',
+              outline: 'none',
+              textDecoration: 'none',
+              animation: 'pulse 2s infinite',
             }}
             onMouseOver={(e) => {
-              e.target.style.backgroundColor = '#a65c32'
-              e.target.style.transform = 'translateY(-2px)'
+              e.target.style.backgroundColor = '#5a5a5a';
+              e.target.style.borderColor = '#3b3b3b';
+              e.target.style.color = 'white';
+              e.target.style.transform = 'translateY(-3px)';
+              e.target.style.boxShadow = '0 8px 25px rgba(59, 59, 59, 0.6)';
             }}
             onMouseOut={(e) => {
-              e.target.style.backgroundColor = '#c49a6c'
-              e.target.style.transform = 'translateY(0)'
+              e.target.style.backgroundColor = '#3b3b3b';
+              e.target.style.borderColor = 'transparent';
+              e.target.style.color = 'white';
+              e.target.style.transform = 'translateY(0)';
+              e.target.style.boxShadow = '0 6px 20px rgba(59, 59, 59, 0.4)';
             }}
           >
             🗺️ {t.directions}
+            <style>{`
+              @keyframes pulse {
+                0% {
+                  box-shadow: 0 6px 20px rgba(59, 59, 59, 0.4), 0 0 0 0 rgba(59, 59, 59, 0.7);
+                }
+                70% {
+                  box-shadow: 0 6px 20px rgba(59, 59, 59, 0.4), 0 0 0 10px rgba(59, 59, 59, 0);
+                }
+                100% {
+                  box-shadow: 0 6px 20px rgba(59, 59, 59, 0.4), 0 0 0 0 rgba(59, 59, 59, 0);
+                }
+              }
+            `}</style>
           </a>
         </div>
         

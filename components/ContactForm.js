@@ -315,36 +315,62 @@ export default function ContactForm() {
           />
         </div>
         
-        {/* Submit Button */}
+        {/* Submit Button styled like Hero.js */}
         <button
           type="submit"
           disabled={isSubmitting}
           style={{
-            backgroundColor: isSubmitting ? '#6c757d' : '#c49a6c',
+            backgroundColor: isSubmitting ? '#6c757d' : '#3b3b3b',
             color: 'white',
-            border: 'none',
-            padding: '1rem 2rem',
+            border: '2px solid transparent',
+            padding: isMobile ? '1rem 2rem' : '1.2rem 2.5rem',
+            fontSize: isMobile ? '1rem' : '1.2rem',
             borderRadius: '8px',
-            fontSize: '1.1rem',
-            fontWeight: 'bold',
             cursor: isSubmitting ? 'not-allowed' : 'pointer',
+            fontWeight: language === 'ar' ? '400' : 'bold',
             transition: 'all 0.3s ease',
-            marginTop: '1rem'
+            boxShadow: '0 6px 20px rgba(59, 59, 59, 0.4), 0 0 0 0 rgba(59, 59, 59, 0.7)',
+            textTransform: 'uppercase',
+            letterSpacing: '0.5px',
+            position: 'relative',
+            overflow: 'hidden',
+            marginTop: '1rem',
+            animation: !isSubmitting ? 'pulse 2s infinite' : 'none',
+            outline: 'none',
           }}
           onMouseOver={(e) => {
             if (!isSubmitting) {
-              e.target.style.backgroundColor = '#a65c32'
-              e.target.style.transform = 'translateY(-2px)'
+              e.target.style.backgroundColor = '#5a5a5a';
+              e.target.style.borderColor = '#3b3b3b';
+              e.target.style.color = 'white';
+              e.target.style.transform = 'translateY(-3px)';
+              e.target.style.boxShadow = '0 8px 25px rgba(59, 59, 59, 0.6)';
             }
           }}
           onMouseOut={(e) => {
             if (!isSubmitting) {
-              e.target.style.backgroundColor = '#c49a6c'
-              e.target.style.transform = 'translateY(0)'
+              e.target.style.backgroundColor = '#3b3b3b';
+              e.target.style.borderColor = 'transparent';
+              e.target.style.color = 'white';
+              e.target.style.transform = 'translateY(0)';
+              e.target.style.boxShadow = '0 6px 20px rgba(59, 59, 59, 0.4)';
             }
           }}
         >
           {isSubmitting ? t.submitting : t.submit}
+          <style>{`
+            @keyframes pulse {
+              0% {
+                box-shadow: 0 6px 20px rgba(59, 59, 59, 0.4), 0 0 0 0 rgba(59, 59, 59, 0.7);
+              }
+              70% {
+                box-shadow: 0 6px 20px rgba(59, 59, 59, 0.4), 0 0 0 10px rgba(59, 59, 59, 0);
+              }
+              100% {
+                box-shadow: 0 6px 20px rgba(59, 59, 59, 0.4), 0 0 0 0 rgba(59, 59, 59, 0);
+              }
+            }
+          `}</style>
         </button>
       </form>
     </div>

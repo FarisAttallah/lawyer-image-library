@@ -39,7 +39,7 @@ export default function Footer() {
               gap: '1rem',
               marginBottom: '1rem'
             }}>
-              <BrandingIcon size="large" />
+            <BrandingIcon size="large" />
               {/* Separator line */}
             <div style={{
               position: 'absolute',

@@ -2,9 +2,24 @@
 
 import { useEffect, useState } from 'react';
 
+
+
+
 export default function BrandingLoader() {
-  const [showLoader, setShowLoader] = useState(true);
+  const [mounted, setMounted] = useState(false);
+  const [showLoader, setShowLoader] = useState(false);
   const [phase, setPhase] = useState(0);
+
+  useEffect(() => {
+    setMounted(true);
+    if (typeof window !== 'undefined') {
+      const cache = localStorage.getItem('brandingLoaderTimestamp');
+      const now = Date.now();
+      if (!cache || now - Number(cache) > 3600000) { // 1 hour = 3600000 ms
+        setShowLoader(true);
+      }
+    }
+  }, []);
 
   useEffect(() => {
     if (!showLoader) return;
@@ -14,11 +29,16 @@ export default function BrandingLoader() {
     loopTimeouts.push(setTimeout(() => setPhase(3), 2200)); // Top icon animates in
     loopTimeouts.push(setTimeout(() => setPhase(4), 3400)); // All fade out
     loopTimeouts.push(setTimeout(() => setPhase(0), 4000)); // Reset
-    loopTimeouts.push(setTimeout(() => setShowLoader(false), 4800)); // Hide loader after one cycle
+    loopTimeouts.push(setTimeout(() => {
+      setShowLoader(false);
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('brandingLoaderTimestamp', String(Date.now()));
+      }
+    }, 4800)); // Hide loader after one cycle
     return () => loopTimeouts.forEach(clearTimeout);
   }, [showLoader]);
 
-  if (!showLoader) return null;
+  if (!mounted || !showLoader) return null;
 
   return (
     <div style={{
