@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react'
 import { useLanguage } from '../contexts/LanguageContext'
 import { translations } from '../utils/translations'
 import { fetchJobPostings, addJobPosting, deleteJobPosting } from '../utils/jobPostingsApi'
-import ReactQuill from 'react-quill';
+import dynamic from 'next/dynamic';
+const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
 import 'react-quill/dist/quill.snow.css';
 import { useMediaQuery } from 'react-responsive';
 
