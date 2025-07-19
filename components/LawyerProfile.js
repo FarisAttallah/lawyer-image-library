@@ -66,7 +66,7 @@ export default function LawyerProfile({ isMobile, fonts }) {
           <div style={{
             display: 'grid',
             gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr',
-            minHeight: isMobile ? 'auto' : '600px'
+            minHeight: isMobile ? 'auto' : '800px'
           }}>
             {/* Text Content - Left Side */}
             <div style={{
@@ -170,9 +170,9 @@ export default function LawyerProfile({ isMobile, fonts }) {
               {/* Branding Icon at bottom right (English) or bottom left (Arabic) */}
               <div style={{
                 position: 'absolute',
-                bottom: language === 'ar' ? '2rem' : '1rem',
-                left: language === 'ar' ? '2rem' : 'auto',
-                right: language === 'ar' ? 'auto' : '2rem',
+                bottom: language === 'ar' ? '1rem' : '0.5rem',
+                left: language === 'ar' ? '1rem' : 'auto',
+                right: language === 'ar' ? 'auto' : '1rem',
                 zIndex: 3
               }}>
                 <BrandingIcon size="medium" />

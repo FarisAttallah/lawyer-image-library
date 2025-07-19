@@ -25,19 +25,6 @@ export default function JusticeSection({ isMobile, fonts }) {
       alignItems: 'center'
     }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative' }}>
-        {/* Decorative Justice Scales Icon */}
-        <div style={{
-          position: 'absolute',
-          top: isMobile ? '-1rem' : '-2rem',
-          right: isMobile ? '1rem' : '2rem',
-          fontSize: isMobile ? '3rem' : '4rem',
-          color: 'rgba(196, 154, 108, 0.1)',
-          zIndex: 1,
-          transform: 'rotate(15deg)'
-        }}>
-          ⚖️
-        </div>
-        
         {/* Section Header with Theme */}
         <div style={{
           textAlign: 'center',
@@ -45,19 +32,16 @@ export default function JusticeSection({ isMobile, fonts }) {
           position: 'relative'
         }}>
           <div style={{
-            display: 'inline-block',
-            padding: '0.5rem 2rem',
-            backgroundColor: 'rgba(12, 75, 59, 0.1)',
-            borderRadius: '25px',
-            border: '2px solid rgba(196, 154, 108, 0.3)',
-            marginBottom: '1rem'
           }}>
-            <span style={{
+            <span 
+            className="services-title"
+            style={{
               fontSize: isMobile ? '0.9rem' : '1rem',
               color: '#0c4b3b',
               fontWeight: 'bold',
               textTransform: 'uppercase',
-              letterSpacing: '1px'
+              letterSpacing: '1px',
+              textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
             }}>
               {language === 'ar' ? 'العدالة والخبرة' : 'Justice & Expertise'}
             </span>
@@ -75,8 +59,9 @@ export default function JusticeSection({ isMobile, fonts }) {
             order: isMobile ? 1 : (language === 'ar' ? 2 : 1),
             padding: isMobile ? '1rem 0' : '2rem 0'
           }}>
-            <h2 style={{
-              fontSize: fonts.heroTitle,
+            <h2 
+            className="service-card-title "
+            style={{
               color: '#0c4b3b',
               marginBottom: '2rem',
               fontWeight: 'bold',
@@ -94,6 +79,7 @@ export default function JusticeSection({ isMobile, fonts }) {
                 background: 'linear-gradient(90deg, #c49a6c, #226249)',
                 borderRadius: '2px'
               }}></div>
+              
               {language === 'ar' 
                 ? 'العدالة والخبرة في خدمتكم' 
                 : 'Justice & Experience at Your Service'
@@ -101,19 +87,22 @@ export default function JusticeSection({ isMobile, fonts }) {
             </h2>
             
             <div style={{
-              fontSize: fonts.bodyLarge,
               lineHeight: '1.8',
               color: '#333',
               marginBottom: '2rem'
             }}>
-              <p style={{ marginBottom: '1.5rem' }}>
+              <p 
+              className="service-card-description line-height-1-7 margin-bottom-1-5"
+              style={{ marginBottom: '1.5rem' }}>
                 {language === 'ar' 
                   ? 'نؤمن بأن العدالة ليست مجرد مفهوم، بل حق أساسي يستحقه كل فرد ومؤسسة. مع خبرة تتجاوز 13 عامًا في الساحة القانونية السعودية، نقدم لكم خدمات قانونية متميزة تجمع بين العلم والخبرة العملية.'
                   : 'We believe that justice is not just a concept, but a fundamental right that every individual and institution deserves. With over 13 years of experience in the Saudi legal arena, we provide you with distinguished legal services that combine knowledge and practical experience.'
                 }
               </p>
               
-              <p style={{ marginBottom: '2rem' }}>
+              <p 
+              className="service-card-description line-height-1-7 margin-bottom-2"
+              >
                 {language === 'ar' 
                   ? 'من القضايا البسيطة إلى المعاملات المعقدة، نضمن لكم تمثيلاً قانونياً قوياً ومؤثراً يحمي حقوقكم ويحقق مصالحكم بأعلى معايير المهنية والنزاهة.'
                   : 'From simple cases to complex transactions, we guarantee you strong and effective legal representation that protects your rights and achieves your interests with the highest standards of professionalism and integrity.'
@@ -149,10 +138,14 @@ export default function JusticeSection({ isMobile, fonts }) {
                 }}>
                   🎓
                 </div>
-                <h4 style={{ color: '#0c4b3b', marginBottom: '0.5rem', fontSize: fonts.cardTitle, position: 'relative', zIndex: 2 }}>
+                <h4 
+                className="service-card-title"
+                style={{ color: '#0c4b3b', marginBottom: '0.5rem', position: 'relative', zIndex: 2 }}>
                   {language === 'ar' ? '13+ سنة خبرة' : '13+ Years Experience'}
                 </h4>
-                <p style={{ color: '#666', fontSize: fonts.body, position: 'relative', zIndex: 2 }}>
+                <p 
+                className="service-card-description"
+                style={{ color: '#666', position: 'relative', zIndex: 2 }}>
                   {language === 'ar' 
                     ? 'خبرة واسعة في جميع مجالات القانون السعودي'
                     : 'Extensive experience in all areas of Saudi law'
@@ -181,10 +174,14 @@ export default function JusticeSection({ isMobile, fonts }) {
                 }}>
                   🏆
                 </div>
-                <h4 style={{ color: '#0c4b3b', marginBottom: '0.5rem', fontSize: fonts.cardTitle, position: 'relative', zIndex: 2 }}>
+                <h4 
+                className="service-card-title"
+                style={{ color: '#0c4b3b', marginBottom: '0.5rem', position: 'relative', zIndex: 2 }}>
                   {language === 'ar' ? '500+ قضية منجزة' : '500+ Cases Completed'}
                 </h4>
-                <p style={{ color: '#666', fontSize: fonts.body, position: 'relative', zIndex: 2 }}>
+                <p 
+                className="service-card-description"
+                style={{ color: '#666', position: 'relative', zIndex: 2 }}>
                   {language === 'ar' 
                     ? 'سجل حافل من القضايا الناجحة والعملاء الراضين'
                     : 'Proven track record of successful cases and satisfied clients'

@@ -12,7 +12,7 @@ export default function AboutPage() {
   const { language } = useLanguage()
   const t = translations[language]
   const [isMobile, setIsMobile] = useState(false)
-  const { fontFamily } = useResponsiveFonts()
+  const { fontFamily, fonts } = useResponsiveFonts()
   
   // Check if screen is mobile size
   useEffect(() => {
@@ -99,8 +99,9 @@ export default function AboutPage() {
             }}>
               {language === 'ar' ? 'عن مكتبنا' : 'About Our Firm'}
             </h1>
-            <p style={{
-              fontSize: isMobile ? '1rem' : '1.4rem',
+            <p 
+            className="service-card-description"
+            style={{
               color: '#c49a6c',
               maxWidth: '700px',
               margin: '0 auto',

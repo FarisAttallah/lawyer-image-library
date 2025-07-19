@@ -199,7 +199,8 @@ export default function Services({ isMobile, fonts }) {
                 height: '2px',
                 background: `linear-gradient(90deg, ${service.color}, transparent)`,
                 margin: isMobile ? '0 auto 0.5rem' : '0 auto 1rem',
-                borderRadius: '2px'
+                borderRadius: '2px',
+                marginTop: service.title.length <= 18 ? (isMobile ? '1rem' : '3rem') : '0'
               }}></div>
               
               <p 
@@ -212,7 +213,7 @@ export default function Services({ isMobile, fonts }) {
                   overflow: 'hidden',
                   display: '-webkit-box',
                   WebkitLineClamp: isMobile ? 3 : 4,
-                  WebkitBoxOrient: 'vertical'
+                  WebkitBoxOrient: 'vertical',
                 }}
                 dangerouslySetInnerHTML={{ __html: service.description }}
               />

@@ -116,9 +116,9 @@ export default function StatsSection({ isMobile, fonts }) {
         zIndex: 1
       }} />
       <div style={{ width: '100%', position: 'relative', zIndex: 2 }}>
-        <h2 style={{
-          fontSize: fonts.sectionTitle,
-          marginBottom: isMobile ? '2rem' : '3rem',
+        <h2 
+        className="services-title"
+        style={{
           textAlign: 'center',
           color: '#c49a6c',
           fontWeight: 'bold',
@@ -127,6 +127,7 @@ export default function StatsSection({ isMobile, fonts }) {
         }}>
           {language === 'ar' ? 'إنجازاتنا بالأرقام' : 'Our Achievements in Numbers'}
         </h2>
+        <br/>
         <div style={{
           display: isMobile ? 'grid' : 'flex',
           flexDirection: isMobile ? undefined : 'row',
@@ -184,8 +185,8 @@ export default function StatsSection({ isMobile, fonts }) {
               }}>
                 {animatedValues[idx]}{stat.suffix}
               </div>
-              <div style={{
-                fontSize: fonts.statLabel,
+              <div className="service-card-title"
+              style={{
                 opacity: 0.92,
                 color: 'white',
                 letterSpacing: '0.5px'

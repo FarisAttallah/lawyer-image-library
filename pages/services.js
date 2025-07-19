@@ -207,18 +207,20 @@ export default function ServicesPage() {
                   onMouseOut={(e) => {
                     e.currentTarget.style.transform = 'translateY(0)'
                   }}>
-                    <h3 style={{
-                      fontSize: fonts.sectionSubtitle,
+                    <h3
+                    className="service-card-title"
+                    style={{
                       color: '#c49a6c',
                       marginBottom: '1rem',
                       fontWeight: language === 'ar' ? '400' : 'bold'
                     }}>
                       {feature.title}
                     </h3>
-                    <p style={{
+                    <p 
+                    className="service-card-description"
+                    style={{
                       color: '#666',
                       lineHeight: 1.6,
-                      fontSize: fonts.bodyRegular
                     }}>
                       {feature.desc}
                     </p>

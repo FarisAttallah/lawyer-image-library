@@ -19,8 +19,9 @@ export default function About({ isMobile, fonts }) {
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
         {/* About Us */}
         <div style={{ marginBottom: '4rem' }}>
-          <h2 style={{
-            fontSize: fonts.sectionTitle,
+          <h2 
+          className="services-title"
+          style={{
             color: '#0c4b3b',
             marginBottom: '2rem',
             textAlign: 'center',
@@ -28,7 +29,11 @@ export default function About({ isMobile, fonts }) {
           }}>
             {t.aboutTitle}
           </h2>
-          <p style={{
+          <br/>
+          <p 
+          className="service-card-title"
+          style={{
+            
             fontSize: fonts.bodyLarge,
             lineHeight: '1.8',
             color: '#333',
@@ -46,7 +51,7 @@ export default function About({ isMobile, fonts }) {
           display: 'grid',
           gridTemplateColumns: isMobile ? '1fr' : 'repeat(auto-fit, minmax(350px, 1fr))',
           gap: '2rem',
-          marginBottom: '4rem'
+          marginBottom: '7rem'
         }}>
           {/* Vision */}
           <div style={{
@@ -56,8 +61,9 @@ export default function About({ isMobile, fonts }) {
             border: '2px solid #c49a6c',
             boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
           }}>
-            <h3 style={{
-              fontSize: fonts.subsectionTitle,
+            <h3 
+            className="service-card-title"
+            style={{
               color: '#0c4b3b',
               marginBottom: '1rem',
               fontWeight: 'bold'
@@ -81,16 +87,18 @@ export default function About({ isMobile, fonts }) {
             border: '2px solid #226249',
             boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
           }}>
-            <h3 style={{
-              fontSize: fonts.subsectionTitle,
+            <h3
+            className="service-card-title"
+            style={{
               color: '#0c4b3b',
               marginBottom: '1rem',
               fontWeight: 'bold'
             }}>
               {t.missionTitle}
             </h3>
-            <p style={{
-              fontSize: fonts.body,
+            <p
+            className="service-card-description"
+            style={{
               lineHeight: '1.7',
               color: '#555'
             }}>
@@ -100,9 +108,10 @@ export default function About({ isMobile, fonts }) {
         </div>
 
         {/* Values Section */}
-        <div style={{ marginBottom: '4rem' }}>
-          <h3 style={{
-            fontSize: fonts.sectionSubtitle,
+        <div style={{ marginBottom: '7rem' }}>
+          <h3 
+          className="services-title"
+          style={{
             color: '#0c4b3b',
             marginBottom: '2rem',
             textAlign: 'center',
@@ -110,96 +119,59 @@ export default function About({ isMobile, fonts }) {
           }}>
             {t.valuesTitle}
           </h3>
-          
           <div style={{
+            marginTop: isMobile ? '2rem' : '3rem',
             display: 'grid',
-            gridTemplateColumns: isMobile ? '1fr' : 'repeat(auto-fit, minmax(280px, 1fr))',
+            gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)',
             gap: '1.5rem'
           }}>
-            {/* Transparency */}
-            <div style={{
-              backgroundColor: 'white',
-              padding: '1.5rem',
-              borderRadius: '8px',
-              boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-              borderLeft: language === 'ar' ? 'none' : '4px solid #c49a6c',
-              borderRight: language === 'ar' ? '4px solid #c49a6c' : 'none'
-            }}>
-              <h4 style={{ color: '#0c4b3b', marginBottom: '0.5rem', fontSize: fonts.cardTitle }}>
-                {t.transparency}
-              </h4>
-              <p style={{ color: '#666', lineHeight: '1.6', fontSize: fonts.body }}>
-                {t.transparencyDesc}
-              </p>
-            </div>
-
-            {/* Confidentiality */}
-            <div style={{
-              backgroundColor: 'white',
-              padding: '1.5rem',
-              borderRadius: '8px',
-              boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-              borderLeft: language === 'ar' ? 'none' : '4px solid #226249',
-              borderRight: language === 'ar' ? '4px solid #226249' : 'none'
-            }}>
-              <h4 style={{ color: '#0c4b3b', marginBottom: '0.5rem', fontSize: fonts.cardTitle }}>
-                {t.confidentiality}
-              </h4>
-              <p style={{ color: '#666', lineHeight: '1.6', fontSize: fonts.body }}>
-                {t.confidentialityDesc}
-              </p>
-            </div>
-
-            {/* Professionalism */}
-            <div style={{
-              backgroundColor: 'white',
-              padding: '1.5rem',
-              borderRadius: '8px',
-              boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-              borderLeft: language === 'ar' ? 'none' : '4px solid #a65c32',
-              borderRight: language === 'ar' ? '4px solid #a65c32' : 'none'
-            }}>
-              <h4 style={{ color: '#0c4b3b', marginBottom: '0.5rem', fontSize: fonts.cardTitle }}>
-                {t.professionalism}
-              </h4>
-              <p style={{ color: '#666', lineHeight: '1.6', fontSize: fonts.body }}>
-                {t.professionalismDesc}
-              </p>
-            </div>
-
-            {/* Justice */}
-            <div style={{
-              backgroundColor: 'white',
-              padding: '1.5rem',
-              borderRadius: '8px',
-              boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-              borderLeft: language === 'ar' ? 'none' : '4px solid #c49a6c',
-              borderRight: language === 'ar' ? '4px solid #c49a6c' : 'none'
-            }}>
-              <h4 style={{ color: '#0c4b3b', marginBottom: '0.5rem', fontSize: fonts.cardTitle }}>
-                {t.justice}
-              </h4>
-              <p style={{ color: '#666', lineHeight: '1.6', fontSize: fonts.body }}>
-                {t.justiceDesc}
-              </p>
-            </div>
-
-            {/* Development */}
-            <div style={{
-              backgroundColor: 'white',
-              padding: '1.5rem',
-              borderRadius: '8px',
-              boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-              borderLeft: language === 'ar' ? 'none' : '4px solid #226249',
-              borderRight: language === 'ar' ? '4px solid #226249' : 'none'
-            }}>
-              <h4 style={{ color: '#0c4b3b', marginBottom: '0.5rem', fontSize: fonts.cardTitle }}>
-                {t.development}
-              </h4>
-              <p style={{ color: '#666', lineHeight: '1.6', fontSize: fonts.body }}>
-                {t.developmentDesc}
-              </p>
-            </div>
+            {[
+              {
+                title: t.transparency,
+                description: t.transparencyDesc,
+                borderColor: '#c49a6c'
+              },
+              {
+                title: t.confidentiality,
+                description: t.confidentialityDesc,
+                borderColor: '#226249'
+              },
+              {
+                title: t.professionalism,
+                description: t.professionalismDesc,
+                borderColor: '#a65c32'
+              },
+              {
+                title: t.justice,
+                description: t.justiceDesc,
+                borderColor: '#c49a6c'
+              },
+              {
+                title: t.development,
+                description: t.developmentDesc,
+                borderColor: '#226249'
+              }
+            ].map((card, index) => (
+              <div key={index} style={{
+                backgroundColor: 'white',
+                padding: '1.5rem',
+                borderRadius: '8px',
+                boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+                borderLeft: language === 'ar' ? 'none' : `4px solid ${card.borderColor}`,
+                borderRight: language === 'ar' ? `4px solid ${card.borderColor}` : 'none'
+              }}>
+                <h4 
+                className="service-card-title"
+                style={{ color: '#0c4b3b', marginBottom: '0.5rem' }}>
+                  {card.title}
+                </h4>
+                <p 
+                className="service-card-description"
+                style={{ color: '#666', lineHeight: '1.6'}}>
+                  {card.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
