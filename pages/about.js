@@ -100,8 +100,8 @@ export default function AboutPage() {
               {language === 'ar' ? 'عن مكتبنا' : 'About Our Firm'}
             </h1>
             <p 
-            className="service-card-description"
             style={{
+              fontSize: fonts.sectionSubtitle,
               color: '#c49a6c',
               maxWidth: '700px',
               margin: '0 auto',

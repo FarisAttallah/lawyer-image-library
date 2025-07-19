@@ -91,6 +91,18 @@ export default function ContactInfo() {
       minHeight: '600px',
       padding: isMobile ? '1rem' : '2rem 1rem'
     }}>
+      {/* Main Heading */}
+      <h2 style={{
+        color: '#0c4b3b',
+        fontSize: isMobile ? '1.6rem' : '2rem',
+        fontWeight: 'bold',
+        textAlign: 'center',
+        marginBottom: '1rem',
+        animation: 'slideInFromTop 1s ease-out'
+      }}>
+        {language === 'ar' ? 'استشارتك القانونية تبدأ من هنا' : 'Your Legal Consultation Starts Here'}
+      </h2>
+      
       {/* Main Contact Image */}
       <div style={{
         position: 'relative',
@@ -147,18 +159,6 @@ export default function ContactInfo() {
         </div>
       </div>
       
-      {/* Main Heading */}
-      <h2 style={{
-        color: '#0c4b3b',
-        fontSize: isMobile ? '1.6rem' : '2rem',
-        fontWeight: 'bold',
-        textAlign: 'center',
-        marginBottom: '1rem',
-        animation: 'gentleFade 4s ease-in-out infinite'
-      }}>
-        {language === 'ar' ? 'استشارتك القانونية تبدأ من هنا' : 'Your Legal Consultation Starts Here'}
-      </h2>
-      
       {/* Supporting Text */}
       <p style={{
         color: '#666',
@@ -168,7 +168,7 @@ export default function ContactInfo() {
         marginBottom: '1.5rem',
         maxWidth: '100%',
         lineHeight: '1.6',
-        animation: 'gentleFade 4s ease-in-out infinite 0.5s'
+        animation: 'slideInFromTop 1s ease-out 0.3s both'
       }}>
         {language === 'ar' 
           ? 'خبرة قانونية تتجاوز ١٣ عامًا في خدمتك'
@@ -177,23 +177,14 @@ export default function ContactInfo() {
       </p>
       
       <style jsx>{`
-        @keyframes gentleFloat {
-          0%, 100% {
-            transform: translateY(0px) scale(1);
-            opacity: 0.8;
+        @keyframes slideInFromTop {
+          0% {
+            opacity: 0;
+            transform: translateY(-20px);
           }
-          50% {
-            transform: translateY(-10px) scale(1.05);
+          100% {
             opacity: 1;
-          }
-        }
-        
-        @keyframes gentleFade {
-          0%, 100% {
-            opacity: 0.6;
-          }
-          50% {
-            opacity: 0.9;
+            transform: translateY(0);
           }
         }
       `}</style>

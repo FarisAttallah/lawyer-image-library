@@ -12,7 +12,7 @@ export default function Contact() {
   const { language } = useLanguage()
   const t = translations[language]
   const [isMobile, setIsMobile] = useState(false)
-  const { fontFamily } = useResponsiveFonts()
+  const { fontFamily, fonts } = useResponsiveFonts()
   
   // Check if screen is mobile size
   useEffect(() => {
@@ -89,8 +89,9 @@ export default function Contact() {
             padding: isMobile ? '0 1rem' : '0',
             animation: 'fadeInUp 1.2s ease-out'
           }}>
-            <h1 style={{
-              fontSize: isMobile ? '2rem' : '3.5rem',
+            <h1 
+            style={{
+              fontSize: fonts.sectionTitle,
               marginBottom: '1.5rem',
               fontWeight: 'bold',
               textShadow: '3px 3px 6px rgba(0,0,0,0.8)',
@@ -98,8 +99,9 @@ export default function Contact() {
             }}>
               {t.contactUsTitle || (language === 'ar' ? 'اتصل بنا' : 'Contact Us')}
             </h1>
-            <p style={{
-              fontSize: isMobile ? '1rem' : '1.4rem',
+            <p 
+            style={{
+              fontSize: fonts.sectionSubtitle,
               color: '#c49a6c',
               maxWidth: '700px',
               margin: '0 auto',
@@ -141,35 +143,43 @@ export default function Contact() {
                   })
                 }}
                 style={{
-                  backgroundColor: '#3b3b3b',
-                  padding: isMobile ? '1rem 1.5rem' : '1.2rem 2rem',
-                  borderRadius: '8px',
+                  backgroundColor: '#c49a6c',
+                  color: 'white',
                   border: '2px solid transparent',
-                  minWidth: isMobile ? '200px' : 'auto',
-                  textDecoration: 'none',
+                  padding: isMobile ? '1rem 2rem' : '1.2rem 2.5rem',
+                  fontSize: fonts.heroButton,
+                  borderRadius: '8px',
                   cursor: 'pointer',
+                  fontWeight: 'bold',
+                  fontFamily: 'BeINBlack, Roboto, Arial, sans-serif',
                   transition: 'all 0.3s ease',
+                  boxShadow: '0 6px 20px rgba(196, 154, 108, 0.4), 0 0 0 0 rgba(196, 154, 108, 0.7)',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.5px',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  animation: 'pulse 2s infinite',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  gap: '0.5rem',
-                  boxShadow: '0 6px 20px rgba(59, 59, 59, 0.4)',
-                  color: 'white',
-                  fontSize: isMobile ? '1rem' : '1.2rem',
-                  fontWeight: 'bold'
+                  gap: '0.5rem'
                 }}
                 onMouseOver={(e) => {
-                  e.target.style.backgroundColor = '#5a5a5a'
+                  e.target.style.backgroundColor = '#a65c32'
+                  e.target.style.borderColor = '#c49a6c'
+                  e.target.style.color = 'white'
                   e.target.style.transform = 'translateY(-3px)'
-                  e.target.style.boxShadow = '0 8px 25px rgba(59, 59, 59, 0.6)'
+                  e.target.style.boxShadow = '0 8px 25px rgba(196, 154, 108, 0.6)'
                 }}
                 onMouseOut={(e) => {
-                  e.target.style.backgroundColor = '#3b3b3b'
+                  e.target.style.backgroundColor = '#c49a6c'
+                  e.target.style.borderColor = 'transparent'
+                  e.target.style.color = 'white'
                   e.target.style.transform = 'translateY(0)'
-                  e.target.style.boxShadow = '0 6px 20px rgba(59, 59, 59, 0.4)'
+                  e.target.style.boxShadow = '0 6px 20px rgba(196, 154, 108, 0.4)'
                 }}
               >
-                ⚖️ {language === 'ar' ? 'استشارة قانونية' : 'Legal Consultation'}
+               {language === 'ar' ? 'استشارة قانونية' : 'Legal Consultation'}
               </button>
             </div>
           </div>
@@ -183,15 +193,19 @@ export default function Contact() {
         }}>
           <div style={{
             display: 'grid',
-            gridTemplateColumns: isMobile ? '1fr' : (language === 'ar' ? '1fr 1fr' : '1fr 1fr'),
+            gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr',
             gap: isMobile ? '2rem' : '3rem',
             marginBottom: isMobile ? '2rem' : '3rem'
           }}>
             {/* Contact Information */}
-            <ContactInfo />
+            <div style={{ order: language === 'ar' ? 2 : 2 }}>
+              <ContactInfo />
+            </div>
             
             {/* Contact Form */}
-            <ContactForm />
+            <div style={{ order: language === 'ar' ? 1 : 1 }}>
+              <ContactForm />
+            </div>
           </div>
           
           {/* Location Map */}

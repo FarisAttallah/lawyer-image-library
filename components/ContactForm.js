@@ -8,6 +8,7 @@ export default function ContactForm() {
     name: '',
     email: '',
     phone: '',
+    commercialRegister: '',
     subject: '',
     message: '',
     legalService: ''
@@ -34,6 +35,7 @@ export default function ContactForm() {
       name: 'الاسم الكامل',
       email: 'البريد الإلكتروني',
       phone: 'رقم الهاتف',
+      commercialRegister: 'سجل تجاري',
       subject: 'موضوع الاستشارة',
       legalService: 'نوع الخدمة القانونية',
       message: 'تفاصيل الاستشارة أو القضية',
@@ -60,6 +62,7 @@ export default function ContactForm() {
       name: 'Full Name',
       email: 'Email Address',
       phone: 'Phone Number',
+      commercialRegister: 'Commercial Register',
       subject: 'Consultation Subject',
       legalService: 'Type of Legal Service',
       message: 'Consultation Details or Case Information',
@@ -114,6 +117,7 @@ export default function ContactForm() {
         name: '',
         email: '',
         phone: '',
+        commercialRegister: '',
         subject: '',
         message: '',
         legalService: ''
@@ -161,7 +165,7 @@ export default function ContactForm() {
         fontSize: isMobile ? '1.5rem' : '2rem',
         marginBottom: '1rem',
         fontWeight: 'bold',
-        textAlign: isMobile ? 'center' : 'left'
+        textAlign: isMobile ? 'center' : (language === 'ar' ? 'right' : 'left')
       }}>
         {t.title}
       </h2>
@@ -171,7 +175,7 @@ export default function ContactForm() {
         marginBottom: '2rem',
         lineHeight: '1.6',
         fontSize: isMobile ? '0.9rem' : '1rem',
-        textAlign: isMobile ? 'center' : 'left'
+        textAlign: isMobile ? 'center' : (language === 'ar' ? 'right' : 'left')
       }}>
         {t.subtitle}
       </p>
@@ -253,6 +257,24 @@ export default function ContactForm() {
           />
         </div>
         
+        {/* Commercial Register Field */}
+        <div>
+          <label style={labelStyle}>
+            {t.commercialRegister} <span style={{ color: '#dc3545', fontFamily: 'Arial, sans-serif' }}>*</span>
+          </label>
+          <input
+            type="text"
+            name="commercialRegister"
+            value={formData.commercialRegister}
+            onChange={handleInputChange}
+            required
+            style={inputStyle}
+            placeholder={language === 'ar' ? 'رقم السجل التجاري' : 'Commercial Register Number'}
+            onFocus={(e) => e.target.style.borderColor = '#c49a6c'}
+            onBlur={(e) => e.target.style.borderColor = '#e9ecef'}
+          />
+        </div>
+        
         {/* Legal Service Type */}
         <div>
           <label style={labelStyle}>
@@ -320,16 +342,17 @@ export default function ContactForm() {
           type="submit"
           disabled={isSubmitting}
           style={{
-            backgroundColor: isSubmitting ? '#6c757d' : '#3b3b3b',
+            backgroundColor: isSubmitting ? '#6c757d' : '#c49a6c',
             color: 'white',
             border: '2px solid transparent',
             padding: isMobile ? '1rem 2rem' : '1.2rem 2.5rem',
             fontSize: isMobile ? '1rem' : '1.2rem',
             borderRadius: '8px',
             cursor: isSubmitting ? 'not-allowed' : 'pointer',
-            fontWeight: language === 'ar' ? '400' : 'bold',
+            fontWeight: 'bold',
+            fontFamily: 'BeINBlack, Roboto, Arial, sans-serif',
             transition: 'all 0.3s ease',
-            boxShadow: '0 6px 20px rgba(59, 59, 59, 0.4), 0 0 0 0 rgba(59, 59, 59, 0.7)',
+            boxShadow: '0 6px 20px rgba(196, 154, 108, 0.4), 0 0 0 0 rgba(196, 154, 108, 0.7)',
             textTransform: 'uppercase',
             letterSpacing: '0.5px',
             position: 'relative',
@@ -340,20 +363,20 @@ export default function ContactForm() {
           }}
           onMouseOver={(e) => {
             if (!isSubmitting) {
-              e.target.style.backgroundColor = '#5a5a5a';
-              e.target.style.borderColor = '#3b3b3b';
+              e.target.style.backgroundColor = '#a65c32';
+              e.target.style.borderColor = '#c49a6c';
               e.target.style.color = 'white';
               e.target.style.transform = 'translateY(-3px)';
-              e.target.style.boxShadow = '0 8px 25px rgba(59, 59, 59, 0.6)';
+              e.target.style.boxShadow = '0 8px 25px rgba(196, 154, 108, 0.6)';
             }
           }}
           onMouseOut={(e) => {
             if (!isSubmitting) {
-              e.target.style.backgroundColor = '#3b3b3b';
+              e.target.style.backgroundColor = '#c49a6c';
               e.target.style.borderColor = 'transparent';
               e.target.style.color = 'white';
               e.target.style.transform = 'translateY(0)';
-              e.target.style.boxShadow = '0 6px 20px rgba(59, 59, 59, 0.4)';
+              e.target.style.boxShadow = '0 6px 20px rgba(196, 154, 108, 0.4)';
             }
           }}
         >
@@ -361,13 +384,13 @@ export default function ContactForm() {
           <style>{`
             @keyframes pulse {
               0% {
-                box-shadow: 0 6px 20px rgba(59, 59, 59, 0.4), 0 0 0 0 rgba(59, 59, 59, 0.7);
+                box-shadow: 0 6px 20px rgba(196, 154, 108, 0.4), 0 0 0 0 rgba(196, 154, 108, 0.7);
               }
               70% {
-                box-shadow: 0 6px 20px rgba(59, 59, 59, 0.4), 0 0 0 10px rgba(59, 59, 59, 0);
+                box-shadow: 0 6px 20px rgba(196, 154, 108, 0.4), 0 0 0 10px rgba(196, 154, 108, 0);
               }
               100% {
-                box-shadow: 0 6px 20px rgba(59, 59, 59, 0.4), 0 0 0 0 rgba(59, 59, 59, 0);
+                box-shadow: 0 6px 20px rgba(196, 154, 108, 0.4), 0 0 0 0 rgba(196, 154, 108, 0);
               }
             }
           `}</style>
