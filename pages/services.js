@@ -10,7 +10,7 @@ export default function ServicesPage() {
   const { language } = useLanguage()
   const t = translations[language]
   const [isMobile, setIsMobile] = useState(false)
-  const { fontFamily } = useResponsiveFonts()
+  const { fontFamily, fonts } = useResponsiveFonts()
   
   // Check if screen is mobile size
   useEffect(() => {
@@ -89,18 +89,20 @@ export default function ServicesPage() {
             animation: 'fadeInUp 1.2s ease-out'
           }}>
             <h2 style={{
-              fontSize: isMobile ? '2rem' : '2.5rem',
+              fontSize: fonts.sectionTitle,
               marginBottom: '1.5rem',
               fontWeight: language === 'ar' ? '400' : 'bold',
+              textShadow: '3px 3px 6px rgba(0,0,0,0.8)',
               animation: 'fadeInUp 1.2s ease-out'
             }}>
               {language === 'ar' ? 'خدماتنا القانونية' : 'Our Legal Services'}
             </h2>
             <p style={{
-              fontSize: isMobile ? '1rem' : '1.4rem',
+              fontSize: fonts.sectionSubtitle,
               color: '#c49a6c',
               maxWidth: '700px',
               margin: '0 auto',
+              textShadow: '2px 2px 4px rgba(0,0,0,0.8)',
               lineHeight: '1.6',
               animation: 'fadeInUp 1.2s ease-out'
             }}>
@@ -149,7 +151,7 @@ export default function ServicesPage() {
                 marginBottom: '3rem'
               }}>
                 <h2 style={{
-                  fontSize: isMobile ? '2rem' : '2.5rem',
+                  fontSize: fonts.sectionTitle,
                   color: '#0c4b3b',
                   marginBottom: '1rem',
                   fontWeight: language === 'ar' ? '400' : 'bold'
@@ -157,7 +159,7 @@ export default function ServicesPage() {
                   {language === 'ar' ? 'لماذا تختارنا؟' : 'Why Choose Us?'}
                 </h2>
                 <p style={{
-                  fontSize: isMobile ? '1rem' : '1.1rem',
+                  fontSize: fonts.sectionSubtitle,
                   color: '#666',
                   maxWidth: '600px',
                   margin: '0 auto',
@@ -206,7 +208,7 @@ export default function ServicesPage() {
                     e.currentTarget.style.transform = 'translateY(0)'
                   }}>
                     <h3 style={{
-                      fontSize: isMobile ? '1.3rem' : '1.5rem',
+                      fontSize: fonts.sectionSubtitle,
                       color: '#c49a6c',
                       marginBottom: '1rem',
                       fontWeight: language === 'ar' ? '400' : 'bold'
@@ -216,7 +218,7 @@ export default function ServicesPage() {
                     <p style={{
                       color: '#666',
                       lineHeight: 1.6,
-                      fontSize: isMobile ? '0.9rem' : '1rem'
+                      fontSize: fonts.bodyRegular
                     }}>
                       {feature.desc}
                     </p>
@@ -227,7 +229,7 @@ export default function ServicesPage() {
           </section>
           {/* Services Section */}
           <section id="services" style={{ 
-            marginBottom: isMobile ? '3rem' : '15rem'
+            marginBottom: isMobile ? '3rem' : '10rem'
           }}>
             <Services isMobile={isMobile} fonts={{}} />
           </section>

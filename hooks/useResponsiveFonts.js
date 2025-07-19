@@ -31,8 +31,8 @@ export function useResponsiveFonts() {
     heroButton: isMobile ? '1rem' : '1.2rem',
     
     // Section Titles
-    sectionTitle: isMobile ? '1.8rem' : '2.5rem',
-    sectionSubtitle: isMobile ? '1.6rem' : '2.2rem',
+    sectionTitle: isMobile ? '2rem' : '3.5rem',
+    sectionSubtitle: isMobile ? '1.2rem' : '1.5rem',
     subsectionTitle: isMobile ? '1.4rem' : '1.8rem',
     
     // Content Text

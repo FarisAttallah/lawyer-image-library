@@ -27,3 +27,40 @@ body {
   background-color: #f9fafb;
   color: #333;
 }
+
+/* Override browser default h2 styles */
+.services-title {
+  font-size: 3.5rem !important;
+  margin: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .services-title {
+    font-size: 2rem !important;
+  }
+}
+
+/* Service card titles */
+.service-card-title {
+  font-size: 1.5rem !important;
+  margin: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .service-card-title {
+    font-size: 1.2rem !important;
+  }
+}
+
+/* Service card descriptions */
+.service-card-description {
+  font-size: 1rem !important;
+  margin: 0 !important;
+  line-height: 1.5 !important;
+}
+
+@media (max-width: 768px) {
+  .service-card-description {
+    font-size: 0.9rem !important;
+  }
+}

@@ -5,8 +5,7 @@ export default function LocationMap() {
   
   const locationTexts = {
     ar: {
-      title: 'موقعنا',
-      subtitle: 'تفضل بزيارتنا في مكتبنا بالرياض',
+      title: 'تفضل بزيارتنا في مكتبنا بالرياض',
       address: [
         'الرياض - المملكة العربية السعودية',
         'الرمز البريدي ١٢٣٣١ الرقم الاضافي ٦٥٨٣'
@@ -18,8 +17,7 @@ export default function LocationMap() {
       phoneNumber: '+٩٦٦ ٥٠ ١٢٣ ٤٥٦٧'
     },
     en: {
-      title: 'Our Location',
-      subtitle: 'Visit us at our office in Riyadh',
+      title: 'Visit us at our office in Riyadh',
       address: [
         'Riyadh - Saudi Arabia',
         'Postal Code 12331 Additional Number 6583'
@@ -45,21 +43,12 @@ export default function LocationMap() {
       <h2 style={{
         color: '#0c4b3b',
         fontSize: '2rem',
-        marginBottom: '1rem',
+        marginBottom: '2rem',
         fontWeight: 'bold',
         textAlign: 'center'
       }}>
         {t.title}
       </h2>
-      
-      <p style={{
-        color: '#666',
-        fontSize: '1.2rem',
-        textAlign: 'center',
-        marginBottom: '2rem'
-      }}>
-        {t.subtitle}
-      </p>
       
       <div style={{
         display: 'grid',

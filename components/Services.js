@@ -52,7 +52,7 @@ export default function Services({ isMobile, fonts }) {
     <div style={{ 
       width: '100%',
       height: '100%',
-      padding: isMobile ? '2rem 2rem' : '3rem 4rem',
+      padding: isMobile ? '2rem 2rem' : '6rem 4rem',
       background: 'linear-gradient(135deg, #0c4b3b 0%, #226249 100%)',
       direction: language === 'ar' ? 'rtl' : 'ltr',
       position: 'relative',
@@ -90,14 +90,18 @@ export default function Services({ isMobile, fonts }) {
         }}>
           
           
-          <h2 style={{
-            fontSize: fonts.sectionTitle,
-            color: 'white',
-            marginBottom: '1rem',
-            textAlign: 'center',
-            fontWeight: language === 'ar' ? '400' : 'bold',
-            textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
-          }}>
+          <h2 
+            className="services-title"
+            style={{
+              color: 'white',
+              marginBottom: '1rem',
+              textAlign: 'center',
+              fontWeight: language === 'ar' ? '400' : 'bold',
+              textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
+              lineHeight: '1.2',
+              fontFamily: language === 'ar' ? 'BeINBlack, Arial, sans-serif' : 'Roboto, Arial, sans-serif'
+            }}
+          >
             {t.servicesTitle}
           </h2>
           
@@ -175,15 +179,17 @@ export default function Services({ isMobile, fonts }) {
                 {index === 7 && '✓'} {/* Compliance */}
               </div>
               
-              <h3 style={{ 
-                color: service.color, 
-                marginBottom: isMobile ? '0.5rem' : '1rem',
-                fontSize: isMobile ? '1rem' : '1.2rem',
-                fontWeight: language === 'ar' ? '400' : 'bold',
-                textAlign: 'center',
-                position: 'relative',
-                zIndex: 2
-              }}>
+              <h3 
+                className="service-card-title"
+                style={{ 
+                  color: service.color, 
+                  marginBottom: isMobile ? '0.5rem' : '1rem',
+                  fontWeight: language === 'ar' ? '400' : 'bold',
+                  textAlign: 'center',
+                  position: 'relative',
+                  zIndex: 2
+                }}
+              >
                 {service.title}
               </h3>
               
@@ -196,20 +202,20 @@ export default function Services({ isMobile, fonts }) {
                 borderRadius: '2px'
               }}></div>
               
-              <p style={{ 
-                color: '#555',
-                lineHeight: '1.5',
-                fontSize: isMobile ? '0.8rem' : '0.9rem',
-                textAlign: 'center',
-                position: 'relative',
-                zIndex: 2,
-                overflow: 'hidden',
-                display: '-webkit-box',
-                WebkitLineClamp: isMobile ? 3 : 4,
-                WebkitBoxOrient: 'vertical'
-              }}>
-                {service.description}
-              </p>
+              <p 
+                className="service-card-description"
+                style={{ 
+                  color: '#555',
+                  textAlign: 'center',
+                  position: 'relative',
+                  zIndex: 2,
+                  overflow: 'hidden',
+                  display: '-webkit-box',
+                  WebkitLineClamp: isMobile ? 3 : 4,
+                  WebkitBoxOrient: 'vertical'
+                }}
+                dangerouslySetInnerHTML={{ __html: service.description }}
+              />
               
               {/* Hover indicator */}
               <div className="hover-indicator" style={{

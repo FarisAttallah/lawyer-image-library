@@ -1,6 +1,5 @@
 import { useLanguage } from '../contexts/LanguageContext'
 import { translations } from '../utils/translations'
-import BrandingIcon from './BrandingIcon'
 import ImageLogo from './ImageLogo'
 import { useState, useEffect } from 'react'
 
@@ -27,41 +26,20 @@ export default function Footer() {
         {/* Main Footer Content */}
         <div style={{ 
           display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', 
+          gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr 1fr 1fr', 
           gap: '3rem',
           marginBottom: '2rem'
         }}>
-          {/* Firm Info with Logo */}
+          {/* Firm Info */}
           <div>
-            <div style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '1rem',
-              marginBottom: '1rem'
+            <h3 style={{ 
+              color: '#c49a6c', 
+              fontSize: '1.4rem',
+              fontWeight: 'bold',
+              margin: '0 0 1rem 0'
             }}>
-            <BrandingIcon size="large" />
-              {/* Separator line */}
-            <div style={{
-              position: 'absolute',
-              left: language === 'ar' ? 'auto' : (isMobile ? '50px' : '60px'),
-              right: language === 'ar' ? (isMobile ? '50px' : '60px') : 'auto',
-              top: '50%',
-              transform: 'translateY(-50%)',
-              width: '2px',
-              height: '30px',
-              backgroundColor: 'rgba(196, 154, 108, 0.3)',
-              zIndex: 1
-            }} />
-              <ImageLogo size="large" />
-              <h3 style={{ 
-                color: '#c49a6c', 
-                fontSize: '1.4rem',
-                fontWeight: 'bold',
-                margin: 0
-              }}>
-                {t.lawFirm}
-              </h3>
-            </div>
+              {t.lawFirm}
+            </h3>
             <p style={{
               lineHeight: '1.7',
               marginBottom: '1rem',
@@ -128,6 +106,33 @@ export default function Footer() {
               </ul>
             </div>
           </div>
+          
+          {/* Logo Column */}
+          <div style={{
+            display: 'flex',
+            alignItems: 'flex-start',
+            justifyContent: 'flex-end'
+          }}>
+            <div style={{
+              width: '150px',
+              height: '150px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}>
+              <img 
+                src="/images/Logo.png" 
+                alt="Hussein Al Mohammed Law Firm Logo"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'contain',
+                  display: 'block'
+                }}
+              />
+            </div>
+          </div>
+          
         </div>
         
         {/* Bottom Bar */}
