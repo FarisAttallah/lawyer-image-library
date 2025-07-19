@@ -88,24 +88,7 @@ export default function Services({ isMobile, fonts }) {
           textAlign: 'center',
           marginBottom: isMobile ? '2.5rem' : '4rem'
         }}>
-          <div style={{
-            display: 'inline-block',
-            padding: '0.5rem 2rem',
-            backgroundColor: 'rgba(196, 154, 108, 0.2)',
-            borderRadius: '25px',
-            border: '2px solid rgba(196, 154, 108, 0.3)',
-            marginBottom: '1rem'
-          }}>
-            <span style={{
-              fontSize: isMobile ? '0.9rem' : '1rem',
-              color: '#c49a6c',
-              fontWeight: language === 'ar' ? '400' : 'bold',
-              textTransform: 'uppercase',
-              letterSpacing: '1px'
-            }}>
-              ⚖️ {language === 'ar' ? 'خدماتنا القانونية' : 'Our Legal Services'}
-            </span>
-          </div>
+          
           
           <h2 style={{
             fontSize: fonts.sectionTitle,

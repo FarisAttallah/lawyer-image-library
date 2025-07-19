@@ -88,21 +88,19 @@ export default function ServicesPage() {
             padding: isMobile ? '0 1rem' : '0',
             animation: 'fadeInUp 1.2s ease-out'
           }}>
-            <h1 style={{
-              fontSize: isMobile ? '2rem' : '3.5rem',
+            <h2 style={{
+              fontSize: isMobile ? '2rem' : '2.5rem',
               marginBottom: '1.5rem',
               fontWeight: language === 'ar' ? '400' : 'bold',
-              textShadow: '3px 3px 6px rgba(0,0,0,0.8)',
               animation: 'fadeInUp 1.2s ease-out'
             }}>
               {language === 'ar' ? 'خدماتنا القانونية' : 'Our Legal Services'}
-            </h1>
+            </h2>
             <p style={{
               fontSize: isMobile ? '1rem' : '1.4rem',
               color: '#c49a6c',
               maxWidth: '700px',
               margin: '0 auto',
-              textShadow: '2px 2px 4px rgba(0,0,0,0.8)',
               lineHeight: '1.6',
               animation: 'fadeInUp 1.2s ease-out'
             }}>

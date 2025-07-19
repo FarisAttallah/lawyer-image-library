@@ -194,16 +194,16 @@ export default function Header({ transparent = false }) {
         {/* Mobile Menu Button and Language Toggle */}
         {isMobile && (
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', direction: 'ltr' }}>
               {language === 'ar' ? (
                 <>
-                  <BrandingIcon size="large" />
+                  <BrandingIcon size="medium" />
                   <LanguageToggle />
                 </>
               ) : (
                 <>
                   <LanguageToggle />
-                  <BrandingIcon size="large" />
+                  <BrandingIcon size="medium" />
                 </>
               )}
             </div>
