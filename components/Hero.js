@@ -14,18 +14,15 @@ export default function Hero({ isMobile, fonts }) {
   const slides = [
     {
       image: '/images/Riyadh_Tower_Ameen.png',
-      title: t.welcome,
-      subtitle: t.subtitle
+      title: t.welcome
     },
     {
       image: '/images/Hero_office.png',
-      title: t.welcome,
-      subtitle: t.subtitle
+      title: t.welcome
     },
     {
       image: '/images/Hero_office_nopeople.png',
-      title: t.welcome,
-      subtitle: t.subtitle
+      title: t.welcome
     }
   ]
   
@@ -310,7 +307,7 @@ export default function Hero({ isMobile, fonts }) {
         <h2 style={{ 
           color: 'white',
           fontSize: fonts.heroTitle,
-          marginBottom: '1.5rem',
+          marginBottom: '2.5rem',
           textShadow: '4px 4px 12px rgba(0,0,0,0.9), 0 0 30px rgba(196, 154, 108, 0.3)',
           fontWeight: language === 'ar' ? '250' : 'bold',
           lineHeight: '1.1',
@@ -319,19 +316,6 @@ export default function Hero({ isMobile, fonts }) {
         }}>
           {slides[currentSlide].title}
         </h2>
-        <p style={{ 
-          color: '#f8f9fa', 
-          fontSize: fonts.heroSubtitle,
-          lineHeight: '1.7',
-          textShadow: '3px 3px 8px rgba(0,0,0,0.9)',
-          marginBottom: '2.5rem',
-          maxWidth: '700px',
-          margin: '0 auto 2.5rem auto',
-          fontWeight: '300',
-          opacity: '0.95'
-        }}>
-          {slides[currentSlide].subtitle}
-        </p>
         
         {/* Enhanced call to action button with pulse effect */}
         <Link href="/contact" style={{ textDecoration: 'none' }}>

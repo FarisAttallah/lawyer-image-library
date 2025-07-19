@@ -1,5 +1,6 @@
 import { useLanguage } from '../contexts/LanguageContext'
 import { translations } from '../utils/translations'
+import BrandingIcon from './BrandingIcon'
 
 export default function LawyerProfile({ isMobile, fonts }) {
   const { language } = useLanguage()
@@ -74,7 +75,8 @@ export default function LawyerProfile({ isMobile, fonts }) {
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
-              background: 'linear-gradient(135deg, rgba(248, 249, 250, 0.8) 0%, rgba(255, 255, 255, 0.9) 100%)'
+              background: 'linear-gradient(135deg, rgba(248, 249, 250, 0.8) 0%, rgba(255, 255, 255, 0.9) 100%)',
+              position: 'relative'
             }}>
               <h2 style={{
                 fontSize: fonts.sectionTitle,
@@ -163,6 +165,17 @@ export default function LawyerProfile({ isMobile, fonts }) {
                 }}>
                   {language === 'ar' ? 'خبرة واسعة في القانون التجاري والمدني' : 'Extensive experience in Commercial and Civil Law'}
                 </p>
+              </div>
+              
+              {/* Branding Icon at bottom right (English) or bottom left (Arabic) */}
+              <div style={{
+                position: 'absolute',
+                bottom: language === 'ar' ? '2rem' : '1rem',
+                left: language === 'ar' ? '2rem' : 'auto',
+                right: language === 'ar' ? 'auto' : '2rem',
+                zIndex: 3
+              }}>
+                <BrandingIcon size="medium" />
               </div>
             </div>
             
