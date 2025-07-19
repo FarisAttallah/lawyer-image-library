@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useLanguage } from '../contexts/LanguageContext'
 
-export default function ContactForm() {
+export default function ContactForm({ fonts }) {
   const { language } = useLanguage()
   const [isMobile, setIsMobile] = useState(false)
   const [formData, setFormData] = useState({

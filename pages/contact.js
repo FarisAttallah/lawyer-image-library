@@ -199,12 +199,12 @@ export default function Contact() {
           }}>
             {/* Contact Information */}
             <div style={{ order: language === 'ar' ? 2 : 2 }}>
-              <ContactInfo />
+              <ContactInfo fonts={fonts} />
             </div>
             
             {/* Contact Form */}
             <div style={{ order: language === 'ar' ? 1 : 1 }}>
-              <ContactForm />
+              <ContactForm fonts={fonts} />
             </div>
           </div>
           

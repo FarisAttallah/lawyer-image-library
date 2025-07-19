@@ -298,7 +298,7 @@ export default function Hero({ isMobile, fonts }) {
         position: 'relative',
         zIndex: 10,
         padding: isMobile ? '2rem 1.5rem' : '4rem 2rem',
-        maxWidth: '1100px',
+        maxWidth: '1000px',
         color: 'white',
         textAlign: 'center',
         animation: 'fadeInUp 1.2s ease-out',

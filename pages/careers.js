@@ -5,6 +5,7 @@ import { useLanguage } from '../contexts/LanguageContext'
 import { translations } from '../utils/translations'
 import { fetchJobPostings } from '../utils/jobPostingsApi'
 import BrandingIcon from '../components/BrandingIcon'
+import { useResponsiveFonts } from '../hooks/useResponsiveFonts'
 
 
 export default function Careers() {
@@ -12,6 +13,7 @@ export default function Careers() {
   const t = translations[language]
   const isArabic = language === 'ar'
   const [isMobile, setIsMobile] = useState(false)
+  const { fontFamily, fonts } = useResponsiveFonts()
   const [jobPostings, setJobPostings] = useState([])
   const [selectedJob, setSelectedJob] = useState(null)
   const [showApplyModal, setShowApplyModal] = useState(false)
@@ -72,8 +74,10 @@ export default function Careers() {
     setApplySuccess(false)
     try {
       const formData = new FormData()
-      formData.append('jobTitle', applyJob.title)
-      formData.append('jobLocation', applyJob.location)
+      formData.append('jobTitle', applyJob.title_en)
+      formData.append('jobLocation', applyJob.location_en)
+      formData.append('jobTitleAr', applyJob.title_ar)
+      formData.append('jobLocationAr', applyJob.location_ar)
       formData.append('jobId', applyJob.id)
       formData.append('name', applicant.name)
       formData.append('email', applicant.email)
@@ -113,22 +117,24 @@ export default function Careers() {
     return html.replace(/<[^>]+>/g, '');
   }
 
-  // Shared button style for careers actions
+  // Shared button style for careers actions - matching hero button theme
   const careersButtonStyle = {
-    backgroundColor: '#3b3b3b',
+    backgroundColor: '#c49a6c',
     color: 'white',
     border: '2px solid transparent',
     borderRadius: '8px',
     fontWeight: 'bold',
+    fontFamily: 'BeINBlack, Roboto, Arial, sans-serif',
     textTransform: 'uppercase',
     letterSpacing: '0.5px',
-    boxShadow: '0 6px 20px rgba(59, 59, 59, 0.4)',
+    boxShadow: '0 6px 20px rgba(196, 154, 108, 0.4), 0 0 0 0 rgba(196, 154, 108, 0.7)',
     transition: 'all 0.3s ease',
     cursor: 'pointer',
     fontSize: '1.08rem',
     padding: '1.1rem',
     outline: 'none',
     marginTop: '0.5rem',
+    animation: 'pulse 2s infinite'
   };
 
   return (
@@ -183,7 +189,7 @@ export default function Careers() {
               animation: 'fadeInUp 1.2s ease-out'
             }}>
               <h1 style={{
-                fontSize: isMobile ? '2rem' : '3.5rem',
+                fontSize: fonts.sectionTitle,
                 marginBottom: '1.5rem',
                 fontWeight: 800,
                 textShadow: '3px 3px 6px rgba(0,0,0,0.8)',
@@ -194,7 +200,7 @@ export default function Careers() {
                 {isArabic ? 'الوظائف' : 'Careers'}
               </h1>
               <p style={{
-                fontSize: isMobile ? '1rem' : '1.4rem',
+                fontSize: fonts.sectionSubtitle,
                 color: '#c49a6c',
                 maxWidth: '700px',
                 margin: '0 auto',
@@ -409,8 +415,8 @@ export default function Careers() {
                         alignItems: 'center',
                         opacity: submitting ? 0.7 : 1,
                       }}
-                      onMouseOver={e => { e.currentTarget.style.backgroundColor = '#5a5a5a'; e.currentTarget.style.borderColor = '#3b3b3b'; e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 8px 25px rgba(59, 59, 59, 0.6)'; }}
-                      onMouseOut={e => { e.currentTarget.style.backgroundColor = '#3b3b3b'; e.currentTarget.style.borderColor = 'transparent'; e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 6px 20px rgba(59, 59, 59, 0.4)'; }}
+                      onMouseOver={e => { e.currentTarget.style.backgroundColor = '#a65c32'; e.currentTarget.style.borderColor = '#c49a6c'; e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 8px 25px rgba(196, 154, 108, 0.6)'; }}
+                      onMouseOut={e => { e.currentTarget.style.backgroundColor = '#c49a6c'; e.currentTarget.style.borderColor = 'transparent'; e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 6px 20px rgba(196, 154, 108, 0.4)'; }}
                       onClick={() => openApplyModal(selectedJob)}
                     >
                       {isArabic ? 'تقديم' : 'Apply'}
@@ -450,9 +456,9 @@ export default function Careers() {
                   style={{
                     ...careersButtonStyle,
                     opacity: submitting ? 0.7 : 1,
-                    onMouseOver: e => { e.currentTarget.style.backgroundColor = '#5a5a5a'; e.currentTarget.style.borderColor = '#3b3b3b'; e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 8px 25px rgba(59, 59, 59, 0.6)'; },
-                    onMouseOut: e => { e.currentTarget.style.backgroundColor = '#3b3b3b'; e.currentTarget.style.borderColor = 'transparent'; e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 6px 20px rgba(59, 59, 59, 0.4)'; },
                   }}
+                  onMouseOver={e => { e.currentTarget.style.backgroundColor = '#a65c32'; e.currentTarget.style.borderColor = '#c49a6c'; e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 8px 25px rgba(196, 154, 108, 0.6)'; }}
+                  onMouseOut={e => { e.currentTarget.style.backgroundColor = '#c49a6c'; e.currentTarget.style.borderColor = 'transparent'; e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 6px 20px rgba(196, 154, 108, 0.4)'; }}
                   onClick={() => openApplyModal(selectedJob)}
                 >
                   {isArabic ? 'تقديم' : 'Apply'}
@@ -527,15 +533,67 @@ export default function Careers() {
                         required
                       />
                       <label htmlFor="apply-resume" style={{ fontWeight: 600, color: '#0c4b3b', fontSize: '1.05rem', textAlign: 'right' }}>{isArabic ? 'السيرة الذاتية' : 'Resume'}</label>
-                      <input
-                        id="apply-resume"
-                        type="file"
-                        accept=".pdf,.doc,.docx"
-                        ref={fileInputRef}
-                        onChange={e => setResumeFile(e.target.files[0])}
-                        style={{ padding: '0.9rem', borderRadius: 8, border: '1.5px solid #c49a6c', fontSize: '1.07rem', background: '#f9fafb', fontWeight: 500, width: '100%', textAlign: 'right' }}
-                        required
-                      />
+                      {!resumeFile ? (
+                        <input
+                          id="apply-resume"
+                          type="file"
+                          accept=".pdf,.doc,.docx"
+                          ref={fileInputRef}
+                          onChange={e => setResumeFile(e.target.files[0])}
+                          style={{ padding: '0.9rem', borderRadius: 8, border: '1.5px solid #c49a6c', fontSize: '1.07rem', background: '#f9fafb', fontWeight: 500, width: '100%', textAlign: 'right' }}
+                          required
+                        />
+                      ) : (
+                        <div style={{ 
+                          display: 'flex', 
+                          alignItems: 'center', 
+                          gap: '0.5rem',
+                          padding: '0.9rem', 
+                          borderRadius: 8, 
+                          border: '1.5px solid #c49a6c', 
+                          background: '#f9fafb',
+                          width: '100%'
+                        }}>
+                          <a 
+                            href={URL.createObjectURL(resumeFile)}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ 
+                              color: '#0c4b3b', 
+                              textDecoration: 'none', 
+                              fontWeight: 500,
+                              flex: 1,
+                              textAlign: 'right'
+                            }}
+                          >
+                            📄 {resumeFile.name}
+                          </a>
+                          <button
+                            type="button"
+                            onClick={() => {
+                              setResumeFile(null)
+                              if (fileInputRef.current) fileInputRef.current.value = ''
+                            }}
+                            style={{
+                              background: '#dc3545',
+                              color: 'white',
+                              border: 'none',
+                              borderRadius: '50%',
+                              width: '24px',
+                              height: '24px',
+                              cursor: 'pointer',
+                              fontSize: '14px',
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              fontWeight: 'bold'
+                            }}
+                            title={isArabic ? 'إزالة الملف' : 'Remove file'}
+                          >
+                            ×
+                          </button>
+                        </div>
+                      )}
                     </>
                   ) : (
                     <>
@@ -567,15 +625,67 @@ export default function Careers() {
                         required
                       />
                       <label htmlFor="apply-resume" style={{ fontWeight: 600, color: '#0c4b3b', fontSize: '1.05rem', textAlign: 'left' }}>{isArabic ? 'السيرة الذاتية' : 'Resume'}</label>
-                      <input
-                        id="apply-resume"
-                        type="file"
-                        accept=".pdf,.doc,.docx"
-                        ref={fileInputRef}
-                        onChange={e => setResumeFile(e.target.files[0])}
-                        style={{ padding: '0.9rem', borderRadius: 8, border: '1.5px solid #c49a6c', fontSize: '1.07rem', background: '#f9fafb', fontWeight: 500, width: '100%', textAlign: 'left' }}
-                        required
-                      />
+                      {!resumeFile ? (
+                        <input
+                          id="apply-resume"
+                          type="file"
+                          accept=".pdf,.doc,.docx"
+                          ref={fileInputRef}
+                          onChange={e => setResumeFile(e.target.files[0])}
+                          style={{ padding: '0.9rem', borderRadius: 8, border: '1.5px solid #c49a6c', fontSize: '1.07rem', background: '#f9fafb', fontWeight: 500, width: '100%', textAlign: 'left' }}
+                          required
+                        />
+                      ) : (
+                        <div style={{ 
+                          display: 'flex', 
+                          alignItems: 'center', 
+                          gap: '0.5rem',
+                          padding: '0.9rem', 
+                          borderRadius: 8, 
+                          border: '1.5px solid #c49a6c', 
+                          background: '#f9fafb',
+                          width: '100%'
+                        }}>
+                          <a 
+                            href={URL.createObjectURL(resumeFile)}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ 
+                              color: '#0c4b3b', 
+                              textDecoration: 'none', 
+                              fontWeight: 500,
+                              flex: 1,
+                              textAlign: 'left'
+                            }}
+                          >
+                            📄 {resumeFile.name}
+                          </a>
+                          <button
+                            type="button"
+                            onClick={() => {
+                              setResumeFile(null)
+                              if (fileInputRef.current) fileInputRef.current.value = ''
+                            }}
+                            style={{
+                              background: '#dc3545',
+                              color: 'white',
+                              border: 'none',
+                              borderRadius: '50%',
+                              width: '24px',
+                              height: '24px',
+                              cursor: 'pointer',
+                              fontSize: '14px',
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              fontWeight: 'bold'
+                            }}
+                            title={isArabic ? 'إزالة الملف' : 'Remove file'}
+                          >
+                            ×
+                          </button>
+                        </div>
+                      )}
                     </>
                   )}
                 </div>
@@ -587,9 +697,9 @@ export default function Careers() {
                   style={{
                     ...careersButtonStyle,
                     opacity: submitting ? 0.7 : 1,
-                    onMouseOver: e => { e.currentTarget.style.backgroundColor = '#5a5a5a'; e.currentTarget.style.borderColor = '#3b3b3b'; e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 8px 25px rgba(59, 59, 59, 0.6)'; },
-                    onMouseOut: e => { e.currentTarget.style.backgroundColor = '#3b3b3b'; e.currentTarget.style.borderColor = 'transparent'; e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 6px 20px rgba(59, 59, 59, 0.4)'; },
                   }}
+                  onMouseOver={e => { e.currentTarget.style.backgroundColor = '#a65c32'; e.currentTarget.style.borderColor = '#c49a6c'; e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 8px 25px rgba(196, 154, 108, 0.6)'; }}
+                  onMouseOut={e => { e.currentTarget.style.backgroundColor = '#c49a6c'; e.currentTarget.style.borderColor = 'transparent'; e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 6px 20px rgba(196, 154, 108, 0.4)'; }}
                 >
                   {submitting ? (
                     <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8 }}>
@@ -604,6 +714,18 @@ export default function Careers() {
                   @keyframes spin {
                     0% { transform: rotate(0deg); }
                     100% { transform: rotate(360deg); }
+                  }
+                  
+                  @keyframes pulse {
+                    0% {
+                      box-shadow: 0 6px 20px rgba(196, 154, 108, 0.4), 0 0 0 0 rgba(196, 154, 108, 0.7);
+                    }
+                    70% {
+                      box-shadow: 0 6px 20px rgba(196, 154, 108, 0.4), 0 0 0 10px rgba(196, 154, 108, 0);
+                    }
+                    100% {
+                      box-shadow: 0 6px 20px rgba(196, 154, 108, 0.4), 0 0 0 0 rgba(196, 154, 108, 0);
+                    }
                   }
                 `}</style>
               </form>

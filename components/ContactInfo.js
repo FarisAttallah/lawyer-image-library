@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { useLanguage } from '../contexts/LanguageContext'
 import { translations } from '../utils/translations'
 
-export default function ContactInfo() {
+export default function ContactInfo({ fonts }) {
   const { language } = useLanguage()
   const t = translations[language]
   const [isMobile, setIsMobile] = useState(false)
@@ -92,7 +92,9 @@ export default function ContactInfo() {
       padding: isMobile ? '1rem' : '2rem 1rem'
     }}>
       {/* Main Heading */}
-      <h2 style={{
+      <h2 
+      
+      style={{
         color: '#0c4b3b',
         fontSize: isMobile ? '1.6rem' : '2rem',
         fontWeight: 'bold',
@@ -107,8 +109,8 @@ export default function ContactInfo() {
       <div style={{
         position: 'relative',
         width: isMobile ? '100%' : '100%',
-        maxWidth: isMobile ? '400px' : '500px',
-        height: isMobile ? '250px' : '400px',
+        maxWidth: isMobile ? '400px' : '800px',
+        height: isMobile ? '250px' : '600px',
         borderRadius: '16px',
         overflow: 'hidden',
         boxShadow: '0 12px 32px rgba(0,0,0,0.15)',
@@ -162,7 +164,7 @@ export default function ContactInfo() {
       {/* Supporting Text */}
       <p style={{
         color: '#666',
-        fontSize: isMobile ? '0.9rem' : '1.1rem',
+        fontSize: fonts.body,
         fontWeight: '400',
         textAlign: 'center',
         marginBottom: '1.5rem',

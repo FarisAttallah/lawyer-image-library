@@ -167,12 +167,11 @@ export default function LawyerProfile({ isMobile, fonts }) {
                 </p>
               </div>
               
-              {/* Branding Icon at bottom right (English) or bottom left (Arabic) */}
+              {/* Branding Icon at bottom left */}
               <div style={{
                 position: 'absolute',
-                bottom: language === 'ar' ? '1rem' : '0.5rem',
-                left: language === 'ar' ? '1rem' : 'auto',
-                right: language === 'ar' ? 'auto' : '1rem',
+                bottom: '0.5rem',
+                left: '1rem',
                 zIndex: 3
               }}>
                 <BrandingIcon size="medium" />
