@@ -200,7 +200,7 @@ export default function Services({ isMobile, fonts }) {
                 background: `linear-gradient(90deg, ${service.color}, transparent)`,
                 margin: isMobile ? '0 auto 0.5rem' : '0 auto 1rem',
                 borderRadius: '2px',
-                marginTop: service.title.length <= 18 ? (isMobile ? '1rem' : '3rem') : '0'
+                marginTop: service.title.length <= 20 ? (isMobile ? '1rem' : '3rem') : '0'
               }}></div>
               
               <p 

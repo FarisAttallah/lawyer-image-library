@@ -142,6 +142,7 @@ export default function JobPostingsAdmin() {
         padding: isMobile ? '0 0.5rem' : '0 2rem',
         marginBottom: isMobile ? '2rem' : '4rem',
         direction: isArabic ? 'rtl' : 'ltr',
+        zIndex: 'auto',
       }}
     >
       {/* Step 1: Basic Info Form */}
@@ -275,7 +276,19 @@ export default function JobPostingsAdmin() {
             <h2 style={{ color: '#0c4b3b', fontWeight: 800, marginBottom: '1.1rem', fontSize: '2rem', letterSpacing: '0.5px', textAlign: 'right' }}>{isArabic ? 'الوصف الوظيفي (عربي)' : 'Job Description (AR)'}</h2>
             <form onSubmit={handleAddJob}>
               <div style={{ marginBottom: '2.2rem' }}>
-                <ReactQuill theme="snow" value={jobDescAr} onChange={setJobDescAr} style={{ background: 'white', borderRadius: 12, minHeight: 300, height: 300 }} />
+                <ReactQuill
+                  theme="snow"
+                  value={jobDescAr}
+                  onChange={setJobDescAr}
+                  style={{ background: 'white', borderRadius: 12, minHeight: 300, height: 300 }}
+                  className="quill-rtl"
+                />
+                <style>{`
+                  .quill-rtl .ql-editor {
+                    direction: rtl;
+                    text-align: right;
+                  }
+                `}</style>
               </div>
               {jobError && <div style={{ color: '#a94442', marginBottom: '0.5rem', textAlign: 'center', fontWeight: 600 }}>{jobError}</div>}
               <button
@@ -405,7 +418,7 @@ export default function JobPostingsAdmin() {
           position: 'fixed',
           top: 0, left: 0, right: 0, bottom: 0,
           background: 'rgba(0,0,0,0.35)',
-          zIndex: 3000,
+          zIndex: 5000,
           display: 'flex', alignItems: 'center', justifyContent: 'center',
         }}>
           <div style={{
@@ -418,6 +431,7 @@ export default function JobPostingsAdmin() {
             textAlign: isArabic ? 'right' : 'left',
             maxHeight: '90vh',
             overflowY: 'auto',
+            zIndex: 513300,
           }}>
             <button onClick={() => setViewMoreJob(null)} style={{ position: 'absolute', top: 18, right: 24, background: 'none', border: 'none', fontSize: 28, cursor: 'pointer', color: '#888', padding: 0, lineHeight: 1, zIndex: 2 }}>&times;</button>
             <h2 style={{ color: '#0c4b3b', fontWeight: 800, marginBottom: '1.1rem', fontSize: '1.35rem', letterSpacing: '0.5px' }}>{viewMoreJob[isArabic ? 'title_ar' : 'title_en']}</h2>
@@ -426,6 +440,7 @@ export default function JobPostingsAdmin() {
             <div style={{ color: '#333', fontSize: '1.08rem', fontWeight: 500, lineHeight: 1.7, marginBottom: '0.5rem' }}>
               <div dangerouslySetInnerHTML={{ __html: viewMoreJob[isArabic ? 'description_ar' : 'description_en'] }} />
             </div>
+            <button onClick={() => setViewMoreJob(null)} style={{ position: 'absolute', top: 18, right: 24, background: 'none', border: 'none', fontSize: 28, cursor: 'pointer', color: '#888', padding: 0, lineHeight: 1, zIndex: 2 }}>&times;</button>
           </div>
         </div>
       )}

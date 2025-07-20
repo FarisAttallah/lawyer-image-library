@@ -448,7 +448,9 @@ export default function Careers() {
                 <div style={{ fontWeight: 900, fontSize: '1.35rem', color: '#0c4b3b', marginBottom: '0.9rem', letterSpacing: '0.2px', textAlign: isArabic ? 'right' : 'left', display:'flex',alignItems:'center',gap:'0.5rem' }}>
                   <span style={{fontSize:'1.1em'}}>💼</span> {selectedJob[isArabic ? 'title_ar' : 'title_en']}
                 </div>
-                <div style={{ marginBottom: '0.9rem', color: '#333', fontSize: '1.08rem', fontWeight: 500, textAlign: isArabic ? 'right' : 'left', lineHeight: 1.7 }}>{selectedJob[isArabic ? 'description_ar' : 'description_en']}</div>
+                <div style={{ marginBottom: '0.9rem', color: '#333', fontSize: '1.08rem', fontWeight: 500, textAlign: isArabic ? 'right' : 'left', lineHeight: 1.7 }}>
+                  <div dangerouslySetInnerHTML={{ __html: selectedJob[isArabic ? 'description_ar' : 'description_en'] }} />
+                </div>
                 <div style={{ color: '#c49a6c', fontWeight: 800, fontSize: '1.05rem', marginBottom: '0.7rem', textAlign: isArabic ? 'right' : 'left', display:'flex',alignItems:'center',gap:'0.4rem' }}>
                   <span style={{fontSize:'1em'}}>📍</span> {selectedJob[isArabic ? 'location_ar' : 'location_en']}
                 </div>

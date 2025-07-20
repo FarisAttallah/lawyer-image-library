@@ -85,8 +85,12 @@ export default function LawyerProfile({ isMobile, fonts }) {
                 fontWeight: language === 'ar' ? '400' : 'bold',
                 textAlign: language === 'ar' ? 'right' : 'left',
                 position: 'relative'
-              }}>
-                {t.lawyerQuoteTitle}
+              }}
+              >
+                <span
+                  dangerouslySetInnerHTML={{ __html: t.lawyerQuoteTitle }}
+                  style={{ display: 'inline-block' }}
+                />
                 {/* Decorative line under title */}
                 <div style={{
                   position: 'absolute',

@@ -156,7 +156,7 @@ export default function ServicesPage() {
                   marginBottom: '1rem',
                   fontWeight: language === 'ar' ? '400' : 'bold'
                 }}>
-                  {language === 'ar' ? 'لماذا تختارنا؟' : 'Why Choose Us?'}
+                  {language === 'ar' ? 'لماذا نحن؟' : 'Why Choose Us?'}
                 </h2>
                 <p style={{
                   fontSize: fonts.sectionSubtitle,
