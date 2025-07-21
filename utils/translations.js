@@ -76,19 +76,19 @@ export const translations = {
   },
   en: {
     // Header
-    lawFirm: 'Hussein Ahmed Al Mohammed Law Firm',
+    lawFirm: 'Hussein Ahmed Almohmmed Law Firm',
     home: 'Home',
     about: 'About Us',
     services: 'Our Services',
     contact: 'Contact Us',
     
     // Hero Section
-    welcome: 'Hussein Ahmed Al Mohammed Law Firm',
+    welcome: 'Hussein Ahmed Almohmmed Law Firm',
     subtitle: 'Over 13 years of legal excellence and trust - Riyadh, Saudi Arabia',
     
     // About Section
     aboutTitle: 'About Us',
-    aboutDescription: 'Hussein Ahmed Al Mohammed Law Firm was established in Riyadh as a specialized legal entity providing high-quality professional services to individuals, companies, and various entities in the Saudi market. The firm has over 13 years of legal experience and serves as a trusted partner for many clients across different sectors.',
+    aboutDescription: 'Hussein Ahmed Almohmmed Law Firm was established in Riyadh as a specialized legal entity providing high-quality professional services to individuals, companies, and various entities in the Saudi market. The firm has over 13 years of legal experience and serves as a trusted partner for many clients across different sectors.',
     
     // Vision, Mission, Goals
     visionTitle: 'Our Vision',
@@ -110,7 +110,7 @@ export const translations = {
     developmentDesc: 'We keep up with regulations and legislation, developing technically and procedurally to serve client interests',
     
     // Lawyer Quote
-    lawyerQuoteTitle: 'Word from Lawyer Hussein Ahmed Al Mohammed',
+    lawyerQuoteTitle: 'Word from Lawyer Hussein Ahmed Almohmmed',
     lawyerQuote: 'We established this firm on the firm belief that law is not just a profession, but a mission concerned with defending rights, maintaining justice, and protecting trust between parties. We do not just provide legal services, but care for our clients\' interests as if they were our own.',
     
     // Services
@@ -140,7 +140,7 @@ export const translations = {
     location: 'Riyadh, Saudi Arabia',
     workingHours: 'Working Hours',
     schedule: 'Sunday - Thursday: 9:00 AM - 6:00 PM',
-    copyright: '© 2025 Hussein Ahmed Al Mohammed Law Firm. All rights reserved.',
+    copyright: '© 2025 Hussein Ahmed Almohmmed Law Firm. All rights reserved.',
     
     // Stats
     experience: '13+',

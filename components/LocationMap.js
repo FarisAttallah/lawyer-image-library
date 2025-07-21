@@ -78,7 +78,7 @@ export default function LocationMap() {
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="Hussein Ahmed Al Mohammed Law Firm Location"
+            title="Hussein Ahmed Almohmmed Law Firm Location"
           />
           
           {/* Map overlay with office info */}

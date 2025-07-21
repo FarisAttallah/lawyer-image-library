@@ -97,7 +97,7 @@ export default function Logo({ size = 'medium' }) {
         marginTop: '8px',
         marginLeft: language === 'ar' ? '0' : '12px' // Add left margin for English to avoid icon overlap
       }}>
-        {/* Hussein & Al Mohammed in stylized format */}
+        {/* Hussein & Almohmmed in stylized format */}
         <div style={{
           display: 'flex',
           flexDirection: 'column',
@@ -124,7 +124,7 @@ export default function Logo({ size = 'medium' }) {
             lineHeight: '1.1',
             marginTop: '-2px'
           }}>
-            {language === 'ar' ? '' : 'AL MOHAMMED'}
+            {language === 'ar' ? '' : 'Almohmmed'}
           </div>
         </div>
         

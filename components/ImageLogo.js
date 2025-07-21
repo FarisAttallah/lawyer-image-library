@@ -27,7 +27,7 @@ export default function ImageLogo({ size = 'medium' }) {
     }}>
       <img 
         src="/images/Logo.png" 
-        alt="Hussein Al Mohammed Law Firm Logo"
+        alt="Hussein Almohmmed Law Firm Logo"
         style={{
           width: '100%',
           height: '100%',

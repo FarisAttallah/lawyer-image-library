@@ -40,7 +40,7 @@ export default async function handler(req, res) {
     try {
       console.log('Sending email via Resend...');
       const result = await resend.emails.send({
-        from: 'Hussein Al Mohammed Law Firm <careers@faresattallah.website>',
+        from: 'Hussein Almohmmed Law Firm <careers@faresattallah.website>',
         to: 'ayoub6669@gmail.com',
         subject: `New Job Application: ${jobTitle}`,
         html: `
@@ -66,7 +66,7 @@ export default async function handler(req, res) {
             <div class="container">
               <div class="header">
                 <div style="position: relative;">
-                  <img src="https://i.imgur.com/SiCHPog.png" alt="Hussein Al Mohammed Law Firm" style="width: 60px; height: 60px; border-radius: 8px; position: absolute; top: 0; left: 0;" />
+                  <img src="https://i.imgur.com/SiCHPog.png" alt="Hussein Almohmmed Law Firm" style="width: 60px; height: 60px; border-radius: 8px; position: absolute; top: 0; left: 0;" />
                   <div style="text-align: center; padding-top: 10px;">
                     <h1 style="margin: 0;">طلب توظيف جديد</h1>
                     <h2 style="margin: 10px 0 0 0; font-size: 1.2em;">New Job Application</h2>
@@ -113,7 +113,7 @@ export default async function handler(req, res) {
                 <p style="margin: 0; color: #666; font-size: 0.9em;">
                   تم إرسال هذا الطلب من موقع مكتب حسين أحمد آل محمد للمحاماة
                   <br>
-                  This application was submitted from Hussein Ahmed Al Mohammed Law Firm website
+                  This application was submitted from Hussein Ahmed Almohmmed Law Firm website
                 </p>
               </div>
             </div>

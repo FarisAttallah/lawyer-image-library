@@ -148,7 +148,7 @@ export default function LawyerProfile({ isMobile, fonts }) {
                   position: 'relative',
                   zIndex: 2
                 }}>
-                  {language === 'ar' ? 'المحامي حسين بن أحمد آل محمد' : 'Lawyer Hussein bin Ahmed Al Mohammed'}
+                  {language === 'ar' ? 'المحامي حسين بن أحمد آل محمد' : 'Lawyer Hussein bin Ahmed Almohmmed'}
                 </h3>
                 <p style={{
                   fontSize: fonts.body,
@@ -227,7 +227,7 @@ export default function LawyerProfile({ isMobile, fonts }) {
                 }}>
                   <img 
                     src="/images/saudi_man.jpeg" 
-                    alt={language === 'ar' ? 'المحامي حسين بن أحمد آل محمد' : 'Lawyer Hussein bin Ahmed Al Mohammed'}
+                    alt={language === 'ar' ? 'المحامي حسين بن أحمد آل محمد' : 'Lawyer Hussein bin Ahmed Almohmmed'}
                     style={{
                       width: '100%',
                       height: '100%',

@@ -51,7 +51,7 @@ export default function ContactInfo({ fonts }) {
     },
     en: {
       title: 'Contact Information',
-      firmName: 'Hussein Ahmed Al Mohammed Law Firm & Legal Consultations',
+      firmName: 'Hussein Ahmed Almohmmed Law Firm & Legal Consultations',
       address: [
         'Riyadh - Saudi Arabia',
         'Postal Code 12331 Additional Number 6583'
@@ -130,7 +130,7 @@ export default function ContactInfo({ fonts }) {
         
         <img 
           src="images/ContactUs.png" 
-          alt="Contact Us - Hussein Al Mohammed Law Firm"
+          alt="Contact Us - Hussein Almohmmed Law Firm"
           style={{
             width: '100%',
             height: '100%',

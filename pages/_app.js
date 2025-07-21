@@ -11,7 +11,7 @@ export default function App({ Component, pageProps }) {
         <meta charSet="utf-8" />
           <link rel="shortcut icon" href="/images/favicon.png" />
 
-        <title>Hussein Ahmed Al Mohammed Law Firm</title>
+        <title>Hussein Ahmed Almohmmed Law Firm</title>
       </Head>
       <BrandingLoader />
       <Component {...pageProps} />
