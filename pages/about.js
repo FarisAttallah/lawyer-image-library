@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import About from '../components/About'
+import Team from '../components/Team'
 import StatsSection from '../components/StatsSection'
 import JusticeSection from '../components/JusticeSection'
 import { useLanguage } from '../contexts/LanguageContext'
@@ -143,6 +144,13 @@ export default function AboutPage() {
             <About isMobile={isMobile} fonts={{}} />
           </section>
 
+          {/* Team Section */}
+          <section style={{ 
+            marginBottom: isMobile ? '3rem' : '4rem'
+          }}>
+            <Team isMobile={isMobile} fonts={{}} />
+          </section>
+
           {/* Stats Section */}
           <section style={{ 
             marginBottom: isMobile ? '3rem' : '4rem'
@@ -151,11 +159,13 @@ export default function AboutPage() {
           </section>
           
           {/* Justice Section */}
-          <section style={{ 
+          
+          {/* <section style={{ 
             marginBottom: isMobile ? '2rem' : '3rem'
           }}>
             <JusticeSection isMobile={isMobile} fonts={{}} />
-          </section>
+          </section> */}
+          
         </div>
         </div>
       </main>

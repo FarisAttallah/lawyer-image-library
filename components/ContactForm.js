@@ -1,17 +1,19 @@
 import { useState, useEffect } from 'react'
 import { useLanguage } from '../contexts/LanguageContext'
+import { translations } from '../utils/translations'
 
 export default function ContactForm({ fonts }) {
   const { language } = useLanguage()
+  const t = translations[language]
   const [isMobile, setIsMobile] = useState(false)
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
     commercialRegister: '',
+    serviceType: '',
     subject: '',
-    message: '',
-    legalService: ''
+    message: ''
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState(null)
@@ -28,64 +30,27 @@ export default function ContactForm({ fonts }) {
     return () => window.removeEventListener('resize', checkIsMobile)
   }, [])
   
-  const formTexts = {
-    ar: {
-      title: 'أرسل لنا رسالة',
-      subtitle: 'نحن نقدر تواصلكم ونسعى للرد عليكم في أقرب وقت ممكن',
-      name: 'الاسم الكامل',
-      email: 'البريد الإلكتروني',
-      phone: 'رقم الهاتف',
-      commercialRegister: 'سجل تجاري',
-      subject: 'موضوع الاستشارة',
-      legalService: 'نوع الخدمة القانونية',
-      message: 'تفاصيل الاستشارة أو القضية',
-      submit: 'إرسال الرسالة',
-      submitting: 'جاري الإرسال...',
-      successMessage: 'تم إرسال رسالتك بنجاح! سنتواصل معك قريباً.',
-      errorMessage: 'حدث خطأ في إرسال الرسالة. يرجى المحاولة مرة أخرى.',
-      required: 'مطلوب',
-      selectService: 'اختر نوع الخدمة',
-      services: [
-        'استشارة قانونية عامة',
-        'قضايا تجارية وشركات',
-        'قضايا عمالية',
-        'عقود واتفاقيات',
-        'قضايا عقارية',
-        'تحكيم ونزاعات',
-        'امتثال وحوكمة',
-        'أخرى'
-      ]
-    },
-    en: {
-      title: 'Send Us a Message',
-      subtitle: 'We value your communication and strive to respond as soon as possible',
-      name: 'Full Name',
-      email: 'Email Address',
-      phone: 'Phone Number',
-      commercialRegister: 'Commercial Register',
-      subject: 'Consultation Subject',
-      legalService: 'Type of Legal Service',
-      message: 'Consultation Details or Case Information',
-      submit: 'Send Message',
-      submitting: 'Sending...',
-      successMessage: 'Your message has been sent successfully! We will contact you soon.',
-      errorMessage: 'An error occurred while sending the message. Please try again.',
-      required: 'Required',
-      selectService: 'Select Service Type',
-      services: [
-        'General Legal Consultation',
-        'Commercial & Corporate Cases',
-        'Labor Law Cases',
-        'Contracts & Agreements',
-        'Real Estate Cases',
-        'Arbitration & Disputes',
-        'Compliance & Governance',
-        'Other'
-      ]
-    }
-  }
+  const services = [
+    'استشارة قانونية عامة',
+    'قضايا تجارية وشركات',
+    'قضايا عمالية',
+    'عقود واتفاقيات',
+    'قضايا عقارية',
+    'تحكيم ونزاعات',
+    'امتثال وحوكمة',
+    'أخرى'
+  ]
   
-  const t = formTexts[language]
+  const servicesEn = [
+    'General Legal Consultation',
+    'Commercial & Corporate Cases',
+    'Labor Law Cases',
+    'Contracts & Agreements',
+    'Real Estate Cases',
+    'Arbitration & Disputes',
+    'Compliance & Governance',
+    'Other'
+  ]
   
   const handleInputChange = (e) => {
     const { name, value } = e.target
@@ -101,27 +66,45 @@ export default function ContactForm({ fonts }) {
     setSubmitStatus(null)
     
     try {
-      // Here you can implement the email sending logic
-      // For now, we'll simulate a successful submission
+      // Validate required fields
+      if (!formData.name || !formData.email || !formData.serviceType || !formData.subject || !formData.message) {
+        setSubmitStatus('error')
+        return
+      }
       
-      // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 2000))
-      
-      // TODO: Replace this with actual email sending logic
-      // You can use services like EmailJS, Formspree, or your own backend API
-      console.log('Form Data to be sent:', formData)
-      
-      // For demonstration, we'll show success
-      setSubmitStatus('success')
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        commercialRegister: '',
-        subject: '',
-        message: '',
-        legalService: ''
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          commercialRegister: formData.commercialRegister,
+          serviceType: formData.serviceType,
+          subject: formData.subject,
+          message: formData.message
+        })
       })
+      
+      if (response.ok) {
+        setSubmitStatus('success')
+        // Reset form data
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          commercialRegister: '',
+          serviceType: '',
+          subject: '',
+          message: ''
+        })
+      } else {
+        const errorData = await response.json()
+        console.error('API Error:', errorData)
+        setSubmitStatus('error')
+      }
       
     } catch (error) {
       console.error('Error sending message:', error)
@@ -167,18 +150,8 @@ export default function ContactForm({ fonts }) {
         fontWeight: 'bold',
         textAlign: isMobile ? 'center' : (language === 'ar' ? 'right' : 'left')
       }}>
-        {t.title}
+        {t.contactFormTitle}
       </h2>
-      
-      <p style={{
-        color: '#666',
-        marginBottom: '2rem',
-        lineHeight: '1.6',
-        fontSize: isMobile ? '0.9rem' : '1rem',
-        textAlign: isMobile ? 'center' : (language === 'ar' ? 'right' : 'left')
-      }}>
-        {t.subtitle}
-      </p>
       
       {submitStatus === 'success' && (
         <div style={{
@@ -210,7 +183,7 @@ export default function ContactForm({ fonts }) {
         {/* Name Field */}
         <div>
           <label style={labelStyle}>
-            {t.name} <span style={{ color: '#dc3545', fontFamily: 'Arial, sans-serif' }}>*</span>
+            {t.fullName} <span style={{ color: '#dc3545', fontFamily: 'Arial, sans-serif' }}>*</span>
           </label>
           <input
             type="text"
@@ -244,7 +217,7 @@ export default function ContactForm({ fonts }) {
         {/* Phone Field */}
         <div>
           <label style={labelStyle}>
-            {t.phone}
+            {t.phoneNumber}
           </label>
           <input
             type="tel"
@@ -260,14 +233,13 @@ export default function ContactForm({ fonts }) {
         {/* Commercial Register Field */}
         <div>
           <label style={labelStyle}>
-            {t.commercialRegister} <span style={{ color: '#dc3545', fontFamily: 'Arial, sans-serif' }}>*</span>
+            {t.commercialRegister}
           </label>
           <input
             type="text"
             name="commercialRegister"
             value={formData.commercialRegister}
             onChange={handleInputChange}
-            required
             style={inputStyle}
             placeholder={language === 'ar' ? 'رقم السجل التجاري' : 'Commercial Register Number'}
             onFocus={(e) => e.target.style.borderColor = '#c49a6c'}
@@ -275,14 +247,14 @@ export default function ContactForm({ fonts }) {
           />
         </div>
         
-        {/* Legal Service Type */}
+        {/* Service Type */}
         <div>
           <label style={labelStyle}>
-            {t.legalService} <span style={{ color: '#dc3545', fontFamily: 'Arial, sans-serif' }}>*</span>
+            {t.serviceType} <span style={{ color: '#dc3545', fontFamily: 'Arial, sans-serif' }}>*</span>
           </label>
           <select
-            name="legalService"
-            value={formData.legalService}
+            name="serviceType"
+            value={formData.serviceType}
             onChange={handleInputChange}
             required
             style={{
@@ -292,8 +264,8 @@ export default function ContactForm({ fonts }) {
             onFocus={(e) => e.target.style.borderColor = '#c49a6c'}
             onBlur={(e) => e.target.style.borderColor = '#e9ecef'}
           >
-            <option value="">{t.selectService}</option>
-            {t.services.map((service, index) => (
+            <option value="">{language === 'ar' ? 'اختر نوع الخدمة' : 'Select Service Type'}</option>
+            {(language === 'ar' ? services : servicesEn).map((service, index) => (
               <option key={index} value={service}>{service}</option>
             ))}
           </select>
@@ -302,7 +274,7 @@ export default function ContactForm({ fonts }) {
         {/* Subject Field */}
         <div>
           <label style={labelStyle}>
-            {t.subject} <span style={{ color: '#dc3545', fontFamily: 'Arial, sans-serif' }}>*</span>
+            {t.consultationSubject} <span style={{ color: '#dc3545', fontFamily: 'Arial, sans-serif' }}>*</span>
           </label>
           <input
             type="text"
@@ -319,7 +291,7 @@ export default function ContactForm({ fonts }) {
         {/* Message Field */}
         <div>
           <label style={labelStyle}>
-            {t.message} <span style={{ color: '#dc3545', fontFamily: 'Arial, sans-serif' }}>*</span>
+            {t.consultationDetails} <span style={{ color: '#dc3545', fontFamily: 'Arial, sans-serif' }}>*</span>
           </label>
           <textarea
             name="message"
@@ -380,7 +352,7 @@ export default function ContactForm({ fonts }) {
             }
           }}
         >
-          {isSubmitting ? t.submitting : t.submit}
+          {isSubmitting ? t.submitting : t.submitMessage}
           <style>{`
             @keyframes pulse {
               0% {

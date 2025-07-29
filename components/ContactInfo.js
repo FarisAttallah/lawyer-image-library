@@ -129,7 +129,7 @@ export default function ContactInfo({ fonts }) {
         }}></div>
         
         <img 
-          src="images/ContactUs.png" 
+          src="images/Contact_Us2.jpg" 
           alt="Contact Us - Hussein Almohmmed Law Firm"
           style={{
             width: '100%',
@@ -137,7 +137,8 @@ export default function ContactInfo({ fonts }) {
             objectFit: 'cover',
             objectPosition: 'center',
             filter: 'contrast(1.1) brightness(1.05)',
-            transition: 'transform 0.3s ease'
+            transition: 'transform 0.3s ease',
+            transform: 'scale(1)' // Fill container by default
           }}
           onMouseOver={(e) => {
             e.target.style.transform = 'scale(1.05)'

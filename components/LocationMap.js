@@ -1,7 +1,9 @@
 import { useLanguage } from '../contexts/LanguageContext'
+import { useResponsiveFonts } from '../hooks/useResponsiveFonts'
 
 export default function LocationMap() {
   const { language } = useLanguage()
+  const { isMobile } = useResponsiveFonts()
   
   const locationTexts = {
     ar: {
@@ -35,15 +37,15 @@ export default function LocationMap() {
   return (
     <div style={{
       backgroundColor: 'white',
-      padding: '2rem',
+      padding: isMobile ? '1rem' : '2rem',
       borderRadius: '12px',
       boxShadow: '0 4px 16px rgba(0,0,0,0.1)',
       marginTop: '2rem'
     }}>
       <h2 style={{
         color: '#0c4b3b',
-        fontSize: '2rem',
-        marginBottom: '2rem',
+        fontSize: isMobile ? '1.5rem' : '2rem',
+        marginBottom: isMobile ? '1.5rem' : '2rem',
         fontWeight: 'bold',
         textAlign: 'center'
       }}>
@@ -51,181 +53,131 @@ export default function LocationMap() {
       </h2>
       
       <div style={{
-        display: 'grid',
-        gridTemplateColumns: language === 'ar' ? '1fr 2fr' : '2fr 1fr',
-        gap: '2rem',
-        alignItems: 'start'
+        display: 'flex',
+        justifyContent: 'center'
       }}>
-        {/* Google Maps Embed */}
+        {/* Single Location Display */}
         <div style={{
           width: '100%',
-          height: '400px',
+          maxWidth: isMobile ? '100%' : '700px',
+          height: isMobile ? '400px' : '500px',
           border: '2px solid #c49a6c',
           borderRadius: '12px',
           overflow: 'hidden',
           position: 'relative',
-          order: language === 'ar' ? 2 : 1,
-          boxShadow: '0 4px 16px rgba(0,0,0,0.1)'
+          boxShadow: '0 4px 16px rgba(0,0,0,0.1)',
+          background: 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
         }}>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.6158337779886!2d46.6725!3d24.7136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03890d489399%3A0xba974d1c98e79fd5!2sKing%20Fahd%20Rd%2C%20Al%20Olaya%2C%20Riyadh%20Saudi%20Arabia!5e0!3m2!1sen!2s!4v1642000000000!5m2!1sen!2s"
-            width="100%"
-            height="100%"
-            style={{
-              border: 0,
-              borderRadius: '10px'
-            }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Hussein Ahmed Almohmmed Law Firm Location"
-          />
-          
-          {/* Map overlay with office info */}
+          {/* Location Content */}
           <div style={{
-            position: 'absolute',
-            top: '1rem',
-            left: '1rem',
-            backgroundColor: 'rgba(255, 255, 255, 0.95)',
-            padding: '1rem',
-            borderRadius: '8px',
-            boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
-            maxWidth: '250px',
-            border: '2px solid #c49a6c'
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            textAlign: 'center',
+            padding: isMobile ? '1.5rem' : '2.5rem'
           }}>
-            <h4 style={{
-              color: '#0c4b3b',
-              fontSize: '1rem',
-              marginBottom: '0.5rem',
-              fontWeight: 'bold'
+            <div style={{
+              fontSize: isMobile ? '3rem' : '4.5rem',
+              marginBottom: '0rem',
+              animation: 'bounce 2s infinite'
             }}>
-              📍 {t.officeLocation}
-            </h4>
-            <p style={{
-              color: '#666',
-              fontSize: '0.85rem',
-              lineHeight: '1.4',
-              marginBottom: '0.5rem'
-            }}>
-              {t.exactAddress}
-            </p>
-            <p style={{
-              color: '#666',
-              fontSize: '0.8rem'
-            }}>
-              {t.district}
-            </p>
-          </div>
-          
-          {/* Directions button */}
-          <a 
-            href="https://maps.google.com/?q=King+Fahd+Road,+Al+Olaya+District,+Riyadh,+Saudi+Arabia"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              position: 'absolute',
-              bottom: '1rem',
-              right: '1rem',
-              backgroundColor: '#c49a6c',
-              color: 'white',
-              border: '2px solid transparent',
-              padding: '0.7rem 1.2rem',
-              fontSize: '0.9rem',
-              borderRadius: '8px',
-              cursor: 'pointer',
-              fontWeight: 'bold',
-              fontFamily: 'BeINBlack, Roboto, Arial, sans-serif',
-              transition: 'all 0.3s ease',
-              boxShadow: '0 6px 20px rgba(196, 154, 108, 0.4), 0 0 0 0 rgba(196, 154, 108, 0.7)',
-              textTransform: 'uppercase',
-              letterSpacing: '0.5px',
-              overflow: 'hidden',
-              outline: 'none',
-              textDecoration: 'none',
-              animation: 'pulse 2s infinite',
-            }}
-            onMouseOver={(e) => {
-              e.target.style.backgroundColor = '#a65c32';
-              e.target.style.borderColor = '#c49a6c';
-              e.target.style.color = 'white';
-              e.target.style.transform = 'translateY(-3px)';
-              e.target.style.boxShadow = '0 8px 25px rgba(196, 154, 108, 0.6)';
-            }}
-            onMouseOut={(e) => {
-              e.target.style.backgroundColor = '#c49a6c';
-              e.target.style.borderColor = 'transparent';
-              e.target.style.color = 'white';
-              e.target.style.transform = 'translateY(0)';
-              e.target.style.boxShadow = '0 6px 20px rgba(196, 154, 108, 0.4)';
-            }}
-          >
-            🗺️ {t.directions}
-            <style>{`
-              @keyframes pulse {
-                0% {
-                  box-shadow: 0 6px 20px rgba(196, 154, 108, 0.4), 0 0 0 0 rgba(196, 154, 108, 0.7);
-                }
-                70% {
-                  box-shadow: 0 6px 20px rgba(196, 154, 108, 0.4), 0 0 0 10px rgba(196, 154, 108, 0);
-                }
-                100% {
-                  box-shadow: 0 6px 20px rgba(196, 154, 108, 0.4), 0 0 0 0 rgba(196, 154, 108, 0);
-                }
-              }
-            `}</style>
-          </a>
-        </div>
-        
-        {/* Location Information */}
-        <div style={{
-          order: language === 'ar' ? 1 : 2
-        }}>
-          <div style={{
-            backgroundColor: '#f8f9fa',
-            padding: '1.5rem',
-            borderRadius: '8px'
-          }}>
+              📍
+            </div>
             <h3 style={{
               color: '#0c4b3b',
-              fontSize: '1.3rem',
-              marginBottom: '1rem',
+              fontSize: isMobile ? '1.4rem' : '2rem',
+              marginBottom: isMobile ? '0.8rem' : '1rem',
               fontWeight: 'bold'
             }}>
-              📍 {t.officeLocation}
+              {t.officeLocation}
             </h3>
             <div style={{
               color: '#666',
-              fontSize: '1.1rem',
+              fontSize: isMobile ? '1rem' : '1.3rem',
               lineHeight: '1.6',
-              marginBottom: '1rem',
-              fontFamily: language === 'ar' ? 'Tahoma, Arial, sans-serif' : 'inherit'
+              marginBottom: isMobile ? '1.5rem' : '2.5rem',
+              fontFamily: 'BeINBlack, Roboto, Arial, sans-serif'
             }}>
               {t.address.map((line, index) => (
-                <div key={index} style={{ marginBottom: '0.25rem' }}>
+                <div key={index} style={{ marginBottom: isMobile ? '0.5rem' : '0.8rem' }}>
                   {line}
                 </div>
               ))}
             </div>
             
-            {/* Contact Quick Info */}
+            {/* Contact Information */}
             <div style={{
               display: 'flex',
               flexDirection: 'column',
-              gap: '0.5rem'
+              gap: isMobile ? '0.8rem' : '1.2rem',
+              alignItems: 'center'
             }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <span>📞</span>
+              <div style={{ 
+                display: 'flex', 
+                alignItems: 'center', 
+                gap: isMobile ? '0.6rem' : '1rem',
+                padding: isMobile ? '0.8rem 1.2rem' : '1rem 2rem',
+                backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                borderRadius: '8px',
+                border: '1px solid rgba(196, 154, 108, 0.3)'
+              }}>
+                <span style={{ fontSize: isMobile ? '1.2rem' : '1.5rem' }}>📞</span>
                 <span style={{ 
                   color: '#666',
-                  fontFamily: language === 'ar' ? 'Tahoma, Arial, sans-serif' : 'inherit'
+                  fontSize: isMobile ? '0.9rem' : '1.2rem',
+                  fontWeight: 'bold',
+                  fontFamily: 'BeINBlack, Roboto, Arial, sans-serif'
                 }}>{t.phoneNumber}</span>
               </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <span>✉️</span>
-                <span style={{ color: '#666' }}>info@almohmmed.com</span>
+              <div style={{ 
+                display: 'flex', 
+                alignItems: 'center', 
+                gap: isMobile ? '0.6rem' : '1rem',
+                padding: isMobile ? '0.8rem 1.2rem' : '1rem 2rem',
+                backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                borderRadius: '8px',
+                border: '1px solid rgba(196, 154, 108, 0.3)',
+                marginBottom: isMobile ? '0.5rem' : '1rem'
+              }}>
+                <span style={{ fontSize: isMobile ? '1.2rem' : '1.5rem' }}>✉️</span>
+                <span style={{ 
+                  color: '#666', 
+                  fontSize: isMobile ? '0.9rem' : '1.2rem',
+                  fontFamily: 'BeINBlack, Roboto, Arial, sans-serif'
+                }}>info@almohmmed.com</span>
               </div>
             </div>
           </div>
+          
+
+          
+          <style jsx>{`
+            @keyframes bounce {
+              0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+              }
+              40% {
+                transform: translateY(-10px);
+              }
+              60% {
+                transform: translateY(-5px);
+              }
+            }
+            @keyframes pulse {
+              0%, 100% {
+                transform: scale(1);
+                opacity: 0.6;
+              }
+              50% {
+                transform: scale(1.1);
+                opacity: 0.8;
+              }
+            }
+          `}</style>
         </div>
       </div>
     </div>

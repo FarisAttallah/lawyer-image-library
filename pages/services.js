@@ -95,7 +95,7 @@ export default function ServicesPage() {
               textShadow: '3px 3px 6px rgba(0,0,0,0.8)',
               animation: 'fadeInUp 1.2s ease-out'
             }}>
-              {language === 'ar' ? 'خدماتنا القانونية' : 'Our Legal Services'}
+              {t.servicesTitle}
             </h2>
             <p style={{
               fontSize: fonts.sectionSubtitle,
@@ -119,10 +119,7 @@ export default function ServicesPage() {
             }
           }
         `}</style>
-              {language === 'ar' 
-                ? 'حلول قانونية شاملة ومتخصصة لجميع احتياجاتكم القانونية'
-                : 'Comprehensive and specialized legal solutions for all your legal needs'
-              }
+              {language === 'ar' ? t.servicesSubtitle : t.servicesSubtitleEn}
             </p>
           </div>
         </section>
@@ -134,10 +131,17 @@ export default function ServicesPage() {
           padding: isMobile ? '2rem 0' : '4rem 0 3rem 0'
         }}>
 
-          {/* Additional Services Information */}
+          {/* Services Section */}
+          <section id="services" style={{ 
+            marginBottom: isMobile ? '3rem' : '10rem'
+          }}>
+            <Services isMobile={isMobile} fonts={{}} />
+          </section>
+          
+          {/* Why Choose Us Section */}
             <section style={{
             padding: '4rem 0',
-            background: '#f8f9fa',
+            background: 'linear-gradient(135deg, #0c4b3b 0%, #226249 100%)',
             direction: language === 'ar' ? 'rtl' : 'ltr',
             marginBottom: isMobile ? '1rem' : '8rem'
           }}>
@@ -152,24 +156,12 @@ export default function ServicesPage() {
               }}>
                 <h2 style={{
                   fontSize: fonts.sectionTitle,
-                  color: '#0c4b3b',
+                  color: 'white',
                   marginBottom: '1rem',
                   fontWeight: language === 'ar' ? '400' : 'bold'
                 }}>
-                  {language === 'ar' ? 'لماذا نحن؟' : 'Why Choose Us?'}
+                  {t.whyChooseUsTitle}
                 </h2>
-                <p style={{
-                  fontSize: fonts.sectionSubtitle,
-                  color: '#666',
-                  maxWidth: '600px',
-                  margin: '0 auto',
-                  lineHeight: 1.6
-                }}>
-                  {language === 'ar' 
-                    ? 'نحن نقدم خدمات قانونية متخصصة مع سنوات من الخبرة والتفاني في تحقيق العدالة'
-                    : 'We provide specialized legal services with years of experience and dedication to achieving justice'
-                  }
-                </p>
               </div>
 
               <div style={{
@@ -180,26 +172,28 @@ export default function ServicesPage() {
               }}>
                 {[
                   {
-                    title: language === 'ar' ? 'خبرة واسعة' : 'Extensive Experience',
-                    desc: language === 'ar' ? 'سنوات من الخبرة في مختلف المجالات القانونية' : 'Years of experience across various legal fields'
+                    title: language === 'ar' ? t.extensiveExperience : t.extensiveExperience,
+                    desc: language === 'ar' ? t.extensiveExperienceDesc : t.extensiveExperienceDesc
                   },
                   {
-                    title: language === 'ar' ? 'نهج شخصي' : 'Personal Approach',
-                    desc: language === 'ar' ? 'نقدم خدمة مخصصة لكل عميل حسب احتياجاته' : 'Personalized service tailored to each client\'s needs'
+                    title: language === 'ar' ? t.personalApproach : t.personalApproach,
+                    desc: language === 'ar' ? t.personalApproachDesc : t.personalApproachDesc
                   },
                   {
-                    title: language === 'ar' ? 'نتائج مؤكدة' : 'Proven Results',
-                    desc: language === 'ar' ? 'سجل حافل من النجاحات والقضايا المكسوبة' : 'Track record of successful cases and satisfied clients'
+                    title: language === 'ar' ? t.provenResults : t.provenResults,
+                    desc: language === 'ar' ? t.provenResultsDesc : t.provenResultsDesc
                   }
                 ].map((feature, index) => (
                   <div key={index} style={{
-                    background: 'white',
+                    background: 'rgba(255, 255, 255, 0.1)',
                     padding: '2rem',
                     borderRadius: '8px',
-                    boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+                    boxShadow: '0 4px 6px rgba(0,0,0,0.2)',
                     textAlign: 'center',
                     transition: 'transform 0.3s ease',
-                    cursor: 'pointer'
+                    cursor: 'pointer',
+                    backdropFilter: 'blur(10px)',
+                    border: '1px solid rgba(255, 255, 255, 0.2)'
                   }}
                   onMouseOver={(e) => {
                     e.currentTarget.style.transform = 'translateY(-5px)'
@@ -219,7 +213,7 @@ export default function ServicesPage() {
                     <p 
                     className="service-card-description"
                     style={{
-                      color: '#666',
+                      color: 'rgba(255, 255, 255, 0.9)',
                       lineHeight: 1.6,
                     }}>
                       {feature.desc}
@@ -228,12 +222,6 @@ export default function ServicesPage() {
                 ))}
               </div>
             </div>
-          </section>
-          {/* Services Section */}
-          <section id="services" style={{ 
-            marginBottom: isMobile ? '3rem' : '10rem'
-          }}>
-            <Services isMobile={isMobile} fonts={{}} />
           </section>
 
           

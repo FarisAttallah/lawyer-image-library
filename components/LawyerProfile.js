@@ -236,14 +236,16 @@ export default function LawyerProfile({ isMobile, fonts }) {
                   aspectRatio: '3/4'
                 }}>
                   <img 
-                    src="/images/saudi_man.jpeg" 
-                    alt={language === 'ar' ? 'المحامي حسين بن أحمد آل محمد' : 'Lawyer Hussein bin Ahmed Almohmmed'}
+                    src="/images/founder-word.png" 
+                    alt={language === 'ar' ? 'مكتب المحاماة' : 'Law Office'}
                     style={{
                       width: '100%',
                       height: '100%',
                       objectFit: 'cover',
-                      objectPosition: '30% center', // Move the focus point to the right
-                      display: 'block'
+                      objectPosition: 'center center',
+                      display: 'block',
+                      filter: 'brightness(1.05) contrast(1.1)',
+                      transition: 'all 0.3s ease'
                     }}
                   />
                   

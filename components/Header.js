@@ -332,6 +332,25 @@ export default function Header({ transparent = false }) {
               </li>
               <li>
                 <Link 
+                  href="/careers" 
+                  onClick={() => setIsMenuOpen(false)}
+                  style={{ 
+                    color: 'white', 
+                    textDecoration: 'none',
+                    display: 'block',
+                    padding: '0.7rem 2rem',
+                    borderBottom: '1px solid rgba(255,255,255,0.1)',
+                    transition: 'background-color 0.3s ease',
+                    fontSize: '0.9rem'
+                  }}
+                  onMouseOver={(e) => e.target.style.backgroundColor = 'rgba(196, 154, 108, 0.2)'}
+                  onMouseOut={(e) => e.target.style.backgroundColor = 'transparent'}
+                >
+                  {language === 'ar' ? 'الوظائف' : 'Careers'}
+                </Link>
+              </li>
+              <li>
+                <Link 
                   href="/contact" 
                   onClick={() => setIsMenuOpen(false)}
                   style={{ 

@@ -7,6 +7,25 @@ export const translations = {
     services: 'خدماتنا',
     contact: 'اتصل بنا',
     
+    // Contact Page
+    contactUsTitle: 'اتصل بنا',
+    contactUsSubtitle: 'نحن هنا لدعمك في جميع احتياجاتك القانونية.',
+    contactUsDescription: 'سواء كنت فردًا أو شركة، يقدم مكتبنا استشارات مهنية وحلولًا قانونية موثوقة.',
+    
+    // Contact Form
+    contactFormTitle: 'نموذج التواصل:',
+    fullName: 'الاسم الكامل',
+    email: 'البريد الإلكتروني',
+    phoneNumber: 'رقم الهاتف',
+    commercialRegister: 'السجل التجاري (إن وجد)',
+    serviceType: 'نوع الخدمة المطلوبة',
+    consultationSubject: 'موضوع الاستشارة',
+    consultationDetails: 'تفاصيل الاستشارة أو القضية',
+    submitMessage: 'إرسال الرسالة',
+    submitting: 'جاري الإرسال...',
+    successMessage: 'تم إرسال رسالتك بنجاح! سنتواصل معك قريباً.',
+    errorMessage: 'حدث خطأ في إرسال الرسالة. يرجى المحاولة مرة أخرى.',
+    
     // Hero Section
     welcome: 'مكتب حسين أحمد آل محمد للمحاماة والاستشارات القانونية',
     subtitle: 'خبرة قانونية تتجاوز 13 عامًا من التميز والثقة - الرياض، المملكة العربية السعودية',
@@ -68,27 +87,31 @@ export const translations = {
     education2Institution: 'جامعة الزيتونة الخاصة ، الاردن',
     
     // Services
-    servicesTitle: 'خدماتنا القانونية',
+    servicesTitle: 'خدماتنا',
+    servicesSubtitle: 'حلول قانونية متكاملة تلبي احتياجات الأفراد والشركات',
+    servicesSubtitleEn: 'Integrated legal solutions meeting the needs of individuals and companies',
+    specializationTitle: 'مجالات تخصصنا:',
+    specializationTitleEn: 'Our Specializations:',
     legalConsultation: 'الاستشارات القانونية',
-    legalConsultationDesc: 'تحليل نظامي دقيق، شفهية أو مكتوبة، تشمل الأنظمة السعودية والأنظمة المقارنة ذات العلاقة',
+    legalConsultationDesc: 'تقديم مشورة شفوية وكتابية دقيقة وفق الأنظمة السعودية والمقارنة.',
     litigation: 'التقاضي والترافع',
-    litigationDesc: 'تمثيل العملاء أمام الجهات القضائية بجميع درجاتها',
+    litigationDesc: 'تمثيل العملاء أمام الجهات القضائية بجميع درجاتها.',
     commercialLaw: 'القانون التجاري والشركات',
-    commercialLawDesc: 'تأسيس الشركات، صياغة العقود، منازعات الشركاء',
+    commercialLawDesc: 'تأسيس الشركات، صياغة العقود، حل نزاعات الشركاء.',
     laborLaw: 'القانون العمالي',
-    laborLawDesc: 'قضايا الفصل التعسفي، النزاعات العمالية، الاستشارات',
+    laborLawDesc: 'معالجة النزاعات العمالية وقضايا الفصل التعسفي.',
     contracts: 'العقود والاتفاقيات',
-    contractsDesc: 'مراجعة وصياغة العقود<br/>و اتفاقيات الشراكة',
+    contractsDesc: 'مراجعة وصياغة عقود الشراكة والتعاملات التجارية.',
     realEstate: 'القضايا العقارية',
-    realEstateDesc: 'منازعات الملكية، الإخلاء،<br/> إثبات الملكية',
+    realEstateDesc: 'منازعات الملكية والإيجارات وإثبات الملكية.',
     arbitration: 'التحكيم وتسوية النزاعات',
-    arbitrationDesc: 'التحكيم المحلي،<br/> التسويات القانونية',
+    arbitrationDesc: 'إدارة قضايا التحكيم المحلية والتسويات القانونية.',
     compliance: 'الامتثال والحوكمة',
-    complianceDesc: 'إعداد السياسات الداخلية، تقليل المخاطر القانونية',
+    complianceDesc: 'إعداد السياسات الداخلية وتقليل المخاطر القانونية.',
     
     // Footer
     contactInfo: 'معلومات الاتصال',
-    phone: 'الهاتف: +966 XX XXX XXXX',
+    phone: 'الهاتف: +٩٦٦ ٥٠ ١٢٣ ٤٥٦٧',
     email: 'البريد الإلكتروني: info@almohmmed.com',
     address: 'العنوان',
     location: 'الرياض، المملكة العربية السعودية',
@@ -99,6 +122,29 @@ export const translations = {
     // Stats
     experience: '13+',
     experienceLabel: 'سنة خبرة',
+    
+    // Achievements
+    achievementsTitle: 'إنجازاتنا',
+    achievement1: 'خبرة تمتد لأكثر من عقد في تقديم الحلول القانونية.',
+    achievement2: 'تمثيل ناجح في مئات القضايا التجارية والعقارية والإدارية المعقدة.',
+    achievement3: 'خبرة واسعة في صياغة العقود والاتفاقيات.',
+    achievement4: 'مساهمة فعّالة في تسويات ودية وتحكيم حققت مصالح العملاء بكفاءة.',
+    
+    // Why Choose Us
+    whyChooseUsTitle: 'لماذا نحن؟',
+    whyChooseUsTitleEn: 'Why Choose Us?',
+    extensiveExperience: 'خبرة واسعة',
+    extensiveExperienceEn: 'Extensive Experience',
+    extensiveExperienceDesc: 'سنوات طويلة من النجاح في مختلف التخصصات القانونية.',
+    extensiveExperienceDescEn: 'Long years of success across various legal specializations.',
+    personalApproach: 'نهج شخصي',
+    personalApproachEn: 'Personal Approach',
+    personalApproachDesc: 'تقديم خدمات مصممة خصيصًا لكل عميل.',
+    personalApproachDescEn: 'Providing services specifically designed for each client.',
+    provenResults: 'نتائج مثبتة',
+    provenResultsEn: 'Proven Results',
+    provenResultsDesc: 'سجل حافل بالقضايا المنجزة لصالح عملائنا.',
+    provenResultsDescEn: 'A proven track record of cases successfully completed for our clients.',
     
     // Call to Action
     ctaTitle: 'دعوة للتصفح:',
@@ -115,6 +161,25 @@ export const translations = {
     about: 'About Us',
     services: 'Our Services',
     contact: 'Contact Us',
+    
+    // Contact Page
+    contactUsTitle: 'Contact Us',
+    contactUsSubtitle: 'We are here to support you in all your legal needs.',
+    contactUsDescription: 'Whether you are an individual or a company, our office provides professional consultations and reliable legal solutions.',
+    
+    // Contact Form
+    contactFormTitle: 'Contact Form:',
+    fullName: 'Full Name',
+    email: 'Email',
+    phoneNumber: 'Phone Number',
+    commercialRegister: 'Commercial Register (if applicable)',
+    serviceType: 'Required Service Type',
+    consultationSubject: 'Consultation Subject',
+    consultationDetails: 'Consultation Details or Case Information',
+    submitMessage: 'Send Message',
+    submitting: 'Sending...',
+    successMessage: 'Your message has been sent successfully! We will contact you soon.',
+    errorMessage: 'An error occurred while sending the message. Please try again.',
     
     // Hero Section
     welcome: 'Hussein Ahmed Almohmmed Law Firm',
@@ -177,27 +242,29 @@ export const translations = {
     education2Institution: 'Al-Zaytoonah University of Jordan, Jordan',
     
     // Services
-    servicesTitle: 'Our Legal Services',
+    servicesTitle: 'Our Services',
+    servicesSubtitle: 'Integrated legal solutions meeting the needs of individuals and companies',
+    specializationTitle: 'Our Specializations:',
     legalConsultation: 'Legal Consultation',
-    legalConsultationDesc: 'Precise regulatory analysis, oral or written, including Saudi regulations and related comparative systems',
+    legalConsultationDesc: 'Providing accurate oral and written advice in accordance with Saudi and comparative regulations.',
     litigation: 'Litigation and Advocacy',
-    litigationDesc: 'Representing clients before judicial authorities at all levels',
+    litigationDesc: 'Representing clients before judicial authorities at all levels.',
     commercialLaw: 'Commercial Law and Companies',
-    commercialLawDesc: 'Company establishment, contract drafting, partner disputes',
+    commercialLawDesc: 'Company establishment, contract drafting, resolving partner disputes.',
     laborLaw: 'Labor Law',
-    laborLawDesc: 'Wrongful termination cases, labor disputes, consultations',
+    laborLawDesc: 'Handling labor disputes and wrongful termination cases.',
     contracts: 'Contracts and Agreements',
-    contractsDesc: 'Contract review and drafting, partnership agreements',
+    contractsDesc: 'Reviewing and drafting partnership contracts and commercial transactions.',
     realEstate: 'Real Estate Cases',
-    realEstateDesc: 'Property disputes, eviction, proof of ownership',
+    realEstateDesc: 'Property disputes, leases, and proof of ownership.',
     arbitration: 'Arbitration and Dispute Resolution',
-    arbitrationDesc: 'Local arbitration, legal settlements',
+    arbitrationDesc: 'Managing local arbitration cases and legal settlements.',
     compliance: 'Compliance and Governance',
-    complianceDesc: 'Preparing internal policies, reducing legal risks',
+    complianceDesc: 'Preparing internal policies and reducing legal risks.',
     
     // Footer
     contactInfo: 'Contact Information',
-    phone: 'Phone: +966 XX XXX XXXX',
+    phone: 'Phone: +966 50 123 4567',
     email: 'Email: info@almohmmed.com',
     address: 'Address',
     location: 'Riyadh, Saudi Arabia',
@@ -208,6 +275,22 @@ export const translations = {
     // Stats
     experience: '13+',
     experienceLabel: 'Years Experience',
+    
+    // Achievements
+    achievementsTitle: 'Our Achievements',
+    achievement1: 'Over a decade of experience in providing legal solutions.',
+    achievement2: 'Successful representation in hundreds of complex commercial, real estate, and administrative cases.',
+    achievement3: 'Extensive experience in drafting contracts and agreements.',
+    achievement4: 'Effective contribution to amicable settlements and arbitration that efficiently achieved client interests.',
+    
+    // Why Choose Us
+    whyChooseUsTitle: 'Why Choose Us?',
+    extensiveExperience: 'Extensive Experience',
+    extensiveExperienceDesc: 'Long years of success across various legal specializations.',
+    personalApproach: 'Personal Approach',
+    personalApproachDesc: 'Providing services specifically designed for each client.',
+    provenResults: 'Proven Results',
+    provenResultsDesc: 'A proven track record of cases successfully completed for our clients.',
     
     // Call to Action
     ctaTitle: 'Browse Invitation:',

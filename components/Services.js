@@ -50,15 +50,16 @@ export default function Services({ isMobile, fonts }) {
   
   return (
     <div style={{ 
-      width: '100%',
       height: '100%',
       padding: isMobile ? '2rem 2rem' : '6rem 4rem',
-      background: 'linear-gradient(135deg, #0c4b3b 0%, #226249 100%)',
+      background: '#f8f9fa',
       direction: language === 'ar' ? 'rtl' : 'ltr',
       position: 'relative',
       overflow: 'hidden',
       display: 'flex',
-      alignItems: 'center'
+      alignItems: 'center',
+      margin: isMobile ? '2rem 0.5rem 0 0.5rem' : '4rem 2rem 0 2rem',
+      borderRadius: '16px'
     }}>
       {/* Decorative background elements */}
       <div style={{
@@ -93,8 +94,8 @@ export default function Services({ isMobile, fonts }) {
           <h2 
             className="services-title"
             style={{
-              color: 'white',
-              marginBottom: '1rem',
+              color: '#0c4b3b',
+              marginBottom: '2rem',
               textAlign: 'center',
               fontWeight: language === 'ar' ? '400' : 'bold',
               textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
@@ -102,7 +103,7 @@ export default function Services({ isMobile, fonts }) {
               fontFamily: language === 'ar' ? 'BeINBlack, Arial, sans-serif' : 'Roboto, Arial, sans-serif'
             }}
           >
-            {t.servicesTitle}
+            {t.specializationTitle}
           </h2>
           
           <div style={{

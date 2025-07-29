@@ -97,12 +97,25 @@ export default function Contact() {
               textShadow: '3px 3px 6px rgba(0,0,0,0.8)',
               animation: 'fadeInUp 1.2s ease-out'
             }}>
-              {t.contactUsTitle || (language === 'ar' ? 'اتصل بنا' : 'Contact Us')}
+              {t.contactUsTitle}
             </h1>
             <p 
             style={{
               fontSize: fonts.sectionSubtitle,
               color: '#c49a6c',
+              maxWidth: '700px',
+              margin: '0 auto',
+              textShadow: '2px 2px 4px rgba(0,0,0,0.8)',
+              lineHeight: '1.6',
+              animation: 'fadeInUp 1.2s ease-out',
+              marginBottom: '1rem'
+            }}>
+              {t.contactUsSubtitle}
+            </p>
+            <p 
+            style={{
+              fontSize: fonts.body,
+              color: 'rgba(255, 255, 255, 0.9)',
               maxWidth: '700px',
               margin: '0 auto',
               textShadow: '2px 2px 4px rgba(0,0,0,0.8)',
@@ -122,10 +135,7 @@ export default function Contact() {
             }
           }
         `}</style>
-              {language === 'ar' 
-                ? 'نحن هنا لمساعدتك في جميع احتياجاتك القانونية. استشارة مهنية، حلول قانونية موثوقة'
-                : 'We are here to help you with all your legal needs. Professional consultation, trusted legal solutions'
-              }
+              {t.contactUsDescription}
             </p>
             
             {/* Legal Consultation button that scrolls to the form */}

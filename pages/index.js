@@ -103,21 +103,27 @@ export default function Home() {
                   animation: 'pulse 2s infinite'
                 }}
                 onMouseOver={e => {
-                  e.target.style.backgroundColor = '#a65c32';
                   e.target.style.borderColor = '#c49a6c';
-                  e.target.style.color = 'white';
                   e.target.style.transform = 'translateY(-3px)';
                   e.target.style.boxShadow = '0 8px 25px rgba(196, 154, 108, 0.6)';
                 }}
                 onMouseOut={e => {
-                  e.target.style.backgroundColor = '#c49a6c';
                   e.target.style.borderColor = 'transparent';
-                  e.target.style.color = 'white';
                   e.target.style.transform = 'translateY(0)';
                   e.target.style.boxShadow = '0 6px 20px rgba(196, 154, 108, 0.4)';
                 }}
               >
-                {t.ctaSubtitle}
+                {language === 'ar' ? (
+                                      <>
+                      تعرف على <span style={{ 
+                        color: 'rgb(62, 60, 60)',
+                        fontWeight: 'bold',
+                        textShadow: '0 0 3px rgba(0,0,0,0.3)'
+                      }}>نهجنا القانوني المتخصص</span>.
+                    </>
+                ) : (
+                  t.ctaSubtitle
+                )}
               </button>
             </Link>
             
@@ -142,21 +148,29 @@ export default function Home() {
                   animation: 'pulse 2s infinite'
                 }}
                 onMouseOver={e => {
-                  e.target.style.backgroundColor = '#a65c32';
                   e.target.style.borderColor = '#c49a6c';
                   e.target.style.color = 'white';
                   e.target.style.transform = 'translateY(-3px)';
                   e.target.style.boxShadow = '0 8px 25px rgba(196, 154, 108, 0.6)';
                 }}
                 onMouseOut={e => {
-                  e.target.style.backgroundColor = '#c49a6c';
                   e.target.style.borderColor = 'transparent';
                   e.target.style.color = 'white';
                   e.target.style.transform = 'translateY(0)';
                   e.target.style.boxShadow = '0 6px 20px rgba(196, 154, 108, 0.4)';
                 }}
               >
-                {t.ctaDescription}
+                {language === 'ar' ? (
+                                      <>
+                      اكتشف المزيد عن <span style={{ 
+                        color: 'rgb(62, 60, 60)',
+                        fontWeight: 'bold',
+                        textShadow: '0 0 3px rgba(0, 0, 0, 0.3)'
+                      }}>خدماتنا وخبرتنا</span>.
+                    </>
+                ) : (
+                  t.ctaDescription
+                )}
               </button>
             </Link>
           </div>
