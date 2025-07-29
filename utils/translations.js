@@ -13,30 +13,59 @@ export const translations = {
     
     // About Section
     aboutTitle: 'من نحن',
-    aboutDescription: 'تأسس مكتب حسين أحمد آل محمد للمحاماة والاستشارات القانونية في مدينة الرياض، ليكون كيانًا قانونيًا متخصصًا يقدم خدماته باحترافية عالية للأفراد والشركات والكيانات بمختلف أنواعها في السوق السعودي. يمتلك المكتب خبرة قانونية تمتد لأكثر من 13 عامًا، ويُعد شريكًا موثوقًا للعديد من العملاء في مختلف القطاعات.',
+    aboutDescription: 'تأسس مكتب حسين أحمد آل محمد للمحاماة والاستشارات القانونية في مدينة الرياض ليكون شريكًا قانونيًا موثوقًا للأفراد والشركات والكيانات بمختلف قطاعاتها. بفضل خبرة تمتد لأكثر من 13 عام في سوق العمل القانوني، يقدم المكتب حلولًا قانونية متكاملة تعتمد على فهم دقيق للأنظمة السعودية والممارسات القانونية.',
+    aboutHeroDescription: 'تأسس مكتب حسين أحمد آل محمد للمحاماة والاستشارات القانونية في مدينة الرياض ليكون شريكًا قانونيًا موثوقًا للأفراد والشركات والكيانات بمختلف قطاعاتها. بفضل خبرة تمتد لأكثر من 13 عام في سوق العمل القانوني، يقدم المكتب حلولًا قانونية متكاملة تعتمد على فهم دقيق للأنظمة السعودية والممارسات القانونية.',
     
     // Vision, Mission, Goals
     visionTitle: 'رؤيتنا',
-    vision: 'أن نكون من بين أبرز المكاتب القانونية في المملكة والمنطقة، بخدمات تُبنى على الثقة والمهنية، وتستند إلى فهم متقدم لمتغيرات الأنظمة والتشريعات.',
+    vision: 'أن نكون من بين أبرز المكاتب القانونية في المملكة والمنطقة، من خلال خدمات قائمة على الثقة والمهنية، تستجيب لمتغيرات الأنظمة والتشريعات المحلية والدولية.',
     
     missionTitle: 'رسالتنا',
-    mission: 'تقديم خدمات قانونية متكاملة ومُصممة باحتراف لتلبية احتياجات العملاء، عبر فريق عمل قانوني مؤهل، ومتابعة دقيقة لمستجدات الأنظمة واللوائح.',
+    mission: 'تقديم خدمات قانونية متكاملة ومصممة باحتراف لتلبية احتياجات العملاء، من خلال فريق قانوني مؤهل، ومتابعة دقيقة لمستجدات الأنظمة واللوائح',
     
     valuesTitle: 'قيمنا',
     transparency: 'الشفافية',
-    transparencyDesc: 'نتعامل بصراحة تامة مع عملائنا ونضع أمامهم الحقيقة القانونية كما هي',
+    transparencyDesc: 'تقديم المشورة القانونية بوضوح وصدق.',
     confidentiality: 'السرية',
-    confidentialityDesc: 'نحافظ على سرية كافة القضايا والبيانات التي نُعنى بها دون أي تهاون',
+    confidentialityDesc: 'حماية بيانات العملاء وقضاياهم بأقصى درجات الأمان.',
     professionalism: 'الاحترافية',
-    professionalismDesc: 'نقدم خدماتنا بمهنية عالية وفقًا لأفضل الممارسات القانونية',
+    professionalismDesc: 'تقديم الخدمات وفق أعلى معايير الجودة القانونية.',
     justice: 'العدالة',
-    justiceDesc: 'نؤمن بأن العدالة حق، ونمارس عملنا بما يدعم إحقاقها دون تمييز',
+    justiceDesc: 'الالتزام بإحقاق الحقوق دون تمييز.',
     development: 'التطوير المستمر',
-    developmentDesc: 'نواكب الأنظمة والتشريعات، ونتطور تقنيًا وإجرائيًا بما يخدم مصلحة العميل',
+    developmentDesc: 'متابعة أحدث التغيرات التشريعية وتطوير قدراتنا وخدماتنا باستمرار.',
+    
+    // Team Section
+    teamTitle: 'فريق العمل',
+    teamDescription: 'في مكتب حسين أحمد آل محمد للمحاماة والاستشارات القانونية نؤمن بأن قوة المكتب تنبع من قوة فريقه.',
+    teamDetails: 'يضم فريقنا عدد من المحامين والمستشارين القانونيين ذوي الخبرات المتنوعة في مختلف فروع القانون، مدعومين بشبكة من الخبراء والاستشاريين الخارجيين لتقديم حلول متكاملة تلبي احتياجات عملائنا.',
+    teamApproach: 'يعمل الفريق بروح واحدة، وفق أعلى معايير المهنية، لضمان تقديم استشارات دقيقة وتمثيل قانوني فعّال أمام الجهات القضائية والإدارية.',
     
     // Lawyer Quote
-    lawyerQuoteTitle: 'كلمة المحامي حسين<br/>بن أحمد آل محمد',
+    lawyerQuoteTitle: 'كلمة المؤسس',
     lawyerQuote: 'أسّسنا هذا المكتب على قناعة راسخة بأن المحاماة ليست مجرد مهنة، بل رسالة تُعنى بالدفاع عن الحقوق، وصيانة العدالة، وحماية الثقة بين الأطراف. نحن لا نقدم خدمات قانونية فحسب، بل نرعى مصالح عملائنا كما لو كانت مصالحنا.',
+    
+    // Lawyer Credentials
+    lawyerName: 'نبذة عن المؤسس',
+    lawyerCredentials: 'محامٍ مرخص بتاريخ 04/04/1436 ، ترخيص رقم 128/36',
+    lawyerMembership: 'عضو أساسي الهيئة السعودية للمحامين من العام 2019',
+    lawyerExperience: 'خبرة واسعة في القانون التجاري والمدني والإداري والعمالي',
+    
+    // Career Section
+    careerTitle: 'الخبرات',
+    currentPosition: 'حاضر',
+    experience1: 'رئيس لجنة المكافآت والترشيحات بجمعية حركية للكبار',
+    experience2: 'عضو مجلس إدارة جمعية حركية للكبار',
+    experience3: 'عضو الجمعية العمومية لجمعية حركية للكبار',
+    experience4: 'مساعد قانوني ووكيل شرعي لعدد 5 شركات ، الرياض',
+    
+    educationTitle: 'التعليم',
+    education1Degree: 'القانون العام',
+    education1Level: 'درجة الماجستير',
+    education1Institution: 'الجامعة الاردنية ، الاردن',
+    education2Degree: 'الحقوق',
+    education2Level: 'درجة البكالوريوس',
+    education2Institution: 'جامعة الزيتونة الخاصة ، الاردن',
     
     // Services
     servicesTitle: 'خدماتنا القانونية',
@@ -71,6 +100,11 @@ export const translations = {
     experience: '13+',
     experienceLabel: 'سنة خبرة',
     
+    // Call to Action
+    ctaTitle: 'دعوة للتصفح:',
+    ctaSubtitle: 'تعرف على نهجنا القانوني المتخصص.',
+    ctaDescription: 'اكتشف المزيد عن خدماتنا وخبرتنا.',
+    
     // Language
     language: 'العربية'
   },
@@ -88,30 +122,59 @@ export const translations = {
     
     // About Section
     aboutTitle: 'About Us',
-    aboutDescription: 'Hussein Ahmed Almohmmed Law Firm was established in Riyadh as a specialized legal entity providing high-quality professional services to individuals, companies, and various entities in the Saudi market. The firm has over 13 years of legal experience and serves as a trusted partner for many clients across different sectors.',
+    aboutDescription: 'Hussein Ahmed Almohmmed Law Firm was established in Riyadh to be a trusted legal partner for individuals, companies, and entities across various sectors. With over 13 years of experience in the legal market, the firm provides integrated legal solutions based on a deep understanding of Saudi regulations and legal practices.',
+    aboutHeroDescription: 'Hussein Ahmed Almohmmed Law Firm was established in Riyadh to be a trusted legal partner for individuals, companies, and entities across various sectors. With over 13 years of experience in the legal market, the firm provides integrated legal solutions based on a deep understanding of Saudi regulations and legal practices.',
     
     // Vision, Mission, Goals
     visionTitle: 'Our Vision',
-    vision: 'To be among the leading law firms in the Kingdom and the region, with services built on trust and professionalism, based on an advanced understanding of regulatory and legislative changes.',
+    vision: 'To be among the leading law firms in the Kingdom and the region, through services based on trust and professionalism, responding to changes in local and international regulations and legislation.',
     
     missionTitle: 'Our Mission',
     mission: 'Providing comprehensive and professionally designed legal services to meet client needs, through a qualified legal team and precise monitoring of regulatory and legal developments.',
     
     valuesTitle: 'Our Values',
     transparency: 'Transparency',
-    transparencyDesc: 'We deal with complete honesty with our clients and present the legal truth as it is',
+    transparencyDesc: 'Providing legal advice with clarity and honesty.',
     confidentiality: 'Confidentiality',
-    confidentialityDesc: 'We maintain the confidentiality of all cases and data we handle without any compromise',
+    confidentialityDesc: 'Protecting client data and cases with the highest levels of security.',
     professionalism: 'Professionalism',
-    professionalismDesc: 'We provide our services with high professionalism according to best legal practices',
+    professionalismDesc: 'Providing services according to the highest legal quality standards.',
     justice: 'Justice',
-    justiceDesc: 'We believe justice is a right, and we practice our work to support its realization without discrimination',
+    justiceDesc: 'Commitment to upholding rights without discrimination.',
     development: 'Continuous Development',
-    developmentDesc: 'We keep up with regulations and legislation, developing technically and procedurally to serve client interests',
+    developmentDesc: 'Following the latest legislative changes and continuously developing our capabilities and services.',
+    
+    // Team Section
+    teamTitle: 'Our Team',
+    teamDescription: 'At Hussein Ahmed Almohmmed Law Firm, we believe that the strength of the firm stems from the strength of its team.',
+    teamDetails: 'Our team includes a number of lawyers and legal consultants with diverse expertise in various branches of law, supported by a network of external experts and consultants to provide integrated solutions that meet our clients\' needs.',
+    teamApproach: 'The team works with one spirit, according to the highest professional standards, to ensure accurate consultations and effective legal representation before judicial and administrative authorities.',
     
     // Lawyer Quote
-    lawyerQuoteTitle: 'Word from Lawyer Hussein Ahmed Almohmmed',
+    lawyerQuoteTitle: 'The Founder\'s Word',
     lawyerQuote: 'We established this firm on the firm belief that law is not just a profession, but a mission concerned with defending rights, maintaining justice, and protecting trust between parties. We do not just provide legal services, but care for our clients\' interests as if they were our own.',
+    
+    // Lawyer Credentials
+    lawyerName: 'About the Founder',
+    lawyerCredentials: 'Licensed lawyer since 04/04/1436, License No. 128/36',
+    lawyerMembership: 'Core member of the Saudi Bar Association since 2019',
+    lawyerExperience: 'Extensive experience in Commercial, Civil, Administrative and Labor Law',
+    
+    // Career Section
+    careerTitle: 'Experience',
+    currentPosition: 'Present',
+    experience1: 'Chairman of the Rewards and Nominations Committee at Harakiyah Association for Adults',
+    experience2: 'Board Member of Harakiyah Association for Adults',
+    experience3: 'General Assembly Member of Harakiyah Association for Adults',
+    experience4: 'Legal Assistant and Legal Representative for 5 companies, Riyadh',
+    
+    educationTitle: 'Education',
+    education1Degree: 'Public Law',
+    education1Level: 'Master\'s Degree',
+    education1Institution: 'University of Jordan, Jordan',
+    education2Degree: 'Law',
+    education2Level: 'Bachelor\'s Degree',
+    education2Institution: 'Al-Zaytoonah University of Jordan, Jordan',
     
     // Services
     servicesTitle: 'Our Legal Services',
@@ -145,6 +208,11 @@ export const translations = {
     // Stats
     experience: '13+',
     experienceLabel: 'Years Experience',
+    
+    // Call to Action
+    ctaTitle: 'Browse Invitation:',
+    ctaSubtitle: 'Our Legal Approach',
+    ctaDescription: 'Our Services & Expertise',
     
     // Language
     language: 'English'

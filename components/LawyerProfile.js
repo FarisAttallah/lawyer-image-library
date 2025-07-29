@@ -148,7 +148,7 @@ export default function LawyerProfile({ isMobile, fonts }) {
                   position: 'relative',
                   zIndex: 2
                 }}>
-                  {language === 'ar' ? 'المحامي حسين بن أحمد آل محمد' : 'Lawyer Hussein bin Ahmed Almohmmed'}
+                  {t.lawyerName}
                 </h3>
                 <p style={{
                   fontSize: fonts.body,
@@ -158,7 +158,17 @@ export default function LawyerProfile({ isMobile, fonts }) {
                   position: 'relative',
                   zIndex: 2
                 }}>
-                  {language === 'ar' ? 'محامي معتمد لدى وزارة العدل' : 'Certified Lawyer with Ministry of Justice'}
+                  {t.lawyerCredentials}
+                </p>
+                <p style={{
+                  fontSize: fonts.body,
+                  lineHeight: '1.6',
+                  color: '#555',
+                  marginBottom: '0.8rem',
+                  position: 'relative',
+                  zIndex: 2
+                }}>
+                  {t.lawyerMembership}
                 </p>
                 <p style={{
                   fontSize: fonts.body,
@@ -167,7 +177,7 @@ export default function LawyerProfile({ isMobile, fonts }) {
                   position: 'relative',
                   zIndex: 2
                 }}>
-                  {language === 'ar' ? 'خبرة واسعة في القانون التجاري والمدني' : 'Extensive experience in Commercial and Civil Law'}
+                  {t.lawyerExperience}
                 </p>
               </div>
               

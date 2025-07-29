@@ -2,6 +2,7 @@ import { useResponsiveFonts } from '../hooks/useResponsiveFonts'
 import Layout from '../components/Layout'
 import Hero from '../components/Hero'
 import LawyerProfile from '../components/LawyerProfile'
+import Career from '../components/Career'
 import Services from '../components/Services'
 import Link from 'next/link'
 import { useLanguage } from '../contexts/LanguageContext'
@@ -36,6 +37,16 @@ export default function Home() {
         <LawyerProfile isMobile={isMobile} fonts={fonts} />
       </section>
 
+      {/* Career Section */}
+      <section style={{ 
+        minHeight: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        padding: '4rem 0'
+      }}>
+        <Career isMobile={isMobile} fonts={fonts} />
+      </section>
+
       
 
       {/* Call to Action Section */}
@@ -58,25 +69,12 @@ export default function Home() {
         }}>
           <h2 style={{
             fontSize: isMobile ? '2.3rem' : '2.8rem',
-            marginBottom: '1rem',
+            marginBottom: '2rem',
             fontWeight: language === 'ar' ? '400' : 'bold',
             textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
           }}>
-            {language === 'ar' ? 'تعرف على المزيد عن خدماتنا' : 'Learn More About Our Services'}
+            {t.ctaTitle}
           </h2>
-          <p style={{
-            fontSize: isMobile ? '1.1rem' : '1.3rem',
-            marginBottom: '2rem',
-            opacity: 0.9,
-            maxWidth: '600px',
-            margin: '0 auto 2rem auto',
-            lineHeight: 1.6
-          }}>
-            {language === 'ar' 
-              ? 'اكتشف المزيد عن خبرتنا ونهجنا القانوني المتخصص'
-              : 'Discover more about our expertise and specialized legal approach'
-            }
-          </p>
           
           <div style={{
             display: 'flex',
@@ -119,7 +117,7 @@ export default function Home() {
                   e.target.style.boxShadow = '0 6px 20px rgba(196, 154, 108, 0.4)';
                 }}
               >
-                {language === 'ar' ? 'عن المكتب' : 'About Our Firm'}
+                {t.ctaSubtitle}
               </button>
             </Link>
             
@@ -158,7 +156,7 @@ export default function Home() {
                   e.target.style.boxShadow = '0 6px 20px rgba(196, 154, 108, 0.4)';
                 }}
               >
-                {language === 'ar' ? 'جميع الخدمات' : 'All Services'}
+                {t.ctaDescription}
               </button>
             </Link>
           </div>
