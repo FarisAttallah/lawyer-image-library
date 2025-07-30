@@ -114,12 +114,7 @@ export default function Home() {
                 }}
               >
                                 {language === 'ar' ? (
-                  <>
-                    تعرف على <span style={{ 
-                      fontWeight: 'bold',
-                      textShadow: '0 0 3px rgba(0,0,0,0.3)'
-                    }}>نهجنا القانوني المتخصص</span>
-                  </>
+                  <>تعرف على نهجنا القانوني المتخصص</>
                 ) : (
                   t.ctaSubtitle
                 )}
@@ -160,12 +155,7 @@ export default function Home() {
                 }}
               >
                                 {language === 'ar' ? (
-                  <>
-                    اكتشف المزيد عن <span style={{ 
-                      fontWeight: 'bold',
-                      textShadow: '0 0 3px rgba(0, 0, 0, 0.3)'
-                    }}>خدماتنا وخبرتنا</span>
-                  </>
+                  <>اكتشف المزيد عن خدماتنا وخبرتنا</>
                 ) : (
                   t.ctaDescription
                 )}
