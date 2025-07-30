@@ -114,7 +114,7 @@ export default function Home() {
                 }}
               >
                                 {language === 'ar' ? (
-                  <>تعرف على نهجنا القانوني المتخصص</>
+                  <> نهجنا القانوني المتخصص</>
                 ) : (
                   t.ctaSubtitle
                 )}
@@ -155,7 +155,7 @@ export default function Home() {
                 }}
               >
                                 {language === 'ar' ? (
-                  <>اكتشف المزيد عن خدماتنا وخبرتنا</>
+                  <>خدماتنا وخبرتنا</>
                 ) : (
                   t.ctaDescription
                 )}
