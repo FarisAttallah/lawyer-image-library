@@ -114,7 +114,7 @@ export default function Home() {
                 }}
               >
                                 {language === 'ar' ? (
-                  <> نهجنا القانوني المتخصص</>
+                  <> عن المكتب</>
                 ) : (
                   t.ctaSubtitle
                 )}

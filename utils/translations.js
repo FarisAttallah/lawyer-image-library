@@ -147,7 +147,7 @@ export const translations = {
     provenResultsDescEn: 'A proven track record of cases successfully completed for our clients.',
     
     // Call to Action
-    ctaTitle: 'دعوة للتصفح:',
+    ctaTitle: 'اكتشف المزيد عن خبرتنا ونهجنا القانوني المتخصص',
     ctaSubtitle: 'تعرف على نهجنا القانوني المتخصص.',
     ctaDescription: 'اكتشف المزيد عن خدماتنا وخبرتنا.',
     
@@ -293,7 +293,7 @@ export const translations = {
     provenResultsDesc: 'A proven track record of cases successfully completed for our clients.',
     
     // Call to Action
-    ctaTitle: 'Browse Invitation:',
+    ctaTitle: 'More about our Specialized Approach',
     ctaSubtitle: 'Our Legal Approach',
     ctaDescription: 'Our Services & Expertise',
     
