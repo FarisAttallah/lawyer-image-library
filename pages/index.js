@@ -113,14 +113,14 @@ export default function Home() {
                   e.target.style.boxShadow = '0 6px 20px rgba(196, 154, 108, 0.4)';
                 }}
               >
-                {language === 'ar' ? (
-                                      <>
-                      تعرف على <span style={{ 
-                        color: 'rgb(62, 60, 60)',
-                        fontWeight: 'bold',
-                        textShadow: '0 0 3px rgba(0,0,0,0.3)'
-                      }}>نهجنا القانوني المتخصص</span>.
-                    </>
+                                {language === 'ar' ? (
+                  <>
+                    تعرف على <span style={{ 
+                      color: 'rgb(62, 60, 60)',
+                      fontWeight: 'bold',
+                      textShadow: '0 0 3px rgba(0,0,0,0.3)'
+                    }}>نهجنا القانوني المتخصص</span>
+                  </>
                 ) : (
                   t.ctaSubtitle
                 )}
@@ -160,14 +160,14 @@ export default function Home() {
                   e.target.style.boxShadow = '0 6px 20px rgba(196, 154, 108, 0.4)';
                 }}
               >
-                {language === 'ar' ? (
-                                      <>
-                      اكتشف المزيد عن <span style={{ 
-                        color: 'rgb(62, 60, 60)',
-                        fontWeight: 'bold',
-                        textShadow: '0 0 3px rgba(0, 0, 0, 0.3)'
-                      }}>خدماتنا وخبرتنا</span>.
-                    </>
+                                {language === 'ar' ? (
+                  <>
+                    اكتشف المزيد عن <span style={{ 
+                      color: 'rgb(62, 60, 60)',
+                      fontWeight: 'bold',
+                      textShadow: '0 0 3px rgba(0, 0, 0, 0.3)'
+                    }}>خدماتنا وخبرتنا</span>
+                  </>
                 ) : (
                   t.ctaDescription
                 )}
