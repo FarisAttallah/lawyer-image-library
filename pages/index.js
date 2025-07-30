@@ -116,7 +116,6 @@ export default function Home() {
                                 {language === 'ar' ? (
                   <>
                     تعرف على <span style={{ 
-                      color: 'rgb(62, 60, 60)',
                       fontWeight: 'bold',
                       textShadow: '0 0 3px rgba(0,0,0,0.3)'
                     }}>نهجنا القانوني المتخصص</span>
@@ -163,7 +162,6 @@ export default function Home() {
                                 {language === 'ar' ? (
                   <>
                     اكتشف المزيد عن <span style={{ 
-                      color: 'rgb(62, 60, 60)',
                       fontWeight: 'bold',
                       textShadow: '0 0 3px rgba(0, 0, 0, 0.3)'
                     }}>خدماتنا وخبرتنا</span>
