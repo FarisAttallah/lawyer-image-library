@@ -46,7 +46,7 @@ export default function Footer() {
               color: '#e0e0e0'
             }}>
               {language === 'ar' 
-                ? 'خبرة قانونية تتجاوز 13 عامًا من التميز والثقة في خدمة العدالة وحماية الحقوق.'
+                ? 'خبرة قانونية تتجاوز ١٣ عاما من التميز والثقة في خدمة العدالة وحماية الحقوق.'
                 : 'Over 13 years of legal excellence and trust in serving justice and protecting rights.'
               }
             </p>
@@ -63,7 +63,7 @@ export default function Footer() {
               {t.contactInfo}
             </h4>
             <div style={{ lineHeight: '1.8', color: '#e0e0e0' }}>
-              <p style={{ marginBottom: '0.5rem' }}>{t.phone}</p>
+              <p style={{ marginBottom: '0.5rem', fontFamily: language === 'ar' ? 'sans-serif' : 'BeINBlack, Roboto, Arial, sans-serif' }} >{t.phone}</p>
               <p style={{ marginBottom: '0.5rem' }}>{t.email}</p>
               <p>{t.location}</p>
             </div>

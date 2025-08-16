@@ -190,9 +190,10 @@ export default function Hero({ isMobile, fonts }) {
           e.target.style.transform = 'translateY(-50%) scale(1)'
         }}
       >
-        ‹
+        {/* Left arrow */}
+        <span style={{ display: 'inline-block', transform: language === 'ar' ? 'scaleX(-1)' : 'none' }}>&#x2039;</span>
       </button>
-      
+
       <button
         onClick={nextSlide}
         disabled={isAnimating}
@@ -227,7 +228,8 @@ export default function Hero({ isMobile, fonts }) {
           e.target.style.transform = 'translateY(-50%) scale(1)'
         }}
       >
-        ›
+        {/* Right arrow */}
+        <span style={{ display: 'inline-block', transform: language === 'ar' ? 'scaleX(-1)' : 'none' }}>&#x203A;</span>
       </button>
       
       {/* Slide Indicators */}

@@ -22,14 +22,14 @@ export default function ContactInfo({ fonts }) {
   const contactData = {
     ar: {
       title: 'معلومات التواصل',
-      firmName: 'مكتب حسين أحمد آل محمد للمحاماة والاستشارات القانونية',
+      firmName: 'مكتب حسين بن أحمد آل محمد للمحاماة والاستشارات القانونية',
       address: [
         'الرياض - المملكة العربية السعودية',
         'الرمز البريدي ١٢٣٣١ الرقم الاضافي ٦٥٨٣'
       ],
-      experience: 'خبرة قانونية تتجاوز ١٣ عامًا من التميز والثقة',
+      experience: 'خبرة قانونية تتجاوز ١٣ عاما من التميز والثقة',
       phone: 'الهاتف',
-      phoneNumber: '+٩٦٦ ٥٠ ١٢٣ ٤٥٦٧',
+      phoneNumber: '+٦٦٩ ٠٥ ٣٢١ ٧٦٥٤',
       email: 'البريد الإلكتروني',
       emailAddress: 'info@almohmmed.com',
       workingHours: 'ساعات العمل',
@@ -174,7 +174,7 @@ export default function ContactInfo({ fonts }) {
         animation: 'slideInFromTop 1s ease-out 0.3s both'
       }}>
         {language === 'ar' 
-          ? 'خبرة قانونية تتجاوز ١٣ عامًا في خدمتك'
+          ? 'خبرة قانونية تتجاوز ١٣ عاما في خدمتك'
           : 'Over 13 years of legal expertise at your service'
         }
       </p>

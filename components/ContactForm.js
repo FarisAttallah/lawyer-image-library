@@ -200,7 +200,7 @@ export default function ContactForm({ fonts }) {
         {/* Email Field */}
         <div>
           <label style={labelStyle}>
-            {t.email} <span style={{ color: '#dc3545', fontFamily: 'Arial, sans-serif' }}>*</span>
+            {t.emailLabel} <span style={{ color: '#dc3545', fontFamily: 'Arial, sans-serif' }}>*</span>
           </label>
           <input
             type="email"
@@ -216,7 +216,7 @@ export default function ContactForm({ fonts }) {
         
         {/* Phone Field */}
         <div>
-          <label style={labelStyle}>
+          <label style={labelStyle} fontFamily="sans-serif">
             {t.phoneNumber}
           </label>
           <input

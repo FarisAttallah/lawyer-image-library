@@ -95,7 +95,7 @@ export default function JusticeSection({ isMobile, fonts }) {
               className="service-card-description line-height-1-7 margin-bottom-1-5"
               style={{ marginBottom: '1.5rem' }}>
                 {language === 'ar' 
-                  ? 'نؤمن بأن العدالة ليست مجرد مفهوم، بل حق أساسي يستحقه كل فرد ومؤسسة. مع خبرة تتجاوز 13 عامًا في الساحة القانونية السعودية، نقدم لكم خدمات قانونية متميزة تجمع بين العلم والخبرة العملية.'
+                  ? 'نؤمن بأن العدالة ليست مجرد مفهوم، بل حق أساسي يستحقه كل فرد ومؤسسة. مع خبرة تتجاوز ١٣ عاما في الساحة القانونية السعودية، نقدم لكم خدمات قانونية متميزة تجمع بين العلم والخبرة العملية.'
                   : 'We believe that justice is not just a concept, but a fundamental right that every individual and institution deserves. With over 13 years of experience in the Saudi legal arena, we provide you with distinguished legal services that combine knowledge and practical experience.'
                 }
               </p>
@@ -141,7 +141,7 @@ export default function JusticeSection({ isMobile, fonts }) {
                 <h4 
                 className="service-card-title"
                 style={{ color: '#0c4b3b', marginBottom: '0.5rem', position: 'relative', zIndex: 2 }}>
-                  {language === 'ar' ? '13+ سنة خبرة' : '13+ Years Experience'}
+                  {language === 'ar' ? '١٣+ سنة خبرة' : '13+ Years Experience'}
                 </h4>
                 <p 
                 className="service-card-description"
@@ -177,7 +177,7 @@ export default function JusticeSection({ isMobile, fonts }) {
                 <h4 
                 className="service-card-title"
                 style={{ color: '#0c4b3b', marginBottom: '0.5rem', position: 'relative', zIndex: 2 }}>
-                  {language === 'ar' ? '500+ قضية منجزة' : '500+ Cases Completed'}
+                  {language === 'ar' ? '٥٠٠+ قضية منجزة' : '500+ Cases Completed'}
                 </h4>
                 <p 
                 className="service-card-description"

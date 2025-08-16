@@ -16,7 +16,7 @@ export default function LocationMap() {
       officeLocation: 'موقع المكتب',
       exactAddress: 'الرياض - المملكة العربية السعودية',
       district: 'الرمز البريدي ١٢٣٣١ الرقم الاضافي ٦٥٨٣',
-      phoneNumber: '+٩٦٦ ٥٠ ١٢٣ ٤٥٦٧'
+      phoneNumber: '+٦٦٩ ٠٥ ٣٢١ ٧٦٥٤'
     },
     en: {
       title: 'Visit us at our office in Riyadh',
@@ -130,7 +130,7 @@ export default function LocationMap() {
                   color: '#666',
                   fontSize: isMobile ? '0.9rem' : '1.2rem',
                   fontWeight: 'bold',
-                  fontFamily: 'BeINBlack, Roboto, Arial, sans-serif'
+                  fontFamily: language === 'ar' ? 'sans-serif' : 'BeINBlack, Roboto, Arial, sans-serif'
                 }}>{t.phoneNumber}</span>
               </div>
               <div style={{ 
