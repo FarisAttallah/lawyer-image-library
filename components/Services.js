@@ -164,20 +164,36 @@ export default function Services({ isMobile, fonts }) {
               
               {/* Service icon based on index */}
               <div style={{
-                fontSize: isMobile ? '2rem' : '2.5rem',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
                 marginBottom: isMobile ? '0.5rem' : '1rem',
-                textAlign: 'center',
-                color: '#3b3b3b',
-                fontWeight: 'bold'
+                height: isMobile ? '48px' : '60px',
               }}>
-                {index === 0 && '◉'} {/* Legal Consultation */}
-                {index === 1 && '⚖'} {/* Litigation */}
-                {index === 2 && '▣'} {/* Commercial Law */}
-                {index === 3 && '◈'} {/* Labor Law */}
-                {index === 4 && '⬒'} {/* Contracts */}
-                {index === 5 && '⬢'} {/* Real Estate */}
-                {index === 6 && '◊'} {/* Arbitration */}
-                {index === 7 && '✓'} {/* Compliance */}
+                {index === 0 && (
+                  <img src="/icons/consultation.png" alt="Consultation Icon" style={{ width: isMobile ? '48px' : '60px', height: isMobile ? '48px' : '60px', objectFit: 'contain' }} />
+                )}
+                {index === 1 && (
+                  <img src="/icons/litigation-advocacy.png" alt="Litigation Icon" style={{ width: isMobile ? '48px' : '60px', height: isMobile ? '48px' : '60px', objectFit: 'contain' }} />
+                )}
+                {index === 2 && (
+                  <img src="/icons/commercial-law.png" alt="Commercial Law Icon" style={{ width: isMobile ? '48px' : '60px', height: isMobile ? '48px' : '60px', objectFit: 'contain' }} />
+                )}
+                {index === 3 && (
+                  <img src="/icons/labor.png" alt="Labor Law Icon" style={{ width: isMobile ? '48px' : '60px', height: isMobile ? '48px' : '60px', objectFit: 'contain' }} />
+                )}
+                {index === 4 && (
+                  <img src="/icons/contracts.png" alt="Contracts Icon" style={{ width: isMobile ? '48px' : '60px', height: isMobile ? '48px' : '60px', objectFit: 'contain' }} />
+                )}
+                {index === 5 && (
+                  <img src="/icons/real-estate.png" alt="Real Estate Icon" style={{ width: isMobile ? '48px' : '60px', height: isMobile ? '48px' : '60px', objectFit: 'contain' }} />
+                )}
+                {index === 6 && (
+                  <img src="/icons/arbitration-dispute.png" alt="Arbitration Icon" style={{ width: isMobile ? '48px' : '60px', height: isMobile ? '48px' : '60px', objectFit: 'contain' }} />
+                )}
+                {index === 7 && (
+                  <img src="/icons/compliance-governance.png" alt="Compliance Icon" style={{ width: isMobile ? '48px' : '60px', height: isMobile ? '48px' : '60px', objectFit: 'contain' }} />
+                )}
               </div>
               
               <h3 
