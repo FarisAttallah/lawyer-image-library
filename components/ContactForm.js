@@ -216,8 +216,8 @@ export default function ContactForm({ fonts }) {
         
         {/* Phone Field */}
         <div>
-          <label style={labelStyle} fontFamily="sans-serif">
-            {t.phoneNumber}
+          <label style={labelStyle}>
+            {t.phoneLabel}
           </label>
           <input
             type="tel"

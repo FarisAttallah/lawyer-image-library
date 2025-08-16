@@ -17,7 +17,7 @@ export default function Team({ isMobile, fonts }) {
       overflow: 'auto',
       color: 'white'
     }}>
-      <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+      <div style={{ maxWidth: isMobile ? '100%' : '1400px', margin: '0 auto' }}>
         {/* Team Section */}
         <div style={{ marginBottom: '4rem' }}>
           <h3 
@@ -56,7 +56,7 @@ export default function Team({ isMobile, fonts }) {
               
               {/* Content with enhanced styling */}
               <div style={{
-                padding: '3rem',
+                padding: isMobile ? '2rem' : '3.5rem',
                 background: 'rgba(255, 255, 255, 0.05)',
                 borderRadius: '20px',
                 backdropFilter: 'blur(10px)',
@@ -71,6 +71,7 @@ export default function Team({ isMobile, fonts }) {
               <p 
               className="service-card-title"
               style={{
+                fontFamily: language === 'ar' ? 'Cairo, BeINBlack, Arial, sans-serif' : 'Roboto, Arial, sans-serif',
                 fontSize: isMobile ? '1.6rem' : '2rem',
                 lineHeight: '1.8',
                 color: '#c49a6c',
@@ -83,6 +84,7 @@ export default function Team({ isMobile, fonts }) {
               <p 
               className="service-card-description"
               style={{
+                fontFamily: language === 'ar' ? 'Cairo, BeINBlack, Arial, sans-serif' : 'Roboto, Arial, sans-serif',
                 fontSize: isMobile ? '1.3rem' : '1.6rem',
                 lineHeight: '1.7',
                 color: 'rgba(255, 255, 255, 0.9)',
@@ -94,6 +96,7 @@ export default function Team({ isMobile, fonts }) {
               <p 
               className="service-card-description"
               style={{
+                fontFamily: language === 'ar' ? 'Cairo, BeINBlack, Arial, sans-serif' : 'Roboto, Arial, sans-serif',
                 fontSize: isMobile ? '1.3rem' : '1.6rem',
                 lineHeight: '1.7',
                 color: 'rgba(255, 255, 255, 0.85)',
@@ -157,7 +160,7 @@ export default function Team({ isMobile, fonts }) {
                 e.currentTarget.style.boxShadow = '0 20px 60px rgba(0,0,0,0.3), 0 8px 25px rgba(196, 154, 108, 0.2)'
               }}>
                 <img 
-                  src="/images/collab.png" 
+                  src="/images/team_1.png" 
                   alt={language === 'ar' ? 'فريق العمل' : 'Our Team'}
                   style={{
                     width: '100%',
@@ -233,4 +236,4 @@ export default function Team({ isMobile, fonts }) {
       </div>
     </div>
   )
-} 
+}

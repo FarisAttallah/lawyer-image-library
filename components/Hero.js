@@ -13,15 +13,19 @@ export default function Hero({ isMobile, fonts }) {
   
   const slides = [
     {
+      image: '/images/riyadh_city.png',
+      title: t.welcome
+    },
+    {
       image: '/images/Riyadh_Tower_Ameen.png',
       title: t.welcome
     },
     {
-      image: '/images/Hero_office.png',
+      image: '/images/desert_image.png',
       title: t.welcome
     },
     {
-      image: '/images/Hero_office_nopeople.png',
+      image: '/images/riyadh_city_2.png',
       title: t.welcome
     }
   ]
@@ -181,13 +185,15 @@ export default function Hero({ isMobile, fonts }) {
         }}
         onMouseOver={(e) => {
           if (!isAnimating) {
-            e.target.style.background = 'rgba(196, 154, 108, 1)'
-            e.target.style.transform = 'translateY(-50%) scale(1.1)'
+            const btn = e.currentTarget
+            btn.style.background = 'rgba(196, 154, 108, 1)'
+            btn.style.transform = 'translateY(-50%) scale(1.1)'
           }
         }}
         onMouseOut={(e) => {
-          e.target.style.background = 'rgba(196, 154, 108, 0.9)'
-          e.target.style.transform = 'translateY(-50%) scale(1)'
+          const btn = e.currentTarget
+          btn.style.background = 'rgba(196, 154, 108, 0.9)'
+          btn.style.transform = 'translateY(-50%) scale(1)'
         }}
       >
         {/* Left arrow */}
@@ -219,13 +225,15 @@ export default function Hero({ isMobile, fonts }) {
         }}
         onMouseOver={(e) => {
           if (!isAnimating) {
-            e.target.style.background = 'rgba(196, 154, 108, 1)'
-            e.target.style.transform = 'translateY(-50%) scale(1.1)'
+            const btn = e.currentTarget
+            btn.style.background = 'rgba(196, 154, 108, 1)'
+            btn.style.transform = 'translateY(-50%) scale(1.1)'
           }
         }}
         onMouseOut={(e) => {
-          e.target.style.background = 'rgba(196, 154, 108, 0.9)'
-          e.target.style.transform = 'translateY(-50%) scale(1)'
+          const btn = e.currentTarget
+          btn.style.background = 'rgba(196, 154, 108, 0.9)'
+          btn.style.transform = 'translateY(-50%) scale(1)'
         }}
       >
         {/* Right arrow */}

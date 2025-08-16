@@ -63,7 +63,15 @@ export default function Footer() {
               {t.contactInfo}
             </h4>
             <div style={{ lineHeight: '1.8', color: '#e0e0e0' }}>
-              <p style={{ marginBottom: '0.5rem', fontFamily: language === 'ar' ? 'sans-serif' : 'BeINBlack, Roboto, Arial, sans-serif' }} >{t.phone}</p>
+              {language === 'ar' ? (
+                <p style={{ marginBottom: '0.5rem' }}>
+                  <span>{t.phoneLabel}:</span>{' '}
+                  <span dir="ltr" style={{ unicodeBidi: 'isolate', display: 'inline-block' }}>{t.phoneNumber}</span>
+                </p>
+              ) : (
+                <p style={{ marginBottom: '0.5rem' }}>{t.phoneLabel}: {t.phoneNumber}</p>
+              )}
+
               <p style={{ marginBottom: '0.5rem' }}>{t.email}</p>
               <p>{t.location}</p>
             </div>
@@ -141,6 +149,18 @@ export default function Footer() {
           paddingTop: '1.5rem',
           textAlign: 'center'
         }}>
+          {/* Social Media Icons */}
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', marginBottom: '1rem' }}>
+            <a href="https://www.instagram.com/almohmmedlaw/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style={{ display: 'inline-block' }}>
+              <img src="/icons/instagram.png" alt="Instagram" style={{ width: 28, height: 28, display: 'block' }} />
+            </a>
+            <a href="https://x.com/AlmohmmedLaw" target="_blank" rel="noopener noreferrer" aria-label="X (formerly Twitter)" style={{ display: 'inline-block' }}>
+              <img src="/icons/twitter.png" alt="X (Tweet)" style={{ width: 28, height: 28, display: 'block' }} />
+            </a>
+            <a href="https://www.linkedin.com/in/al-mohmmed-lawfirm22/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style={{ display: 'inline-block' }}>
+              <img src="/icons/linkedin.png" alt="LinkedIn" style={{ width: 28, height: 28, display: 'block' }} />
+            </a>
+          </div>
           <p style={{ 
             margin: 0, 
             color: '#c49a6c',

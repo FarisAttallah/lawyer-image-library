@@ -29,7 +29,7 @@ export default function ContactInfo({ fonts }) {
       ],
       experience: 'خبرة قانونية تتجاوز ١٣ عاما من التميز والثقة',
       phone: 'الهاتف',
-      phoneNumber: '+٦٦٩ ٠٥ ٣٢١ ٧٦٥٤',
+      phoneNumber: '+966 50 123 4567',
       email: 'البريد الإلكتروني',
       emailAddress: 'info@almohmmed.com',
       workingHours: 'ساعات العمل',
@@ -129,7 +129,7 @@ export default function ContactInfo({ fonts }) {
         }}></div>
         
         <img 
-          src="images/Contact_Us2.jpg" 
+          src="images/team_2.png" 
           alt="Contact Us - Hussein Almohmmed Law Firm"
           style={{
             width: '100%',
