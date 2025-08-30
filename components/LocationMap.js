@@ -9,26 +9,30 @@ export default function LocationMap() {
     ar: {
       title: 'تفضل بزيارتنا في مكتبنا بالرياض',
       address: [
-        'الرياض - المملكة العربية السعودية',
-        'الرمز البريدي ١٢٣٣١ الرقم الاضافي ٦٥٨٣'
+        'الأمير محمد بن سعود بن عبدالعزيز',
+        'العليا، الرياض 12331',
+        'المملكة العربية السعودية'
       ],
       directions: 'احصل على الاتجاهات',
       officeLocation: 'موقع المكتب',
       exactAddress: 'الرياض - المملكة العربية السعودية',
       district: 'الرمز البريدي ١٢٣٣١ الرقم الاضافي ٦٥٨٣',
-      phoneNumber: '+966 50 123 4567'
+      phoneNumber: '+966 50 123 4567',
+      officePhoneNumber: '11 123 4567',
     },
     en: {
       title: 'Visit us at our office in Riyadh',
       address: [
-        'Riyadh - Saudi Arabia',
-        'Postal Code 12331 Additional Number 6583'
+        'Prince Mohammed bin Saud bin Abdulaziz',
+        'Al Olaya, Riyadh 12331',
+        'Saudi Arabia'
       ],
       directions: 'Get Directions',
       officeLocation: 'Office Location',
       exactAddress: 'Riyadh - Saudi Arabia',
       district: 'Postal Code 12331 Additional Number 6583',
-      phoneNumber: '+966 50 123 4567'
+      phoneNumber: '+966 50 123 4567',
+      officePhoneNumber: '11 123 4567',
     }
   }
   
@@ -117,12 +121,26 @@ export default function LocationMap() {
                   padding: '0.6rem 0.8rem',
                   backgroundColor: 'rgba(255,255,255,0.9)',
                   borderRadius: '8px',
-                  border: '1px solid rgba(196,154,108,0.25)'
+                  border: '1px solid rgba(196,154,108,0.25)',
+                  // Force LTR flow so the icon stays at the physical left in Arabic
+                  direction: language === 'ar' ? 'ltr' : 'ltr'
                 }}>
                   <span style={{ fontSize: isMobile ? '1.1rem' : '1.3rem' }}>📞</span>
-                  <span style={{ color: '#666', fontWeight: 'bold', fontSize: isMobile ? '0.95rem' : '1rem' }}>
-                    <span dir="ltr" style={{ unicodeBidi: 'isolate', display: 'inline-block' }}>{t.phoneNumber}</span>
-                  </span>
+                  <div style={{ 
+                    display: 'flex', 
+                    flexDirection: 'column', 
+                    fontSize: isMobile ? '0.95rem' : '1rem', 
+                    fontWeight: 'bold', 
+                    color: '#666',
+                    textAlign: language === 'ar' ? 'right' : 'left'
+                  }}>
+                    <span>
+                      <span dir="ltr" style={{ unicodeBidi: 'isolate', display: 'inline-block' }}>{t.phoneNumber}</span>
+                    </span>
+                    <span>
+                      <span dir="ltr" style={{ unicodeBidi: 'isolate', display: 'inline-block' }}>{t.officePhoneNumber}</span>
+                    </span>
+                  </div>
                 </div>
 
                 <div style={{
@@ -132,10 +150,17 @@ export default function LocationMap() {
                   padding: '0.6rem 0.8rem',
                   backgroundColor: 'rgba(255,255,255,0.9)',
                   borderRadius: '8px',
-                  border: '1px solid rgba(196,154,108,0.25)'
+                  border: '1px solid rgba(196,154,108,0.25)',
+                  direction: language === 'ar' ? 'ltr' : 'ltr'
                 }}>
                   <span style={{ fontSize: isMobile ? '1.1rem' : '1.3rem' }}>✉️</span>
-                  <span style={{ color: '#666', fontSize: isMobile ? '0.95rem' : '1rem' }}>info@almohmmed.com</span>
+                  <span style={{ 
+                    color: '#666', 
+                    fontSize: isMobile ? '0.95rem' : '1rem',
+                    textAlign: language === 'ar' ? 'right' : 'left',
+                    direction: 'ltr',
+                    unicodeBidi: 'isolate'
+                  }}>info@almohmmed.com</span>
                 </div>
               </div>
             </div>

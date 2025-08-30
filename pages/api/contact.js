@@ -22,7 +22,7 @@ export default async function handler(req, res) {
     
     const result = await resend.emails.send({
       from: 'Hussein Almohmmed Law Firm <contact@faresattallah.website>',
-      to: 'ayoub6669@gmail.com',
+      to: 'info@almohmmed.com',
       subject: `New Contact Form Submission: ${subject}`,
       html: `
         <!DOCTYPE html>

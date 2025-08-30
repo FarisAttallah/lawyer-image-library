@@ -236,7 +236,7 @@ export default function LawyerProfile({ isMobile, fonts }) {
                   aspectRatio: '3/4'
                 }}>
                   <img 
-                    src="/images/founder-word.png" 
+                    src="/images/Hussein-office.jpeg" 
                     alt={language === 'ar' ? 'مكتب المحاماة' : 'Law Office'}
                     style={{
                       width: '100%',

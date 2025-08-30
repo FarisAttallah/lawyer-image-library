@@ -71,7 +71,14 @@ export default function Footer() {
               ) : (
                 <p style={{ marginBottom: '0.5rem' }}>{t.phoneLabel}: {t.phoneNumber}</p>
               )}
-
+             {language === 'ar' ? (
+               <p style={{ marginBottom: '0.5rem' }}>
+                 <span>{t.officePhoneLabel}:</span>{' '}
+                 <span dir="ltr" style={{ unicodeBidi: 'isolate', display: 'inline-block' }}>{t.officePhoneNumber}</span>
+               </p>
+             ) : (
+               <p style={{ marginBottom: '0.5rem' }}>{t.officePhoneLabel}: {t.officePhoneNumber}</p>
+             )}
               <p style={{ marginBottom: '0.5rem' }}>{t.email}</p>
               <p>{t.location}</p>
             </div>
@@ -157,7 +164,7 @@ export default function Footer() {
             <a href="https://x.com/AlmohmmedLaw" target="_blank" rel="noopener noreferrer" aria-label="X (formerly Twitter)" style={{ display: 'inline-block' }}>
               <img src="/icons/twitter.png" alt="X (Tweet)" style={{ width: 28, height: 28, display: 'block' }} />
             </a>
-            <a href="https://www.linkedin.com/in/al-mohmmed-lawfirm22/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style={{ display: 'inline-block' }}>
+            <a href="https://www.linkedin.com/in/al-mohammed-law-firm-and-legal-consultations-%D8%A2%D9%84-%D9%85%D8%AD%D9%85%D8%AF-%D9%84%D9%84%D9%85%D8%AD%D8%A7%D9%85%D8%A7%D8%A9-%D9%88-%D8%A7%D9%84%D8%A5%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A7%D8%AA-%D8%A7%D9%84%D9%82%D8%A7%D9%86%D9%88%D9%86%D9%8A%D8%A9-0361a3343/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style={{ display: 'inline-block' }}>
               <img src="/icons/linkedin.png" alt="LinkedIn" style={{ width: 28, height: 28, display: 'block' }} />
             </a>
           </div>

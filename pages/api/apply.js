@@ -41,7 +41,7 @@ export default async function handler(req, res) {
       console.log('Sending email via Resend...');
       const result = await resend.emails.send({
         from: 'Hussein Almohmmed Law Firm <careers@faresattallah.website>',
-        to: 'ayoub6669@gmail.com',
+        to: 'info@almohmmed.com',
         subject: `New Job Application: ${jobTitle}`,
         html: `
           <!DOCTYPE html>

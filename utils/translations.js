@@ -1,161 +1,4 @@
 export const translations = {
-  ar: {
-    // Header
-    lawFirm: 'مكتب حسين بن أحمد آل محمد للمحاماة والاستشارات القانونية',
-    home: 'الرئيسية',
-    about: 'من نحن',
-    services: 'خدماتنا',
-    contact: 'اتصل بنا',
-    
-    // Contact Page
-    contactUsTitle: 'اتصل بنا',
-    contactUsSubtitle: 'نحن هنا لدعمك في جميع احتياجاتك القانونية.',
-    contactUsDescription: 'سواء كنت فردا أو شركة، يقدم مكتبنا استشارات مهنية وحلولا قانونية موثوقة.',
-    
-    // Contact Form
-    contactFormTitle: 'نموذج التواصل:',
-    fullName: 'الاسم الكامل',
-    email: 'البريد الإلكتروني',
-    phoneNumber: 'رقم الهاتف',
-    commercialRegister: 'السجل التجاري (إن وجد)',
-    serviceType: 'نوع الخدمة المطلوبة',
-    consultationSubject: 'موضوع الاستشارة',
-    consultationDetails: 'تفاصيل الاستشارة أو القضية',
-    submitMessage: 'إرسال الرسالة',
-    submitting: 'جاري الإرسال...',
-    successMessage: 'تم إرسال رسالتك بنجاح! سنتواصل معك قريباً.',
-    errorMessage: 'حدث خطأ في إرسال الرسالة. يرجى المحاولة مرة أخرى.',
-    
-    // Hero Section
-    welcome: 'مكتب حسين بن أحمد آل محمد للمحاماة والاستشارات القانونية',
-    subtitle: 'خبرة قانونية تتجاوز ١٣ عاما من التميز والثقة - الرياض، المملكة العربية السعودية',
-    
-    // About Section
-    aboutTitle: 'من نحن',
-    aboutDescription: 'تأسس مكتب حسين بن أحمد آل محمد للمحاماة والاستشارات القانونية في مدينة الرياض ليكون شريكا قانونيا موثوقا للأفراد والشركات والكيانات بمختلف قطاعاتها. بفضل خبرة تمتد لأكثر من ١٣ عام في سوق العمل القانوني، يقدم المكتب حلولا قانونية متكاملة تعتمد على فهم دقيق للأنظمة السعودية والممارسات القانونية.',
-    aboutHeroDescription: 'تأسس مكتب حسين بن أحمد آل محمد للمحاماة والاستشارات القانونية في مدينة الرياض ليكون شريكا قانونيا موثوقا للأفراد والشركات والكيانات بمختلف قطاعاتها. بفضل خبرة تمتد لأكثر من ١٣ عام في سوق العمل القانوني، يقدم المكتب حلولا قانونية متكاملة تعتمد على فهم دقيق للأنظمة السعودية والممارسات القانونية.',
-
-    // Vision, Mission, Goals
-    visionTitle: 'رؤيتنا',
-    vision: 'أن نكون من بين أبرز المكاتب القانونية في المملكة والمنطقة، من خلال خدمات قائمة على الثقة والمهنية، تستجيب لمتغيرات الأنظمة والتشريعات المحلية والدولية.',
-    
-    missionTitle: 'رسالتنا',
-    mission: 'تقديم خدمات قانونية متكاملة ومصممة باحتراف لتلبية احتياجات العملاء، من خلال فريق قانوني مؤهل، ومتابعة دقيقة لمستجدات الأنظمة واللوائح',
-    
-    valuesTitle: 'قيمنا',
-    transparency: 'الشفافية',
-    transparencyDesc: 'تقديم المشورة القانونية بوضوح وصدق.',
-    confidentiality: 'السرية',
-    confidentialityDesc: 'حماية بيانات العملاء وقضاياهم بأقصى درجات الأمان.',
-    professionalism: 'الاحترافية',
-    professionalismDesc: 'تقديم الخدمات وفق أعلى معايير الجودة القانونية.',
-    justice: 'العدالة',
-    justiceDesc: 'الالتزام بإحقاق الحقوق دون تمييز.',
-    development: 'التطوير المستمر',
-    developmentDesc: 'متابعة أحدث التغيرات التشريعية وتطوير قدراتنا وخدماتنا باستمرار.',
-    
-    // Team Section
-    teamTitle: 'فريق العمل',
-    teamDescription: 'في مكتب حسين بن أحمد آل محمد للمحاماة والاستشارات القانونية نؤمن بأن قوة المكتب تنبع من قوة فريقه.',
-    teamDetails: 'يضم فريقنا عدد من المحامين والمستشارين القانونيين ذوي الخبرات المتنوعة في مختلف فروع القانون، مدعومين بشبكة من الخبراء والاستشاريين الخارجيين لتقديم حلول متكاملة تلبي احتياجات عملائنا.',
-    teamApproach: 'يعمل الفريق بروح واحدة، وفق أعلى معايير المهنية، لضمان تقديم استشارات دقيقة وتمثيل قانوني فعّال أمام الجهات القضائية والإدارية.',
-    
-    // Lawyer Quote
-    lawyerQuoteTitle: 'كلمة المؤسس',
-    lawyerQuote: 'أسسنا هذا المكتب على قناعة راسخة بأن المحاماة ليست مجرد مهنة، بل رسالة تعنى بالدفاع عن الحقوق، وصيانة العدالة، وحماية الثقة بين الأطراف. نحن لا نقدم خدمات قانونية فحسب، بل نرعى مصالح عملائنا كما لو كانت مصالحنا.',
-    
-    // Lawyer Credentials
-    lawyerName: 'نبذة عن المؤسس',
-    lawyerCredentials: 'محامي مرخص بتاريخ ٠٤/٠٤/١٤٣٦ ، ترخيص رقم ١٢٨/٣٦',
-    lawyerMembership: 'عضو أساسي الهيئة السعودية للمحامين من العام ٢٠١٩',
-    lawyerExperience: 'خبرة واسعة في القانون التجاري والمدني والإداري والعمالي',
-    
-    // Career Section
-    careerTitle: 'الخبرات',
-    currentPosition: 'حاضر',
-    experience1: 'رئيس لجنة المكافآت والترشيحات بجمعية حركية للكبار',
-    experience2: 'عضو مجلس إدارة جمعية حركية للكبار',
-    experience3: 'عضو الجمعية العمومية لجمعية حركية للكبار',
-    experience4: 'مساعد قانوني ووكيل شرعي لعدد ٥ شركات ، الرياض',
-    
-    educationTitle: 'التعليم',
-    education1Degree: 'القانون العام',
-    education1Level: 'درجة الماجستير',
-    education1Institution: 'الجامعة الاردنية ، الاردن',
-    education2Degree: 'الحقوق',
-    education2Level: 'درجة البكالوريوس',
-    education2Institution: 'جامعة الزيتونة الخاصة ، الاردن',
-    
-    // Services
-    servicesTitle: 'خدماتنا',
-    servicesSubtitle: 'حلول قانونية متكاملة تلبي احتياجات الأفراد والشركات',
-    servicesSubtitleEn: 'Integrated legal solutions meeting the needs of individuals and companies',
-    specializationTitle: 'مجالات تخصصنا:',
-    specializationTitleEn: 'Our Specializations:',
-    legalConsultation: 'الاستشارات القانونية',
-    legalConsultationDesc: 'تقديم مشورة شفوية وكتابية دقيقة وفق الأنظمة السعودية والمقارنة.',
-    litigation: 'التقاضي والترافع',
-    litigationDesc: 'تمثيل العملاء أمام الجهات القضائية بجميع درجاتها.',
-    commercialLaw: 'القانون التجاري والشركات',
-    commercialLawDesc: 'تأسيس الشركات، صياغة العقود، حل نزاعات الشركاء.',
-    laborLaw: 'القانون العمالي',
-    laborLawDesc: 'معالجة النزاعات العمالية وقضايا الفصل التعسفي.',
-    contracts: 'العقود والاتفاقيات',
-    contractsDesc: 'مراجعة وصياغة عقود الشراكة والتعاملات التجارية.',
-    realEstate: 'القضايا العقارية',
-    realEstateDesc: 'منازعات الملكية والإيجارات وإثبات الملكية.',
-    arbitration: 'التحكيم وتسوية النزاعات',
-    arbitrationDesc: 'إدارة قضايا التحكيم المحلية والتسويات القانونية.',
-    compliance: 'الامتثال والحوكمة',
-    complianceDesc: 'إعداد السياسات الداخلية وتقليل المخاطر القانونية.',
-
-    // Footer
-    contactInfo: 'معلومات الاتصال',
-    phoneLabel: 'الهاتف',
-    phoneNumber: '+966 50 123 4567',
-    email: 'البريد الإلكتروني: info@almohmmed.com',
-    emailLabel: 'البريد الإلكتروني',
-    address: 'العنوان',
-    location: 'الرياض، المملكة العربية السعودية',
-    workingHours: 'ساعات العمل',
-    schedule: 'الأحد - الخميس: 8:00 ص - 4:00 م',
-    copyright: '© ٢٠٢٥ مكتب حسين بن أحمد آل محمد للمحاماة. جميع الحقوق محفوظة.',
-    
-    // Stats
-    experience: '١٣+',
-    experienceLabel: 'سنة خبرة',
-    
-    // Achievements
-    achievementsTitle: 'إنجازاتنا',
-    achievement1: 'خبرة تمتد لأكثر من عقد في تقديم الحلول القانونية.',
-    achievement2: 'تمثيل ناجح في مئات القضايا التجارية والعقارية والإدارية المعقدة.',
-    achievement3: 'خبرة واسعة في صياغة العقود والاتفاقيات.',
-    achievement4: 'مساهمة فعّالة في تسويات ودية وتحكيم حققت مصالح العملاء بكفاءة.',
-    
-    // Why Choose Us
-    whyChooseUsTitle: 'لماذا نحن؟',
-    whyChooseUsTitleEn: 'Why Choose Us?',
-    extensiveExperience: 'خبرة واسعة',
-    extensiveExperienceEn: 'Extensive Experience',
-    extensiveExperienceDesc: 'سنوات طويلة من النجاح في مختلف التخصصات القانونية.',
-    extensiveExperienceDescEn: 'Long years of success across various legal specializations.',
-    personalApproach: 'نهج شخصي',
-    personalApproachEn: 'Personal Approach',
-    personalApproachDesc: 'تقديم خدمات مصممة خصيصًا لكل عميل.',
-    personalApproachDescEn: 'Providing services specifically designed for each client.',
-    provenResults: 'نتائج مثبتة',
-    provenResultsEn: 'Proven Results',
-    provenResultsDesc: 'سجل حافل بالقضايا المنجزة لصالح عملائنا.',
-    provenResultsDescEn: 'A proven track record of cases successfully completed for our clients.',
-    
-    // Call to Action
-    ctaTitle: 'اكتشف المزيد عن خبرتنا ونهجنا القانوني المتخصص',
-    ctaSubtitle: 'تعرف على نهجنا القانوني المتخصص.',
-    ctaDescription: 'اكتشف المزيد عن خدماتنا وخبرتنا.',
-    
-    // Language
-    language: 'العربية'
-  },
   en: {
     // Header
     lawFirm: 'Hussein Ahmed Almohmmed Law Firm',
@@ -223,7 +66,7 @@ export const translations = {
     
     // Lawyer Credentials
     lawyerName: 'About the Founder',
-    lawyerCredentials: 'Licensed lawyer since 04/04/1436, License No. 128/36',
+    lawyerCredentials: 'Licensed lawyer since 04/04/1436, License No. 36/128',
     lawyerMembership: 'Core member of the Saudi Bar Association since 2019',
     lawyerExperience: 'Extensive experience in Commercial, Civil, Administrative and Labor Law',
     
@@ -267,13 +110,16 @@ export const translations = {
     // Footer
     contactInfo: 'Contact Information',
     phoneLabel: 'Phone',
-    phoneNumber: '+966 50 123 4567',
+    phoneNumber: '+966 55 905 5731',
+    officePhoneLabel: 'Office',
+    officePhoneNumber: '11 494 4110',
     email: 'Email: info@almohmmed.com',
     emailLabel: 'Email',
     address: 'Address',
     location: 'Riyadh, Saudi Arabia',
+    exactAddress: 'Prince Mohammed bin Saud bin Abdulaziz, Al Olaya, Riyadh 12331, Saudi Arabia',
     workingHours: 'Working Hours',
-    schedule: 'Sunday - Thursday: 9:00 AM - 6:00 PM',
+    schedule: 'Sun - Thur: 8:00 AM - 4:00 PM',
     copyright: '© 2025 Hussein Ahmed Almohmmed Law Firm. All rights reserved.',
     
     // Stats
@@ -303,5 +149,163 @@ export const translations = {
     
     // Language
     language: 'English'
+  },
+  ar: {
+    // Header
+    lawFirm: 'مكتب حسين بن أحمد آل محمد للمحاماة والاستشارات القانونية',
+    home: 'الرئيسية',
+    about: 'من نحن',
+    services: 'خدماتنا',
+    contact: 'اتصل بنا',
+    
+    // Contact Page
+    contactUsTitle: 'اتصل بنا',
+    contactUsSubtitle: 'نحن هنا لدعمك في جميع احتياجاتك القانونية.',
+    contactUsDescription: 'سواء كنت فردا أو شركة، يقدم مكتبنا استشارات مهنية وحلولا قانونية موثوقة.',
+    
+    // Contact Form
+    contactFormTitle: 'نموذج التواصل:',
+    fullName: 'الاسم الكامل',
+    email: 'البريد الإلكتروني',
+    phoneNumber: 'رقم الهاتف',
+    commercialRegister: 'السجل التجاري (إن وجد)',
+    serviceType: 'نوع الخدمة المطلوبة',
+    consultationSubject: 'موضوع الاستشارة',
+    consultationDetails: 'تفاصيل الاستشارة أو القضية',
+    submitMessage: 'إرسال الرسالة',
+    submitting: 'جاري الإرسال...',
+    successMessage: 'تم إرسال رسالتك بنجاح! سنتواصل معك قريباً.',
+    errorMessage: 'حدث خطأ في إرسال الرسالة. يرجى المحاولة مرة أخرى.',
+    
+    // Hero Section
+    welcome: 'مكتب حسين بن أحمد آل محمد للمحاماة والاستشارات القانونية',
+    subtitle: 'خبرة قانونية تتجاوز ١٣ عاما من التميز والثقة - الرياض، المملكة العربية السعودية',
+    
+    // About Section
+    aboutTitle: 'من نحن',
+    aboutDescription: 'تأسس مكتب حسين بن أحمد آل محمد للمحاماة والاستشارات القانونية في مدينة الرياض ليكون شريكا قانونيا موثوقا للأفراد والشركات والكيانات بمختلف قطاعاتها. بفضل خبرة تمتد لأكثر من ١٣ عام في سوق العمل القانوني، يقدم المكتب حلولا قانونية متكاملة تعتمد على فهم دقيق للأنظمة السعودية والممارسات القانونية.',
+    aboutHeroDescription: 'تأسس مكتب حسين بن أحمد آل محمد للمحاماة والاستشارات القانونية في مدينة الرياض ليكون شريكا قانونيا موثوقا للأفراد والشركات والكيانات بمختلف قطاعاتها. بفضل خبرة تمتد لأكثر من ١٣ عام في سوق العمل القانوني، يقدم المكتب حلولا قانونية متكاملة تعتمد على فهم دقيق للأنظمة السعودية والممارسات القانونية.',
+
+    // Vision, Mission, Goals
+    visionTitle: 'رؤيتنا',
+    vision: 'أن نكون من بين أبرز المكاتب القانونية في المملكة والمنطقة، من خلال خدمات قائمة على الثقة والمهنية، تستجيب لمتغيرات الأنظمة والتشريعات المحلية والدولية.',
+    
+    missionTitle: 'رسالتنا',
+    mission: 'تقديم خدمات قانونية متكاملة ومصممة باحتراف لتلبية احتياجات العملاء، من خلال فريق قانوني مؤهل، ومتابعة دقيقة لمستجدات الأنظمة واللوائح',
+    
+    valuesTitle: 'قيمنا',
+    transparency: 'الشفافية',
+    transparencyDesc: 'تقديم المشورة القانونية بوضوح وصدق.',
+    confidentiality: 'السرية',
+    confidentialityDesc: 'حماية بيانات العملاء وقضاياهم بأقصى درجات الأمان.',
+    professionalism: 'الاحترافية',
+    professionalismDesc: 'تقديم الخدمات وفق أعلى معايير الجودة القانونية.',
+    justice: 'العدالة',
+    justiceDesc: 'الالتزام بإحقاق الحقوق دون تمييز.',
+    development: 'التطوير المستمر',
+    developmentDesc: 'متابعة أحدث التغيرات التشريعية وتطوير قدراتنا وخدماتنا باستمرار.',
+    
+    // Team Section
+    teamTitle: 'فريق العمل',
+    teamDescription: 'في مكتب حسين بن أحمد آل محمد للمحاماة والاستشارات القانونية نؤمن بأن قوة المكتب تنبع من قوة فريقه.',
+    teamDetails: 'يضم فريقنا عدد من المحامين والمستشارين القانونيين ذوي الخبرات المتنوعة في مختلف فروع القانون، مدعومين بشبكة من الخبراء والاستشاريين الخارجيين لتقديم حلول متكاملة تلبي احتياجات عملائنا.',
+    teamApproach: 'يعمل الفريق بروح واحدة، وفق أعلى معايير المهنية، لضمان تقديم استشارات دقيقة وتمثيل قانوني فعّال أمام الجهات القضائية والإدارية.',
+    
+    // Lawyer Quote
+    lawyerQuoteTitle: 'كلمة المؤسس',
+    lawyerQuote: 'أسسنا هذا المكتب على قناعة راسخة بأن المحاماة ليست مجرد مهنة، بل رسالة تعنى بالدفاع عن الحقوق، وصيانة العدالة، وحماية الثقة بين الأطراف. نحن لا نقدم خدمات قانونية فحسب، بل نرعى مصالح عملائنا كما لو كانت مصالحنا.',
+    
+    // Lawyer Credentials
+    lawyerName: 'نبذة عن المؤسس',
+    lawyerCredentials: 'محامي مرخص بتاريخ ٠٤/٠٤/١٤٣٦ ، ترخيص رقم 36/128',
+    lawyerMembership: 'عضو أساسي الهيئة السعودية للمحامين من العام ٢٠١٩',
+    lawyerExperience: 'خبرة واسعة في القانون التجاري والمدني والإداري والعمالي',
+    
+    // Career Section
+    careerTitle: 'الخبرات',
+    currentPosition: 'حاضر',
+    experience1: 'رئيس لجنة المكافآت والترشيحات بجمعية حركية للكبار',
+    experience2: 'عضو مجلس إدارة جمعية حركية للكبار',
+    experience3: 'عضو الجمعية العمومية لجمعية حركية للكبار',
+    experience4: 'مساعد قانوني ووكيل شرعي لعدد ٥ شركات ، الرياض',
+    
+    educationTitle: 'التعليم',
+    education1Degree: 'القانون العام',
+    education1Level: 'درجة الماجستير',
+    education1Institution: 'الجامعة الاردنية ، الاردن',
+    education2Degree: 'الحقوق',
+    education2Level: 'درجة البكالوريوس',
+    education2Institution: 'جامعة الزيتونة الخاصة ، الاردن',
+    
+    // Services
+    servicesTitle: 'خدماتنا',
+    servicesSubtitle: 'حلول قانونية متكاملة تلبي احتياجات الأفراد والشركات',
+    specializationTitle: 'مجالات تخصصنا:',
+    legalConsultation: 'الاستشارات القانونية',
+    legalConsultationDesc: 'تقديم مشورة شفوية وكتابية دقيقة وفق الأنظمة السعودية والمقارنة.',
+    litigation: 'التقاضي والترافع',
+    litigationDesc: 'تمثيل العملاء أمام الجهات القضائية بجميع درجاتها.',
+    commercialLaw: 'القانون التجاري والشركات',
+    commercialLawDesc: 'تأسيس الشركات، صياغة العقود، حل نزاعات الشركاء.',
+    laborLaw: 'القانون العمالي',
+    laborLawDesc: 'معالجة النزاعات العمالية وقضايا الفصل التعسفي.',
+    contracts: 'العقود والاتفاقيات',
+    contractsDesc: 'مراجعة وصياغة عقود الشراكة والتعاملات التجارية.',
+    realEstate: 'القضايا العقارية',
+    realEstateDesc: 'منازعات الملكية والإيجارات وإثبات الملكية.',
+    arbitration: 'التحكيم وتسوية النزاعات',
+    arbitrationDesc: 'إدارة قضايا التحكيم المحلية والتسويات القانونية.',
+    compliance: 'الامتثال والحوكمة',
+    complianceDesc: 'إعداد السياسات الداخلية وتقليل المخاطر القانونية.',
+
+    // Footer
+    contactInfo: 'معلومات الاتصال',
+    phoneLabel: 'رقم الجوال',
+    phoneNumber: '+966 55 905 5731',
+    officePhoneLabel: 'هاتف المكتب',
+    officePhoneNumber: '11 494 4110',
+    email: 'البريد الإلكتروني: info@almohmmed.com',
+    emailLabel: 'البريد الإلكتروني',
+    address: 'العنوان',
+    location: 'الرياض ، المملكة العربية السعودية',
+    exactAddress: 'الأمير محمد بن سعود بن عبدالعزيز، العليا، الرياض 12331، المملكة العربية السعودية',
+    workingHours: 'ساعات العمل',
+    schedule: 'الأحد - الخميس: 8:00 ص - 4:00 م',
+    copyright: '© ٢٠٢٥ مكتب حسين بن أحمد آل محمد للمحاماة. جميع الحقوق محفوظة.',
+    
+    // Stats
+    experience: '١٣+',
+    experienceLabel: 'سنة خبرة',
+    
+    // Achievements
+    achievementsTitle: 'إنجازاتنا',
+    achievement1: 'خبرة تمتد لأكثر من عقد في تقديم الحلول القانونية.',
+    achievement2: 'تمثيل ناجح في مئات القضايا التجارية والعقارية والإدارية المعقدة.',
+    achievement3: 'خبرة واسعة في صياغة العقود والاتفاقيات.',
+    achievement4: 'مساهمة فعّالة في تسويات ودية وتحكيم حققت مصالح العملاء بكفاءة.',
+    
+    // Why Choose Us
+    whyChooseUsTitle: 'لماذا نحن؟',
+    whyChooseUsTitleEn: 'Why Choose Us?',
+    extensiveExperience: 'خبرة واسعة',
+    extensiveExperienceEn: 'Extensive Experience',
+    extensiveExperienceDesc: 'سنوات طويلة من النجاح في مختلف التخصصات القانونية.',
+    extensiveExperienceDescEn: 'Long years of success across various legal specializations.',
+    personalApproach: 'نهج شخصي',
+    personalApproachEn: 'Personal Approach',
+    personalApproachDesc: 'تقديم خدمات مصممة خصيصًا لكل عميل.',
+    personalApproachDescEn: 'Providing services specifically designed for each client.',
+    provenResults: 'نتائج مثبتة',
+    provenResultsEn: 'Proven Results',
+    provenResultsDesc: 'سجل حافل بالقضايا المنجزة لصالح عملائنا.',
+    provenResultsDescEn: 'A proven track record of cases successfully completed for our clients.',
+    
+    // Call to Action
+    ctaTitle: 'اكتشف المزيد عن خبرتنا ونهجنا القانوني المتخصص',
+    ctaSubtitle: 'تعرف على نهجنا القانوني المتخصص.',
+    ctaDescription: 'اكتشف المزيد عن خدماتنا وخبرتنا.',
+    
+    // Language
+    language: 'العربية'
   }
 }
