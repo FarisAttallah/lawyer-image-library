@@ -86,7 +86,7 @@ export default function LocationMap() {
             <div style={{ flex: '0 0 auto', width: '100%', height: isMobile ? '50%' : '65%' }}>
               <iframe
                 title="Office Location"
-                src={`https://www.google.com/maps?q=${encodeURIComponent('الأمير محمد بن سعود بن عبدالعزيز, Al Olaya, Riyadh 12331, Saudi Arabia')}&output=embed`}
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7249.974239337065!2d46.674492199999996!3d24.6929695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03a4b49c99cd%3A0x8ea7c823bc59a899!2z2YXZg9iq2Kgg2K3Ys9mK2YYg2KfZhCDZhdit2YXYryDZhNmE2YXYrdin2YXYp9ipINmI2KfZhNin2LPYqti02KfYsdin2Kog2KfZhNmC2KfZhtmI2YbZitip!5e0!3m2!1sen!2sus!4v1756578589842!5m2!1sen!2sus" 
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -94,6 +94,7 @@ export default function LocationMap() {
                 referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
+            
 
             {/* Details + Contact */}
             <div style={{
