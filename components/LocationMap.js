@@ -17,8 +17,8 @@ export default function LocationMap() {
       officeLocation: 'موقع المكتب',
       exactAddress: 'الرياض - المملكة العربية السعودية',
       district: 'الرمز البريدي ١٢٣٣١ الرقم الاضافي ٦٥٨٣',
-      phoneNumber: '+966 50 123 4567',
-      officePhoneNumber: '11 123 4567',
+      phoneNumber: '+966 55 905 5731',
+      officePhoneNumber: '+966 11 494 4110',
     },
     en: {
       title: 'Visit us at our office in Riyadh',
@@ -31,8 +31,8 @@ export default function LocationMap() {
       officeLocation: 'Office Location',
       exactAddress: 'Riyadh - Saudi Arabia',
       district: 'Postal Code 12331 Additional Number 6583',
-      phoneNumber: '+966 50 123 4567',
-      officePhoneNumber: '11 123 4567',
+      phoneNumber: '+966 55 905 5731',
+      officePhoneNumber: '+966 11 494 4110',
     }
   }
   
