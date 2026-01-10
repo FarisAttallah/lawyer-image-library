@@ -32,8 +32,10 @@ export const translations = {
     
     // About Section
     aboutTitle: 'About Us',
-    aboutDescription: 'Hussein Ahmed Almohmmed Law Firm was established in Riyadh to be a trusted legal partner for individuals, companies, and entities across various sectors. With over 13 years of experience in the legal market, the firm provides integrated legal solutions based on a deep understanding of Saudi regulations and legal practices.',
-    aboutHeroDescription: 'Hussein Ahmed Almohmmed Law Firm was established in Riyadh to be a trusted legal partner for individuals, companies, and entities across various sectors. With over 13 years of experience in the legal market, the firm provides integrated legal solutions based on a deep understanding of Saudi regulations and legal practices.',
+    aboutDescription1: 'Our legal practice began more than ten years ago as a law firm that includes, during this journey, a group of elite lawyers and legal consultants. During this period, we provided specialized and diverse legal services to individuals and companies, and we contributed to handling qualitative cases and building professional relationships based on trust and competence.',
+    aboutDescription2: 'And starting from this professional extension, and in line with the regulatory and institutional development of the legal sector in the Kingdom, Hussein Al-Ghamdi Law Firm was established in the capital Riyadh, to continue its journey with steady steps towards becoming one of the most prominent legal entities in the Kingdom of Saudi Arabia, based on deep practical experience and a modern institutional vision.',
+    aboutDescription3: 'We are a professional company licensed by the Saudi Ministry of Justice, and we are proud to provide integrated legal services according to high professional standards, and with a precise understanding of the local judicial environment, which achieves effective and sustainable legal solutions for our clients.',
+    aboutHeroDescription: 'Our legal practice began more than ten years ago as a law firm that includes, during this journey, a group of elite lawyers and legal consultants. During this period, we provided specialized and diverse legal services to individuals and companies, and we contributed to handling qualitative cases and building professional relationships based on trust and competence. And starting from this professional extension, and in line with the regulatory and institutional development of the legal sector in the Kingdom, Hussein Al-Ghamdi Law Firm was established in the capital Riyadh, to continue its journey with steady steps towards becoming one of the most prominent legal entities in the Kingdom of Saudi Arabia, based on deep practical experience and a modern institutional vision. We are a professional company licensed by the Saudi Ministry of Justice, and we are proud to provide integrated legal services according to high professional standards, and with a precise understanding of the local judicial environment, which achieves effective and sustainable legal solutions for our clients.',
     
     // Vision, Mission, Goals
     visionTitle: 'Our Vision',
@@ -183,8 +185,10 @@ export const translations = {
     
     // About Section
     aboutTitle: 'من نحن',
-    aboutDescription: 'تأسس مكتب حسين بن أحمد آل محمد للمحاماة والاستشارات القانونية في مدينة الرياض ليكون شريكا قانونيا موثوقا للأفراد والشركات والكيانات بمختلف قطاعاتها. بفضل خبرة تمتد لأكثر من ١٣ عام في سوق العمل القانوني، يقدم المكتب حلولا قانونية متكاملة تعتمد على فهم دقيق للأنظمة السعودية والممارسات القانونية.',
-    aboutHeroDescription: 'تأسس مكتب حسين بن أحمد آل محمد للمحاماة والاستشارات القانونية في مدينة الرياض ليكون شريكا قانونيا موثوقا للأفراد والشركات والكيانات بمختلف قطاعاتها. بفضل خبرة تمتد لأكثر من ١٣ عام في سوق العمل القانوني، يقدم المكتب حلولا قانونية متكاملة تعتمد على فهم دقيق للأنظمة السعودية والممارسات القانونية.',
+    aboutDescription1: 'انطلقت ممارستنا القانونية منذ أكثر ما يزيد عن عشر سنوات كمكتب محاماة يضم خلال هذه المسيره نخبة من المحامين والمستشارين القانونيين، قدمنا خلالها خدمات قانونية متخصصة ومتنوعة للأفراد والشركات، وأسهمنا في معالجة قضايا نوعية وبناء علاقات مهنية قائمة على الثقة والكفاءة.',
+    aboutDescription2: 'وانطلاقا من هذا الامتداد المهني، وتماشيا مع التطور النظامي والمؤسسي لقطاع المحاماة في المملكة، تأسست شركة حسين الغامدي للمحاماة والاستشارات القانونية في العاصمة الرياض، لتواصل مسيرتها بخطى ثابتة نحو أن تكون واحدة من أبرز الكيانات القانونية في المملكة العربية السعودية، مستندة إلى خبرة عملية عميقة ورؤية مؤسسية حديثة.',
+    aboutDescription3: 'نحن شركة مهنية مرخصة من وزارة العدل السعودية، ونفخر بتقديم خدمات قانونية متكاملة وفق معايير مهنية عالية، وبفهم دقيق للبيئة العدلية المحلية، بما يحقق لعملائنا حلولا قانونية فعّالة ومستدامة.',
+    aboutHeroDescription: 'انطلقت ممارستنا القانونية منذ أكثر ما يزيد عن عشر سنوات كمكتب محاماة يضم خلال هذه المسيره نخبة من المحامين والمستشارين القانونيين، قدمنا خلالها خدمات قانونية متخصصة ومتنوعة للأفراد والشركات، وأسهمنا في معالجة قضايا نوعية وبناء علاقات مهنية قائمة على الثقة والكفاءة. وانطلاقا من هذا الامتداد المهني، وتماشيا مع التطور النظامي والمؤسسي لقطاع المحاماة في المملكة، تأسست شركة حسين الغامدي للمحاماة والاستشارات القانونية في العاصمة الرياض، لتواصل مسيرتها بخطى ثابتة نحو أن تكون واحدة من أبرز الكيانات القانونية في المملكة العربية السعودية، مستندة إلى خبرة عملية عميقة ورؤية مؤسسية حديثة. نحن شركة مهنية مرخصة من وزارة العدل السعودية، ونفخر بتقديم خدمات قانونية متكاملة وفق معايير مهنية عالية، وبفهم دقيق للبيئة العدلية المحلية، بما يحقق لعملائنا حلولا قانونية فعّالة ومستدامة',
 
     // Vision, Mission, Goals
     visionTitle: 'رؤيتنا',
@@ -293,7 +297,7 @@ export const translations = {
     extensiveExperienceDescEn: 'Long years of success across various legal specializations.',
     personalApproach: 'نهج شخصي',
     personalApproachEn: 'Personal Approach',
-    personalApproachDesc: 'تقديم خدمات مصممة خصيصًا لكل عميل.',
+    personalApproachDesc: 'تقديم خدمات مصممة خصيصا لكل عميل.',
     personalApproachDescEn: 'Providing services specifically designed for each client.',
     provenResults: 'نتائج مثبتة',
     provenResultsEn: 'Proven Results',

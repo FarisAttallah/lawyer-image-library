@@ -53,7 +53,7 @@ export default function Contact() {
         {/* Hero Section */}
         <section style={{
           position: 'relative',
-          backgroundColor: '#0c4b3b',
+          backgroundColor: '#284268',
           color: 'white',
           padding: isMobile ? '3rem 1rem' : '5rem 2rem',
           textAlign: 'center',
@@ -77,7 +77,7 @@ export default function Contact() {
             left: 0,
             right: 0,
             bottom: 0,
-            background: 'linear-gradient(135deg, rgba(12, 75, 59, 0.55) 0%, rgba(34, 98, 73, 0.85) 50%, rgba(12, 75, 59, 0.55) 100%)',
+            background: 'linear-gradient(135deg, rgba(40, 66, 104, 0.55) 0%, rgba(40, 66, 104, 0.85) 50%, rgba(40, 66, 104, 0.55) 100%)',
             zIndex: 1
           }} />
           
@@ -102,7 +102,7 @@ export default function Contact() {
             <p 
             style={{
               fontSize: fonts.sectionSubtitle,
-              color: '#c49a6c',
+              color: '#FFFFFF',
               maxWidth: '700px',
               margin: '0 auto',
               textShadow: '2px 2px 4px rgba(0,0,0,0.8)',
@@ -153,8 +153,8 @@ export default function Contact() {
                   })
                 }}
                 style={{
-                  backgroundColor: '#c49a6c',
-                  color: 'white',
+                  backgroundColor: '#FFFFFF',
+                  color: '#284268',
                   border: '2px solid transparent',
                   padding: isMobile ? '1rem 2rem' : '1.2rem 2.5rem',
                   fontSize: fonts.heroButton,
@@ -163,7 +163,7 @@ export default function Contact() {
                   fontWeight: 'bold',
                   fontFamily: 'BeINBlack, Roboto, Arial, sans-serif',
                   transition: 'all 0.3s ease',
-                  boxShadow: '0 6px 20px rgba(196, 154, 108, 0.4), 0 0 0 0 rgba(196, 154, 108, 0.7)',
+                  boxShadow: '0 6px 20px rgba(255, 255, 255, 0.4), 0 0 0 0 rgba(255, 255, 255, 0.7)',
                   textTransform: 'uppercase',
                   letterSpacing: '0.5px',
                   position: 'relative',
@@ -175,18 +175,18 @@ export default function Contact() {
                   gap: '0.5rem'
                 }}
                 onMouseOver={(e) => {
-                  e.target.style.backgroundColor = '#a65c32'
-                  e.target.style.borderColor = '#c49a6c'
+                  e.target.style.backgroundColor = '#284268'
+                  e.target.style.borderColor = '#FFFFFF'
                   e.target.style.color = 'white'
                   e.target.style.transform = 'translateY(-3px)'
-                  e.target.style.boxShadow = '0 8px 25px rgba(196, 154, 108, 0.6)'
+                  e.target.style.boxShadow = '0 8px 25px rgba(255, 255, 255, 0.6)'
                 }}
                 onMouseOut={(e) => {
-                  e.target.style.backgroundColor = '#c49a6c'
+                  e.target.style.backgroundColor = '#FFFFFF'
                   e.target.style.borderColor = 'transparent'
-                  e.target.style.color = 'white'
+                  e.target.style.color = '#284268'
                   e.target.style.transform = 'translateY(0)'
-                  e.target.style.boxShadow = '0 6px 20px rgba(196, 154, 108, 0.4)'
+                  e.target.style.boxShadow = '0 6px 20px rgba(255, 255, 255, 0.4)'
                 }}
               >
                {language === 'ar' ? 'استشارة قانونية' : 'Legal Consultation'}

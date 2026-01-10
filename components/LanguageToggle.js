@@ -21,8 +21,8 @@ export default function LanguageToggle() {
     <button
       onClick={toggleLanguage}
       style={{
-        backgroundColor: '#c49a6c',
-        color: 'white',
+        backgroundColor: '#FFFFFF',
+        color: '#284268',
         border: 'none',
         padding: isMobile ? '0.4rem 0.6rem' : '0.5rem 1rem',
         borderRadius: '4px',
@@ -35,10 +35,12 @@ export default function LanguageToggle() {
         textAlign: 'center'
       }}
       onMouseOver={(e) => {
-        e.target.style.backgroundColor = '#a65c32'
+        e.target.style.backgroundColor = '#284268'
+        e.target.style.color = '#FFFFFF'
       }}
       onMouseOut={(e) => {
-        e.target.style.backgroundColor = '#c49a6c'
+        e.target.style.backgroundColor = '#FFFFFF'
+        e.target.style.color = '#284268'
       }}
     >
       {language === 'ar' ? 'English' : 'العربية'}

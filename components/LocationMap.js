@@ -47,7 +47,7 @@ export default function LocationMap() {
       marginTop: '2rem'
     }}>
       <h2 style={{
-        color: '#0c4b3b',
+        color: '#284268',
         fontSize: isMobile ? '1.5rem' : '2rem',
         marginBottom: isMobile ? '1.5rem' : '2rem',
         fontWeight: 'bold',
@@ -65,7 +65,7 @@ export default function LocationMap() {
           width: '100%',
           maxWidth: isMobile ? '100%' : '700px',
           height: isMobile ? '400px' : '500px',
-          border: '2px solid #c49a6c',
+          border: '2px solid #FFFFFF',
           borderRadius: '12px',
           overflow: 'hidden',
           position: 'relative',
@@ -106,7 +106,7 @@ export default function LocationMap() {
               padding: isMobile ? '1rem' : '1.5rem 2rem'
             }}>
               <div style={{ textAlign: language === 'ar' ? 'right' : 'left', flex: '1 1 60%' }}>
-                <h3 style={{ color: '#0c4b3b', margin: 0, fontSize: isMobile ? '1rem' : '1.1rem', fontWeight: '600' }}>{t.exactAddress}</h3>
+                <h3 style={{ color: '#284268', margin: 0, fontSize: isMobile ? '1rem' : '1.1rem', fontWeight: '600' }}>{t.exactAddress}</h3>
                 <div style={{ color: '#666', marginTop: '0.5rem', lineHeight: '1.5', fontSize: isMobile ? '0.95rem' : '1rem' }}>
                   {t.address.map((line, i) => (
                     <div key={i}>{line}</div>

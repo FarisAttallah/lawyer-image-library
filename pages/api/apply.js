@@ -51,13 +51,13 @@ export default async function handler(req, res) {
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>New Job Application</title>
             <style>
-              body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; }
+              body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #414042; }
               .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-              .header { background: linear-gradient(135deg, #0c4b3b 0%, #226249 100%); color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+              .header { background: linear-gradient(135deg, #284268 0%, #284268 100%); color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
               .section { margin-bottom: 20px; padding: 15px; border: 1px solid #e0e0e0; border-radius: 8px; }
-              .label { font-weight: bold; color: #0c4b3b; }
+              .label { font-weight: bold; color: #284268; }
               .value { margin-left: 10px; }
-              .divider { border-top: 2px solid #c49a6c; margin: 30px 0; }
+              .divider { border-top: 2px solid #FFFFFF; margin: 30px 0; }
               .english { direction: ltr; text-align: left; }
               .arabic { direction: rtl; text-align: right; }
             </style>
@@ -75,13 +75,13 @@ export default async function handler(req, res) {
               </div>
               
               <div class="section arabic">
-                <h3 style="color: #0c4b3b; margin-top: 0;">تفاصيل الوظيفة</h3>
+                <h3 style="color: #284268; margin-top: 0;">تفاصيل الوظيفة</h3>
                 <p><span class="label">الوظيفة:</span> <span class="value">${jobTitleAr || jobTitle}</span></p>
                 <p><span class="label">الموقع:</span> <span class="value">${jobLocationAr || jobLocation}</span></p>
               </div>
               
               <div class="section arabic">
-                <h3 style="color: #0c4b3b; margin-top: 0;">معلومات المتقدم</h3>
+                <h3 style="color: #284268; margin-top: 0;">معلومات المتقدم</h3>
                 <p><span class="label">الاسم:</span> <span class="value">${fields.name}</span></p>
                 <p><span class="label">البريد الإلكتروني:</span> <span class="value">${fields.email}</span></p>
                 <p><span class="label">رقم الهاتف:</span> <span class="value">${fields.phone}</span></p>
@@ -90,13 +90,13 @@ export default async function handler(req, res) {
               <div class="divider"></div>
               
               <div class="section english">
-                <h3 style="color: #0c4b3b; margin-top: 0;">Job Details</h3>
+                <h3 style="color: #284268; margin-top: 0;">Job Details</h3>
                 <p><span class="label">Position:</span> <span class="value">${jobTitle}</span></p>
                 <p><span class="label">Location:</span> <span class="value">${jobLocation}</span></p>
               </div>
               
               <div class="section english">
-                <h3 style="color: #0c4b3b; margin-top: 0;">Applicant Information</h3>
+                <h3 style="color: #284268; margin-top: 0;">Applicant Information</h3>
                 <p><span class="label">Name:</span> <span class="value">${fields.name}</span></p>
                 <p><span class="label">Email:</span> <span class="value">${fields.email}</span></p>
                 <p><span class="label">Phone:</span> <span class="value">${fields.phone}</span></p>
@@ -104,7 +104,7 @@ export default async function handler(req, res) {
               
               ${resume && Array.isArray(resume) && resume[0] ? `
               <div class="section">
-                <h3 style="color: #0c4b3b; margin-top: 0;">📎 Resume Attached</h3>
+                <h3 style="color: #284268; margin-top: 0;">📎 Resume Attached</h3>
                 <p style="margin: 0;">File: ${resume[0].originalFilename}</p>
               </div>
               ` : ''}

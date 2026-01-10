@@ -26,7 +26,7 @@ export default function LawyerProfile({ isMobile, fonts }) {
         width: '150px',
         height: '150px',
         borderRadius: '50%',
-        background: 'rgba(196, 154, 108, 0.05)',
+        background: 'rgba(255, 255, 255, 0.05)',
         zIndex: 1
       }} />
       <div style={{
@@ -36,7 +36,7 @@ export default function LawyerProfile({ isMobile, fonts }) {
         width: '200px',
         height: '200px',
         borderRadius: '50%',
-        background: 'rgba(12, 75, 59, 0.03)',
+        background: 'rgba(40, 66, 104, 0.03)',
         zIndex: 1
       }} />
       
@@ -53,13 +53,13 @@ export default function LawyerProfile({ isMobile, fonts }) {
           borderRadius: '24px',
           boxShadow: '0 20px 60px rgba(0,0,0,0.1), 0 8px 25px rgba(0,0,0,0.05)',
           overflow: 'hidden',
-          border: '1px solid rgba(196, 154, 108, 0.1)',
+          border: '1px solid rgba(255, 255, 255, 0.1)',
           position: 'relative'
         }}>
           {/* Decorative top border */}
           <div style={{
             height: '4px',
-            background: 'linear-gradient(90deg, #c49a6c 0%, #226249 50%, #c49a6c 100%)',
+            background: 'linear-gradient(90deg, #FFFFFF 0%, #284268 50%, #FFFFFF 100%)',
             width: '100%'
           }} />
           
@@ -80,7 +80,7 @@ export default function LawyerProfile({ isMobile, fonts }) {
             }}>
               <h2 style={{
                 fontSize: fonts.sectionTitle,
-                color: '#0c4b3b',
+                color: '#284268',
                 marginBottom: '2rem',
                 fontWeight: language === 'ar' ? '400' : 'bold',
                 textAlign: language === 'ar' ? 'right' : 'left',
@@ -99,7 +99,7 @@ export default function LawyerProfile({ isMobile, fonts }) {
                   right: language === 'ar' ? '0' : 'auto',
                   width: '60px',
                   height: '3px',
-                  background: 'linear-gradient(90deg, #c49a6c, #226249)',
+                  background: 'linear-gradient(90deg, #FFFFFF, #284268)',
                   borderRadius: '2px'
                 }} />
               </h2>
@@ -107,14 +107,14 @@ export default function LawyerProfile({ isMobile, fonts }) {
               <blockquote style={{
                 fontSize: fonts.bodyLarge,
                 lineHeight: '1.8',
-                color: '#333',
+                color: '#414042',
                 fontStyle: 'italic',
                 marginBottom: '2.5rem',
                 position: 'relative',
                 paddingLeft: language === 'ar' ? '0' : '2rem',
                 paddingRight: language === 'ar' ? '2rem' : '0',
-                borderLeft: language === 'ar' ? 'none' : '4px solid #c49a6c',
-                borderRight: language === 'ar' ? '4px solid #c49a6c' : 'none'
+                borderLeft: language === 'ar' ? 'none' : '4px solid #FFFFFF',
+                borderRight: language === 'ar' ? '4px solid #FFFFFF' : 'none'
               }}>
                 "{t.lawyerQuote}"
               </blockquote>
@@ -125,7 +125,7 @@ export default function LawyerProfile({ isMobile, fonts }) {
                 padding: '2rem',
                 borderRadius: '16px',
                 boxShadow: '0 8px 25px rgba(0,0,0,0.08)',
-                border: '2px solid #c49a6c',
+                border: '2px solid #FFFFFF',
                 position: 'relative',
                 overflow: 'hidden'
               }}>
@@ -136,13 +136,13 @@ export default function LawyerProfile({ isMobile, fonts }) {
                   right: '0',
                   width: '80px',
                   height: '80px',
-                  background: 'linear-gradient(135deg, rgba(196, 154, 108, 0.1), transparent)',
+                  background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent)',
                   zIndex: 1
                 }} />
                 
                 <h3 style={{
                   fontSize: fonts.subsectionTitle,
-                  color: '#0c4b3b',
+                  color: '#284268',
                   marginBottom: '1rem',
                   fontWeight: language === 'ar' ? '400' : 'bold',
                   position: 'relative',
@@ -197,7 +197,7 @@ export default function LawyerProfile({ isMobile, fonts }) {
               order: isMobile ? 1 : (language === 'ar' ? 1 : 2),
               position: 'relative',
               overflow: 'hidden',
-              background: 'linear-gradient(135deg, #0c4b3b 0%, #226249 100%)',
+              background: 'linear-gradient(135deg, #284268 0%, #284268 100%)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center'
@@ -210,8 +210,8 @@ export default function LawyerProfile({ isMobile, fonts }) {
                 right: '0',
                 bottom: '0',
                 backgroundImage: `
-                  radial-gradient(circle at 20% 20%, rgba(196, 154, 108, 0.1) 0%, transparent 50%),
-                  radial-gradient(circle at 80% 80%, rgba(196, 154, 108, 0.05) 0%, transparent 50%)
+                  radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                  radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%)
                 `,
                 zIndex: 1
               }} />
@@ -256,7 +256,7 @@ export default function LawyerProfile({ isMobile, fonts }) {
                     left: '0',
                     right: '0',
                     bottom: '0',
-                    background: 'linear-gradient(135deg, rgba(196, 154, 108, 0.1) 0%, transparent 40%, rgba(12, 75, 59, 0.1) 100%)',
+                    background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 40%, rgba(40, 66, 104, 0.1) 100%)',
                     pointerEvents: 'none'
                   }} />
                 </div>
@@ -269,7 +269,7 @@ export default function LawyerProfile({ isMobile, fonts }) {
                   width: '20px',
                   height: '20px',
                   borderRadius: '50%',
-                  background: 'rgba(196, 154, 108, 0.6)',
+                  background: 'rgba(255, 255, 255, 0.6)',
                   animation: 'float 3s ease-in-out infinite',
                   zIndex: 1
                 }} />
@@ -280,7 +280,7 @@ export default function LawyerProfile({ isMobile, fonts }) {
                   width: '15px',
                   height: '15px',
                   borderRadius: '50%',
-                  background: 'rgba(196, 154, 108, 0.4)',
+                  background: 'rgba(255, 255, 255, 0.4)',
                   animation: 'float 4s ease-in-out infinite reverse',
                   zIndex: 1
                 }} />

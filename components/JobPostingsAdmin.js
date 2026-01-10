@@ -166,7 +166,7 @@ export default function JobPostingsAdmin() {
         boxSizing: 'border-box',
         width: '100%',
       }}>
-        <h2 style={{ color: '#0c4b3b', fontWeight: 900, marginBottom: '2rem', fontSize: '1.7rem', letterSpacing: '0.5px', textAlign: isArabic ? 'right' : 'left' }}>
+        <h2 style={{ color: '#284268', fontWeight: 900, marginBottom: '2rem', fontSize: '1.7rem', letterSpacing: '0.5px', textAlign: isArabic ? 'right' : 'left' }}>
           {isArabic ? 'إضافة وظيفة جديدة' : 'Add New Job Posting'}
         </h2>
         <form onSubmit={handleStep1Next} style={{
@@ -177,30 +177,30 @@ export default function JobPostingsAdmin() {
           <div style={{ display: 'grid', gridTemplateColumns: '160px 1fr', alignItems: 'center', gap: '1.1rem 1.2rem', width: '100%' }}>
             {isArabic ? (
               <>
-                <label htmlFor="job-title-en" style={{ fontWeight: 700, color: '#0c4b3b', fontSize: '1.08rem', textAlign: 'right' }}>{isArabic ? 'المسمى (إنجليزي)' : 'Title (EN)'}</label>
-                <input id="job-title-en" type="text" value={jobTitleEn} onChange={e => setJobTitleEn(e.target.value)} style={{ padding: '0.9rem', borderRadius: 8, border: '1.5px solid #c49a6c', fontSize: '1.07rem', outline: 'none', background: 'white', fontWeight: 500, width: '100%', textAlign: 'right' }} required />
-                <label htmlFor="job-location-en" style={{ fontWeight: 700, color: '#0c4b3b', fontSize: '1.08rem', textAlign: 'right' }}>{isArabic ? 'الموقع (إنجليزي)' : 'Location (EN)'}</label>
-                <input id="job-location-en" type="text" value={jobLocationEn} onChange={e => setJobLocationEn(e.target.value)} style={{ padding: '0.9rem', borderRadius: 8, border: '1.5px solid #c49a6c', fontSize: '1.07rem', outline: 'none', background: 'white', fontWeight: 500, width: '100%', textAlign: 'right' }} required />
-                <label htmlFor="job-title-ar" style={{ fontWeight: 700, color: '#0c4b3b', fontSize: '1.08rem', textAlign: 'right' }}>{isArabic ? 'المسمى (عربي)' : 'Title (AR)'}</label>
-                <input id="job-title-ar" type="text" value={jobTitleAr} onChange={e => setJobTitleAr(e.target.value)} style={{ padding: '0.9rem', borderRadius: 8, border: '1.5px solid #c49a6c', fontSize: '1.07rem', outline: 'none', background: 'white', fontWeight: 500, width: '100%', textAlign: 'right' }} required />
-                <label htmlFor="job-location-ar" style={{ fontWeight: 700, color: '#0c4b3b', fontSize: '1.08rem', textAlign: 'right' }}>{isArabic ? 'الموقع (عربي)' : 'Location (AR)'}</label>
-                <input id="job-location-ar" type="text" value={jobLocationAr} onChange={e => setJobLocationAr(e.target.value)} style={{ padding: '0.9rem', borderRadius: 8, border: '1.5px solid #c49a6c', fontSize: '1.07rem', outline: 'none', background: 'white', fontWeight: 500, width: '100%', textAlign: 'right' }} required />
+                <label htmlFor="job-title-en" style={{ fontWeight: 700, color: '#284268', fontSize: '1.08rem', textAlign: 'right' }}>{isArabic ? 'المسمى (إنجليزي)' : 'Title (EN)'}</label>
+                <input id="job-title-en" type="text" value={jobTitleEn} onChange={e => setJobTitleEn(e.target.value)} style={{ padding: '0.9rem', borderRadius: 8, border: '1.5px solid #FFFFFF', fontSize: '1.07rem', outline: 'none', background: 'white', fontWeight: 500, width: '100%', textAlign: 'right' }} required />
+                <label htmlFor="job-location-en" style={{ fontWeight: 700, color: '#284268', fontSize: '1.08rem', textAlign: 'right' }}>{isArabic ? 'الموقع (إنجليزي)' : 'Location (EN)'}</label>
+                <input id="job-location-en" type="text" value={jobLocationEn} onChange={e => setJobLocationEn(e.target.value)} style={{ padding: '0.9rem', borderRadius: 8, border: '1.5px solid #FFFFFF', fontSize: '1.07rem', outline: 'none', background: 'white', fontWeight: 500, width: '100%', textAlign: 'right' }} required />
+                <label htmlFor="job-title-ar" style={{ fontWeight: 700, color: '#284268', fontSize: '1.08rem', textAlign: 'right' }}>{isArabic ? 'المسمى (عربي)' : 'Title (AR)'}</label>
+                <input id="job-title-ar" type="text" value={jobTitleAr} onChange={e => setJobTitleAr(e.target.value)} style={{ padding: '0.9rem', borderRadius: 8, border: '1.5px solid #FFFFFF', fontSize: '1.07rem', outline: 'none', background: 'white', fontWeight: 500, width: '100%', textAlign: 'right' }} required />
+                <label htmlFor="job-location-ar" style={{ fontWeight: 700, color: '#284268', fontSize: '1.08rem', textAlign: 'right' }}>{isArabic ? 'الموقع (عربي)' : 'Location (AR)'}</label>
+                <input id="job-location-ar" type="text" value={jobLocationAr} onChange={e => setJobLocationAr(e.target.value)} style={{ padding: '0.9rem', borderRadius: 8, border: '1.5px solid #FFFFFF', fontSize: '1.07rem', outline: 'none', background: 'white', fontWeight: 500, width: '100%', textAlign: 'right' }} required />
               </>
             ) : (
               <>
-                <label htmlFor="job-title-en" style={{ fontWeight: 700, color: '#0c4b3b', fontSize: '1.08rem', textAlign: 'left' }}>{isArabic ? 'المسمى (إنجليزي)' : 'Title (EN)'}</label>
-                <input id="job-title-en" type="text" value={jobTitleEn} onChange={e => setJobTitleEn(e.target.value)} style={{ padding: '0.9rem', borderRadius: 8, border: '1.5px solid #c49a6c', fontSize: '1.07rem', outline: 'none', background: 'white', fontWeight: 500, width: '100%', textAlign: 'left' }} required />
-                <label htmlFor="job-location-en" style={{ fontWeight: 700, color: '#0c4b3b', fontSize: '1.08rem', textAlign: 'left' }}>{isArabic ? 'الموقع (إنجليزي)' : 'Location (EN)'}</label>
-                <input id="job-location-en" type="text" value={jobLocationEn} onChange={e => setJobLocationEn(e.target.value)} style={{ padding: '0.9rem', borderRadius: 8, border: '1.5px solid #c49a6c', fontSize: '1.07rem', outline: 'none', background: 'white', fontWeight: 500, width: '100%', textAlign: 'left' }} required />
-                <label htmlFor="job-title-ar" style={{ fontWeight: 700, color: '#0c4b3b', fontSize: '1.08rem', textAlign: 'left' }}>{isArabic ? 'المسمى (عربي)' : 'Title (AR)'}</label>
-                <input id="job-title-ar" type="text" value={jobTitleAr} onChange={e => setJobTitleAr(e.target.value)} style={{ padding: '0.9rem', borderRadius: 8, border: '1.5px solid #c49a6c', fontSize: '1.07rem', outline: 'none', background: 'white', fontWeight: 500, width: '100%', textAlign: 'left' }} required />
-                <label htmlFor="job-location-ar" style={{ fontWeight: 700, color: '#0c4b3b', fontSize: '1.08rem', textAlign: 'left' }}>{isArabic ? 'الموقع (عربي)' : 'Location (AR)'}</label>
-                <input id="job-location-ar" type="text" value={jobLocationAr} onChange={e => setJobLocationAr(e.target.value)} style={{ padding: '0.9rem', borderRadius: 8, border: '1.5px solid #c49a6c', fontSize: '1.07rem', outline: 'none', background: 'white', fontWeight: 500, width: '100%', textAlign: 'left' }} required />
+                <label htmlFor="job-title-en" style={{ fontWeight: 700, color: '#284268', fontSize: '1.08rem', textAlign: 'left' }}>{isArabic ? 'المسمى (إنجليزي)' : 'Title (EN)'}</label>
+                <input id="job-title-en" type="text" value={jobTitleEn} onChange={e => setJobTitleEn(e.target.value)} style={{ padding: '0.9rem', borderRadius: 8, border: '1.5px solid #FFFFFF', fontSize: '1.07rem', outline: 'none', background: 'white', fontWeight: 500, width: '100%', textAlign: 'left' }} required />
+                <label htmlFor="job-location-en" style={{ fontWeight: 700, color: '#284268', fontSize: '1.08rem', textAlign: 'left' }}>{isArabic ? 'الموقع (إنجليزي)' : 'Location (EN)'}</label>
+                <input id="job-location-en" type="text" value={jobLocationEn} onChange={e => setJobLocationEn(e.target.value)} style={{ padding: '0.9rem', borderRadius: 8, border: '1.5px solid #FFFFFF', fontSize: '1.07rem', outline: 'none', background: 'white', fontWeight: 500, width: '100%', textAlign: 'left' }} required />
+                <label htmlFor="job-title-ar" style={{ fontWeight: 700, color: '#284268', fontSize: '1.08rem', textAlign: 'left' }}>{isArabic ? 'المسمى (عربي)' : 'Title (AR)'}</label>
+                <input id="job-title-ar" type="text" value={jobTitleAr} onChange={e => setJobTitleAr(e.target.value)} style={{ padding: '0.9rem', borderRadius: 8, border: '1.5px solid #FFFFFF', fontSize: '1.07rem', outline: 'none', background: 'white', fontWeight: 500, width: '100%', textAlign: 'left' }} required />
+                <label htmlFor="job-location-ar" style={{ fontWeight: 700, color: '#284268', fontSize: '1.08rem', textAlign: 'left' }}>{isArabic ? 'الموقع (عربي)' : 'Location (AR)'}</label>
+                <input id="job-location-ar" type="text" value={jobLocationAr} onChange={e => setJobLocationAr(e.target.value)} style={{ padding: '0.9rem', borderRadius: 8, border: '1.5px solid #FFFFFF', fontSize: '1.07rem', outline: 'none', background: 'white', fontWeight: 500, width: '100%', textAlign: 'left' }} required />
               </>
             )}
           </div>
           {jobError && <div style={{ color: '#a94442', marginBottom: '0.5rem', textAlign: 'center', fontWeight: 600 }}>{jobError}</div>}
-          {addSuccess && <div style={{ color: '#0c4b3b', fontWeight: 700, textAlign: 'center', marginBottom: '0.5rem' }}>{isArabic ? 'تمت إضافة الوظيفة بنجاح!' : 'Job added successfully!'}</div>}
+          {addSuccess && <div style={{ color: '#284268', fontWeight: 700, textAlign: 'center', marginBottom: '0.5rem' }}>{isArabic ? 'تمت إضافة الوظيفة بنجاح!' : 'Job added successfully!'}</div>}
           <button
             type="submit"
             style={{ ...adminButtonStyle, opacity: submitting ? 0.7 : 1 }}
@@ -233,7 +233,7 @@ export default function JobPostingsAdmin() {
             display: 'flex', flexDirection: 'column',
           }}>
             <button onClick={() => setDescModalOpen(false)} style={{ position: 'absolute', top: 24, right: 36, background: 'none', border: 'none', fontSize: 32, cursor: 'pointer', color: '#888', padding: 0, lineHeight: 1, zIndex: 2 }}>&times;</button>
-            <h2 style={{ color: '#0c4b3b', fontWeight: 800, marginBottom: '1.1rem', fontSize: '2rem', letterSpacing: '0.5px' }}>{isArabic ? 'الوصف الوظيفي (إنجليزي)' : 'Job Description (EN)'}</h2>
+            <h2 style={{ color: '#284268', fontWeight: 800, marginBottom: '1.1rem', fontSize: '2rem', letterSpacing: '0.5px' }}>{isArabic ? 'الوصف الوظيفي (إنجليزي)' : 'Job Description (EN)'}</h2>
             <form onSubmit={handleDescNext}>
               <div style={{ marginBottom: '2.2rem' }}>
                 <ReactQuill theme="snow" value={jobDescEn} onChange={setJobDescEn} style={{ background: 'white', borderRadius: 12, minHeight: 300, height: 300 }} />
@@ -273,7 +273,7 @@ export default function JobPostingsAdmin() {
           }}>
             <button onClick={() => setDescStep(1)} style={{ position: 'absolute', top: 24, left: 36, background: 'none', border: 'none', fontSize: 32, cursor: 'pointer', color: '#888', padding: 0, lineHeight: 1, zIndex: 2 }}>&larr;</button>
             <button onClick={() => setDescModalOpen(false)} style={{ position: 'absolute', top: 24, right: 36, background: 'none', border: 'none', fontSize: 32, cursor: 'pointer', color: '#888', padding: 0, lineHeight: 1, zIndex: 2 }}>&times;</button>
-            <h2 style={{ color: '#0c4b3b', fontWeight: 800, marginBottom: '1.1rem', fontSize: '2rem', letterSpacing: '0.5px', textAlign: 'right' }}>{isArabic ? 'الوصف الوظيفي (عربي)' : 'Job Description (AR)'}</h2>
+            <h2 style={{ color: '#284268', fontWeight: 800, marginBottom: '1.1rem', fontSize: '2rem', letterSpacing: '0.5px', textAlign: 'right' }}>{isArabic ? 'الوصف الوظيفي (عربي)' : 'Job Description (AR)'}</h2>
             <form onSubmit={handleAddJob}>
               <div style={{ marginBottom: '2.2rem' }}>
                 <ReactQuill
@@ -328,7 +328,7 @@ export default function JobPostingsAdmin() {
           borderRadius: 18,
           boxShadow: '0 6px 32px rgba(12,75,59,0.13)',
           padding: '2.2rem 2.2rem 2rem 2.2rem',
-          border: '2px solid #c49a6c',
+          border: '2px solid #FFFFFF',
           minWidth: 320,
           maxWidth: 800,
           marginTop: 0,
@@ -336,7 +336,7 @@ export default function JobPostingsAdmin() {
           overflowY: 'auto',
         }}>
           <h2 style={{
-            color: '#0c4b3b',
+            color: '#284268',
             fontWeight: 900,
             marginBottom: '1.5rem',
             fontSize: '1.35rem',
@@ -365,11 +365,11 @@ export default function JobPostingsAdmin() {
                   flexDirection: 'column',
                   gap: '0.5rem',
                 }}>
-                  <div style={{ fontWeight: 800, fontSize: '1.18rem', color: '#0c4b3b', marginBottom: '0.5rem', letterSpacing: '0.2px', textAlign: isArabic ? 'right' : 'left' }}>{job[isArabic ? 'title_ar' : 'title_en']}</div>
+                  <div style={{ fontWeight: 800, fontSize: '1.18rem', color: '#284268', marginBottom: '0.5rem', letterSpacing: '0.2px', textAlign: isArabic ? 'right' : 'left' }}>{job[isArabic ? 'title_ar' : 'title_en']}</div>
                   {/* REMOVE description preview here */}
-                  <div style={{ color: '#c49a6c', fontWeight: 700, fontSize: '1.01rem', marginBottom: '0.7rem', textAlign: isArabic ? 'right' : 'left' }}>{job[isArabic ? 'location_ar' : 'location_en']}</div>
-                  <div style={{ color: '#0c4b3b', fontWeight: 600, fontSize: '0.98rem', marginBottom: '0.5rem', textAlign: isArabic ? 'right' : 'left', display: 'flex', alignItems: 'center', gap: 6 }}>
-                    <span style={{ background: '#e7f2ef', color: '#0c4b3b', borderRadius: 8, padding: '0.2rem 0.7rem', fontWeight: 700, fontSize: '0.95rem', marginRight: isArabic ? 0 : 8, marginLeft: isArabic ? 8 : 0 }}>
+                  <div style={{ color: '#FFFFFF', fontWeight: 700, fontSize: '1.01rem', marginBottom: '0.7rem', textAlign: isArabic ? 'right' : 'left' }}>{job[isArabic ? 'location_ar' : 'location_en']}</div>
+                  <div style={{ color: '#284268', fontWeight: 600, fontSize: '0.98rem', marginBottom: '0.5rem', textAlign: isArabic ? 'right' : 'left', display: 'flex', alignItems: 'center', gap: 6 }}>
+                    <span style={{ background: '#e7f2ef', color: '#284268', borderRadius: 8, padding: '0.2rem 0.7rem', fontWeight: 700, fontSize: '0.95rem', marginRight: isArabic ? 0 : 8, marginLeft: isArabic ? 8 : 0 }}>
                       {isArabic ? 'عدد المتقدمين' : 'Applicants'}: {job.applicants ?? 0}
                     </span>
                   </div>
@@ -390,7 +390,7 @@ export default function JobPostingsAdmin() {
                     position: 'absolute',
                     top: '1.1rem',
                     [isArabic ? 'left' : 'right']: '1.1rem',
-                    background: '#c49a6c',
+                    background: '#FFFFFF',
                     color: 'white',
                     border: 'none',
                     borderRadius: '6px',
@@ -401,8 +401,8 @@ export default function JobPostingsAdmin() {
                     boxShadow: '0 1px 4px rgba(12,75,59,0.08)',
                     transition: 'background 0.2s',
                   }}
-                  onMouseOver={e => e.currentTarget.style.background = '#a65c32'}
-                  onMouseOut={e => e.currentTarget.style.background = '#c49a6c'}
+                  onMouseOver={e => e.currentTarget.style.background = '#284268'}
+                  onMouseOut={e => e.currentTarget.style.background = '#FFFFFF'}
                 >
                   {isArabic ? 'حذف' : 'Delete'}
                 </button>
@@ -434,10 +434,10 @@ export default function JobPostingsAdmin() {
             zIndex: 513300,
           }}>
             <button onClick={() => setViewMoreJob(null)} style={{ position: 'absolute', top: 18, right: 24, background: 'none', border: 'none', fontSize: 28, cursor: 'pointer', color: '#888', padding: 0, lineHeight: 1, zIndex: 2 }}>&times;</button>
-            <h2 style={{ color: '#0c4b3b', fontWeight: 800, marginBottom: '1.1rem', fontSize: '1.35rem', letterSpacing: '0.5px' }}>{viewMoreJob[isArabic ? 'title_ar' : 'title_en']}</h2>
-            <div style={{ color: '#c49a6c', fontWeight: 700, fontSize: '1.08rem', marginBottom: '0.7rem' }}>{viewMoreJob[isArabic ? 'location_ar' : 'location_en']}</div>
-            <div style={{ color: '#0c4b3b', fontWeight: 600, fontSize: '1.01rem', marginBottom: '1.2rem' }}>{isArabic ? 'عدد المتقدمين' : 'Applicants'}: {viewMoreJob.applicants ?? 0}</div>
-            <div style={{ color: '#333', fontSize: '1.08rem', fontWeight: 500, lineHeight: 1.7, marginBottom: '0.5rem' }}>
+            <h2 style={{ color: '#284268', fontWeight: 800, marginBottom: '1.1rem', fontSize: '1.35rem', letterSpacing: '0.5px' }}>{viewMoreJob[isArabic ? 'title_ar' : 'title_en']}</h2>
+            <div style={{ color: '#FFFFFF', fontWeight: 700, fontSize: '1.08rem', marginBottom: '0.7rem' }}>{viewMoreJob[isArabic ? 'location_ar' : 'location_en']}</div>
+            <div style={{ color: '#284268', fontWeight: 600, fontSize: '1.01rem', marginBottom: '1.2rem' }}>{isArabic ? 'عدد المتقدمين' : 'Applicants'}: {viewMoreJob.applicants ?? 0}</div>
+            <div style={{ color: '#414042', fontSize: '1.08rem', fontWeight: 500, lineHeight: 1.7, marginBottom: '0.5rem' }}>
               <div dangerouslySetInnerHTML={{ __html: viewMoreJob[isArabic ? 'description_ar' : 'description_en'] }} />
             </div>
             <button onClick={() => setViewMoreJob(null)} style={{ position: 'absolute', top: 18, right: 24, background: 'none', border: 'none', fontSize: 28, cursor: 'pointer', color: '#888', padding: 0, lineHeight: 1, zIndex: 2 }}>&times;</button>

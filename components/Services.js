@@ -9,42 +9,42 @@ export default function Services({ isMobile, fonts }) {
     {
       title: t.legalConsultation,
       description: t.legalConsultationDesc,
-      color: '#c49a6c'
+      color: '#FFFFFF'
     },
     {
       title: t.litigation,
       description: t.litigationDesc,
-      color: '#c49a6c'
+      color: '#FFFFFF'
     },
     {
       title: t.commercialLaw,
       description: t.commercialLawDesc,
-      color: '#c49a6c'
+      color: '#FFFFFF'
     },
     {
       title: t.laborLaw,
       description: t.laborLawDesc,
-      color: '#c49a6c'
+      color: '#FFFFFF'
     },
     {
       title: t.contracts,
       description: t.contractsDesc,
-      color: '#c49a6c'
+      color: '#FFFFFF'
     },
     {
       title: t.realEstate,
       description: t.realEstateDesc,
-      color: '#c49a6c'
+      color: '#FFFFFF'
     },
     {
       title: t.arbitration,
       description: t.arbitrationDesc,
-      color: '#c49a6c'
+      color: '#FFFFFF'
     },
     {
       title: t.compliance,
       description: t.complianceDesc,
-      color: '#c49a6c'
+      color: '#FFFFFF'
     }
   ]
   
@@ -69,7 +69,7 @@ export default function Services({ isMobile, fonts }) {
         width: '200px',
         height: '200px',
         borderRadius: '50%',
-        background: 'rgba(196, 154, 108, 0.1)',
+        background: 'rgba(40, 66, 104, 0.1)',
         zIndex: 1
       }}></div>
       <div style={{
@@ -79,7 +79,7 @@ export default function Services({ isMobile, fonts }) {
         width: '300px',
         height: '300px',
         borderRadius: '50%',
-        background: 'rgba(196, 154, 108, 0.05)',
+        background: 'rgba(40, 66, 104, 0.05)',
         zIndex: 1
       }}></div>
       
@@ -94,7 +94,7 @@ export default function Services({ isMobile, fonts }) {
           <h2 
             className="services-title"
             style={{
-              color: '#0c4b3b',
+              color: '#284268',
               marginBottom: '2rem',
               textAlign: 'center',
               fontWeight: language === 'ar' ? '400' : 'bold',
@@ -109,7 +109,7 @@ export default function Services({ isMobile, fonts }) {
           <div style={{
             width: '80px',
             height: '4px',
-            background: 'linear-gradient(90deg, #c49a6c, rgba(196, 154, 108, 0.5))',
+            background: 'linear-gradient(90deg, #FFFFFF, rgba(40, 66, 104, 0.5))',
             margin: '0 auto',
             borderRadius: '2px'
           }}></div>
@@ -138,7 +138,7 @@ export default function Services({ isMobile, fonts }) {
             onMouseOver={(e) => {
               e.currentTarget.style.transform = 'translateY(-8px) scale(1.02)'
               e.currentTarget.style.boxShadow = '0 12px 40px rgba(0,0,0,0.2)'
-              e.currentTarget.style.borderColor = '#c49a6c'
+              e.currentTarget.style.borderColor = '#FFFFFF'
               // Animate the bottom indicator
               const indicator = e.currentTarget.querySelector('.hover-indicator')
               if (indicator) indicator.style.transform = 'scaleX(1)'
@@ -242,7 +242,7 @@ export default function Services({ isMobile, fonts }) {
                 left: '0',
                 right: '0',
                 height: '4px',
-                background: `linear-gradient(90deg, ${service.color}, #c49a6c)`,
+                background: `linear-gradient(90deg, ${service.color}, #FFFFFF)`,
                 transform: 'scaleX(0)',
                 transition: 'transform 0.3s ease',
                 transformOrigin: 'left'

@@ -52,7 +52,7 @@ export default function ServicesPage() {
         {/* Hero Section */}
         <section style={{
           position: 'relative',
-          backgroundColor: '#0c4b3b',
+          backgroundColor: '#284268',
           color: 'white',
           padding: isMobile ? '3rem 1rem' : '5rem 2rem',
           textAlign: 'center',
@@ -76,7 +76,7 @@ export default function ServicesPage() {
             left: 0,
             right: 0,
             bottom: 0,
-            background: 'linear-gradient(135deg, rgba(12, 75, 59, 0.55) 0%, rgba(34, 98, 73, 0.85) 50%, rgba(12, 75, 59, 0.55) 100%)',
+            background: 'linear-gradient(135deg, rgba(40, 66, 104, 0.55) 0%, rgba(40, 66, 104, 0.85) 50%, rgba(40, 66, 104, 0.55) 100%)',
             zIndex: 1
           }} />
           
@@ -99,7 +99,7 @@ export default function ServicesPage() {
             </h2>
             <p style={{
               fontSize: fonts.sectionSubtitle,
-              color: '#c49a6c',
+              color: '#FFFFFF',
               maxWidth: '700px',
               margin: '0 auto',
               textShadow: '2px 2px 4px rgba(0,0,0,0.8)',
@@ -141,7 +141,7 @@ export default function ServicesPage() {
           {/* Why Choose Us Section */}
             <section style={{
             padding: '4rem 0',
-            background: 'linear-gradient(135deg, #0c4b3b 0%, #226249 100%)',
+            background: '#284268',
             direction: language === 'ar' ? 'rtl' : 'ltr',
             marginBottom: isMobile ? '1rem' : '8rem'
           }}>
@@ -204,7 +204,7 @@ export default function ServicesPage() {
                     <h3
                     className="service-card-title"
                     style={{
-                      color: '#c49a6c',
+                      color: '#FFFFFF',
                       marginBottom: '1rem',
                       fontWeight: language === 'ar' ? '400' : 'bold'
                     }}>

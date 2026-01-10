@@ -32,16 +32,16 @@ export default async function handler(req, res) {
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <title>New Contact Form Submission</title>
           <style>
-            body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; }
+            body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #414042; }
             .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-            .header { background: linear-gradient(135deg, #0c4b3b 0%, #226249 100%); color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+            .header { background: linear-gradient(135deg, #284268 0%, #284268 100%); color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
             .section { margin-bottom: 20px; padding: 15px; border: 1px solid #e0e0e0; border-radius: 8px; }
-            .label { font-weight: bold; color: #0c4b3b; }
+            .label { font-weight: bold; color: #284268; }
             .value { margin-left: 10px; }
-            .divider { border-top: 2px solid #c49a6c; margin: 30px 0; }
+            .divider { border-top: 2px solid #FFFFFF; margin: 30px 0; }
             .english { direction: ltr; text-align: left; }
             .arabic { direction: rtl; text-align: right; }
-            .message-box { background: #f8f9fa; padding: 15px; border-radius: 8px; border-left: 4px solid #c49a6c; }
+            .message-box { background: #f8f9fa; padding: 15px; border-radius: 8px; border-left: 4px solid #FFFFFF; }
           </style>
         </head>
         <body>
@@ -57,7 +57,7 @@ export default async function handler(req, res) {
             </div>
             
             <div class="section arabic">
-              <h3 style="color: #0c4b3b; margin-top: 0;">معلومات العميل</h3>
+              <h3 style="color: #284268; margin-top: 0;">معلومات العميل</h3>
               <p><span class="label">الاسم الكامل:</span> <span class="value">${name}</span></p>
               <p><span class="label">البريد الإلكتروني:</span> <span class="value">${email}</span></p>
               <p><span class="label">رقم الهاتف:</span> <span class="value">${phone || 'غير محدد'}</span></p>
@@ -65,13 +65,13 @@ export default async function handler(req, res) {
             </div>
             
             <div class="section arabic">
-              <h3 style="color: #0c4b3b; margin-top: 0;">تفاصيل الخدمة</h3>
+              <h3 style="color: #284268; margin-top: 0;">تفاصيل الخدمة</h3>
               <p><span class="label">نوع الخدمة المطلوبة:</span> <span class="value">${serviceType}</span></p>
               <p><span class="label">موضوع الاستشارة:</span> <span class="value">${subject}</span></p>
             </div>
             
             <div class="section arabic">
-              <h3 style="color: #0c4b3b; margin-top: 0;">تفاصيل الاستشارة</h3>
+              <h3 style="color: #284268; margin-top: 0;">تفاصيل الاستشارة</h3>
               <div class="message-box">
                 <p style="margin: 0; white-space: pre-wrap;">${message}</p>
               </div>
@@ -80,7 +80,7 @@ export default async function handler(req, res) {
             <div class="divider"></div>
             
             <div class="section english">
-              <h3 style="color: #0c4b3b; margin-top: 0;">Client Information</h3>
+              <h3 style="color: #284268; margin-top: 0;">Client Information</h3>
               <p><span class="label">Full Name:</span> <span class="value">${name}</span></p>
               <p><span class="label">Email:</span> <span class="value">${email}</span></p>
               <p><span class="label">Phone Number:</span> <span class="value">${phone || 'Not provided'}</span></p>
@@ -88,13 +88,13 @@ export default async function handler(req, res) {
             </div>
             
             <div class="section english">
-              <h3 style="color: #0c4b3b; margin-top: 0;">Service Details</h3>
+              <h3 style="color: #284268; margin-top: 0;">Service Details</h3>
               <p><span class="label">Required Service Type:</span> <span class="value">${serviceType}</span></p>
               <p><span class="label">Consultation Subject:</span> <span class="value">${subject}</span></p>
             </div>
             
             <div class="section english">
-              <h3 style="color: #0c4b3b; margin-top: 0;">Consultation Details</h3>
+              <h3 style="color: #284268; margin-top: 0;">Consultation Details</h3>
               <div class="message-box">
                 <p style="margin: 0; white-space: pre-wrap;">${message}</p>
               </div>

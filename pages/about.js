@@ -55,7 +55,7 @@ export default function AboutPage() {
         {/* Hero Section */}
         <section style={{
           position: 'relative',
-          backgroundColor: '#0c4b3b',
+          backgroundColor: '#284268',
           color: 'white',
           padding: isMobile ? '3rem 1rem' : '5rem 2rem',
           textAlign: 'center',
@@ -79,7 +79,7 @@ export default function AboutPage() {
             left: 0,
             right: 0,
             bottom: 0,
-            background: 'linear-gradient(135deg, rgba(12, 75, 59, 0.55) 0%, rgba(34, 98, 73, 0.85) 50%, rgba(12, 75, 59, 0.55) 100%)',
+            background: 'linear-gradient(135deg, rgba(40, 66, 104, 0.55) 0%, rgba(40, 66, 104, 0.85) 50%, rgba(40, 66, 104, 0.55) 100%)',
             zIndex: 1
           }} />
           
@@ -103,7 +103,7 @@ export default function AboutPage() {
             <p 
             style={{
               fontSize: fonts.sectionSubtitle,
-              color: '#c49a6c',
+              color: '#FFFFFF',
               maxWidth: '700px',
               margin: '0 auto',
               textShadow: '2px 2px 4px rgba(0,0,0,0.8)',

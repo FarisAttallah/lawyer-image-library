@@ -12,10 +12,10 @@ export default function JusticeSection({ isMobile, fonts }) {
       padding: isMobile ? '2rem 1rem' : '3rem 2rem',
       backgroundColor: '#f8f9fa',
       backgroundImage: `
-        linear-gradient(45deg, rgba(12, 75, 59, 0.02) 25%, transparent 25%),
-        linear-gradient(-45deg, rgba(12, 75, 59, 0.02) 25%, transparent 25%),
-        linear-gradient(45deg, transparent 75%, rgba(196, 154, 108, 0.02) 75%),
-        linear-gradient(-45deg, transparent 75%, rgba(196, 154, 108, 0.02) 75%)
+        linear-gradient(45deg, rgba(40, 66, 104, 0.02) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(40, 66, 104, 0.02) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, rgba(255, 255, 255, 0.02) 75%),
+        linear-gradient(-45deg, transparent 75%, rgba(255, 255, 255, 0.02) 75%)
       `,
       backgroundSize: '60px 60px',
       backgroundPosition: '0 0, 0 30px, 30px -30px, -30px 0px',
@@ -37,7 +37,7 @@ export default function JusticeSection({ isMobile, fonts }) {
             className="services-title"
             style={{
               fontSize: isMobile ? '0.9rem' : '1rem',
-              color: '#0c4b3b',
+              color: '#284268',
               fontWeight: 'bold',
               textTransform: 'uppercase',
               letterSpacing: '1px',
@@ -62,7 +62,7 @@ export default function JusticeSection({ isMobile, fonts }) {
             <h2 
             className="service-card-title "
             style={{
-              color: '#0c4b3b',
+              color: '#284268',
               marginBottom: '2rem',
               fontWeight: 'bold',
               lineHeight: '1.2',
@@ -76,7 +76,7 @@ export default function JusticeSection({ isMobile, fonts }) {
                 right: language === 'ar' ? '0' : 'auto',
                 width: '60px',
                 height: '4px',
-                background: 'linear-gradient(90deg, #c49a6c, #226249)',
+                background: 'linear-gradient(90deg, #FFFFFF, #284268)',
                 borderRadius: '2px'
               }}></div>
               
@@ -88,7 +88,7 @@ export default function JusticeSection({ isMobile, fonts }) {
             
             <div style={{
               lineHeight: '1.8',
-              color: '#333',
+              color: '#414042',
               marginBottom: '2rem'
             }}>
               <p 
@@ -121,8 +121,8 @@ export default function JusticeSection({ isMobile, fonts }) {
                 padding: '1.5rem',
                 backgroundColor: 'white',
                 borderRadius: '12px',
-                borderLeft: language === 'ar' ? 'none' : '4px solid #c49a6c',
-                borderRight: language === 'ar' ? '4px solid #c49a6c' : 'none',
+                borderLeft: language === 'ar' ? 'none' : '4px solid #FFFFFF',
+                borderRight: language === 'ar' ? '4px solid #FFFFFF' : 'none',
                 boxShadow: '0 4px 15px rgba(0,0,0,0.1)',
                 position: 'relative',
                 overflow: 'hidden'
@@ -140,7 +140,7 @@ export default function JusticeSection({ isMobile, fonts }) {
                 </div>
                 <h4 
                 className="service-card-title"
-                style={{ color: '#0c4b3b', marginBottom: '0.5rem', position: 'relative', zIndex: 2 }}>
+                style={{ color: '#284268', marginBottom: '0.5rem', position: 'relative', zIndex: 2 }}>
                   {language === 'ar' ? '١٣+ سنة خبرة' : '13+ Years Experience'}
                 </h4>
                 <p 
@@ -157,8 +157,8 @@ export default function JusticeSection({ isMobile, fonts }) {
                 padding: '1.5rem',
                 backgroundColor: 'white',
                 borderRadius: '12px',
-                borderLeft: language === 'ar' ? 'none' : '4px solid #226249',
-                borderRight: language === 'ar' ? '4px solid #226249' : 'none',
+                borderLeft: language === 'ar' ? 'none' : '4px solid #284268',
+                borderRight: language === 'ar' ? '4px solid #284268' : 'none',
                 boxShadow: '0 4px 15px rgba(0,0,0,0.1)',
                 position: 'relative',
                 overflow: 'hidden'
@@ -176,7 +176,7 @@ export default function JusticeSection({ isMobile, fonts }) {
                 </div>
                 <h4 
                 className="service-card-title"
-                style={{ color: '#0c4b3b', marginBottom: '0.5rem', position: 'relative', zIndex: 2 }}>
+                style={{ color: '#284268', marginBottom: '0.5rem', position: 'relative', zIndex: 2 }}>
                   {language === 'ar' ? '٥٠٠+ قضية منجزة' : '500+ Cases Completed'}
                 </h4>
                 <p 
@@ -215,7 +215,7 @@ export default function JusticeSection({ isMobile, fonts }) {
                 left: '0',
                 right: '0',
                 height: '8px',
-                background: 'linear-gradient(90deg, #c49a6c, #226249, #c49a6c)',
+                background: 'linear-gradient(90deg, #FFFFFF, #284268, #FFFFFF)',
                 zIndex: 2
               }}></div>
               
@@ -244,14 +244,14 @@ export default function JusticeSection({ isMobile, fonts }) {
                 bottom: 0,
                 left: 0,
                 right: 0,
-                background: 'linear-gradient(transparent, rgba(12, 75, 59, 0.95))',
+                background: 'linear-gradient(transparent, rgba(40, 66, 104, 0.95))',
                 padding: isMobile ? '1.5rem 1rem 1rem' : '2rem 1.5rem 1.5rem',
                 color: 'white'
               }}>
                 {/* Decorative quote marks */}
                 <div style={{
                   fontSize: '2rem',
-                  color: '#c49a6c',
+                  color: '#FFFFFF',
                   textAlign: 'center',
                   marginBottom: '0.5rem',
                   opacity: 0.7
@@ -273,7 +273,7 @@ export default function JusticeSection({ isMobile, fonts }) {
                 </p>
                 <div style={{
                   fontSize: '2rem',
-                  color: '#c49a6c',
+                  color: '#FFFFFF',
                   textAlign: 'center',
                   marginTop: '0.5rem',
                   opacity: 0.7,

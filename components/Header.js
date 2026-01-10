@@ -72,7 +72,7 @@ export default function Header({ transparent = false }) {
   
   return (
     <header style={{ 
-      backgroundColor: transparent ? 'rgba(12, 75, 59, 0.2)' : '#0c4b3b',
+      background: transparent ? 'linear-gradient(135deg, rgba(26, 37, 47, 0.3) 0%, rgba(40, 66, 104, 0.4) 100%)' : '#284268',
       backdropFilter: transparent ? 'blur(10px)' : 'none',
       WebkitBackdropFilter: transparent ? 'blur(10px)' : 'none',
       color: 'white', 
@@ -122,7 +122,7 @@ export default function Header({ transparent = false }) {
                     textDecoration: 'none',
                     transition: 'color 0.3s ease'
                   }}
-                  onMouseOver={(e) => e.target.style.color = '#c49a6c'}
+                  onMouseOver={(e) => e.target.style.color = '#FFFFFF'}
                   onMouseOut={(e) => e.target.style.color = 'white'}>
                     {t.home}
                   </Link>
@@ -133,7 +133,7 @@ export default function Header({ transparent = false }) {
                     textDecoration: 'none',
                     transition: 'color 0.3s ease'
                   }}
-                  onMouseOver={(e) => e.target.style.color = '#c49a6c'}
+                  onMouseOver={(e) => e.target.style.color = '#FFFFFF'}
                   onMouseOut={(e) => e.target.style.color = 'white'}>
                     {t.about}
                   </Link>
@@ -144,7 +144,7 @@ export default function Header({ transparent = false }) {
                     textDecoration: 'none',
                     transition: 'color 0.3s ease'
                   }}
-                  onMouseOver={(e) => e.target.style.color = '#c49a6c'}
+                  onMouseOver={(e) => e.target.style.color = '#FFFFFF'}
                   onMouseOut={(e) => e.target.style.color = 'white'}>
                     {t.services}
                   </Link>
@@ -155,7 +155,7 @@ export default function Header({ transparent = false }) {
                     textDecoration: 'none',
                     transition: 'color 0.3s ease'
                   }}
-                  onMouseOver={(e) => e.target.style.color = '#c49a6c'}
+                  onMouseOver={(e) => e.target.style.color = '#FFFFFF'}
                   onMouseOut={(e) => e.target.style.color = 'white'}>
                     {language === 'ar' ? 'الوظائف' : 'Careers'}
                   </Link>
@@ -166,7 +166,7 @@ export default function Header({ transparent = false }) {
                     textDecoration: 'none',
                     transition: 'color 0.3s ease'
                   }}
-                  onMouseOver={(e) => e.target.style.color = '#c49a6c'}
+                  onMouseOver={(e) => e.target.style.color = '#FFFFFF'}
                   onMouseOut={(e) => e.target.style.color = 'white'}>
                     {t.contact}
                   </Link>
@@ -260,7 +260,7 @@ export default function Header({ transparent = false }) {
           top: '100%',
           left: 0,
           right: 0,
-          backgroundColor: '#0c4b3b',
+          backgroundColor: '#284268',
           borderTop: '1px solid rgba(255,255,255,0.2)',
           zIndex: 1000,
           boxShadow: '0 4px 8px rgba(0,0,0,0.2)'
@@ -286,7 +286,7 @@ export default function Header({ transparent = false }) {
                     transition: 'background-color 0.3s ease',
                     fontSize: '0.9rem'
                   }}
-                  onMouseOver={(e) => e.target.style.backgroundColor = 'rgba(196, 154, 108, 0.2)'}
+                  onMouseOver={(e) => e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.2)'}
                   onMouseOut={(e) => e.target.style.backgroundColor = 'transparent'}
                 >
                   {t.home}
@@ -305,7 +305,7 @@ export default function Header({ transparent = false }) {
                     transition: 'background-color 0.3s ease',
                     fontSize: '0.9rem'
                   }}
-                  onMouseOver={(e) => e.target.style.backgroundColor = 'rgba(196, 154, 108, 0.2)'}
+                  onMouseOver={(e) => e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.2)'}
                   onMouseOut={(e) => e.target.style.backgroundColor = 'transparent'}
                 >
                   {t.about}
@@ -324,7 +324,7 @@ export default function Header({ transparent = false }) {
                     transition: 'background-color 0.3s ease',
                     fontSize: '0.9rem'
                   }}
-                  onMouseOver={(e) => e.target.style.backgroundColor = 'rgba(196, 154, 108, 0.2)'}
+                  onMouseOver={(e) => e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.2)'}
                   onMouseOut={(e) => e.target.style.backgroundColor = 'transparent'}
                 >
                   {t.services}
@@ -343,7 +343,7 @@ export default function Header({ transparent = false }) {
                     transition: 'background-color 0.3s ease',
                     fontSize: '0.9rem'
                   }}
-                  onMouseOver={(e) => e.target.style.backgroundColor = 'rgba(196, 154, 108, 0.2)'}
+                  onMouseOver={(e) => e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.2)'}
                   onMouseOut={(e) => e.target.style.backgroundColor = 'transparent'}
                 >
                   {language === 'ar' ? 'الوظائف' : 'Careers'}
@@ -361,7 +361,7 @@ export default function Header({ transparent = false }) {
                     transition: 'background-color 0.3s ease',
                     fontSize: '0.9rem'
                   }}
-                  onMouseOver={(e) => e.target.style.backgroundColor = 'rgba(196, 154, 108, 0.2)'}
+                  onMouseOver={(e) => e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.2)'}
                   onMouseOut={(e) => e.target.style.backgroundColor = 'transparent'}
                 >
                   {t.contact}

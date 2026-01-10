@@ -22,7 +22,7 @@ export default function About({ isMobile, fonts }) {
           <h2 
           className="services-title"
           style={{
-            color: '#0c4b3b',
+            color: '#284268',
             marginBottom: '2rem',
             textAlign: 'center',
             fontWeight: 'bold'
@@ -36,13 +36,41 @@ export default function About({ isMobile, fonts }) {
             
             fontSize: fonts.bodyLarge,
             lineHeight: '1.8',
-            color: '#333',
+            color: '#414042',
+            textAlign: 'center',
+            maxWidth: '900px',
+            margin: '0 auto',
+            marginBottom: '1.5rem'
+          }}>
+            {t.aboutDescription1}
+          </p>
+          <p 
+          className="service-card-title"
+          style={{
+            
+            fontSize: fonts.bodyLarge,
+            lineHeight: '1.8',
+            color: '#414042',
+            textAlign: 'center',
+            maxWidth: '900px',
+            margin: '0 auto',
+            marginBottom: '1.5rem'
+          }}>
+            {t.aboutDescription2}
+          </p>
+          <p 
+          className="service-card-title"
+          style={{
+            
+            fontSize: fonts.bodyLarge,
+            lineHeight: '1.8',
+            color: '#414042',
             textAlign: 'center',
             maxWidth: '900px',
             margin: '0 auto',
             marginBottom: '3rem'
           }}>
-            {t.aboutHeroDescription}
+            {t.aboutDescription3}
           </p>
         </div>
 
@@ -58,13 +86,13 @@ export default function About({ isMobile, fonts }) {
             backgroundColor: '#f8f9fa',
             padding: isMobile ? '1.5rem' : '2rem',
             borderRadius: '12px',
-            border: '2px solid #c49a6c',
+            border: '2px solid #FFFFFF',
             boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
           }}>
             <h3 
             className="service-card-title"
             style={{
-              color: '#0c4b3b',
+              color: '#284268',
               marginBottom: '1rem',
               fontWeight: 'bold'
             }}>
@@ -84,13 +112,13 @@ export default function About({ isMobile, fonts }) {
             backgroundColor: '#f8f9fa',
             padding: isMobile ? '1.5rem' : '2rem',
             borderRadius: '12px',
-            border: '2px solid #226249',
+            border: '2px solid #284268',
             boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
           }}>
             <h3
             className="service-card-title"
             style={{
-              color: '#0c4b3b',
+              color: '#284268',
               marginBottom: '1rem',
               fontWeight: 'bold'
             }}>
@@ -112,7 +140,7 @@ export default function About({ isMobile, fonts }) {
           <h3 
           className="services-title"
           style={{
-            color: '#0c4b3b',
+            color: '#284268',
             marginBottom: '2rem',
             textAlign: 'center',
             fontWeight: 'bold'
@@ -129,27 +157,27 @@ export default function About({ isMobile, fonts }) {
               {
                 title: t.transparency,
                 description: t.transparencyDesc,
-                borderColor: '#c49a6c'
+                borderColor: '#FFFFFF'
               },
               {
                 title: t.confidentiality,
                 description: t.confidentialityDesc,
-                borderColor: '#226249'
+                borderColor: '#284268'
               },
               {
                 title: t.professionalism,
                 description: t.professionalismDesc,
-                borderColor: '#a65c32'
+                borderColor: '#284268'
               },
               {
                 title: t.justice,
                 description: t.justiceDesc,
-                borderColor: '#c49a6c'
+                borderColor: '#FFFFFF'
               },
               {
                 title: t.development,
                 description: t.developmentDesc,
-                borderColor: '#226249'
+                borderColor: '#284268'
               }
             ].map((card, index) => (
               <div key={index} style={{
@@ -162,7 +190,7 @@ export default function About({ isMobile, fonts }) {
               }}>
                 <h4 
                 className="service-card-title"
-                style={{ color: '#0c4b3b', marginBottom: '0.5rem' }}>
+                style={{ color: '#284268', marginBottom: '0.5rem' }}>
                   {card.title}
                 </h4>
                 <p 

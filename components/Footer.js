@@ -17,7 +17,7 @@ export default function Footer() {
   
   return (
     <footer style={{ 
-      backgroundColor: '#0c4b3b', 
+      backgroundColor: '#284268', 
       color: 'white', 
       padding: '3rem 2rem 2rem',
       direction: language === 'ar' ? 'rtl' : 'ltr'
@@ -33,7 +33,7 @@ export default function Footer() {
           {/* Firm Info */}
           <div>
             <h3 style={{ 
-              color: '#c49a6c', 
+              color: '#FFFFFF', 
               fontSize: '1.4rem',
               fontWeight: 'bold',
               margin: '0 0 1rem 0'
@@ -55,7 +55,7 @@ export default function Footer() {
           {/* Contact Info */}
           <div>
             <h4 style={{ 
-              color: '#c49a6c', 
+              color: '#FFFFFF', 
               marginBottom: '1rem',
               fontSize: '1.2rem',
               fontWeight: 'bold'
@@ -87,7 +87,7 @@ export default function Footer() {
           {/* Working Hours */}
           <div>
             <h4 style={{ 
-              color: '#c49a6c', 
+              color: '#FFFFFF', 
               marginBottom: '1rem',
               fontSize: '1.2rem',
               fontWeight: 'bold'
@@ -103,7 +103,7 @@ export default function Footer() {
             
             <div style={{ marginTop: '1.5rem' }}>
               <h5 style={{ 
-                color: '#c49a6c', 
+                color: '#FFFFFF', 
                 marginBottom: '0.5rem',
                 fontSize: '1rem'
               }}>
@@ -152,7 +152,7 @@ export default function Footer() {
         
         {/* Bottom Bar */}
         <div style={{ 
-          borderTop: '1px solid rgba(196, 154, 108, 0.3)', 
+          borderTop: '1px solid rgba(255, 255, 255, 0.3)', 
           paddingTop: '1.5rem',
           textAlign: 'center'
         }}>
@@ -170,7 +170,7 @@ export default function Footer() {
           </div>
           <p style={{ 
             margin: 0, 
-            color: '#c49a6c',
+            color: '#FFFFFF',
             fontSize: '0.95rem'
           }}>
             {t.copyright}

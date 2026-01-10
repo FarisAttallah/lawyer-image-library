@@ -119,7 +119,7 @@ export default function Careers() {
 
   // Shared button style for careers actions - matching hero button theme
   const careersButtonStyle = {
-    backgroundColor: '#c49a6c',
+    backgroundColor: '#FFFFFF',
     color: 'white',
     border: '2px solid transparent',
     borderRadius: '8px',
@@ -127,7 +127,7 @@ export default function Careers() {
     fontFamily: 'BeINBlack, Roboto, Arial, sans-serif',
     textTransform: 'uppercase',
     letterSpacing: '0.5px',
-    boxShadow: '0 6px 20px rgba(196, 154, 108, 0.4), 0 0 0 0 rgba(196, 154, 108, 0.7)',
+    boxShadow: '0 6px 20px rgba(255, 255, 255, 0.4), 0 0 0 0 rgba(255, 255, 255, 0.7)',
     transition: 'all 0.3s ease',
     cursor: 'pointer',
     fontSize: '1.08rem',
@@ -148,7 +148,7 @@ export default function Careers() {
           <section
             style={{
               position: 'relative',
-              backgroundColor: '#0c4b3b',
+              backgroundColor: '#284268',
               color: 'white',
               padding: isMobile ? '3rem 1rem' : '5rem 2rem',
               textAlign: 'center',
@@ -176,7 +176,7 @@ export default function Careers() {
               left: 0,
               right: 0,
               bottom: 0,
-              background: 'linear-gradient(135deg, rgba(12, 75, 59, 0.55) 0%, rgba(34, 98, 73, 0.85) 50%, rgba(12, 75, 59, 0.55) 100%)',
+              background: 'linear-gradient(135deg, rgba(40, 66, 104, 0.55) 0%, rgba(40, 66, 104, 0.85) 50%, rgba(12, 75, 59, 0.55) 100%)',
               zIndex: 1
             }} />
             <div style={{
@@ -201,7 +201,7 @@ export default function Careers() {
               </h1>
               <p style={{
                 fontSize: fonts.sectionSubtitle,
-                color: '#c49a6c',
+                color: '#FFFFFF',
                 maxWidth: '700px',
                 margin: '0 auto',
                 textShadow: '2px 2px 4px rgba(0,0,0,0.8)',
@@ -273,7 +273,7 @@ export default function Careers() {
               }}
             >
               <h2 style={{
-                color: '#0c4b3b',
+                color: '#284268',
                 fontWeight: 900,
                 marginBottom: '1.5rem',
                 fontSize: isMobile ? '1.18rem' : '1.35rem',
@@ -316,8 +316,8 @@ export default function Careers() {
                           borderRadius: '18px',
                           marginBottom: '0.2rem',
                         }),
-                        background: selectedJob && selectedJob.id === job.id ? 'linear-gradient(90deg, #e7f2ef 80%, #c49a6c22 100%)' : 'white',
-                        border: selectedJob && selectedJob.id === job.id ? '3px solid #0c4b3b' : '2px solid #c49a6c',
+                        background: selectedJob && selectedJob.id === job.id ? 'linear-gradient(90deg, #e7f2ef 80%, #FFFFFF22 100%)' : 'white',
+                        border: selectedJob && selectedJob.id === job.id ? '3px solid #284268' : '2px solid #FFFFFF',
                         boxShadow: selectedJob && selectedJob.id === job.id ? '0 8px 32px rgba(12,75,59,0.16)' : '0 4px 16px rgba(12,75,59,0.09)',
                         cursor: 'pointer',
                         display: 'flex',
@@ -326,30 +326,30 @@ export default function Careers() {
                         transition: 'box-shadow 0.25s cubic-bezier(.4,0,.2,1), background 0.25s cubic-bezier(.4,0,.2,1), border 0.25s cubic-bezier(.4,0,.2,1)',
                         direction: isArabic ? 'rtl' : 'ltr',
                         position: 'relative',
-                        outline: selectedJob && selectedJob.id === job.id ? '2.5px solid #c49a6c' : 'none',
+                        outline: selectedJob && selectedJob.id === job.id ? '2.5px solid #FFFFFF' : 'none',
                       }}
                       onClick={() => setSelectedJob(job)}
                       onMouseEnter={e => {
                         e.currentTarget.style.background = 'linear-gradient(90deg, #f3f8f6 80%, #e7e7e7 100%)';
                         e.currentTarget.style.boxShadow = '0 8px 28px rgba(12,75,59,0.16)';
-                        e.currentTarget.style.border = '2.5px solid #c49a6c';
+                        e.currentTarget.style.border = '2.5px solid #FFFFFF';
                       }}
                       onMouseLeave={e => {
                         if (selectedJob && selectedJob.id === job.id) {
-                          e.currentTarget.style.background = 'linear-gradient(90deg, #e7f2ef 80%, #c49a6c22 100%)';
+                          e.currentTarget.style.background = 'linear-gradient(90deg, #e7f2ef 80%, #FFFFFF22 100%)';
                           e.currentTarget.style.boxShadow = '0 4px 16px rgba(12,75,59,0.13)';
-                          e.currentTarget.style.border = '2.5px solid #0c4b3b';
+                          e.currentTarget.style.border = '2.5px solid #284268';
                         } else {
                           e.currentTarget.style.background = 'white';
                           e.currentTarget.style.boxShadow = '0 2px 8px rgba(12,75,59,0.07)';
-                          e.currentTarget.style.border = '1.5px solid #c49a6c';
+                          e.currentTarget.style.border = '1.5px solid #FFFFFF';
                         }
                       }}
                     >
                       <div style={{
                         fontWeight: 900,
                         fontSize: isMobile ? '1.13rem' : '1.45rem',
-                        color: '#0c4b3b',
+                        color: '#284268',
                         textAlign: isArabic ? 'right' : 'left',
                         flex: 1,
                         overflow: 'hidden',
@@ -361,10 +361,10 @@ export default function Careers() {
                         alignItems: 'center',
                         gap: isMobile ? '0.3rem' : '0.7rem',
                       }}>{job[isArabic ? 'title_ar' : 'title_en']}
-                        <span style={{fontSize: '1.1em', color: '#c49a6c', marginLeft: isArabic ? 0 : 6, marginRight: isArabic ? 6 : 0}}>➔</span>
+                        <span style={{fontSize: '1.1em', color: '#FFFFFF', marginLeft: isArabic ? 0 : 6, marginRight: isArabic ? 6 : 0}}>➔</span>
                       </div>
                       {/* Only show location, no description */}
-                      <div style={{ color: '#c49a6c', fontWeight: 700, fontSize: isMobile ? '1.08rem' : '1.18rem', marginBottom: '0.7rem', textAlign: isArabic ? 'right' : 'left' }}>{job[isArabic ? 'location_ar' : 'location_en']}</div>
+                      <div style={{ color: '#FFFFFF', fontWeight: 700, fontSize: isMobile ? '1.08rem' : '1.18rem', marginBottom: '0.7rem', textAlign: isArabic ? 'right' : 'left' }}>{job[isArabic ? 'location_ar' : 'location_en']}</div>
                     </div>
                   ))}
                 </div>
@@ -376,7 +376,7 @@ export default function Careers() {
                 style={{
                   flex: 1,
                   background: 'linear-gradient(135deg, #f9fafb 70%, #e6e6e6 100%)',
-                  border: '2.5px solid #c49a6c',
+                  border: '2.5px solid #FFFFFF',
                   borderRadius: '20px',
                   boxShadow: '0 8px 32px rgba(12,75,59,0.13)',
                   padding: '2.7rem 2.7rem 2rem 2.7rem',
@@ -392,16 +392,16 @@ export default function Careers() {
                 }}
               >
                 {/* Decorative Accent Bar */}
-                <div style={{position:'absolute',top:0,left:0,right:0,height:8,background:'linear-gradient(90deg,#0c4b3b 60%,#c49a6c 100%)',borderTopLeftRadius:20,borderTopRightRadius:20,opacity:0.9}} />
+                <div style={{position:'absolute',top:0,left:0,right:0,height:8,background:'linear-gradient(90deg,#284268 60%,#FFFFFF 100%)',borderTopLeftRadius:20,borderTopRightRadius:20,opacity:0.9}} />
                 {selectedJob ? (
                   <>
-                    <div style={{ fontWeight: 900, fontSize: '1.55rem', color: '#0c4b3b', marginBottom: '1.3rem', letterSpacing: '0.2px', textAlign: isArabic ? 'right' : 'left', display:'flex',alignItems:'center',gap:'0.5rem' }}>
+                    <div style={{ fontWeight: 900, fontSize: '1.55rem', color: '#284268', marginBottom: '1.3rem', letterSpacing: '0.2px', textAlign: isArabic ? 'right' : 'left', display:'flex',alignItems:'center',gap:'0.5rem' }}>
                       <span style={{fontSize:'1.2em'}}>💼</span> {selectedJob[isArabic ? 'title_ar' : 'title_en']}
                     </div>
-                    <div style={{ marginBottom: '1.3rem', color: '#333', fontSize: '1.18rem', fontWeight: 500, textAlign: isArabic ? 'right' : 'left', lineHeight: 1.8 }}>
+                    <div style={{ marginBottom: '1.3rem', color: '#414042', fontSize: '1.18rem', fontWeight: 500, textAlign: isArabic ? 'right' : 'left', lineHeight: 1.8 }}>
                       <div dangerouslySetInnerHTML={{ __html: selectedJob[isArabic ? 'description_ar' : 'description_en'] }} />
                     </div>
-                    <div style={{ color: '#c49a6c', fontWeight: 800, fontSize: '1.13rem', marginBottom: '0.7rem', textAlign: isArabic ? 'right' : 'left', display:'flex',alignItems:'center',gap:'0.4rem' }}>
+                    <div style={{ color: '#FFFFFF', fontWeight: 800, fontSize: '1.13rem', marginBottom: '0.7rem', textAlign: isArabic ? 'right' : 'left', display:'flex',alignItems:'center',gap:'0.4rem' }}>
                       <span style={{fontSize:'1.1em'}}>📍</span> {selectedJob[isArabic ? 'location_ar' : 'location_en']}
                     </div>
                     <button
@@ -415,8 +415,8 @@ export default function Careers() {
                         alignItems: 'center',
                         opacity: submitting ? 0.7 : 1,
                       }}
-                      onMouseOver={e => { e.currentTarget.style.backgroundColor = '#a65c32'; e.currentTarget.style.borderColor = '#c49a6c'; e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 8px 25px rgba(196, 154, 108, 0.6)'; }}
-                      onMouseOut={e => { e.currentTarget.style.backgroundColor = '#c49a6c'; e.currentTarget.style.borderColor = 'transparent'; e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 6px 20px rgba(196, 154, 108, 0.4)'; }}
+                      onMouseOver={e => { e.currentTarget.style.backgroundColor = '#284268'; e.currentTarget.style.borderColor = '#FFFFFF'; e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 8px 25px rgba(40, 66, 104, 0.6)'; }}
+                      onMouseOut={e => { e.currentTarget.style.backgroundColor = '#FFFFFF'; e.currentTarget.style.borderColor = 'transparent'; e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 6px 20px rgba(40, 66, 104, 0.4)'; }}
                       onClick={() => openApplyModal(selectedJob)}
                     >
                       {isArabic ? 'تقديم' : 'Apply'}
@@ -434,7 +434,7 @@ export default function Careers() {
               <div
                 style={{
                   background: 'linear-gradient(135deg, #f9fafb 70%, #e6e6e6 100%)',
-                  border: '2.5px solid #c49a6c',
+                  border: '2.5px solid #FFFFFF',
                   borderRadius: '20px',
                   boxShadow: '0 8px 32px rgba(12,75,59,0.13)',
                   padding: '1.7rem 1.2rem 1.2rem 1.7rem',
@@ -444,14 +444,14 @@ export default function Careers() {
                   overflow: 'hidden',
                 }}
               >
-                <div style={{position:'absolute',top:0,left:0,right:0,height:8,background:'linear-gradient(90deg,#0c4b3b 60%,#c49a6c 100%)',borderTopLeftRadius:20,borderTopRightRadius:20,opacity:0.9}} />
-                <div style={{ fontWeight: 900, fontSize: '1.35rem', color: '#0c4b3b', marginBottom: '0.9rem', letterSpacing: '0.2px', textAlign: isArabic ? 'right' : 'left', display:'flex',alignItems:'center',gap:'0.5rem' }}>
+                <div style={{position:'absolute',top:0,left:0,right:0,height:8,background:'linear-gradient(90deg,#284268 60%,#FFFFFF 100%)',borderTopLeftRadius:20,borderTopRightRadius:20,opacity:0.9}} />
+                <div style={{ fontWeight: 900, fontSize: '1.35rem', color: '#284268', marginBottom: '0.9rem', letterSpacing: '0.2px', textAlign: isArabic ? 'right' : 'left', display:'flex',alignItems:'center',gap:'0.5rem' }}>
                   <span style={{fontSize:'1.1em'}}>💼</span> {selectedJob[isArabic ? 'title_ar' : 'title_en']}
                 </div>
-                <div style={{ marginBottom: '0.9rem', color: '#333', fontSize: '1.08rem', fontWeight: 500, textAlign: isArabic ? 'right' : 'left', lineHeight: 1.7 }}>
+                <div style={{ marginBottom: '0.9rem', color: '#414042', fontSize: '1.08rem', fontWeight: 500, textAlign: isArabic ? 'right' : 'left', lineHeight: 1.7 }}>
                   <div dangerouslySetInnerHTML={{ __html: selectedJob[isArabic ? 'description_ar' : 'description_en'] }} />
                 </div>
-                <div style={{ color: '#c49a6c', fontWeight: 800, fontSize: '1.05rem', marginBottom: '0.7rem', textAlign: isArabic ? 'right' : 'left', display:'flex',alignItems:'center',gap:'0.4rem' }}>
+                <div style={{ color: '#FFFFFF', fontWeight: 800, fontSize: '1.05rem', marginBottom: '0.7rem', textAlign: isArabic ? 'right' : 'left', display:'flex',alignItems:'center',gap:'0.4rem' }}>
                   <span style={{fontSize:'1em'}}>📍</span> {selectedJob[isArabic ? 'location_ar' : 'location_en']}
                 </div>
                 <button
@@ -459,8 +459,8 @@ export default function Careers() {
                     ...careersButtonStyle,
                     opacity: submitting ? 0.7 : 1,
                   }}
-                  onMouseOver={e => { e.currentTarget.style.backgroundColor = '#a65c32'; e.currentTarget.style.borderColor = '#c49a6c'; e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 8px 25px rgba(196, 154, 108, 0.6)'; }}
-                  onMouseOut={e => { e.currentTarget.style.backgroundColor = '#c49a6c'; e.currentTarget.style.borderColor = 'transparent'; e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 6px 20px rgba(196, 154, 108, 0.4)'; }}
+                  onMouseOver={e => { e.currentTarget.style.backgroundColor = '#284268'; e.currentTarget.style.borderColor = '#FFFFFF'; e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 8px 25px rgba(40, 66, 104, 0.6)'; }}
+                  onMouseOut={e => { e.currentTarget.style.backgroundColor = '#FFFFFF'; e.currentTarget.style.borderColor = 'transparent'; e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 6px 20px rgba(40, 66, 104, 0.4)'; }}
                   onClick={() => openApplyModal(selectedJob)}
                 >
                   {isArabic ? 'تقديم' : 'Apply'}
@@ -497,44 +497,44 @@ export default function Careers() {
               </div>
               <button onClick={closeApplyModal} style={{ position: 'absolute', top: 28, right: isArabic ? 'unset' : 36, left: isArabic ? 36 : 'unset', background: 'none', border: 'none', fontSize: 28, cursor: 'pointer', color: '#888', padding: 0, lineHeight: 1, zIndex: 2 }}>&times;</button>
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '1.5rem' }}>
-                <h2 style={{ color: '#0c4b3b', fontWeight: 800, marginBottom: '0.7rem', fontSize: '1.7rem', letterSpacing: '0.5px', textAlign: 'center' }}>
+                <h2 style={{ color: '#284268', fontWeight: 800, marginBottom: '0.7rem', fontSize: '1.7rem', letterSpacing: '0.5px', textAlign: 'center' }}>
                   {isArabic ? `التقديم على ${applyJob[isArabic ? 'title_ar' : 'title_en']}` : `Apply for ${applyJob[isArabic ? 'title_ar' : 'title_en']}`}
                 </h2>
               </div>
-              <div style={{ marginBottom: '1.1rem', color: '#c49a6c', fontWeight: 700, fontSize: '1.13rem', textAlign: 'center' }}>{applyJob[isArabic ? 'location_ar' : 'location_en']}</div>
+              <div style={{ marginBottom: '1.1rem', color: '#FFFFFF', fontWeight: 700, fontSize: '1.13rem', textAlign: 'center' }}>{applyJob[isArabic ? 'location_ar' : 'location_en']}</div>
               <form onSubmit={handleApplySubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', marginTop: '1.2rem', alignItems: isArabic ? 'flex-end' : 'flex-start', direction: isArabic ? 'rtl' : 'ltr', width: '100%' }}>
                 {/* Two-column layout for labels and fields, swap order for Arabic */}
                 <div style={{ display: 'grid', gridTemplateColumns: '160px 1fr', alignItems: 'center', gap: '1.1rem 1.2rem', width: '100%' }}>
                   {isArabic ? (
                     <>
-                      <label htmlFor="apply-name" style={{ fontWeight: 600, color: '#0c4b3b', fontSize: '1.05rem', textAlign: 'right' }}>{isArabic ? 'الاسم' : 'Name'}</label>
+                      <label htmlFor="apply-name" style={{ fontWeight: 600, color: '#284268', fontSize: '1.05rem', textAlign: 'right' }}>{isArabic ? 'الاسم' : 'Name'}</label>
                       <input
                         id="apply-name"
                         type="text"
                         value={applicant.name}
                         onChange={e => setApplicant(a => ({ ...a, name: e.target.value }))}
-                        style={{ padding: '0.9rem', borderRadius: 8, border: '1.5px solid #c49a6c', fontSize: '1.07rem', outline: 'none', background: '#f9fafb', fontWeight: 500, width: '100%', textAlign: 'right' }}
+                        style={{ padding: '0.9rem', borderRadius: 8, border: '1.5px solid #FFFFFF', fontSize: '1.07rem', outline: 'none', background: '#f9fafb', fontWeight: 500, width: '100%', textAlign: 'right' }}
                         required
                       />
-                      <label htmlFor="apply-email" style={{ fontWeight: 600, color: '#0c4b3b', fontSize: '1.05rem', textAlign: 'right' }}>{isArabic ? 'البريد الإلكتروني' : 'Email'}</label>
+                      <label htmlFor="apply-email" style={{ fontWeight: 600, color: '#284268', fontSize: '1.05rem', textAlign: 'right' }}>{isArabic ? 'البريد الإلكتروني' : 'Email'}</label>
                       <input
                         id="apply-email"
                         type="email"
                         value={applicant.email}
                         onChange={e => setApplicant(a => ({ ...a, email: e.target.value }))}
-                        style={{ padding: '0.9rem', borderRadius: 8, border: '1.5px solid #c49a6c', fontSize: '1.07rem', outline: 'none', background: '#f9fafb', fontWeight: 500, width: '100%', textAlign: 'right' }}
+                        style={{ padding: '0.9rem', borderRadius: 8, border: '1.5px solid #FFFFFF', fontSize: '1.07rem', outline: 'none', background: '#f9fafb', fontWeight: 500, width: '100%', textAlign: 'right' }}
                         required
                       />
-                      <label htmlFor="apply-phone" style={{ fontWeight: 600, color: '#0c4b3b', fontSize: '1.05rem', textAlign: 'right' }}>{isArabic ? 'رقم الجوال' : 'Phone'}</label>
+                      <label htmlFor="apply-phone" style={{ fontWeight: 600, color: '#284268', fontSize: '1.05rem', textAlign: 'right' }}>{isArabic ? 'رقم الجوال' : 'Phone'}</label>
                       <input
                         id="apply-phone"
                         type="text"
                         value={applicant.phone}
                         onChange={e => setApplicant(a => ({ ...a, phone: e.target.value }))}
-                        style={{ padding: '0.9rem', borderRadius: 8, border: '1.5px solid #c49a6c', fontSize: '1.07rem', outline: 'none', background: '#f9fafb', fontWeight: 500, width: '100%', textAlign: 'right' }}
+                        style={{ padding: '0.9rem', borderRadius: 8, border: '1.5px solid #FFFFFF', fontSize: '1.07rem', outline: 'none', background: '#f9fafb', fontWeight: 500, width: '100%', textAlign: 'right' }}
                         required
                       />
-                      <label htmlFor="apply-resume" style={{ fontWeight: 600, color: '#0c4b3b', fontSize: '1.05rem', textAlign: 'right' }}>{isArabic ? 'السيرة الذاتية' : 'Resume'}</label>
+                      <label htmlFor="apply-resume" style={{ fontWeight: 600, color: '#284268', fontSize: '1.05rem', textAlign: 'right' }}>{isArabic ? 'السيرة الذاتية' : 'Resume'}</label>
                       {!resumeFile ? (
                         <input
                           id="apply-resume"
@@ -542,7 +542,7 @@ export default function Careers() {
                           accept=".pdf,.doc,.docx"
                           ref={fileInputRef}
                           onChange={e => setResumeFile(e.target.files[0])}
-                          style={{ padding: '0.9rem', borderRadius: 8, border: '1.5px solid #c49a6c', fontSize: '1.07rem', background: '#f9fafb', fontWeight: 500, width: '100%', textAlign: 'right' }}
+                          style={{ padding: '0.9rem', borderRadius: 8, border: '1.5px solid #FFFFFF', fontSize: '1.07rem', background: '#f9fafb', fontWeight: 500, width: '100%', textAlign: 'right' }}
                           required
                         />
                       ) : (
@@ -552,7 +552,7 @@ export default function Careers() {
                           gap: '0.5rem',
                           padding: '0.9rem', 
                           borderRadius: 8, 
-                          border: '1.5px solid #c49a6c', 
+                          border: '1.5px solid #FFFFFF', 
                           background: '#f9fafb',
                           width: '100%'
                         }}>
@@ -561,7 +561,7 @@ export default function Careers() {
                             target="_blank"
                             rel="noopener noreferrer"
                             style={{ 
-                              color: '#0c4b3b', 
+                              color: '#284268', 
                               textDecoration: 'none', 
                               fontWeight: 500,
                               flex: 1,
@@ -599,34 +599,34 @@ export default function Careers() {
                     </>
                   ) : (
                     <>
-                      <label htmlFor="apply-name" style={{ fontWeight: 600, color: '#0c4b3b', fontSize: '1.05rem', textAlign: 'left' }}>{isArabic ? 'الاسم' : 'Name'}</label>
+                      <label htmlFor="apply-name" style={{ fontWeight: 600, color: '#284268', fontSize: '1.05rem', textAlign: 'left' }}>{isArabic ? 'الاسم' : 'Name'}</label>
                       <input
                         id="apply-name"
                         type="text"
                         value={applicant.name}
                         onChange={e => setApplicant(a => ({ ...a, name: e.target.value }))}
-                        style={{ padding: '0.9rem', borderRadius: 8, border: '1.5px solid #c49a6c', fontSize: '1.07rem', outline: 'none', background: '#f9fafb', fontWeight: 500, width: '100%', textAlign: 'left' }}
+                        style={{ padding: '0.9rem', borderRadius: 8, border: '1.5px solid #FFFFFF', fontSize: '1.07rem', outline: 'none', background: '#f9fafb', fontWeight: 500, width: '100%', textAlign: 'left' }}
                         required
                       />
-                      <label htmlFor="apply-email" style={{ fontWeight: 600, color: '#0c4b3b', fontSize: '1.05rem', textAlign: 'left' }}>{isArabic ? 'البريد الإلكتروني' : 'Email'}</label>
+                      <label htmlFor="apply-email" style={{ fontWeight: 600, color: '#284268', fontSize: '1.05rem', textAlign: 'left' }}>{isArabic ? 'البريد الإلكتروني' : 'Email'}</label>
                       <input
                         id="apply-email"
                         type="email"
                         value={applicant.email}
                         onChange={e => setApplicant(a => ({ ...a, email: e.target.value }))}
-                        style={{ padding: '0.9rem', borderRadius: 8, border: '1.5px solid #c49a6c', fontSize: '1.07rem', outline: 'none', background: '#f9fafb', fontWeight: 500, width: '100%', textAlign: 'left' }}
+                        style={{ padding: '0.9rem', borderRadius: 8, border: '1.5px solid #FFFFFF', fontSize: '1.07rem', outline: 'none', background: '#f9fafb', fontWeight: 500, width: '100%', textAlign: 'left' }}
                         required
                       />
-                      <label htmlFor="apply-phone" style={{ fontWeight: 600, color: '#0c4b3b', fontSize: '1.05rem', textAlign: 'left' }}>{isArabic ? 'رقم الجوال' : 'Phone'}</label>
+                      <label htmlFor="apply-phone" style={{ fontWeight: 600, color: '#284268', fontSize: '1.05rem', textAlign: 'left' }}>{isArabic ? 'رقم الجوال' : 'Phone'}</label>
                       <input
                         id="apply-phone"
                         type="text"
                         value={applicant.phone}
                         onChange={e => setApplicant(a => ({ ...a, phone: e.target.value }))}
-                        style={{ padding: '0.9rem', borderRadius: 8, border: '1.5px solid #c49a6c', fontSize: '1.07rem', outline: 'none', background: '#f9fafb', fontWeight: 500, width: '100%', textAlign: 'left' }}
+                        style={{ padding: '0.9rem', borderRadius: 8, border: '1.5px solid #FFFFFF', fontSize: '1.07rem', outline: 'none', background: '#f9fafb', fontWeight: 500, width: '100%', textAlign: 'left' }}
                         required
                       />
-                      <label htmlFor="apply-resume" style={{ fontWeight: 600, color: '#0c4b3b', fontSize: '1.05rem', textAlign: 'left' }}>{isArabic ? 'السيرة الذاتية' : 'Resume'}</label>
+                      <label htmlFor="apply-resume" style={{ fontWeight: 600, color: '#284268', fontSize: '1.05rem', textAlign: 'left' }}>{isArabic ? 'السيرة الذاتية' : 'Resume'}</label>
                       {!resumeFile ? (
                         <input
                           id="apply-resume"
@@ -634,7 +634,7 @@ export default function Careers() {
                           accept=".pdf,.doc,.docx"
                           ref={fileInputRef}
                           onChange={e => setResumeFile(e.target.files[0])}
-                          style={{ padding: '0.9rem', borderRadius: 8, border: '1.5px solid #c49a6c', fontSize: '1.07rem', background: '#f9fafb', fontWeight: 500, width: '100%', textAlign: 'left' }}
+                          style={{ padding: '0.9rem', borderRadius: 8, border: '1.5px solid #FFFFFF', fontSize: '1.07rem', background: '#f9fafb', fontWeight: 500, width: '100%', textAlign: 'left' }}
                           required
                         />
                       ) : (
@@ -644,7 +644,7 @@ export default function Careers() {
                           gap: '0.5rem',
                           padding: '0.9rem', 
                           borderRadius: 8, 
-                          border: '1.5px solid #c49a6c', 
+                          border: '1.5px solid #FFFFFF', 
                           background: '#f9fafb',
                           width: '100%'
                         }}>
@@ -653,7 +653,7 @@ export default function Careers() {
                             target="_blank"
                             rel="noopener noreferrer"
                             style={{ 
-                              color: '#0c4b3b', 
+                              color: '#284268', 
                               textDecoration: 'none', 
                               fontWeight: 500,
                               flex: 1,
@@ -692,7 +692,7 @@ export default function Careers() {
                   )}
                 </div>
                 {applyError && <div style={{ color: '#a94442', fontWeight: 600, textAlign: 'center' }}>{applyError}</div>}
-                {applySuccess && <div style={{ color: '#0c4b3b', fontWeight: 700, textAlign: 'center' }}>{isArabic ? 'تم التقديم بنجاح!' : 'Application submitted successfully!'}</div>}
+                {applySuccess && <div style={{ color: '#284268', fontWeight: 700, textAlign: 'center' }}>{isArabic ? 'تم التقديم بنجاح!' : 'Application submitted successfully!'}</div>}
                 <button
                   type="submit"
                   disabled={submitting}
@@ -700,12 +700,12 @@ export default function Careers() {
                     ...careersButtonStyle,
                     opacity: submitting ? 0.7 : 1,
                   }}
-                  onMouseOver={e => { e.currentTarget.style.backgroundColor = '#a65c32'; e.currentTarget.style.borderColor = '#c49a6c'; e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 8px 25px rgba(196, 154, 108, 0.6)'; }}
-                  onMouseOut={e => { e.currentTarget.style.backgroundColor = '#c49a6c'; e.currentTarget.style.borderColor = 'transparent'; e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 6px 20px rgba(196, 154, 108, 0.4)'; }}
+                  onMouseOver={e => { e.currentTarget.style.backgroundColor = '#284268'; e.currentTarget.style.borderColor = '#FFFFFF'; e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 8px 25px rgba(40, 66, 104, 0.6)'; }}
+                  onMouseOut={e => { e.currentTarget.style.backgroundColor = '#FFFFFF'; e.currentTarget.style.borderColor = 'transparent'; e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 6px 20px rgba(40, 66, 104, 0.4)'; }}
                 >
                   {submitting ? (
                     <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8 }}>
-                      <span className="spinner" style={{ width: 22, height: 22, border: '3px solid #fff', borderTop: '3px solid #c49a6c', borderRadius: '50%', display: 'inline-block', animation: 'spin 1s linear infinite' }}></span>
+                      <span className="spinner" style={{ width: 22, height: 22, border: '3px solid #fff', borderTop: '3px solid #FFFFFF', borderRadius: '50%', display: 'inline-block', animation: 'spin 1s linear infinite' }}></span>
                       {isArabic ? 'جاري الإرسال...' : 'Submitting...'}
                     </span>
                   ) : (
@@ -720,13 +720,13 @@ export default function Careers() {
                   
                   @keyframes pulse {
                     0% {
-                      box-shadow: 0 6px 20px rgba(196, 154, 108, 0.4), 0 0 0 0 rgba(196, 154, 108, 0.7);
+                      box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4), 0 0 0 0 rgba(255, 255, 255, 0.7);
                     }
                     70% {
-                      box-shadow: 0 6px 20px rgba(196, 154, 108, 0.4), 0 0 0 10px rgba(196, 154, 108, 0);
+                      box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4), 0 0 0 10px rgba(255, 255, 255, 0);
                     }
                     100% {
-                      box-shadow: 0 6px 20px rgba(196, 154, 108, 0.4), 0 0 0 0 rgba(196, 154, 108, 0);
+                      box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4), 0 0 0 0 rgba(255, 255, 255, 0);
                     }
                   }
                 `}</style>

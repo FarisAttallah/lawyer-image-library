@@ -10,7 +10,7 @@ export default function Team({ isMobile, fonts }) {
       width: '100%',
       height: '100%',
       padding: isMobile ? '2rem 1rem' : '3rem 2rem',
-      background: 'linear-gradient(135deg, #0c4b3b 0%, #226249 100%)',
+      background: 'linear-gradient(135deg, #284268 0%, #284268 100%)',
       direction: language === 'ar' ? 'rtl' : 'ltr',
       display: 'flex',
       alignItems: 'center',
@@ -49,7 +49,7 @@ export default function Team({ isMobile, fonts }) {
                 right: language === 'ar' ? '0' : 'auto',
                 width: '60px',
                 height: '4px',
-                background: 'linear-gradient(90deg, #c49a6c, rgba(196, 154, 108, 0.5))',
+                background: 'linear-gradient(90deg, #FFFFFF, rgba(40, 66, 104, 0.5))',
                 borderRadius: '2px',
                 marginBottom: '2rem'
               }} />
@@ -60,7 +60,7 @@ export default function Team({ isMobile, fonts }) {
                 background: 'rgba(255, 255, 255, 0.05)',
                 borderRadius: '20px',
                 backdropFilter: 'blur(10px)',
-                border: '1px solid rgba(196, 154, 108, 0.2)',
+                border: '1px solid rgba(255, 255, 255, 0.2)',
                 boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)',
                 marginTop: '1rem',
                 minHeight: '400px',
@@ -74,7 +74,7 @@ export default function Team({ isMobile, fonts }) {
                 fontFamily: language === 'ar' ? 'Cairo, BeINBlack, Arial, sans-serif' : 'Roboto, Arial, sans-serif',
                 fontSize: isMobile ? '1.6rem' : '2rem',
                 lineHeight: '1.8',
-                color: '#c49a6c',
+                color: '#FFFFFF',
                 marginBottom: '2rem',
                 fontWeight: 'bold',
                 textAlign: language === 'ar' ? 'right' : 'left'
@@ -123,7 +123,7 @@ export default function Team({ isMobile, fonts }) {
                 width: '100px',
                 height: '100px',
                 borderRadius: '50%',
-                background: 'rgba(196, 154, 108, 0.2)',
+                background: 'rgba(255, 255, 255, 0.2)',
                 zIndex: 1,
                 animation: 'float 6s ease-in-out infinite'
               }} />
@@ -134,7 +134,7 @@ export default function Team({ isMobile, fonts }) {
                 width: '150px',
                 height: '150px',
                 borderRadius: '50%',
-                background: 'rgba(34, 98, 73, 0.15)',
+                background: 'rgba(40, 66, 104, 0.15)',
                 zIndex: 1,
                 animation: 'float 8s ease-in-out infinite reverse'
               }} />
@@ -143,21 +143,21 @@ export default function Team({ isMobile, fonts }) {
                 position: 'relative',
                 borderRadius: '20px',
                 overflow: 'hidden',
-                boxShadow: '0 20px 60px rgba(0,0,0,0.3), 0 8px 25px rgba(196, 154, 108, 0.2)',
+                boxShadow: '0 20px 60px rgba(0,0,0,0.3), 0 8px 25px rgba(255, 255, 255, 0.2)',
                 maxWidth: '500px',
                 width: '100%',
                 zIndex: 2,
                 transform: 'perspective(1000px) rotateY(-5deg)',
                 transition: 'all 0.5s ease',
-                border: '3px solid rgba(196, 154, 108, 0.3)'
+                border: '3px solid rgba(255, 255, 255, 0.3)'
               }}
               onMouseOver={(e) => {
                 e.currentTarget.style.transform = 'perspective(1000px) rotateY(0deg) scale(1.02)'
-                e.currentTarget.style.boxShadow = '0 25px 80px rgba(0,0,0,0.4), 0 12px 35px rgba(196, 154, 108, 0.3)'
+                e.currentTarget.style.boxShadow = '0 25px 80px rgba(0,0,0,0.4), 0 12px 35px rgba(255, 255, 255, 0.3)'
               }}
               onMouseOut={(e) => {
                 e.currentTarget.style.transform = 'perspective(1000px) rotateY(-5deg) scale(1)'
-                e.currentTarget.style.boxShadow = '0 20px 60px rgba(0,0,0,0.3), 0 8px 25px rgba(196, 154, 108, 0.2)'
+                e.currentTarget.style.boxShadow = '0 20px 60px rgba(0,0,0,0.3), 0 8px 25px rgba(255, 255, 255, 0.2)'
               }}>
                 <img 
                   src="/images/team_1.png" 
@@ -177,7 +177,7 @@ export default function Team({ isMobile, fonts }) {
                   left: '0',
                   right: '0',
                   bottom: '0',
-                  background: 'linear-gradient(135deg, rgba(196, 154, 108, 0.2) 0%, transparent 30%, rgba(12, 75, 59, 0.2) 70%, rgba(34, 98, 73, 0.1) 100%)',
+                  background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, transparent 30%, rgba(40, 66, 104, 0.2) 70%, rgba(40, 66, 104, 0.1) 100%)',
                   pointerEvents: 'none'
                 }} />
                 
@@ -188,7 +188,7 @@ export default function Team({ isMobile, fonts }) {
                   right: '0',
                   width: '60px',
                   height: '60px',
-                  background: 'linear-gradient(135deg, #c49a6c, transparent)',
+                  background: 'linear-gradient(135deg, #FFFFFF, transparent)',
                   opacity: 0.3,
                   borderRadius: '0 20px 0 0'
                 }} />
@@ -202,7 +202,7 @@ export default function Team({ isMobile, fonts }) {
                 width: '20px',
                 height: '20px',
                 borderRadius: '50%',
-                background: '#c49a6c',
+                background: '#FFFFFF',
                 opacity: 0.6,
                 animation: 'pulse 3s ease-in-out infinite',
                 zIndex: 3
@@ -214,7 +214,7 @@ export default function Team({ isMobile, fonts }) {
                 width: '15px',
                 height: '15px',
                 borderRadius: '50%',
-                background: '#226249',
+                background: '#284268',
                 opacity: 0.5,
                 animation: 'pulse 4s ease-in-out infinite 1s',
                 zIndex: 3

@@ -52,7 +52,7 @@ export default function Home() {
       {/* Call to Action Section */}
       <section style={{
         padding: '4rem 0',
-        background: 'linear-gradient(135deg, #0c4b3b 0%, #226249 100%)',
+        background: 'linear-gradient(135deg, #284268 0%, #284268 100%)',
         color: 'white',
         textAlign: 'center',
         direction: language === 'ar' ? 'rtl' : 'ltr',
@@ -60,7 +60,7 @@ export default function Home() {
         borderRadius: '16px',
         maxWidth: '1200px',
         width: 'calc(100% - 4rem)',
-        boxShadow: '0 12px 40px rgba(12, 75, 59, 0.3), 0 4px 16px rgba(0, 0, 0, 0.1)'
+        boxShadow: '0 12px 40px rgba(40, 66, 104, 0.3), 0 4px 16px rgba(0, 0, 0, 0.1)'
       }}>
         <div style={{
           maxWidth: '1200px',
@@ -85,8 +85,8 @@ export default function Home() {
             <Link href="/about" style={{ textDecoration: 'none' }}>
               <button
                 style={{
-                  backgroundColor: '#c49a6c',
-                  color: 'white',
+                  backgroundColor: '#FFFFFF',
+                  color: '#284268',
                   border: '2px solid transparent',
                   padding: isMobile ? '1rem 2rem' : '1.2rem 2.5rem',
                   fontSize: isMobile ? '1.1rem' : '1.25rem',
@@ -95,7 +95,7 @@ export default function Home() {
                   fontWeight: 'bold',
                   fontFamily: 'BeINBlack, Roboto, Arial, sans-serif',
                   transition: 'all 0.3s ease',
-                  boxShadow: '0 6px 20px rgba(196, 154, 108, 0.4), 0 0 0 0 rgba(196, 154, 108, 0.7)',
+                  boxShadow: '0 6px 20px rgba(255, 255, 255, 0.4), 0 0 0 0 rgba(255, 255, 255, 0.7)',
                   textTransform: 'uppercase',
                   letterSpacing: '0.5px',
                   position: 'relative',
@@ -103,14 +103,18 @@ export default function Home() {
                   animation: 'pulse 2s infinite'
                 }}
                 onMouseOver={e => {
-                  e.target.style.borderColor = '#c49a6c';
+                  e.target.style.backgroundColor = '#284268';
+                  e.target.style.borderColor = '#FFFFFF';
+                  e.target.style.color = 'white';
                   e.target.style.transform = 'translateY(-3px)';
-                  e.target.style.boxShadow = '0 8px 25px rgba(196, 154, 108, 0.6)';
+                  e.target.style.boxShadow = '0 8px 25px rgba(255, 255, 255, 0.6)';
                 }}
                 onMouseOut={e => {
+                  e.target.style.backgroundColor = '#FFFFFF';
                   e.target.style.borderColor = 'transparent';
+                  e.target.style.color = '#284268';
                   e.target.style.transform = 'translateY(0)';
-                  e.target.style.boxShadow = '0 6px 20px rgba(196, 154, 108, 0.4)';
+                  e.target.style.boxShadow = '0 6px 20px rgba(255, 255, 255, 0.4)';
                 }}
               >
                                 {language === 'ar' ? (
@@ -124,8 +128,8 @@ export default function Home() {
             <Link href="/services" style={{ textDecoration: 'none' }}>
               <button
                 style={{
-                  backgroundColor: '#c49a6c',
-                  color: 'white',
+                  backgroundColor: '#FFFFFF',
+                  color: '#284268',
                   border: '2px solid transparent',
                   padding: isMobile ? '1rem 2rem' : '1.2rem 2.5rem',
                   fontSize: isMobile ? '1.1rem' : '1.25rem',
@@ -134,7 +138,7 @@ export default function Home() {
                   fontWeight: 'bold',
                   fontFamily: 'BeINBlack, Roboto, Arial, sans-serif',
                   transition: 'all 0.3s ease',
-                  boxShadow: '0 6px 20px rgba(196, 154, 108, 0.4), 0 0 0 0 rgba(196, 154, 108, 0.7)',
+                  boxShadow: '0 6px 20px rgba(255, 255, 255, 0.4), 0 0 0 0 rgba(255, 255, 255, 0.7)',
                   textTransform: 'uppercase',
                   letterSpacing: '0.5px',
                   position: 'relative',
@@ -142,16 +146,18 @@ export default function Home() {
                   animation: 'pulse 2s infinite'
                 }}
                 onMouseOver={e => {
-                  e.target.style.borderColor = '#c49a6c';
+                  e.target.style.backgroundColor = '#284268';
+                  e.target.style.borderColor = '#FFFFFF';
                   e.target.style.color = 'white';
                   e.target.style.transform = 'translateY(-3px)';
-                  e.target.style.boxShadow = '0 8px 25px rgba(196, 154, 108, 0.6)';
+                  e.target.style.boxShadow = '0 8px 25px rgba(255, 255, 255, 0.6)';
                 }}
                 onMouseOut={e => {
+                  e.target.style.backgroundColor = '#FFFFFF';
                   e.target.style.borderColor = 'transparent';
-                  e.target.style.color = 'white';
+                  e.target.style.color = '#284268';
                   e.target.style.transform = 'translateY(0)';
-                  e.target.style.boxShadow = '0 6px 20px rgba(196, 154, 108, 0.4)';
+                  e.target.style.boxShadow = '0 6px 20px rgba(255, 255, 255, 0.4)';
                 }}
               >
                                 {language === 'ar' ? (
@@ -165,13 +171,13 @@ export default function Home() {
           <style jsx>{`
             @keyframes pulse {
               0% {
-                box-shadow: 0 6px 20px rgba(196, 154, 108, 0.4), 0 0 0 0 rgba(196, 154, 108, 0.7);
+                box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4), 0 0 0 0 rgba(255, 255, 255, 0.7);
               }
               70% {
-                box-shadow: 0 6px 20px rgba(196, 154, 108, 0.4), 0 0 0 10px rgba(196, 154, 108, 0);
+                box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4), 0 0 0 10px rgba(255, 255, 255, 0);
               }
               100% {
-                box-shadow: 0 6px 20px rgba(196, 154, 108, 0.4), 0 0 0 0 rgba(196, 154, 108, 0);
+                box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4), 0 0 0 0 rgba(255, 255, 255, 0);
               }
             }
           `}</style>

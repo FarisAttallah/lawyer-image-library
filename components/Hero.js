@@ -140,10 +140,10 @@ export default function Hero({ isMobile, fonts }) {
         bottom: 0,
         background: `linear-gradient(
           135deg, 
-          rgba(12, 75, 59, 0.6) 0%, 
-          rgba(34, 98, 73, 0.4) 30%,
+          rgba(40, 66, 104, 0.6) 0%, 
+          rgba(40, 66, 104, 0.4) 30%,
           rgba(0, 0, 0, 0.3) 70%,
-          rgba(12, 75, 59, 0.7) 100%
+          rgba(40, 66, 104, 0.7) 100%
         )`,
         zIndex: 5
       }} />
@@ -155,7 +155,7 @@ export default function Hero({ isMobile, fonts }) {
         left: 0,
         right: 0,
         bottom: 0,
-        background: 'radial-gradient(ellipse at center, transparent 0%, rgba(34, 98, 73, 0.25) 100%)',
+        background: 'radial-gradient(ellipse at center, transparent 0%, rgba(40, 66, 104, 0.25) 100%)',
         zIndex: 6
       }} />
       
@@ -168,7 +168,7 @@ export default function Hero({ isMobile, fonts }) {
           left: isMobile ? '10px' : '30px',
           top: '50%',
           transform: 'translateY(-50%)',
-          background: 'rgba(196, 154, 108, 0.9)',
+          background: 'rgba(255, 255, 255, 0.9)',
           border: 'none',
           borderRadius: '50%',
           width: isMobile ? '40px' : '50px',
@@ -186,13 +186,13 @@ export default function Hero({ isMobile, fonts }) {
         onMouseOver={(e) => {
           if (!isAnimating) {
             const btn = e.currentTarget
-            btn.style.background = 'rgba(196, 154, 108, 1)'
+            btn.style.background = 'rgba(255, 255, 255, 1)'
             btn.style.transform = 'translateY(-50%) scale(1.1)'
           }
         }}
         onMouseOut={(e) => {
           const btn = e.currentTarget
-          btn.style.background = 'rgba(196, 154, 108, 0.9)'
+          btn.style.background = 'rgba(255, 255, 255, 0.9)'
           btn.style.transform = 'translateY(-50%) scale(1)'
         }}
       >
@@ -208,7 +208,7 @@ export default function Hero({ isMobile, fonts }) {
           right: isMobile ? '10px' : '30px',
           top: '50%',
           transform: 'translateY(-50%)',
-          background: 'rgba(196, 154, 108, 0.9)',
+          background: 'rgba(255, 255, 255, 0.9)',
           border: 'none',
           borderRadius: '50%',
           width: isMobile ? '40px' : '50px',
@@ -226,13 +226,13 @@ export default function Hero({ isMobile, fonts }) {
         onMouseOver={(e) => {
           if (!isAnimating) {
             const btn = e.currentTarget
-            btn.style.background = 'rgba(196, 154, 108, 1)'
+            btn.style.background = 'rgba(255, 255, 255, 1)'
             btn.style.transform = 'translateY(-50%) scale(1.1)'
           }
         }}
         onMouseOut={(e) => {
           const btn = e.currentTarget
-          btn.style.background = 'rgba(196, 154, 108, 0.9)'
+          btn.style.background = 'rgba(255, 255, 255, 0.9)'
           btn.style.transform = 'translateY(-50%) scale(1)'
         }}
       >
@@ -260,7 +260,7 @@ export default function Hero({ isMobile, fonts }) {
               height: isMobile ? '8px' : '10px',
               borderRadius: '50%',
               border: 'none',
-              background: index === currentSlide ? '#c49a6c' : 'rgba(255, 255, 255, 0.5)',
+              background: index === currentSlide ? '#FFFFFF' : 'rgba(255, 255, 255, 0.5)',
               cursor: isAnimating ? 'not-allowed' : 'pointer',
               transition: 'all 0.3s ease',
               opacity: isAnimating ? 0.5 : 1
@@ -286,7 +286,7 @@ export default function Hero({ isMobile, fonts }) {
         right: '10%',
         width: '3px',
         height: '100px',
-        background: 'linear-gradient(to bottom, transparent, #c49a6c, transparent)',
+        background: 'linear-gradient(to bottom, transparent, #FFFFFF, transparent)',
         opacity: 0.6,
         animation: 'float 3s ease-in-out infinite',
         zIndex: 5
@@ -297,7 +297,7 @@ export default function Hero({ isMobile, fonts }) {
         left: '15%',
         width: '2px',
         height: '80px',
-        background: 'linear-gradient(to bottom, transparent, #c49a6c, transparent)',
+        background: 'linear-gradient(to bottom, transparent, #FFFFFF, transparent)',
         opacity: 0.4,
         animation: 'float 4s ease-in-out infinite reverse',
         zIndex: 5
@@ -318,7 +318,7 @@ export default function Hero({ isMobile, fonts }) {
           color: 'white',
           fontSize: fonts.heroTitle,
           marginBottom: '2.5rem',
-          textShadow: '4px 4px 12px rgba(0,0,0,0.9), 0 0 30px rgba(196, 154, 108, 0.3)',
+          textShadow: '4px 4px 12px rgba(0,0,0,0.9), 0 0 30px rgba(40, 66, 104, 0.3)',
           fontWeight: language === 'ar' ? '250' : 'bold',
           lineHeight: '1.1',
           letterSpacing: '-0.02em',
@@ -330,8 +330,8 @@ export default function Hero({ isMobile, fonts }) {
         {/* Enhanced call to action button with pulse effect */}
         <Link href="/contact" style={{ textDecoration: 'none' }}>
           <button style={{
-            backgroundColor: '#c49a6c',
-            color: 'white',
+            backgroundColor: '#FFFFFF',
+            color: '#284268',
             border: '2px solid transparent',
             padding: isMobile ? '1rem 2rem' : '1.2rem 2.5rem',
             fontSize: fonts.heroButton,
@@ -340,7 +340,7 @@ export default function Hero({ isMobile, fonts }) {
             fontWeight: 'bold',
             fontFamily: 'BeINBlack, Roboto, Arial, sans-serif',
             transition: 'all 0.3s ease',
-            boxShadow: '0 6px 20px rgba(196, 154, 108, 0.4), 0 0 0 0 rgba(196, 154, 108, 0.7)',
+            boxShadow: '0 6px 20px rgba(255, 255, 255, 0.4), 0 0 0 0 rgba(255, 255, 255, 0.7)',
             textTransform: 'uppercase',
             letterSpacing: '0.5px',
             position: 'relative',
@@ -348,18 +348,18 @@ export default function Hero({ isMobile, fonts }) {
             animation: 'pulse 2s infinite'
           }}
           onMouseOver={(e) => {
-            e.target.style.backgroundColor = '#a65c32'
-            e.target.style.borderColor = '#c49a6c'
+            e.target.style.backgroundColor = '#284268'
+            e.target.style.borderColor = '#FFFFFF'
             e.target.style.color = 'white'
             e.target.style.transform = 'translateY(-3px)'
-            e.target.style.boxShadow = '0 8px 25px rgba(196, 154, 108, 0.6)'
+            e.target.style.boxShadow = '0 8px 25px rgba(255, 255, 255, 0.6)'
           }}
           onMouseOut={(e) => {
-            e.target.style.backgroundColor = '#c49a6c'
+            e.target.style.backgroundColor = '#FFFFFF'
             e.target.style.borderColor = 'transparent'
-            e.target.style.color = 'white'
+            e.target.style.color = '#284268'
             e.target.style.transform = 'translateY(0)'
-            e.target.style.boxShadow = '0 6px 20px rgba(196, 154, 108, 0.4)'
+            e.target.style.boxShadow = '0 6px 20px rgba(255, 255, 255, 0.4)'
           }}>
             {language === 'ar' ? 'اتصل بنا' : 'Contact Us'}
           </button>
@@ -390,13 +390,13 @@ export default function Hero({ isMobile, fonts }) {
         
         @keyframes pulse {
           0% {
-            box-shadow: 0 6px 20px rgba(196, 154, 108, 0.4), 0 0 0 0 rgba(196, 154, 108, 0.7);
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4), 0 0 0 0 rgba(255, 255, 255, 0.7);
           }
           70% {
-            box-shadow: 0 6px 20px rgba(196, 154, 108, 0.4), 0 0 0 10px rgba(196, 154, 108, 0);
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4), 0 0 0 10px rgba(255, 255, 255, 0);
           }
           100% {
-            box-shadow: 0 6px 20px rgba(196, 154, 108, 0.4), 0 0 0 0 rgba(196, 154, 108, 0);
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4), 0 0 0 0 rgba(255, 255, 255, 0);
           }
         }
         
@@ -408,8 +408,8 @@ export default function Hero({ isMobile, fonts }) {
           right: 0;
           bottom: 0;
           background: 
-            radial-gradient(circle at 20% 20%, rgba(196, 154, 108, 0.1) 0%, transparent 50%),
-            radial-gradient(circle at 80% 80%, rgba(34, 98, 73, 0.1) 0%, transparent 50%);
+            radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 80%, rgba(40, 66, 104, 0.1) 0%, transparent 50%);
           z-index: 1;
           pointer-events: none;
         }

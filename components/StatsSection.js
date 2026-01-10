@@ -11,7 +11,7 @@ export default function StatsSection({ isMobile, fonts }) {
       minHeight: '350px',
       backgroundColor: 'white',
       padding: isMobile ? '2rem 0.5rem' : '4rem 0',
-      color: '#0c4b3b',
+      color: '#284268',
       direction: language === 'ar' ? 'rtl' : 'ltr',
       display: 'flex',
       flexDirection: 'column',
@@ -48,7 +48,7 @@ export default function StatsSection({ isMobile, fonts }) {
         className="services-title"
         style={{
           textAlign: 'center',
-          color: '#0c4b3b',
+          color: '#284268',
           fontWeight: 'bold',
           letterSpacing: '1px',
           marginBottom: '2rem'
@@ -75,7 +75,7 @@ export default function StatsSection({ isMobile, fonts }) {
                 borderRadius: '16px',
                 backgroundColor: '#f8f9fa',
                 boxShadow: '0 8px 32px rgba(0,0,0,0.1)',
-                border: '2px solid #c49a6c',
+                border: '2px solid #FFFFFF',
                 transition: 'transform 0.3s cubic-bezier(.25,.8,.25,1)',
                 position: 'relative',
                 zIndex: 2,
@@ -88,7 +88,7 @@ export default function StatsSection({ isMobile, fonts }) {
               style={{
                 fontSize: isMobile ? '1.1rem' : '1.3rem',
                 lineHeight: '1.8',
-                color: '#333',
+                color: '#414042',
                 textAlign: language === 'ar' ? 'right' : 'left',
                 margin: 0,
                 fontWeight: '500'

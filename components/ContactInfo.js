@@ -95,7 +95,7 @@ export default function ContactInfo({ fonts }) {
       <h2 
       
       style={{
-        color: '#0c4b3b',
+        color: '#284268',
         fontSize: isMobile ? '1.6rem' : '2rem',
         fontWeight: 'bold',
         textAlign: 'center',
@@ -154,7 +154,7 @@ export default function ContactInfo({ fonts }) {
           bottom: 0,
           left: 0,
           right: 0,
-          background: 'linear-gradient(transparent, rgba(12, 75, 59, 0.95))',
+          background: 'linear-gradient(transparent, rgba(40, 66, 104, 0.95))',
           padding: isMobile ? '1.5rem 1rem 1rem' : '2rem 1.5rem 1.5rem',
           color: 'white'
         }}>

@@ -110,7 +110,7 @@ export default function Admin() {
   // Setup and login screens (centered, as before)
   if (setupMode) {
     return (
-      <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #0c4b3b 0%, #226249 100%)' }}>
+      <div style={{ minHeight: '100vh', background: '#284268' }}>
         <Header transparent={false} />
         <div style={{ marginTop: '4rem' }} />
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '80vh' }}>
@@ -121,32 +121,32 @@ export default function Admin() {
             boxShadow: '0 8px 32px rgba(12,75,59,0.18)',
             minWidth: '340px',
             maxWidth: '95vw',
-            border: '2px solid #c49a6c',
+            border: '2px solid #FFFFFF',
           }}>
-            <h2 style={{ marginBottom: '1.5rem', textAlign: 'center', color: '#0c4b3b', fontWeight: 700, letterSpacing: '0.5px' }}>Admin Setup</h2>
+            <h2 style={{ marginBottom: '1.5rem', textAlign: 'center', color: '#284268', fontWeight: 700, letterSpacing: '0.5px' }}>Admin Setup</h2>
             <input
               type="text"
               placeholder="Create username"
               value={username}
               onChange={e => setUsername(e.target.value)}
-              style={{ width: '100%', padding: '0.8rem', marginBottom: '1rem', borderRadius: '8px', border: '1.5px solid #c49a6c', fontSize: '1rem', outline: 'none', background: '#f9fafb' }}
+              style={{ width: '100%', padding: '0.8rem', marginBottom: '1rem', borderRadius: '8px', border: '1.5px solid #FFFFFF', fontSize: '1rem', outline: 'none', background: '#f9fafb' }}
             />
             <input
               type="password"
               placeholder="Create password"
               value={password}
               onChange={e => setPassword(e.target.value)}
-              style={{ width: '100%', padding: '0.8rem', marginBottom: '1rem', borderRadius: '8px', border: '1.5px solid #c49a6c', fontSize: '1rem', outline: 'none', background: '#f9fafb' }}
+              style={{ width: '100%', padding: '0.8rem', marginBottom: '1rem', borderRadius: '8px', border: '1.5px solid #FFFFFF', fontSize: '1rem', outline: 'none', background: '#f9fafb' }}
             />
             <input
               type="email"
               placeholder="Your email"
               value={email}
               onChange={e => setEmail(e.target.value)}
-              style={{ width: '100%', padding: '0.8rem', marginBottom: '1rem', borderRadius: '8px', border: '1.5px solid #c49a6c', fontSize: '1rem', outline: 'none', background: '#f9fafb' }}
+              style={{ width: '100%', padding: '0.8rem', marginBottom: '1rem', borderRadius: '8px', border: '1.5px solid #FFFFFF', fontSize: '1rem', outline: 'none', background: '#f9fafb' }}
             />
             {error && <div style={{ color: '#a94442', marginBottom: '1rem', textAlign: 'center', fontWeight: 500 }}>{error}</div>}
-            <button type="submit" style={{ width: '100%', padding: '0.9rem', background: '#0c4b3b', color: 'white', border: 'none', borderRadius: '8px', fontWeight: 'bold', cursor: 'pointer', fontSize: '1.1rem', letterSpacing: '0.5px', boxShadow: '0 2px 8px rgba(12,75,59,0.10)' }}>Create Admin</button>
+            <button type="submit" style={{ width: '100%', padding: '0.9rem', background: '#284268', color: 'white', border: 'none', borderRadius: '8px', fontWeight: 'bold', cursor: 'pointer', fontSize: '1.1rem', letterSpacing: '0.5px', boxShadow: '0 2px 8px rgba(12,75,59,0.10)' }}>Create Admin</button>
           </form>
         </div>
       </div>
@@ -155,7 +155,7 @@ export default function Admin() {
 
   if (!authenticated) {
     return (
-      <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #0c4b3b 0%, #226249 100%)' }}>
+      <div style={{ minHeight: '100vh', background: '#284268' }}>
         <Header transparent={false} />
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '80vh' }}>
           <form onSubmit={handleLogin} style={{
@@ -165,25 +165,25 @@ export default function Admin() {
             boxShadow: '0 8px 32px rgba(12,75,59,0.18)',
             minWidth: '340px',
             maxWidth: '95vw',
-            border: '2px solid #c49a6c',
+            border: '2px solid #FFFFFF',
           }}>
-            <h2 style={{ marginBottom: '1.5rem', textAlign: 'center', color: '#0c4b3b', fontWeight: 700, letterSpacing: '0.5px' }}>Admin Login</h2>
+            <h2 style={{ marginBottom: '1.5rem', textAlign: 'center', color: '#284268', fontWeight: 700, letterSpacing: '0.5px' }}>Admin Login</h2>
             <input
               type="text"
               placeholder="Username"
               value={username}
               onChange={e => setUsername(e.target.value)}
-              style={{ width: '100%', padding: '0.8rem', marginBottom: '1rem', borderRadius: '8px', border: '1.5px solid #c49a6c', fontSize: '1rem', outline: 'none', background: '#f9fafb' }}
+              style={{ width: '100%', padding: '0.8rem', marginBottom: '1rem', borderRadius: '8px', border: '1.5px solid #FFFFFF', fontSize: '1rem', outline: 'none', background: '#f9fafb' }}
             />
             <input
               type="password"
               placeholder="Password"
               value={password}
               onChange={e => setPassword(e.target.value)}
-              style={{ width: '100%', padding: '0.8rem', marginBottom: '1rem', borderRadius: '8px', border: '1.5px solid #c49a6c', fontSize: '1rem', outline: 'none', background: '#f9fafb' }}
+              style={{ width: '100%', padding: '0.8rem', marginBottom: '1rem', borderRadius: '8px', border: '1.5px solid #FFFFFF', fontSize: '1rem', outline: 'none', background: '#f9fafb' }}
             />
             {error && <div style={{ color: '#a94442', marginBottom: '1rem', textAlign: 'center', fontWeight: 500 }}>{error}</div>}
-            <button type="submit" style={{ width: '100%', padding: '0.9rem', background: '#0c4b3b', color: 'white', border: 'none', borderRadius: '8px', fontWeight: 'bold', cursor: 'pointer', fontSize: '1.1rem', letterSpacing: '0.5px', boxShadow: '0 2px 8px rgba(12,75,59,0.10)' }}>Login</button>
+            <button type="submit" style={{ width: '100%', padding: '0.9rem', background: '#284268', color: 'white', border: 'none', borderRadius: '8px', fontWeight: 'bold', cursor: 'pointer', fontSize: '1.1rem', letterSpacing: '0.5px', boxShadow: '0 2px 8px rgba(12,75,59,0.10)' }}>Login</button>
           </form>
         </div>
       </div>
@@ -203,7 +203,7 @@ export default function Admin() {
           <section
             style={{
               position: 'relative',
-              backgroundColor: '#0c4b3b',
+              backgroundColor: '#284268',
               color: 'white',
               padding: isMobile ? '3rem 1rem' : '5rem 2rem',
               textAlign: 'center',
@@ -231,7 +231,7 @@ export default function Admin() {
               left: 0,
               right: 0,
               bottom: 0,
-              background: 'linear-gradient(135deg, rgba(12, 75, 59, 0.55) 0%, rgba(34, 98, 73, 0.85) 50%, rgba(12, 75, 59, 0.55) 100%)',
+              background: 'linear-gradient(135deg, rgba(40, 66, 104, 0.55) 0%, rgba(40, 66, 104, 0.85) 50%, rgba(40, 66, 104, 0.55) 100%)',
               zIndex: 1
             }} />
             <div style={{
@@ -256,7 +256,7 @@ export default function Admin() {
               </h1>
               <p style={{
                 fontSize: isMobile ? '1rem' : '1.4rem',
-                color: '#c49a6c',
+                color: '#FFFFFF',
                 maxWidth: '700px',
                 margin: '0 auto',
                 textShadow: '2px 2px 4px rgba(0,0,0,0.8)',

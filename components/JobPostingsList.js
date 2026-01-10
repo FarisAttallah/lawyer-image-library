@@ -13,7 +13,7 @@ export default function JobPostingsList({ jobPostings, isMobile }) {
       direction: isArabic ? 'rtl' : 'ltr',
     }}>
       <h2 style={{
-        color: '#0c4b3b',
+        color: '#284268',
         fontWeight: 800,
         marginBottom: '2rem',
         fontSize: isMobile ? '1.3rem' : '1.7rem',
@@ -31,7 +31,7 @@ export default function JobPostingsList({ jobPostings, isMobile }) {
           {jobPostings.map(job => (
             <div key={job.id} style={{
               background: 'white',
-              border: '2px solid #c49a6c',
+              border: '2px solid #FFFFFF',
               borderRadius: '14px',
               boxShadow: '0 4px 18px rgba(12,75,59,0.08)',
               padding: isArabic ? '1.5rem 1.2rem 1.2rem 1.5rem' : '1.5rem 1.5rem 1.2rem 1.2rem',
@@ -39,9 +39,9 @@ export default function JobPostingsList({ jobPostings, isMobile }) {
               transition: 'box-shadow 0.2s',
               direction: isArabic ? 'rtl' : 'ltr',
             }}>
-              <div style={{ fontWeight: 800, fontSize: '1.18rem', color: '#0c4b3b', marginBottom: '0.5rem', letterSpacing: '0.2px', textAlign: isArabic ? 'right' : 'left' }}>{job.title}</div>
-              <div style={{ marginBottom: '0.5rem', color: '#333', fontSize: '1.01rem', fontWeight: 500, textAlign: isArabic ? 'right' : 'left' }}>{job.description}</div>
-              <div style={{ color: '#c49a6c', fontWeight: 700, fontSize: '1.01rem', marginBottom: '0.7rem', textAlign: isArabic ? 'right' : 'left' }}>{job.location}</div>
+              <div style={{ fontWeight: 800, fontSize: '1.18rem', color: '#284268', marginBottom: '0.5rem', letterSpacing: '0.2px', textAlign: isArabic ? 'right' : 'left' }}>{job.title}</div>
+              <div style={{ marginBottom: '0.5rem', color: '#414042', fontSize: '1.01rem', fontWeight: 500, textAlign: isArabic ? 'right' : 'left' }}>{job.description}</div>
+              <div style={{ color: '#FFFFFF', fontWeight: 700, fontSize: '1.01rem', marginBottom: '0.7rem', textAlign: isArabic ? 'right' : 'left' }}>{job.location}</div>
             </div>
           ))}
         </div>

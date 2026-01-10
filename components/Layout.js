@@ -17,7 +17,7 @@ export default function Layout({ children }) {
     }}>
       
       {/* Header is now fixed positioned in the Header component itself */}
-      <Header transparent={true} />
+      <Header transparent={false} />
       <main style={{ position: 'relative', zIndex: 1 }}>
         {children}
       </main>

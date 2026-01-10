@@ -37,15 +37,15 @@ export default function Logo({ size = 'medium' }) {
     <div style={{
       width: currentSize.width,
       height: currentSize.height,
-      background: 'linear-gradient(135deg, #226249 0%, #2a7353 50%, #1e5a42 100%)',
+      background: 'linear-gradient(135deg, #284268 0%, #284268 50%, #284268 100%)',
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'flex-start',
       padding: currentSize.padding,
       borderRadius: '8px',
-      boxShadow: '0 4px 16px rgba(34, 98, 73, 0.3)',
-      border: '2px solid rgba(196, 154, 108, 0.4)',
+      boxShadow: '0 4px 16px rgba(40, 66, 104, 0.3)',
+      border: '2px solid rgba(255, 255, 255, 0.4)',
       position: 'relative',
       overflow: 'hidden'
     }}>
@@ -56,7 +56,7 @@ export default function Logo({ size = 'medium' }) {
         right: 0,
         width: '30px',
         height: '30px',
-        background: 'linear-gradient(135deg, #c49a6c, #a65c32)',
+        background: 'linear-gradient(135deg, #FFFFFF, #284268)',
         clipPath: 'polygon(100% 0, 0 0, 100% 100%)',
         opacity: 0.8
       }} />
@@ -68,7 +68,7 @@ export default function Logo({ size = 'medium' }) {
         left: currentSize.padding,
         right: currentSize.padding,
         height: '2px',
-        background: 'linear-gradient(90deg, #c49a6c, transparent)',
+        background: 'linear-gradient(90deg, #FFFFFF, transparent)',
         marginTop: '4px'
       }} />
       
@@ -79,7 +79,7 @@ export default function Logo({ size = 'medium' }) {
         left: '8px',
         width: currentSize.iconSize,
         height: currentSize.iconSize,
-        color: '#c49a6c',
+        color: '#FFFFFF',
         opacity: 0.7,
         fontSize: currentSize.iconSize,
         display: 'flex',
@@ -115,7 +115,7 @@ export default function Logo({ size = 'medium' }) {
             {language === 'ar' ? 'حسين آل محمد' : 'HUSSEIN'}
           </div>
           <div style={{
-            color: '#c49a6c',
+            color: '#FFFFFF',
             fontSize: currentSize.nameFont,
             fontWeight: '700',
             fontFamily: 'Roboto, Arial, sans-serif',
@@ -150,7 +150,7 @@ export default function Logo({ size = 'medium' }) {
         left: '0',
         right: '0',
         height: '3px',
-        background: 'linear-gradient(90deg, #c49a6c 0%, #a65c32 50%, transparent 100%)'
+        background: 'linear-gradient(90deg, #FFFFFF 0%, #284268 50%, transparent 100%)'
       }} />
     </div>
   )

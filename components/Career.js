@@ -11,9 +11,9 @@ export default function Career({ isMobile, fonts }) {
       padding: isMobile ? '3rem 1rem' : '5rem 2rem',
       background: `
         linear-gradient(135deg, #f8f9fa 0%, #ffffff 30%, #f0f4f8 70%, #e8f4f8 100%),
-        radial-gradient(circle at 20% 80%, rgba(196, 154, 108, 0.08) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(12, 75, 59, 0.06) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(34, 98, 73, 0.04) 0%, transparent 50%)
+        radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(40, 66, 104, 0.06) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(40, 66, 104, 0.04) 0%, transparent 50%)
       `,
       direction: language === 'ar' ? 'rtl' : 'ltr',
       position: 'relative',
@@ -26,7 +26,7 @@ export default function Career({ isMobile, fonts }) {
         left: '3%',
         width: '120px',
         height: '120px',
-        background: 'linear-gradient(45deg, rgba(196, 154, 108, 0.1), rgba(196, 154, 108, 0.05))',
+        background: 'linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05))',
         borderRadius: '20px',
         transform: 'rotate(45deg)',
         animation: 'float 6s ease-in-out infinite',
@@ -39,7 +39,7 @@ export default function Career({ isMobile, fonts }) {
         right: '5%',
         width: '80px',
         height: '80px',
-        background: 'linear-gradient(135deg, rgba(12, 75, 59, 0.08), rgba(12, 75, 59, 0.03))',
+        background: 'linear-gradient(135deg, rgba(40, 66, 104, 0.08), rgba(40, 66, 104, 0.03))',
         borderRadius: '50%',
         animation: 'pulse 4s ease-in-out infinite',
         zIndex: 1
@@ -51,7 +51,7 @@ export default function Career({ isMobile, fonts }) {
         right: '15%',
         width: '60px',
         height: '60px',
-        background: 'linear-gradient(90deg, rgba(34, 98, 73, 0.06), rgba(34, 98, 73, 0.02))',
+        background: 'linear-gradient(90deg, rgba(40, 66, 104, 0.06), rgba(40, 66, 104, 0.02))',
         borderRadius: '12px',
         transform: 'rotate(-15deg)',
         animation: 'spin 8s linear infinite',
@@ -64,7 +64,7 @@ export default function Career({ isMobile, fonts }) {
         left: '10%',
         width: '100px',
         height: '100px',
-        background: 'linear-gradient(225deg, rgba(196, 154, 108, 0.07), rgba(196, 154, 108, 0.02))',
+        background: 'linear-gradient(225deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.02))',
         borderRadius: '50% 20px 50% 20px',
         animation: 'bounce 5s ease-in-out infinite',
         zIndex: 1
@@ -76,7 +76,7 @@ export default function Career({ isMobile, fonts }) {
         left: '50%',
         width: '40px',
         height: '40px',
-        background: 'linear-gradient(315deg, rgba(12, 75, 59, 0.05), rgba(12, 75, 59, 0.01))',
+        background: 'linear-gradient(315deg, rgba(40, 66, 104, 0.05), rgba(40, 66, 104, 0.01))',
         borderRadius: '8px',
         transform: 'rotate(30deg)',
         animation: 'slide 7s ease-in-out infinite',
@@ -91,7 +91,7 @@ export default function Career({ isMobile, fonts }) {
         right: '0',
         height: '100%',
         background: `
-          linear-gradient(90deg, transparent 0%, rgba(196, 154, 108, 0.02) 25%, transparent 50%, rgba(34, 98, 73, 0.02) 75%, transparent 100%)
+          linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.02) 25%, transparent 50%, rgba(40, 66, 104, 0.02) 75%, transparent 100%)
         `,
         animation: 'wave 10s ease-in-out infinite',
         zIndex: 1
@@ -109,7 +109,7 @@ export default function Career({ isMobile, fonts }) {
         }}>
           <h2 style={{
             fontSize: fonts.sectionTitle,
-            color: '#0c4b3b',
+            color: '#284268',
             fontWeight: language === 'ar' ? '400' : 'bold',
             marginBottom: '1rem',
             position: 'relative'
@@ -119,7 +119,7 @@ export default function Career({ isMobile, fonts }) {
           <div style={{
             width: '80px',
             height: '3px',
-            background: 'linear-gradient(90deg, #c49a6c, #226249)',
+            background: 'linear-gradient(90deg, #FFFFFF, #284268)',
             margin: '0 auto',
             borderRadius: '2px'
           }} />
@@ -137,14 +137,14 @@ export default function Career({ isMobile, fonts }) {
             borderRadius: '20px',
             padding: '2.5rem',
             boxShadow: '0 15px 40px rgba(0,0,0,0.12), 0 5px 15px rgba(0,0,0,0.08)',
-            border: '1px solid rgba(196, 154, 108, 0.15)',
+            border: '1px solid rgba(255, 255, 255, 0.15)',
             backdropFilter: 'blur(10px)',
             position: 'relative',
             overflow: 'hidden'
           }}>
             <h3 style={{
               fontSize: fonts.subsectionTitle,
-              color: '#0c4b3b',
+              color: '#284268',
               marginBottom: '2rem',
               fontWeight: language === 'ar' ? '400' : 'bold',
               textAlign: language === 'ar' ? 'right' : 'left',
@@ -163,15 +163,15 @@ export default function Career({ isMobile, fonts }) {
             }}>
               {/* Experience Item 1 */}
               <div style={{
-                borderLeft: language === 'ar' ? 'none' : '4px solid #c49a6c',
-                borderRight: language === 'ar' ? '4px solid #c49a6c' : 'none',
+                borderLeft: language === 'ar' ? 'none' : '4px solid #FFFFFF',
+                borderRight: language === 'ar' ? '4px solid #FFFFFF' : 'none',
                 paddingLeft: language === 'ar' ? '0' : '1.5rem',
                 paddingRight: language === 'ar' ? '1.5rem' : '0',
                 position: 'relative'
               }}>
                 <div style={{
                   fontSize: fonts.body,
-                  color: '#333',
+                  color: '#414042',
                   fontWeight: 'bold',
                   marginBottom: '0.5rem'
                 }}>
@@ -179,7 +179,7 @@ export default function Career({ isMobile, fonts }) {
                 </div>
                 <div style={{
                   fontSize: fonts.body,
-                  color: '#c49a6c',
+                  color: '#FFFFFF',
                   fontWeight: 'bold',
                   marginBottom: '0.5rem'
                 }}>
@@ -189,14 +189,14 @@ export default function Career({ isMobile, fonts }) {
 
               {/* Experience Item 2 */}
               <div style={{
-                borderLeft: language === 'ar' ? 'none' : '4px solid #c49a6c',
-                borderRight: language === 'ar' ? '4px solid #c49a6c' : 'none',
+                borderLeft: language === 'ar' ? 'none' : '4px solid #FFFFFF',
+                borderRight: language === 'ar' ? '4px solid #FFFFFF' : 'none',
                 paddingLeft: language === 'ar' ? '0' : '1.5rem',
                 paddingRight: language === 'ar' ? '1.5rem' : '0'
               }}>
                 <div style={{
                   fontSize: fonts.body,
-                  color: '#333',
+                  color: '#414042',
                   fontWeight: 'bold',
                   marginBottom: '0.5rem'
                 }}>
@@ -204,7 +204,7 @@ export default function Career({ isMobile, fonts }) {
                 </div>
                 <div style={{
                   fontSize: fonts.body,
-                  color: '#c49a6c',
+                  color: '#FFFFFF',
                   fontWeight: 'bold',
                   marginBottom: '0.5rem'
                 }}>
@@ -214,14 +214,14 @@ export default function Career({ isMobile, fonts }) {
 
               {/* Experience Item 3 */}
               <div style={{
-                borderLeft: language === 'ar' ? 'none' : '4px solid #c49a6c',
-                borderRight: language === 'ar' ? '4px solid #c49a6c' : 'none',
+                borderLeft: language === 'ar' ? 'none' : '4px solid #FFFFFF',
+                borderRight: language === 'ar' ? '4px solid #FFFFFF' : 'none',
                 paddingLeft: language === 'ar' ? '0' : '1.5rem',
                 paddingRight: language === 'ar' ? '1.5rem' : '0'
               }}>
                 <div style={{
                   fontSize: fonts.body,
-                  color: '#333',
+                  color: '#414042',
                   fontWeight: 'bold',
                   marginBottom: '0.5rem'
                 }}>
@@ -229,7 +229,7 @@ export default function Career({ isMobile, fonts }) {
                 </div>
                 <div style={{
                   fontSize: fonts.body,
-                  color: '#c49a6c',
+                  color: '#FFFFFF',
                   fontWeight: 'bold',
                   marginBottom: '0.5rem'
                 }}>
@@ -239,14 +239,14 @@ export default function Career({ isMobile, fonts }) {
 
               {/* Experience Item 4 */}
               <div style={{
-                borderLeft: language === 'ar' ? 'none' : '4px solid #c49a6c',
-                borderRight: language === 'ar' ? '4px solid #c49a6c' : 'none',
+                borderLeft: language === 'ar' ? 'none' : '4px solid #FFFFFF',
+                borderRight: language === 'ar' ? '4px solid #FFFFFF' : 'none',
                 paddingLeft: language === 'ar' ? '0' : '1.5rem',
                 paddingRight: language === 'ar' ? '1.5rem' : '0'
               }}>
                 <div style={{
                   fontSize: fonts.body,
-                  color: '#333',
+                  color: '#414042',
                   fontWeight: 'bold',
                   marginBottom: '0.5rem'
                 }}>
@@ -254,7 +254,7 @@ export default function Career({ isMobile, fonts }) {
                 </div>
                 <div style={{
                   fontSize: fonts.body,
-                  color: '#c49a6c',
+                  color: '#FFFFFF',
                   fontWeight: 'bold',
                   marginBottom: '0.5rem'
                 }}>
@@ -270,14 +270,14 @@ export default function Career({ isMobile, fonts }) {
             borderRadius: '20px',
             padding: '2.5rem',
             boxShadow: '0 15px 40px rgba(0,0,0,0.12), 0 5px 15px rgba(0,0,0,0.08)',
-            border: '1px solid rgba(196, 154, 108, 0.15)',
+            border: '1px solid rgba(255, 255, 255, 0.15)',
             backdropFilter: 'blur(10px)',
             position: 'relative',
             overflow: 'hidden'
           }}>
             <h3 style={{
               fontSize: fonts.subsectionTitle,
-              color: '#0c4b3b',
+              color: '#284268',
               marginBottom: '2rem',
               fontWeight: language === 'ar' ? '400' : 'bold',
               textAlign: language === 'ar' ? 'right' : 'left',
@@ -296,14 +296,14 @@ export default function Career({ isMobile, fonts }) {
             }}>
               {/* Education Item 1 */}
               <div style={{
-                borderLeft: language === 'ar' ? 'none' : '4px solid #226249',
-                borderRight: language === 'ar' ? '4px solid #226249' : 'none',
+                borderLeft: language === 'ar' ? 'none' : '4px solid #284268',
+                borderRight: language === 'ar' ? '4px solid #284268' : 'none',
                 paddingLeft: language === 'ar' ? '0' : '1.5rem',
                 paddingRight: language === 'ar' ? '1.5rem' : '0'
               }}>
                 <div style={{
                   fontSize: fonts.body,
-                  color: '#333',
+                  color: '#414042',
                   fontWeight: 'bold',
                   marginBottom: '0.5rem'
                 }}>
@@ -318,14 +318,14 @@ export default function Career({ isMobile, fonts }) {
                 </div>
                 <div style={{
                   fontSize: fonts.body,
-                  color: '#333',
+                  color: '#414042',
                   marginBottom: '0.3rem'
                 }}>
                   {t.education1Institution}
                 </div>
                 <div style={{
                   fontSize: fonts.body,
-                  color: '#c49a6c',
+                  color: '#FFFFFF',
                   fontWeight: 'bold'
                 }}>
                   {language === 'ar' ? 'يوليو 2008 - نوفمبر 2011' : 'July 2008 - November 2011'}
@@ -334,14 +334,14 @@ export default function Career({ isMobile, fonts }) {
 
               {/* Education Item 2 */}
               <div style={{
-                borderLeft: language === 'ar' ? 'none' : '4px solid #226249',
-                borderRight: language === 'ar' ? '4px solid #226249' : 'none',
+                borderLeft: language === 'ar' ? 'none' : '4px solid #284268',
+                borderRight: language === 'ar' ? '4px solid #284268' : 'none',
                 paddingLeft: language === 'ar' ? '0' : '1.5rem',
                 paddingRight: language === 'ar' ? '1.5rem' : '0'
               }}>
                 <div style={{
                   fontSize: fonts.body,
-                  color: '#333',
+                  color: '#414042',
                   fontWeight: 'bold',
                   marginBottom: '0.5rem'
                 }}>
@@ -356,14 +356,14 @@ export default function Career({ isMobile, fonts }) {
                 </div>
                 <div style={{
                   fontSize: fonts.body,
-                  color: '#333',
+                  color: '#414042',
                   marginBottom: '0.3rem'
                 }}>
                   {t.education2Institution}
                 </div>
                 <div style={{
                   fontSize: fonts.body,
-                  color: '#c49a6c',
+                  color: '#FFFFFF',
                   fontWeight: 'bold'
                 }}>
                   {language === 'ar' ? 'مايو 2004 - أبريل 2008' : 'May 2004 - April 2008'}

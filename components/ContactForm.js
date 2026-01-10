@@ -128,7 +128,7 @@ export default function ContactForm({ fonts }) {
   const labelStyle = {
     display: 'block',
     marginBottom: '0.5rem',
-    color: '#0c4b3b',
+    color: '#284268',
     fontWeight: 'bold',
     fontSize: isMobile ? '0.9rem' : '1rem'
   }
@@ -144,7 +144,7 @@ export default function ContactForm({ fonts }) {
       scrollMarginTop: '100px' // Adds space when scrolling to this element
     }}>
       <h2 style={{
-        color: '#0c4b3b',
+        color: '#284268',
         fontSize: isMobile ? '1.5rem' : '2rem',
         marginBottom: '1rem',
         fontWeight: 'bold',
@@ -192,7 +192,7 @@ export default function ContactForm({ fonts }) {
             onChange={handleInputChange}
             required
             style={inputStyle}
-            onFocus={(e) => e.target.style.borderColor = '#c49a6c'}
+            onFocus={(e) => e.target.style.borderColor = '#FFFFFF'}
             onBlur={(e) => e.target.style.borderColor = '#e9ecef'}
           />
         </div>
@@ -209,7 +209,7 @@ export default function ContactForm({ fonts }) {
             onChange={handleInputChange}
             required
             style={inputStyle}
-            onFocus={(e) => e.target.style.borderColor = '#c49a6c'}
+            onFocus={(e) => e.target.style.borderColor = '#FFFFFF'}
             onBlur={(e) => e.target.style.borderColor = '#e9ecef'}
           />
         </div>
@@ -225,7 +225,7 @@ export default function ContactForm({ fonts }) {
             value={formData.phone}
             onChange={handleInputChange}
             style={inputStyle}
-            onFocus={(e) => e.target.style.borderColor = '#c49a6c'}
+            onFocus={(e) => e.target.style.borderColor = '#FFFFFF'}
             onBlur={(e) => e.target.style.borderColor = '#e9ecef'}
           />
         </div>
@@ -242,7 +242,7 @@ export default function ContactForm({ fonts }) {
             onChange={handleInputChange}
             style={inputStyle}
             placeholder={language === 'ar' ? 'رقم السجل التجاري' : 'Commercial Register Number'}
-            onFocus={(e) => e.target.style.borderColor = '#c49a6c'}
+            onFocus={(e) => e.target.style.borderColor = '#FFFFFF'}
             onBlur={(e) => e.target.style.borderColor = '#e9ecef'}
           />
         </div>
@@ -261,7 +261,7 @@ export default function ContactForm({ fonts }) {
               ...inputStyle,
               cursor: 'pointer'
             }}
-            onFocus={(e) => e.target.style.borderColor = '#c49a6c'}
+            onFocus={(e) => e.target.style.borderColor = '#FFFFFF'}
             onBlur={(e) => e.target.style.borderColor = '#e9ecef'}
           >
             <option value="">{language === 'ar' ? 'اختر نوع الخدمة' : 'Select Service Type'}</option>
@@ -283,7 +283,7 @@ export default function ContactForm({ fonts }) {
             onChange={handleInputChange}
             required
             style={inputStyle}
-            onFocus={(e) => e.target.style.borderColor = '#c49a6c'}
+            onFocus={(e) => e.target.style.borderColor = '#FFFFFF'}
             onBlur={(e) => e.target.style.borderColor = '#e9ecef'}
           />
         </div>
@@ -304,7 +304,7 @@ export default function ContactForm({ fonts }) {
               resize: 'vertical',
               minHeight: '120px'
             }}
-            onFocus={(e) => e.target.style.borderColor = '#c49a6c'}
+            onFocus={(e) => e.target.style.borderColor = '#FFFFFF'}
             onBlur={(e) => e.target.style.borderColor = '#e9ecef'}
           />
         </div>
@@ -314,7 +314,7 @@ export default function ContactForm({ fonts }) {
           type="submit"
           disabled={isSubmitting}
           style={{
-            backgroundColor: isSubmitting ? '#6c757d' : '#c49a6c',
+            backgroundColor: isSubmitting ? '#6c757d' : '#FFFFFF',
             color: 'white',
             border: '2px solid transparent',
             padding: isMobile ? '1rem 2rem' : '1.2rem 2.5rem',
@@ -324,7 +324,7 @@ export default function ContactForm({ fonts }) {
             fontWeight: 'bold',
             fontFamily: 'BeINBlack, Roboto, Arial, sans-serif',
             transition: 'all 0.3s ease',
-            boxShadow: '0 6px 20px rgba(196, 154, 108, 0.4), 0 0 0 0 rgba(196, 154, 108, 0.7)',
+            boxShadow: '0 6px 20px rgba(255, 255, 255, 0.4), 0 0 0 0 rgba(255, 255, 255, 0.7)',
             textTransform: 'uppercase',
             letterSpacing: '0.5px',
             position: 'relative',
@@ -335,20 +335,20 @@ export default function ContactForm({ fonts }) {
           }}
           onMouseOver={(e) => {
             if (!isSubmitting) {
-              e.target.style.backgroundColor = '#a65c32';
-              e.target.style.borderColor = '#c49a6c';
+              e.target.style.backgroundColor = '#284268';
+              e.target.style.borderColor = '#FFFFFF';
               e.target.style.color = 'white';
               e.target.style.transform = 'translateY(-3px)';
-              e.target.style.boxShadow = '0 8px 25px rgba(196, 154, 108, 0.6)';
+              e.target.style.boxShadow = '0 8px 25px rgba(255, 255, 255, 0.6)';
             }
           }}
           onMouseOut={(e) => {
             if (!isSubmitting) {
-              e.target.style.backgroundColor = '#c49a6c';
+              e.target.style.backgroundColor = '#FFFFFF';
               e.target.style.borderColor = 'transparent';
               e.target.style.color = 'white';
               e.target.style.transform = 'translateY(0)';
-              e.target.style.boxShadow = '0 6px 20px rgba(196, 154, 108, 0.4)';
+              e.target.style.boxShadow = '0 6px 20px rgba(255, 255, 255, 0.4)';
             }
           }}
         >
@@ -356,13 +356,13 @@ export default function ContactForm({ fonts }) {
           <style>{`
             @keyframes pulse {
               0% {
-                box-shadow: 0 6px 20px rgba(196, 154, 108, 0.4), 0 0 0 0 rgba(196, 154, 108, 0.7);
+                box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4), 0 0 0 0 rgba(255, 255, 255, 0.7);
               }
               70% {
-                box-shadow: 0 6px 20px rgba(196, 154, 108, 0.4), 0 0 0 10px rgba(196, 154, 108, 0);
+                box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4), 0 0 0 10px rgba(255, 255, 255, 0);
               }
               100% {
-                box-shadow: 0 6px 20px rgba(196, 154, 108, 0.4), 0 0 0 0 rgba(196, 154, 108, 0);
+                box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4), 0 0 0 0 rgba(255, 255, 255, 0);
               }
             }
           `}</style>
