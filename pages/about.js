@@ -98,7 +98,7 @@ export default function AboutPage() {
               textShadow: '3px 3px 6px rgba(0,0,0,0.8)',
               animation: 'fadeInUp 1.2s ease-out'
             }}>
-              {language === 'ar' ? 'عن مكتبنا' : 'About Our Firm'}
+              {language === 'ar' ? 'عن شركتنا' : 'About Our Company'}
             </h1>
             <p 
             style={{

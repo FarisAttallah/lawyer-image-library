@@ -108,7 +108,7 @@ export default function LawyerProfile({ isMobile, fonts }) {
                 fontSize: fonts.bodyLarge,
                 lineHeight: '1.8',
                 color: '#414042',
-                fontStyle: 'italic',
+                fontStyle: 'normal',
                 marginBottom: '2.5rem',
                 position: 'relative',
                 paddingLeft: language === 'ar' ? '0' : '2rem',

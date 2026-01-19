@@ -7,7 +7,7 @@ export default function LocationMap() {
   
   const locationTexts = {
     ar: {
-      title: 'تفضل بزيارتنا في مكتبنا بالرياض',
+      title: 'تفضل بزيارتنا في مقرنا بالرياض',
       address: [
         'الأمير محمد بن سعود بن عبدالعزيز',
         'العليا، الرياض 12331',

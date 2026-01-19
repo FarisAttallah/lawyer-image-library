@@ -1,7 +1,7 @@
 export const translations = {
   en: {
     // Header
-    lawFirm: 'Hussein Ahmed Almohmmed Law Firm',
+    lawFirm: 'Hussein Alghamdi Law Firm and Legal Consultations',
     home: 'Home',
     about: 'About Us',
     services: 'Our Services',
@@ -10,7 +10,7 @@ export const translations = {
     // Contact Page
     contactUsTitle: 'Contact Us',
     contactUsSubtitle: 'We are here to support you in all your legal needs.',
-    contactUsDescription: 'Whether you are an individual or a company, our office provides professional consultations and reliable legal solutions.',
+    contactUsDescription: 'Whether you are an individual or a company, our company provides professional consultations and reliable legal solutions.',
     
     // Contact Form
     contactFormTitle: 'Contact Form:',
@@ -27,7 +27,7 @@ export const translations = {
     errorMessage: 'An error occurred while sending the message. Please try again.',
     
     // Hero Section
-    welcome: 'Hussein Ahmed Almohmmed Law Firm',
+    welcome: 'Hussein Alghamdi Law Firm and Legal Consultations',
     subtitle: 'Over 13 years of legal excellence and trust - Riyadh, Saudi Arabia',
     
     // About Section
@@ -39,7 +39,7 @@ export const translations = {
     
     // Vision, Mission, Goals
     visionTitle: 'Our Vision',
-    vision: 'To be among the leading law firms in the Kingdom and the region, through services based on trust and professionalism, responding to changes in local and international regulations and legislation.',
+    vision: 'To be among the leading legal companies in the Kingdom and the region, through services based on trust and professionalism, responding to changes in local and international regulations and legislation.',
     
     missionTitle: 'Our Mission',
     mission: 'Providing comprehensive and professionally designed legal services to meet client needs, through a qualified legal team and precise monitoring of regulatory and legal developments.',
@@ -58,13 +58,13 @@ export const translations = {
     
     // Team Section
     teamTitle: 'Our Team',
-    teamDescription: 'At Hussein Ahmed Almohmmed Law Firm, we believe that the strength of the firm stems from the strength of its team.',
+    teamDescription: 'At Hussein Alghamdi Law Firm and Legal Consultations, we believe that the strength of the company stems from the strength of its team.',
     teamDetails: 'Our team includes a number of lawyers and legal consultants with diverse expertise in various branches of law, supported by a network of external experts and consultants to provide integrated solutions that meet our clients\' needs.',
     teamApproach: 'The team works with one spirit, according to the highest professional standards, to ensure accurate consultations and effective legal representation before judicial and administrative authorities.',
     
     // Lawyer Quote
     lawyerQuoteTitle: 'The Founder\'s Word',
-    lawyerQuote: 'We established this firm on the firm belief that law is not just a profession, but a mission concerned with defending rights, maintaining justice, and protecting trust between parties. We do not just provide legal services, but care for our clients\' interests as if they were our own.',
+    lawyerQuote: 'We established this entity on the firm belief that law is not just a profession, but a mission concerned with defending rights, maintaining justice, and protecting trust between parties. We do not just provide legal services, but care for our clients\' interests as if they were our own.',
     
     // Lawyer Credentials
     lawyerName: 'About the Founder',
@@ -122,7 +122,7 @@ export const translations = {
     exactAddress: 'Prince Mohammed bin Saud bin Abdulaziz, Al Olaya, Riyadh 12331, Saudi Arabia',
     workingHours: 'Working Hours',
     schedule: 'Sun - Thur: 8:00 AM - 4:00 PM',
-    copyright: '© 2025 Hussein Ahmed Almohmmed Law Firm. All rights reserved.',
+    copyright: '© 2025 Hussein Alghamdi Law Firm and Legal Consultations. All rights reserved.',
     
     // Stats
     experience: '13+',
@@ -146,7 +146,7 @@ export const translations = {
     
     // Call to Action
     ctaTitle: 'More about our Specialized Approach',
-    ctaSubtitle: 'Our Legal Approach',
+    ctaSubtitle: 'About Our Company',
     ctaDescription: 'Our Services & Expertise',
     
     // Language
@@ -154,7 +154,7 @@ export const translations = {
   },
   ar: {
     // Header
-    lawFirm: 'مكتب حسين بن أحمد آل محمد للمحاماة والاستشارات القانونية',
+    lawFirm: 'شركة حسين الغامدي للمحاماة والاستشارات القانونية',
     home: 'الرئيسية',
     about: 'من نحن',
     services: 'خدماتنا',
@@ -163,7 +163,7 @@ export const translations = {
     // Contact Page
     contactUsTitle: 'اتصل بنا',
     contactUsSubtitle: 'نحن هنا لدعمك في جميع احتياجاتك القانونية.',
-    contactUsDescription: 'سواء كنت فردا أو شركة، يقدم مكتبنا استشارات مهنية وحلولا قانونية موثوقة.',
+    contactUsDescription: 'سواء كنت فردا أو شركة، تقدم شركتنا استشارات مهنية وحلولا قانونية موثوقة.',
     
     // Contact Form
     contactFormTitle: 'نموذج التواصل:',
@@ -180,7 +180,7 @@ export const translations = {
     errorMessage: 'حدث خطأ في إرسال الرسالة. يرجى المحاولة مرة أخرى.',
     
     // Hero Section
-    welcome: 'مكتب حسين بن أحمد آل محمد للمحاماة والاستشارات القانونية',
+    welcome: 'شركة حسين الغامدي للمحاماة والاستشارات القانونية',
     subtitle: 'خبرة قانونية تتجاوز ١٣ عاما من التميز والثقة - الرياض، المملكة العربية السعودية',
     
     // About Section
@@ -188,14 +188,14 @@ export const translations = {
     aboutDescription1: 'انطلقت ممارستنا القانونية منذ أكثر ما يزيد عن عشر سنوات كمكتب محاماة يضم خلال هذه المسيره نخبة من المحامين والمستشارين القانونيين، قدمنا خلالها خدمات قانونية متخصصة ومتنوعة للأفراد والشركات، وأسهمنا في معالجة قضايا نوعية وبناء علاقات مهنية قائمة على الثقة والكفاءة.',
     aboutDescription2: 'وانطلاقا من هذا الامتداد المهني، وتماشيا مع التطور النظامي والمؤسسي لقطاع المحاماة في المملكة، تأسست شركة حسين الغامدي للمحاماة والاستشارات القانونية في العاصمة الرياض، لتواصل مسيرتها بخطى ثابتة نحو أن تكون واحدة من أبرز الكيانات القانونية في المملكة العربية السعودية، مستندة إلى خبرة عملية عميقة ورؤية مؤسسية حديثة.',
     aboutDescription3: 'نحن شركة مهنية مرخصة من وزارة العدل السعودية، ونفخر بتقديم خدمات قانونية متكاملة وفق معايير مهنية عالية، وبفهم دقيق للبيئة العدلية المحلية، بما يحقق لعملائنا حلولا قانونية فعّالة ومستدامة.',
-    aboutHeroDescription: 'انطلقت ممارستنا القانونية منذ أكثر ما يزيد عن عشر سنوات كمكتب محاماة يضم خلال هذه المسيره نخبة من المحامين والمستشارين القانونيين، قدمنا خلالها خدمات قانونية متخصصة ومتنوعة للأفراد والشركات، وأسهمنا في معالجة قضايا نوعية وبناء علاقات مهنية قائمة على الثقة والكفاءة. وانطلاقا من هذا الامتداد المهني، وتماشيا مع التطور النظامي والمؤسسي لقطاع المحاماة في المملكة، تأسست شركة حسين الغامدي للمحاماة والاستشارات القانونية في العاصمة الرياض، لتواصل مسيرتها بخطى ثابتة نحو أن تكون واحدة من أبرز الكيانات القانونية في المملكة العربية السعودية، مستندة إلى خبرة عملية عميقة ورؤية مؤسسية حديثة. نحن شركة مهنية مرخصة من وزارة العدل السعودية، ونفخر بتقديم خدمات قانونية متكاملة وفق معايير مهنية عالية، وبفهم دقيق للبيئة العدلية المحلية، بما يحقق لعملائنا حلولا قانونية فعّالة ومستدامة',
+    aboutHeroDescription: 'انطلقت ممارستنا القانونية منذ أكثر ما يزيد عن عشر سنوات كمكتب محاماة يضم خلال هذه المسيره نخبة من المحامين والمستشارين القانونيين، قدمنا خلالها خدمات قانونية متخصصة ومتنوعة للأفراد والشركات، وأسهمنا في معالجة قضايا نوعية وبناء علاقات مهنية قائمة على الثقة والكفاءة. وانطلاقا من هذا الامتداد المهني، وتماشيا مع التطور النظامي والمؤسسي لقطاع المحاماة في المملكة، تأسست شركة حسين الغامدي للمحاماة والاستشارات القانونية في العاصمة الرياض، لتواصل مسيرتها بخطى ثابتة نحو أن تكون واحدة من أبرز الكيانات القانونية في المملكة العربية السعودية، مستندة إلى خبرة عملية عميقة ورؤية مؤسسية حديثة. نحن شركة مهنية مرخصة من وزارة العدل السعودية، ونفخر بتقديم خدمات قانونية متكاملة وفق معايير مهنية عالية، وبفهم دقيق للبيئة العدلية المحلية، بما يحقق لعملائنا حلولا قانونية فعّالة ومستدامة.',
 
     // Vision, Mission, Goals
     visionTitle: 'رؤيتنا',
-    vision: 'أن نكون من بين أبرز المكاتب القانونية في المملكة والمنطقة، من خلال خدمات قائمة على الثقة والمهنية، تستجيب لمتغيرات الأنظمة والتشريعات المحلية والدولية.',
+    vision: 'أن نكون من بين أبرز الشركات القانونية في المملكة والمنطقة، من خلال خدمات قائمة على الثقة والمهنية، تستجيب لمتغيرات الأنظمة والتشريعات المحلية والدولية.',
     
     missionTitle: 'رسالتنا',
-    mission: 'تقديم خدمات قانونية متكاملة ومصممة باحتراف لتلبية احتياجات العملاء، من خلال فريق قانوني مؤهل، ومتابعة دقيقة لمستجدات الأنظمة واللوائح',
+    mission: 'تقديم خدمات قانونية متكاملة ومصممة باحتراف لتلبية احتياجات العملاء، من خلال فريق قانوني مؤهل، ومتابعة دقيقة لمستجدات الأنظمة واللوائح.',
     
     valuesTitle: 'قيمنا',
     transparency: 'الشفافية',
@@ -211,13 +211,13 @@ export const translations = {
     
     // Team Section
     teamTitle: 'فريق العمل',
-    teamDescription: 'في مكتب حسين بن أحمد آل محمد للمحاماة والاستشارات القانونية نؤمن بأن قوة المكتب تنبع من قوة فريقه.',
+    teamDescription: 'في شركة حسين الغامدي للمحاماة والاستشارات القانونية نؤمن بأن قوة الشركة تنبع من قوة فريقه.',
     teamDetails: 'يضم فريقنا عدد من المحامين والمستشارين القانونيين ذوي الخبرات المتنوعة في مختلف فروع القانون، مدعومين بشبكة من الخبراء والاستشاريين الخارجيين لتقديم حلول متكاملة تلبي احتياجات عملائنا.',
     teamApproach: 'يعمل الفريق بروح واحدة، وفق أعلى معايير المهنية، لضمان تقديم استشارات دقيقة وتمثيل قانوني فعّال أمام الجهات القضائية والإدارية.',
     
     // Lawyer Quote
     lawyerQuoteTitle: 'كلمة المؤسس',
-    lawyerQuote: 'أسسنا هذا المكتب على قناعة راسخة بأن المحاماة ليست مجرد مهنة، بل رسالة تعنى بالدفاع عن الحقوق، وصيانة العدالة، وحماية الثقة بين الأطراف. نحن لا نقدم خدمات قانونية فحسب، بل نرعى مصالح عملائنا كما لو كانت مصالحنا.',
+    lawyerQuote: 'أسسنا هذا الكيان على قناعة راسخة بأن المحاماة ليست مجرد مهنة، بل رسالة تعنى بالدفاع عن الحقوق، وصيانة العدالة، وحماية الثقة بين الأطراف. نحن لا نقدم خدمات قانونية فحسب، بل نرعى مصالح عملائنا كما لو كانت مصالحنا.',
     
     // Lawyer Credentials
     lawyerName: 'نبذة عن المؤسس',
@@ -275,7 +275,7 @@ export const translations = {
     exactAddress: 'الأمير محمد بن سعود بن عبدالعزيز، العليا، الرياض 12331، المملكة العربية السعودية',
     workingHours: 'ساعات العمل',
     schedule: 'الأحد - الخميس: 8:00 ص - 4:00 م',
-    copyright: '© ٢٠٢٥ مكتب حسين بن أحمد آل محمد للمحاماة. جميع الحقوق محفوظة.',
+    copyright: '© ٢٠٢٥ شركة حسين الغامدي للمحاماة والاستشارات القانونية. جميع الحقوق محفوظة.',
     
     // Stats
     experience: '١٣+',
@@ -306,7 +306,7 @@ export const translations = {
     
     // Call to Action
     ctaTitle: 'اكتشف المزيد عن خبرتنا ونهجنا القانوني المتخصص',
-    ctaSubtitle: 'تعرف على نهجنا القانوني المتخصص.',
+    ctaSubtitle: 'تعرف على شركتنا',
     ctaDescription: 'اكتشف المزيد عن خدماتنا وخبرتنا.',
     
     // Language

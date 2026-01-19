@@ -118,7 +118,7 @@ export default function Home() {
                 }}
               >
                                 {language === 'ar' ? (
-                  <> عن المكتب</>
+                  <> عن الشركة</>
                 ) : (
                   t.ctaSubtitle
                 )}
