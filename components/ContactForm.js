@@ -120,7 +120,6 @@ export default function ContactForm({ fonts }) {
     border: '2px solid #e9ecef',
     borderRadius: '8px',
     fontSize: isMobile ? '16px' : '1rem', // 16px prevents zoom on iOS
-    fontFamily: language === 'ar' ? 'BeINBlack, Arial, sans-serif' : 'Roboto, sans-serif',
     transition: 'border-color 0.3s ease',
     direction: language === 'ar' ? 'rtl' : 'ltr'
   }
@@ -183,7 +182,7 @@ export default function ContactForm({ fonts }) {
         {/* Name Field */}
         <div>
           <label style={labelStyle}>
-            {t.fullName} <span style={{ color: '#dc3545', fontFamily: 'Arial, sans-serif' }}>*</span>
+            {t.fullName} <span style={{ color: '#dc3545' }}>†</span>
           </label>
           <input
             type="text"
@@ -200,7 +199,7 @@ export default function ContactForm({ fonts }) {
         {/* Email Field */}
         <div>
           <label style={labelStyle}>
-            {t.emailLabel} <span style={{ color: '#dc3545', fontFamily: 'Arial, sans-serif' }}>*</span>
+            {t.emailLabel} <span style={{ color: '#dc3545' }}>†</span>
           </label>
           <input
             type="email"
@@ -250,7 +249,7 @@ export default function ContactForm({ fonts }) {
         {/* Service Type */}
         <div>
           <label style={labelStyle}>
-            {t.serviceType} <span style={{ color: '#dc3545', fontFamily: 'Arial, sans-serif' }}>*</span>
+            {t.serviceType} <span style={{ color: '#dc3545' }}>†</span>
           </label>
           <select
             name="serviceType"
@@ -274,7 +273,7 @@ export default function ContactForm({ fonts }) {
         {/* Subject Field */}
         <div>
           <label style={labelStyle}>
-            {t.consultationSubject} <span style={{ color: '#dc3545', fontFamily: 'Arial, sans-serif' }}>*</span>
+            {t.consultationSubject} <span style={{ color: '#dc3545' }}>†</span>
           </label>
           <input
             type="text"
@@ -291,7 +290,7 @@ export default function ContactForm({ fonts }) {
         {/* Message Field */}
         <div>
           <label style={labelStyle}>
-            {t.consultationDetails} <span style={{ color: '#dc3545', fontFamily: 'Arial, sans-serif' }}>*</span>
+            {t.consultationDetails} <span style={{ color: '#dc3545' }}>†</span>
           </label>
           <textarea
             name="message"
@@ -322,7 +321,6 @@ export default function ContactForm({ fonts }) {
             borderRadius: '8px',
             cursor: isSubmitting ? 'not-allowed' : 'pointer',
             fontWeight: 'bold',
-            fontFamily: 'BeINBlack, Roboto, Arial, sans-serif',
             transition: 'all 0.3s ease',
             boxShadow: '0 6px 20px rgba(255, 255, 255, 0.4), 0 0 0 0 rgba(255, 255, 255, 0.7)',
             textTransform: 'uppercase',

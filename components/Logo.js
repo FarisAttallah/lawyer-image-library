@@ -107,7 +107,6 @@ export default function Logo({ size = 'medium' }) {
             color: 'white',
             fontSize: currentSize.nameFont,
             fontWeight: '700',
-            fontFamily: 'Roboto, Arial, sans-serif',
             letterSpacing: '0.5px',
             textShadow: '1px 1px 2px rgba(0,0,0,0.3)',
             lineHeight: '1.1'
@@ -118,7 +117,6 @@ export default function Logo({ size = 'medium' }) {
             color: '#FFFFFF',
             fontSize: currentSize.nameFont,
             fontWeight: '700',
-            fontFamily: 'Roboto, Arial, sans-serif',
             letterSpacing: '0.5px',
             textShadow: '1px 1px 2px rgba(0,0,0,0.3)',
             lineHeight: '1.1',
@@ -133,7 +131,6 @@ export default function Logo({ size = 'medium' }) {
           color: 'white',
           fontSize: currentSize.subtitleFont,
           fontWeight: '400',
-          fontFamily: 'Roboto, Arial, sans-serif',
           opacity: 0.95,
           letterSpacing: '0.3px',
           textTransform: 'uppercase',

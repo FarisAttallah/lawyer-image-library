@@ -29,7 +29,6 @@ export default function LanguageToggle() {
         cursor: 'pointer',
         fontSize: isMobile ? '0.7rem' : '0.9rem',
         fontWeight: 'bold',
-        fontFamily: language === 'ar' ? 'Roboto, Arial, sans-serif' : 'BeINBlack, Roboto, Arial, sans-serif',
         transition: 'all 0.3s ease',
         minWidth: isMobile ? '70px' : '80px',
         textAlign: 'center'

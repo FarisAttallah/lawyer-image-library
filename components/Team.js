@@ -71,7 +71,6 @@ export default function Team({ isMobile, fonts }) {
               <p 
               className="service-card-title"
               style={{
-                fontFamily: language === 'ar' ? 'Cairo, BeINBlack, Arial, sans-serif' : 'Roboto, Arial, sans-serif',
                 fontSize: isMobile ? '1.6rem' : '2rem',
                 lineHeight: '1.8',
                 color: '#FFFFFF',
@@ -84,7 +83,6 @@ export default function Team({ isMobile, fonts }) {
               <p 
               className="service-card-description"
               style={{
-                fontFamily: language === 'ar' ? 'Cairo, BeINBlack, Arial, sans-serif' : 'Roboto, Arial, sans-serif',
                 fontSize: isMobile ? '1.3rem' : '1.6rem',
                 lineHeight: '1.7',
                 color: 'rgba(255, 255, 255, 0.9)',
@@ -96,7 +94,6 @@ export default function Team({ isMobile, fonts }) {
               <p 
               className="service-card-description"
               style={{
-                fontFamily: language === 'ar' ? 'Cairo, BeINBlack, Arial, sans-serif' : 'Roboto, Arial, sans-serif',
                 fontSize: isMobile ? '1.3rem' : '1.6rem',
                 lineHeight: '1.7',
                 color: 'rgba(255, 255, 255, 0.85)',

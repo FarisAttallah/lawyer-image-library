@@ -338,7 +338,6 @@ export default function Hero({ isMobile, fonts }) {
             borderRadius: '8px',
             cursor: 'pointer',
             fontWeight: 'bold',
-            fontFamily: 'BeINBlack, Roboto, Arial, sans-serif',
             transition: 'all 0.3s ease',
             boxShadow: '0 6px 20px rgba(255, 255, 255, 0.4), 0 0 0 0 rgba(255, 255, 255, 0.7)',
             textTransform: 'uppercase',

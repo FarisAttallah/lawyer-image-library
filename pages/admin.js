@@ -5,11 +5,13 @@ import Footer from '../components/Footer'
 import JobPostingsAdmin from '../components/JobPostingsAdmin'
 import { useLanguage } from '../contexts/LanguageContext'
 import { translations } from '../utils/translations'
+import { useResponsiveFonts } from '../hooks/useResponsiveFonts'
 
 export default function Admin() {
   const { language } = useLanguage()
   const t = translations[language]
   const isArabic = language === 'ar'
+  const { fontFamily } = useResponsiveFonts()
   const [authenticated, setAuthenticated] = useState(false)
   const [password, setPassword] = useState('')
   const [username, setUsername] = useState('')
@@ -193,7 +195,7 @@ export default function Admin() {
 
 
   return (
-    <div style={{ minHeight: '100vh', background: '#f8f9fa', fontFamily: 'BeINBlack, Roboto, Arial, sans-serif' }}>
+    <div style={{ fontFamily, minHeight: '100vh', background: '#f8f9fa' }}>
       <div style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000 }}>
         <Header transparent={false} />
       </div>

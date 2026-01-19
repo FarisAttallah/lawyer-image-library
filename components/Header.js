@@ -72,10 +72,10 @@ export default function Header({ transparent = false }) {
   
   return (
     <header style={{ 
-      background: transparent ? 'linear-gradient(135deg, rgba(26, 37, 47, 0.3) 0%, rgba(40, 66, 104, 0.4) 100%)' : '#284268',
+      background: transparent ? 'linear-gradient(135deg, rgba(26, 37, 47, 0.3) 0%, rgba(40, 66, 104, 0.4) 100%)' : '#eeeeee',
       backdropFilter: transparent ? 'blur(10px)' : 'none',
       WebkitBackdropFilter: transparent ? 'blur(10px)' : 'none',
-      color: 'white', 
+      color: '#284268', 
       paddingTop: '0', // No top padding - touches the screen
       paddingBottom: isMobile ? '0.5rem' : '0.5rem',
       paddingLeft: isMobile ? '1rem' : '2rem',
@@ -118,56 +118,56 @@ export default function Header({ transparent = false }) {
               }}>
                 <li>
                   <Link href="/" style={{ 
-                    color: 'white', 
+                    color: '#284268', 
                     textDecoration: 'none',
                     transition: 'color 0.3s ease'
                   }}
-                  onMouseOver={(e) => e.target.style.color = '#FFFFFF'}
-                  onMouseOut={(e) => e.target.style.color = 'white'}>
+                  onMouseOver={(e) => e.target.style.color = '#284268'}
+                  onMouseOut={(e) => e.target.style.color = '#284268'}>
                     {t.home}
                   </Link>
                 </li>
                 <li>
                   <Link href="/about" style={{ 
-                    color: 'white', 
+                    color: '#284268', 
                     textDecoration: 'none',
                     transition: 'color 0.3s ease'
                   }}
-                  onMouseOver={(e) => e.target.style.color = '#FFFFFF'}
-                  onMouseOut={(e) => e.target.style.color = 'white'}>
+                  onMouseOver={(e) => e.target.style.color = '#284268'}
+                  onMouseOut={(e) => e.target.style.color = '#284268'}>
                     {t.about}
                   </Link>
                 </li>
                 <li>
                   <Link href="/services" style={{ 
-                    color: 'white', 
+                    color: '#284268', 
                     textDecoration: 'none',
                     transition: 'color 0.3s ease'
                   }}
-                  onMouseOver={(e) => e.target.style.color = '#FFFFFF'}
-                  onMouseOut={(e) => e.target.style.color = 'white'}>
+                  onMouseOver={(e) => e.target.style.color = '#284268'}
+                  onMouseOut={(e) => e.target.style.color = '#284268'}>
                     {t.services}
                   </Link>
                 </li>
                 <li>
                   <Link href="/careers" style={{ 
-                    color: 'white', 
+                    color: '#284268', 
                     textDecoration: 'none',
                     transition: 'color 0.3s ease'
                   }}
-                  onMouseOver={(e) => e.target.style.color = '#FFFFFF'}
-                  onMouseOut={(e) => e.target.style.color = 'white'}>
+                  onMouseOver={(e) => e.target.style.color = '#284268'}
+                  onMouseOut={(e) => e.target.style.color = '#284268'}>
                     {language === 'ar' ? 'الوظائف' : 'Careers'}
                   </Link>
                 </li>
                 <li>
                   <Link href="/contact" style={{ 
-                    color: 'white', 
+                    color: '#284268', 
                     textDecoration: 'none',
                     transition: 'color 0.3s ease'
                   }}
-                  onMouseOver={(e) => e.target.style.color = '#FFFFFF'}
-                  onMouseOut={(e) => e.target.style.color = 'white'}>
+                  onMouseOver={(e) => e.target.style.color = '#284268'}
+                  onMouseOut={(e) => e.target.style.color = '#284268'}>
                     {t.contact}
                   </Link>
                 </li>
@@ -214,7 +214,7 @@ export default function Header({ transparent = false }) {
               style={{
                 background: 'none',
                 border: 'none',
-                color: 'white',
+                color: '#284268',
                 fontSize: '1.5rem',
                 cursor: 'pointer',
                 padding: '0.5rem',
@@ -230,21 +230,21 @@ export default function Header({ transparent = false }) {
               <div style={{
                 width: '20px',
                 height: '2px',
-                backgroundColor: 'white',
+                backgroundColor: '#284268',
                 transition: 'all 0.3s ease',
                 transform: isMenuOpen ? 'rotate(45deg) translate(5px, 5px)' : 'none'
               }} />
               <div style={{
                 width: '20px',
                 height: '2px',
-                backgroundColor: 'white',
+                backgroundColor: '#284268',
                 transition: 'all 0.3s ease',
                 opacity: isMenuOpen ? 0 : 1
               }} />
               <div style={{
                 width: '20px',
                 height: '2px',
-                backgroundColor: 'white',
+                backgroundColor: '#284268',
                 transition: 'all 0.3s ease',
                 transform: isMenuOpen ? 'rotate(-45deg) translate(7px, -6px)' : 'none'
               }} />

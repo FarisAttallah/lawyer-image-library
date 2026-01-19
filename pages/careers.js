@@ -138,7 +138,7 @@ export default function Careers() {
   };
 
   return (
-    <div style={{ minHeight: '100vh', background: '#f8f9fa', fontFamily: 'BeINBlack, Roboto, Arial, sans-serif' }}>
+    <div style={{ fontFamily, minHeight: '100vh', background: '#f8f9fa' }}>
       <div style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000 }}>
         <Header transparent={false} />
       </div>

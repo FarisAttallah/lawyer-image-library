@@ -99,8 +99,7 @@ export default function Services({ isMobile, fonts }) {
               textAlign: 'center',
               fontWeight: language === 'ar' ? '400' : 'bold',
               textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
-              lineHeight: '1.2',
-              fontFamily: language === 'ar' ? 'BeINBlack, Arial, sans-serif' : 'Roboto, Arial, sans-serif'
+              lineHeight: '1.2'
             }}
           >
             {t.specializationTitle}
