@@ -17,8 +17,8 @@ export default function Footer() {
   
   return (
     <footer style={{ 
-      backgroundColor: '#284268', 
-      color: 'white', 
+      backgroundColor: '#eeeeee', 
+      color: '#284268', 
       padding: '3rem 2rem 2rem',
       direction: language === 'ar' ? 'rtl' : 'ltr'
     }}>
@@ -33,7 +33,7 @@ export default function Footer() {
           {/* Firm Info */}
           <div>
             <h3 style={{ 
-              color: '#FFFFFF', 
+              color: '#284268', 
               fontSize: '1.4rem',
               fontWeight: 'bold',
               margin: '0 0 1rem 0'
@@ -43,7 +43,7 @@ export default function Footer() {
             <p style={{
               lineHeight: '1.7',
               marginBottom: '1rem',
-              color: '#e0e0e0'
+              color: '#555555'
             }}>
               {language === 'ar' 
                 ? 'خبرة قانونية تتجاوز ١٣ عاما من التميز والثقة في خدمة العدالة وحماية الحقوق.'
@@ -55,14 +55,14 @@ export default function Footer() {
           {/* Contact Info */}
           <div>
             <h4 style={{ 
-              color: '#FFFFFF', 
+              color: '#284268', 
               marginBottom: '1rem',
               fontSize: '1.2rem',
               fontWeight: 'bold'
             }}>
               {t.contactInfo}
             </h4>
-            <div style={{ lineHeight: '1.8', color: '#e0e0e0' }}>
+            <div style={{ lineHeight: '1.8', color: '#555555' }}>
               {language === 'ar' ? (
                 <p style={{ marginBottom: '0.5rem' }}>
                   <span>{t.phoneLabel}:</span>{' '}
@@ -87,7 +87,7 @@ export default function Footer() {
           {/* Working Hours */}
           <div>
             <h4 style={{ 
-              color: '#FFFFFF', 
+              color: '#284268', 
               marginBottom: '1rem',
               fontSize: '1.2rem',
               fontWeight: 'bold'
@@ -96,14 +96,14 @@ export default function Footer() {
             </h4>
             <p style={{ 
               lineHeight: '1.8',
-              color: '#e0e0e0'
+              color: '#555555'
             }}>
               {t.schedule}
             </p>
             
             <div style={{ marginTop: '1.5rem' }}>
               <h5 style={{ 
-                color: '#FFFFFF', 
+                color: '#284268', 
                 marginBottom: '0.5rem',
                 fontSize: '1rem'
               }}>
@@ -112,7 +112,7 @@ export default function Footer() {
               <ul style={{ 
                 listStyle: 'none', 
                 padding: 0, 
-                color: '#e0e0e0',
+                color: '#555555', 
                 fontSize: '0.9rem'
               }}>
                 <li style={{ marginBottom: '0.3rem' }}>• {t.legalConsultation}</li>
@@ -152,7 +152,7 @@ export default function Footer() {
         
         {/* Bottom Bar */}
         <div style={{ 
-          borderTop: '1px solid rgba(255, 255, 255, 0.3)', 
+          borderTop: '1px solid rgba(40, 66, 104, 0.2)', 
           paddingTop: '1.5rem',
           textAlign: 'center'
         }}>
@@ -170,14 +170,14 @@ export default function Footer() {
           </div>
           <p style={{ 
             margin: 0, 
-            color: '#FFFFFF',
+            color: '#284268',
             fontSize: '0.95rem'
           }}>
             {t.copyright}
           </p>
           <p style={{
             margin: '0.5rem 0 0',
-            color: '#e0e0e0',
+            color: '#555555',
             fontSize: '0.85rem'
           }}>
             {language === 'ar' 

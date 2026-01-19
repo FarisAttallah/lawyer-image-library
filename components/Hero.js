@@ -317,7 +317,7 @@ export default function Hero({ isMobile, fonts }) {
         <h2 style={{ 
           color: 'white',
           fontSize: fonts.heroTitle,
-          marginBottom: '2.5rem',
+          marginBottom: isMobile ? '1.5rem' : '2.5rem',
           textShadow: '4px 4px 12px rgba(0,0,0,0.9), 0 0 30px rgba(40, 66, 104, 0.3)',
           fontWeight: language === 'ar' ? '250' : 'bold',
           lineHeight: '1.1',
@@ -328,7 +328,7 @@ export default function Hero({ isMobile, fonts }) {
         </h2>
         
         {/* Enhanced call to action button with pulse effect */}
-        <Link href="/contact" style={{ textDecoration: 'none' }}>
+        <Link href="/contact" style={{ textDecoration: 'none', display: 'inline-block', marginBottom: '2rem' }}>
           <button style={{
             backgroundColor: '#FFFFFF',
             color: '#284268',
@@ -363,6 +363,87 @@ export default function Hero({ isMobile, fonts }) {
             {language === 'ar' ? 'اتصل بنا' : 'Contact Us'}
           </button>
         </Link>
+        
+        {/* Secondary CTAs Section */}
+        <div style={{
+           marginTop: '0.5rem',
+           paddingTop: '1.5rem',
+           borderTop: '1px solid rgba(255,255,255,0.3)',
+           animation: 'fadeInUp 1.5s ease-out'
+        }}>
+            {/* Header: More about our Specialized Approach */}
+            <h3 style={{
+                color: 'white',
+                fontSize: isMobile ? '1.1rem' : '1.4rem',
+                fontWeight: 'normal',
+                marginBottom: '1rem',
+                textShadow: '2px 2px 4px rgba(0,0,0,0.5)'
+            }}>
+                {t.ctaTitle}
+            </h3>
+
+            {/* Buttons Row */}
+            <div style={{
+                display: 'flex',
+                gap: '1rem',
+                justifyContent: 'center',
+                flexWrap: 'wrap'
+            }}>
+                 {/* About Button */}
+                 <Link href="/about" style={{ textDecoration: 'none' }}>
+                    <button style={{
+                        backgroundColor: 'rgba(255, 255, 255, 0.15)',
+                        backdropFilter: 'blur(5px)',
+                        color: 'white',
+                        border: '1px solid rgba(255,255,255,0.5)',
+                        padding: isMobile ? '0.6rem 1rem' : '0.8rem 1.5rem',
+                        fontSize: isMobile ? '0.9rem' : '1rem',
+                        borderRadius: '6px',
+                        cursor: 'pointer',
+                        transition: 'all 0.3s ease',
+                        fontWeight: 'bold'
+                    }}
+                    onMouseOver={(e) => {
+                       e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.3)'
+                       e.target.style.transform = 'translateY(-2px)'
+                    }}
+                    onMouseOut={(e) => {
+                       e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.15)'
+                       e.target.style.transform = 'translateY(0)'
+                    }}
+                    >
+                     {language === 'ar' ? 'عن الشركة' : t.ctaSubtitle}
+                    </button>
+                 </Link>
+
+                 {/* Services Button */}
+                 <Link href="/services" style={{ textDecoration: 'none' }}>
+                    <button style={{
+                        backgroundColor: 'rgba(255, 255, 255, 0.15)',
+                        backdropFilter: 'blur(5px)',
+                        color: 'white',
+                        border: '1px solid rgba(255,255,255,0.5)',
+                        padding: isMobile ? '0.6rem 1rem' : '0.8rem 1.5rem',
+                        fontSize: isMobile ? '0.9rem' : '1rem',
+                        borderRadius: '6px',
+                        cursor: 'pointer',
+                        transition: 'all 0.3s ease',
+                        fontWeight: 'bold'
+                    }}
+                    onMouseOver={(e) => {
+                       e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.3)'
+                       e.target.style.transform = 'translateY(-2px)'
+                    }}
+                    onMouseOut={(e) => {
+                       e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.15)'
+                       e.target.style.transform = 'translateY(0)'
+                    }}
+                    >
+                     {language === 'ar' ? 'خدماتنا وخبرتنا' : t.ctaDescription}
+                    </button>
+                 </Link>
+            </div>
+        </div>
       </div>
       
       {/* CSS Animations */}

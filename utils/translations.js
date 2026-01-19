@@ -4,6 +4,7 @@ export const translations = {
     lawFirm: 'Hussein Alghamdi Law Firm and Legal Consultations',
     home: 'Home',
     about: 'About Us',
+    founder: 'Founder',
     services: 'Our Services',
     contact: 'Contact Us',
     
@@ -157,6 +158,7 @@ export const translations = {
     lawFirm: 'شركة حسين الغامدي للمحاماة والاستشارات القانونية',
     home: 'الرئيسية',
     about: 'من نحن',
+    founder: 'المؤسس',
     services: 'خدماتنا',
     contact: 'اتصل بنا',
     

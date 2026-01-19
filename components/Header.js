@@ -150,6 +150,17 @@ export default function Header({ transparent = false }) {
                   </Link>
                 </li>
                 <li>
+                  <Link href="/founder" style={{ 
+                    color: '#284268', 
+                    textDecoration: 'none',
+                    transition: 'color 0.3s ease'
+                  }}
+                  onMouseOver={(e) => e.target.style.color = '#284268'}
+                  onMouseOut={(e) => e.target.style.color = '#284268'}>
+                    {t.founder}
+                  </Link>
+                </li>
+                <li>
                   <Link href="/careers" style={{ 
                     color: '#284268', 
                     textDecoration: 'none',
@@ -328,6 +339,25 @@ export default function Header({ transparent = false }) {
                   onMouseOut={(e) => e.target.style.backgroundColor = 'transparent'}
                 >
                   {t.services}
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/founder" 
+                  onClick={() => setIsMenuOpen(false)}
+                  style={{ 
+                    color: 'white', 
+                    textDecoration: 'none',
+                    display: 'block',
+                    padding: '0.7rem 2rem',
+                    borderBottom: '1px solid rgba(255,255,255,0.1)',
+                    transition: 'background-color 0.3s ease',
+                    fontSize: '0.9rem'
+                  }}
+                  onMouseOver={(e) => e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.2)'}
+                  onMouseOut={(e) => e.target.style.backgroundColor = 'transparent'}
+                >
+                  {t.founder}
                 </Link>
               </li>
               <li>
