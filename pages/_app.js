@@ -7,7 +7,7 @@ export default function App({ Component, pageProps }) {
   return (
     <LanguageProvider>
       <Head>
-        <title>مكتب حسين أحمد آل محمد للمحاماة | Hussein Ahmed Almohmmed Law Firm</title>
+        <title>شركة حسين الغامدي للمحاماة والاستشارات القانونية | Hussein Alghamdi Law Firm and Legal Consultations</title>
         <meta name="description" content="مكتب محاماة متخصص في الاستشارات القانونية والتقاضي والقانون التجاري في الرياض. خبرة تزيد عن 13 عاماً في الخدمات القانونية. Law firm specializing in legal consultations, litigation, and commercial law in Riyadh with over 13 years of experience." />
         
         {/* Arabic Keywords */}
@@ -19,8 +19,8 @@ export default function App({ Component, pageProps }) {
         {/* Location-based SEO */}
         <meta name="geo.region" content="SA-01" />
         <meta name="geo.placename" content="Riyadh" />
-        <meta name="geo.position" content="24.6929695;46.674492" />
-        <meta name="ICBM" content="24.6929695, 46.674492" />
+        <meta name="geo.position" content="24.6928918;46.6744507" />
+        <meta name="ICBM" content="24.6928918, 46.6744507" />
         
         {/* Business Schema */}
         <script type="application/ld+json">
@@ -43,8 +43,8 @@ export default function App({ Component, pageProps }) {
             },
             "geo": {
               "@type": "GeoCoordinates",
-              "latitude": 24.6929695,
-              "longitude": 46.674492
+              "latitude": 24.6928918,
+              "longitude": 46.6744507
             },
             "openingHours": "Mo-Th 09:00-17:00, Fr 09:00-12:00",
             "priceRange": "$$",

@@ -86,7 +86,7 @@ export default function LocationMap() {
             <div style={{ flex: '0 0 auto', width: '100%', height: isMobile ? '50%' : '65%' }}>
               <iframe
                 title="Office Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7249.974239337065!2d46.674492199999996!3d24.6929695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03a4b49c99cd%3A0x8ea7c823bc59a899!2z2YXZg9iq2Kgg2K3Ys9mK2YYg2KfZhCDZhdit2YXYryDZhNmE2YXYrdin2YXYp9ipINmI2KfZhNin2LPYqti02KfYsdin2Kog2KfZhNmC2KfZhtmI2YbZitip!5e0!3m2!1sen!2sus!4v1756578589842!5m2!1sen!2sus" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.2684047619454!2d46.6722620759327!3d24.692891778149784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c4589dba4f9d0ed%3A0x39d4887adbf6bb6c!2z2LTYsdmD2Kkg2K3Ys9mK2YYg2KfZhNi62KfZhdiv2Yog2YTZhNmF2K3Yp9mF2KfYqSDZiNin2YTYp9iz2KrYtNin2LHYp9iqINin2YTZgtin2YbZiNmG2YrYqQ!5e0!3m2!1sen!2sus!4v1737878400000!5m2!1sen!2sus" 
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
