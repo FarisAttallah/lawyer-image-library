@@ -14,7 +14,7 @@ export default function LocationMap() {
         'المملكة العربية السعودية'
       ],
       directions: 'احصل على الاتجاهات',
-      officeLocation: 'موقع المكتب',
+      officeLocation: 'موقع الشركة',
       exactAddress: 'الرياض - المملكة العربية السعودية',
       district: 'الرمز البريدي ١٢٣٣١ الرقم الاضافي ٦٥٨٣',
       phoneNumber: '+966 55 905 5731',

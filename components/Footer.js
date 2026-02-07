@@ -30,7 +30,7 @@ export default function Footer() {
           gap: '2rem',
           marginBottom: '1.5rem'
         }}>
-          {/* Firm Info */}
+          {/* Firm Info */} 
           <div>
             <h3 style={{ 
               color: '#284268', 

@@ -268,7 +268,7 @@ export const translations = {
     contactInfo: 'معلومات الاتصال',
     phoneLabel: 'رقم الجوال',
     phoneNumber: '+966 55 905 5731',
-    officePhoneLabel: 'هاتف المكتب',
+    officePhoneLabel: 'هاتف الشركة',
     officePhoneNumber: '+966 11 494 4110',
     email: 'البريد الإلكتروني: info@almohmmed.com',
     emailLabel: 'البريد الإلكتروني',

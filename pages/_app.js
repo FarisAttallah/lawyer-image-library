@@ -8,10 +8,10 @@ export default function App({ Component, pageProps }) {
     <LanguageProvider>
       <Head>
         <title>شركة حسين الغامدي للمحاماة والاستشارات القانونية | Hussein Alghamdi Law Firm and Legal Consultations</title>
-        <meta name="description" content="مكتب محاماة متخصص في الاستشارات القانونية والتقاضي والقانون التجاري في الرياض. خبرة تزيد عن 13 عاماً في الخدمات القانونية. Law firm specializing in legal consultations, litigation, and commercial law in Riyadh with over 13 years of experience." />
+        <meta name="description" content="شركة محاماة متخصص في الاستشارات القانونية والتقاضي والقانون التجاري في الرياض. خبرة تزيد عن 13 عاماً في الخدمات القانونية. Law firm specializing in legal consultations, litigation, and commercial law in Riyadh with over 13 years of experience." />
         
         {/* Arabic Keywords */}
-        <meta name="keywords" content="محامي الرياض, مكتب محاماة الرياض, استشارات قانونية, محامي تجاري, قانون تجاري, تقاضي, حسين آل محمد, العليا الرياض, خدمات قانونية, محكمة, دعاوى قضائية, عقود, شركات, استشارة قانونية مجانية" />
+        <meta name="keywords" content="محامي الرياض, شركة محاماة الرياض, استشارات قانونية, محامي تجاري, قانون تجاري, تقاضي, حسين آل محمد, العليا الرياض, خدمات قانونية, محكمة, دعاوى قضائية, عقود, شركات, استشارة قانونية مجانية" />
         
         {/* English Keywords */}
         <meta name="keywords" content="lawyer Riyadh, law firm Riyadh, legal consultation, commercial lawyer, business law, litigation, Hussein Almohmmed, Al Olaya Riyadh, legal services, court, lawsuits, contracts, companies, free legal consultation" />
@@ -27,9 +27,9 @@ export default function App({ Component, pageProps }) {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LegalService",
-            "name": "مكتب حسين أحمد آل محمد للمحاماة",
+            "name": "شركة حسين أحمد آل محمد للمحاماة",
             "alternateName": "Hussein Ahmed Almohmmed Law Firm",
-            "description": "مكتب محاماة متخصص في الاستشارات القانونية والتقاضي والقانون التجاري",
+            "description": "شركة محاماة متخصص في الاستشارات القانونية والتقاضي والقانون التجاري",
             "url": "https://almohmmed.com",
             "telephone": ["+966559055731", "+966114944110"],
             "email": "info@almohmmed.com",
@@ -57,7 +57,7 @@ export default function App({ Component, pageProps }) {
         </script>
         
         {/* Open Graph */}
-        <meta property="og:title" content="مكتب حسين أحمد آل محمد للمحاماة | Law Firm Riyadh" />
+        <meta property="og:title" content="شركة حسين أحمد آل محمد للمحاماة | Law Firm Riyadh" />
         <meta property="og:description" content="خبرة قانونية تتجاوز 13 عاماً في الرياض. استشارات قانونية وتجارية متخصصة." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://almohmmed.com" />
@@ -67,7 +67,7 @@ export default function App({ Component, pageProps }) {
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="مكتب حسين أحمد آل محمد للمحاماة" />
+        <meta name="twitter:title" content="شركة حسين أحمد آل محمد للمحاماة" />
         <meta name="twitter:description" content="خبرة قانونية تتجاوز 13 عاماً في الرياض" />
         <meta name="twitter:image" content="https://almohmmed.com/images/Logo.png" />
         

@@ -111,7 +111,7 @@ export default async function handler(req, res) {
               
               <div style="text-align: center; margin-top: 30px; padding: 15px; background: #f8f9fa; border-radius: 8px;">
                 <p style="margin: 0; color: #666; font-size: 0.9em;">
-                  تم إرسال هذا الطلب من موقع مكتب حسين بن أحمد آل محمد للمحاماة
+                  تم إرسال هذا الطلب من موقع شركة حسين بن أحمد آل محمد للمحاماة
                   <br>
                   This application was submitted from Hussein Ahmed Almohmmed Law Firm website
                 </p>
